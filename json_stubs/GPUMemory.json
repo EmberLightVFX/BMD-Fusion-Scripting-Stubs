@@ -1,0 +1,1 @@
+{"name":"GPUMemory","methods":{"Download":{"usage":["boolean :Download(Image img)"]},"info_text":"Discovered methods might be available in many contexts, but most typically in Fuse scripts","GPUMemory":{"usage":["GPUMemory GPUMemory()"],"short_help":"GPUMemory constructor"},"header_text":"Discovered Methods"}}

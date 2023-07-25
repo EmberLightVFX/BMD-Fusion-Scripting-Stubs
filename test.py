@@ -1,0 +1,1 @@
+a = Fusion.GetData()

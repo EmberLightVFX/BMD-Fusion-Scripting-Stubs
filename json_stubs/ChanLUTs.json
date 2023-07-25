@@ -1,0 +1,1 @@
+{"name":"ChanLUTs","properties":{"TypeNamePtr":{"return_type":"string","access_class":"Read Only"},"info_text":"Discovered properties might be available in many contexts, but most typically in Fuse scripts","TypeName":{"return_type":"string","access_class":"Read Only"},"header_text":"Discovered Properties"}}

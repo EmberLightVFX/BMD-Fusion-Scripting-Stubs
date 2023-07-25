@@ -1,0 +1,1 @@
+{"name":"MediaStorage","methods":{"info_text":"Manually added methods are known but not documented or discoverable","GetMountedVolumes":{"short_help":"Deprecated"},"GetSubFolders":{"short_help":"Deprecated"},"GetFiles":{"short_help":"Deprecated"},"AddItemsToMediaPool":{"short_help":"Deprecated"},"header_text":"Added Methods"}}

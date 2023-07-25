@@ -1,0 +1,1 @@
+{"name":"Container","methods":{"Container":{"usage":["Container Container(TagList tags)"],"short_help":"Container constructor"},"info_text":"Discovered methods might be available in many contexts, but most typically in Fuse scripts","header_text":"Discovered Methods"},"class_inheritance":["LayoutObj"]}

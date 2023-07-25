@@ -1,0 +1,1 @@
+{"name":"ExtRef","methods":{"info_text":"Discovered methods might be available in many contexts, but most typically in Fuse scripts","ExtRef":{"usage":["ExtRef ExtRef(void ptr, TagList tags)"],"short_help":"ExtRef constructor"},"header_text":"Discovered Methods"},"class_inheritance":["LayoutObj"]}

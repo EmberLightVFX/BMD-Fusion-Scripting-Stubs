@@ -1,0 +1,1 @@
+{"name":"ProjectManager","methods":{"GetProjectsInCurrentFolder":{"short_help":"Deprecated"},"info_text":"Manually added methods are known but not documented or discoverable","GetFoldersInCurrentFolder":{"short_help":"Deprecated"},"header_text":"Added Methods"}}

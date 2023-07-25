@@ -1,0 +1,18 @@
+{
+    "python.autoComplete.extraPaths": [
+        "./typings"
+    ],
+    "python.analysis.extraPaths": [
+        "./typings"
+    ],
+    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportUnknownArgumentType": "none",
+        "reportUnknownVariableType": "none",
+        "reportUnknownParameterType": "none",
+        "reportMissingParameterType": "none"
+    },
+    "python.analysis.inlayHints.pytestParameters": false,
+    "python.analysis.inlayHints.functionReturnTypes": false,
+    "python.analysis.inlayHints.variableTypes": false
+}
