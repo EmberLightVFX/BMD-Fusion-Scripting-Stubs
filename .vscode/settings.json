@@ -10,7 +10,8 @@
         "reportUnknownArgumentType": "none",
         "reportUnknownVariableType": "none",
         "reportUnknownParameterType": "none",
-        "reportMissingParameterType": "none"
+        "reportMissingParameterType": "none",
+        "reportUnknownMemberType": "none"
     },
     "python.analysis.inlayHints.pytestParameters": false,
     "python.analysis.inlayHints.functionReturnTypes": false,
