@@ -1,7 +1,7 @@
 """
 Convert json generated files to python stubs
 
-TODO:
+Fixed:
 *   If a method has two usage with the same inputs but different outputs,
     combine them and make multiple output types instead
 *   If the method is a constructor (eg ChannelStyle constructor),
@@ -11,9 +11,12 @@ TODO:
         from  import _
 *   Media_pool_item's class name contain spaces
 *   MtlGraph3D imports "from Request req import _Request req"
-*   Make sure Opertator.pyi doesn't import None from _None
-*   RefObject.pyi uses "void", what should void be?
-*   Request.pyi imports TimeStamp, waht should it be?
+*   Fetch all return types that aren't native but also not objects
+
+TODO:
+*   How to deal with:
+    "info_text":    "Discovered methods might be available in many contexts,
+                    but most typically in Fuse scripts",
 
 """
 
@@ -23,101 +26,171 @@ import re
 
 
 return_types: list[str] = []
+non_existing_types: list[str] = []
+local_non_existing_types: list[str] = []
+json_files: list[str] = []
 add_overload = False
 add_any = False
+add_literal = False
 
 
-def typeConverter(type_string: str, is_optional=False) -> str:
+def removeParents(string: str) -> str:
+    return string.replace("(", "").replace(")", "").strip()
+
+
+def removeBrackets(string: str) -> str:
+    return string.replace("[", "").replace("]", "").strip()
+
+
+def removeColon(string: str) -> str:
+    return string.replace(":", "").strip()
+
+
+def replaceDotsFromName(string: str) -> str:
+    return string.replace(".", "_").strip()
+
+
+def replaceWithUnderscore(string: str):
+    return string.replace("-", "_").replace(" ", "_")
+
+
+def fixProbChars(string: str):
+    """Remove characters that shouldn't be there from the Fusion Docs"""
+    return (
+        string.replace("ï¿½@ï¿½vIhï¿½%<ï¿½", "")
+        .replace("ð@‚vIhÂ%<½", "")
+        .replace("�@�vIh�%<�", "")
+        .replace("@vIh%<", "")
+    )
+
+
+def fixIllegalNames(string: str) -> str:
+    if string in {
+        "def",
+        "from",
+    }:
+        string = f"{string}_"
+    return string
+
+
+def fixMultiInputNames(string: str) -> str:
+    return string.replace("|", "_or_")
+
+
+def generateNonExistingClasses(non_existing_types: list[str]) -> str:
+    content = "".join(f"class _{obj}:\n\t...\n" for obj in non_existing_types) + "\n"
+    for obj in non_existing_types:
+        content += f"{obj} = _{obj}\n"
+    content += "\n"
+    return content
+
+
+def typeConverter(type_string: str, is_optional=False, name: str = "") -> str:
     return_string = ""
-    match type_string:
-        case "boolean":
-            return_string = "bool"
-        case "number":
-            return_string = "int"
-        case "number (integer)":
-            return_string = "int"
-        case "integer":
-            return_string = "int"
-        case "int":
-            return_string = "int"
-        case "int8":
-            return_string = "int"
-        case "uint8":
-            return_string = "int"
-        case "int16":
-            return_string = "int"
-        case "uint16":
-            return_string = "int"
-        case "int32":
-            return_string = "int"
-        case "uint32":
-            return_string = "int"
-        case "int64":
-            return_string = "int"
-        case "uint64":
-            return_string = "int"
-        case "size_t":
-            return_string = "int"
-        case "float32":
-            return_string = "float"
-        case "float64":
-            return_string = "float"
-        case "value":
-            return_string = "int"
-        case "string":
-            return_string = "str"
-        case "char":
-            return_string = "str"
-        case "char8":
-            return_string = "str"
-        case "char16":
-            return_string = "str"
-        case "char32":
-            return_string = "str"
-        case "char64":
-            return_string = "str"
-        case "table":
-            global add_any
-            add_any = True
-            return_string = "dict[Any, Any]"
-        case "nil":
-            return_string = "None"
-        case _:
-            return_string = f"_{type_string}"
-            global return_types
-            if type_string not in return_types:
-                return_types.append(type_string)
+
+    if type_string == "boolean":
+        return_string = "bool"
+    elif type_string in {
+        "number",
+        "number (integer)",
+        "integer",
+        "int",
+        "int8",
+        "uint8",
+        "int16",
+        "uint16",
+        "int32",
+        "uint32",
+        "int64",
+        "uint64",
+        "size_t",
+    }:
+        return_string = "int"
+    elif type_string in {
+        "value",
+        "float32",
+        "float64",
+    }:
+        return_string = "float"
+    elif type_string in {
+        "string",
+        "char",
+        "char_t",
+        "char8",
+        "char8_t",
+        "char16",
+        "char16_t",
+        "char32",
+        "char32_t",
+        "char64",
+        "char64_t",
+    }:
+        return_string = "str"
+    elif type_string == "table":
+        global add_any
+        add_any = True
+        return_string = "dict[Any, Any]"
+    elif type_string == "nil":
+        return_string = "None"
+    else:
+        return_string = f"_{type_string}"
+        global return_types
+        if type_string != name and type_string not in return_types:
+            return_types.append(type_string)
+            global json_files
+            global non_existing_types
+            global local_non_existing_types
+            if f"{type_string}.json" not in json_files:
+                local_non_existing_types.append(type_string)
+                if type_string not in non_existing_types:
+                    non_existing_types.append(type_string)
+
     if is_optional:
         return_string += f" = {return_string}()"
     return return_string
 
 
-def genTypeList(types: list[str] | str, is_optional=False):
+def genTypeList(types: list[str] | str, is_optional=False, name=""):
     if isinstance(types, str):
         types = types.split("|")
     for i in range(len(types)):
-        types[i] = typeConverter(types[i], is_optional)
+        types[i] = typeConverter(types[i], is_optional, name)
     return " | ".join(types) if len(types) > 1 else "".join(types)
 
 
-def genInputType(txt: str, is_optional=False):
+def genInputType(txt: str, is_optional=False, name=""):
     # Split at the first space only
     txt_list = txt.split(" ", 1)
     if len(txt_list) == 1:
-        return txt_list[0].replace("-", "_").replace(" ", "_")
-    return f"{txt_list[1].replace('-', '_').replace(' ', '_')}: {genTypeList(txt_list[0], is_optional)}"
+        return fixMultiInputNames(fixIllegalNames(replaceWithUnderscore(txt_list[0])))
+    new_name = fixMultiInputNames(fixIllegalNames(replaceWithUnderscore(txt_list[1])))
+    if "§" in new_name:
+        global add_literal
+        add_literal = True
+        literals = new_name.split("§")
+        rest_literals = ", ".join(f'"{literal}"' for literal in literals[1:])
+        return f"{literals[0]}: Literal[{rest_literals}]"
+    return f"{new_name}: {genTypeList(txt_list[0], is_optional, name)}"
 
 
 def genStubs(o) -> tuple[str, list[str]]:
     print("Name: ", o["name"])
-    content = f'class _{o["name"]}:\n'
+    content = f'class _{replaceWithUnderscore(o["name"])}:\n'
     global return_types
     global add_overload
     global add_any
+    global local_non_existing_types
     add_overload = False
     add_any = False
     return_types = []
+    local_non_existing_types = []
 
+    # Check if object is empty:
+    if not o.get("properties") and not o.get("attributes") and not o.get("methods"):
+        content += "\t...\n"
+        return content, return_types
+
+    ## PROPERTIES ##
     if o.get("properties") and len(o["properties"]) > 0:
         content += "\n\t#---Properties---#\n"
         for name, key in o["properties"].items():
@@ -132,9 +205,9 @@ def genStubs(o) -> tuple[str, list[str]]:
                 continue
 
             if key.get("return_type"):
-                content += f': {typeConverter(key["return_type"])}'
+                content += f': {typeConverter(key["return_type"], name=o["name"])}'
             else:
-                content += f": Any"
+                content += ": Any"
                 add_any = True
             content += "\n"
 
@@ -143,7 +216,7 @@ def genStubs(o) -> tuple[str, list[str]]:
                 or key.get("description")
                 or key.get("access_class")
             ):
-                content += f'\t"""\n'
+                content += '\t"""\n'
                 if key.get("short_help"):
                     content += f'\t{key["short_help"]}\n\n'
                 if key.get("description"):
@@ -171,26 +244,57 @@ def genStubs(o) -> tuple[str, list[str]]:
 
             content += "\n"
 
+    ## ATTRIBUTES ##
     if o.get("attributes") and len(o["attributes"]) > 0:
         content += "\n\t#---Attributes---#\n"
         for name, key in o["attributes"].items():
             content += f"\t{name}"
 
             if key.get("value"):
-                content += f': {typeConverter(key["value"])}\n'
+                content += f': {typeConverter(key["value"], name=o["name"])}\n'
 
             content += "\n"
 
+    ## METHODS ##
     if o.get("methods") and len(o["methods"]) > 0:
+        # Pattern to catch everything within ()
+        input_type_pattern = r"\((?:[^()]*|\((?:[^()]*|\([^()]*\))*\))*\)"
+        # Define the regular expression pattern
+        return_type_pattern = r"\|(?![^(]*\))"
+        """
+        Pre Process the methods to look for duplicate objects
+        with same input variables. If found, combine them into one
+        """
+        for name, key in o["methods"].items():
+            do_process = len(key) > 0 and isinstance(key, dict)
+            if do_process and key.get("usage") and len(key["usage"]) > 1:
+                new_usage: list[str] = []
+                for usage in key["usage"]:
+                    splits = usage.split(" :")
+                    # Process the input types
+                    if len(splits) > 1:
+                        new_nu = True
+                        for i, nu in enumerate(new_usage):
+                            nu_splits = nu.split(" :")
+                            if len(nu_splits) > 1 and splits[1] == nu_splits[1]:
+                                new_nu = False
+                                new_usage[
+                                    i
+                                ] = f"({splits[0]}|{nu_splits[0]}) :{splits[1]}"
+                                break
+                        if new_nu:
+                            new_usage.append(f"{splits[0]} :{splits[1]}")
+                key["usage"] = new_usage
+
         content += "\n\t#---Methods---#\n"
         for name, key in o["methods"].items():
-            # Check if the item is something to process (if it's a dict or just a string)
+            # Check if the item is something to process (only process dicts)
             do_process = len(key) > 0 and isinstance(key, dict)
 
             # Fetch the help-string
             short_help = ""
             if do_process and (key.get("short_help") or key.get("description")):
-                short_help += f'\t\t"""\n'
+                short_help += '\t\t"""\n'
                 if key.get("short_help"):
                     short_help += f'\t\t{key["short_help"]}\n\n'
                 if key.get("description"):
@@ -215,53 +319,97 @@ def genStubs(o) -> tuple[str, list[str]]:
                 short_help += '\t\t"""\n'
             short_help += "\t\t...\n"
 
+            # Process all usage types
             if do_process and key.get("usage"):
-                pattern = r"\((?:[^()]*|\((?:[^()]*|\([^()]*\))*\))*\)"
-
-                is_overload = len(key["usage"]) > 1
-                if is_overload:
+                if is_overload := len(key["usage"]) > 1:
                     add_overload = True
                 for usage in key["usage"]:
                     if is_overload:
                         content += "\t@overload\n"
                     content += f"\tdef {name}(self"
-                    splits = usage.split(" :")
+
+                    # Split the input and return types
+                    splits = usage.split(f"{name}(")
 
                     # Process the input types
                     if len(splits) > 1:
-                        if matches := re.findall(pattern, splits[1]):
+                        if matches := re.findall(input_type_pattern, f"({splits[1]}"):
                             # If the match is just an empty (), continue
                             if matches[0] != "()":
                                 content += ", "
-                                matches = matches[0].split(", ")
-                                for i, match in enumerate(matches):
-                                    match = match.replace("(", "").replace(")", "")
+                                matches = replaceDotsFromName(matches[0]).split(", ")
+
+                                # Check if string is of type Literal
+                                # If litterlas are found, tag them with §
+                                filtered_matches = []
+                                is_literal = False
+                                for match in matches:
+                                    if ":" in match and is_literal is False:
+                                        is_literal = True
+                                        match_split = match.split(": ")
+                                        filtered_matches.append(
+                                            f"{match_split[0]}§{match_split[1]}"
+                                        )
+                                    elif is_literal is True:
+                                        if " " in match:  # No longer literals
+                                            is_literal = False
+                                            filtered_matches.append(match)
+                                        else:  # Literals - Add § between each object
+                                            filtered_matches[
+                                                len(filtered_matches) - 1
+                                            ] += f"§{match}"
+                                    else:
+                                        filtered_matches.append(match)
+
+                                # Go through all matches and extract input types
+                                for i, match in enumerate(filtered_matches):
+                                    match = removeParents(match)
                                     if i > 0:
                                         content += ", "
                                     is_optional = False
                                     if match[0] == "[":
                                         is_optional = True
-                                        match = match.replace("[", "").replace("]", "")
-                                    content += genInputType(match, is_optional)
+                                        match = removeBrackets(match)
+                                    content += genInputType(
+                                        match, is_optional, name=o["name"]
+                                    )
 
-                    content += ")"
+                    # process all return types
+                    content += ") -> "
+                    splits[0] = removeColon(fixProbChars(splits[0]))
+                    return_type_result = re.split(return_type_pattern, splits[0])
+                    for r_i, r_splits in enumerate(return_type_result):
+                        if r_i > 0:
+                            content += " | "
+                        usage_types = removeParents(r_splits)
+                        usage_splits = usage_types.split(", ")
+                        if usage_splits[0] == "":
+                            content += "None"
+                        else:
+                            # Catch errors in the fusion docs:
+                            # If the return type is an empty whitespace
+                            # remove it from the list
+                            for i, splits in enumerate(usage_splits):
+                                if splits == ",":
+                                    del usage_splits[i]
 
-                    # # Get all return types
-                    usage_types = splits[0].strip().replace("(", "").replace(")", "")
-                    usage_splits = usage_types.split(", ")
-                    content += " -> "
-                    if usage_splits[0] != "":
-                        if len(usage_splits) > 1:
-                            content += "tuple["
-                        for i, splits in enumerate(usage_splits):
-                            if i > 0:
-                                content += ", "
-                            multi_splits = splits.split("|")
-                            content += genTypeList(multi_splits)
-                        if len(usage_splits) > 1:
-                            content += "]"
-                    else:
-                        content += "None"
+                            # Check if it's a constructor:
+                            construct_split = usage_splits[0].split(" ")
+                            if len(construct_split) > 1 and removeParents(
+                                construct_split[0]
+                            ) == removeParents(construct_split[1]):
+                                content += f"_{removeParents(construct_split[0])}"
+
+                            else:  # Normal return type
+                                if len(usage_splits) > 1:
+                                    content += "tuple["
+                                for i, splits in enumerate(usage_splits):
+                                    if i > 0:
+                                        content += ", "
+                                    multi_splits = splits.split("|")
+                                    content += genTypeList(multi_splits, name=o["name"])
+                                if len(usage_splits) > 1:
+                                    content += "]"
                     content += ":\n"
                     content += short_help
             else:
@@ -278,32 +426,53 @@ if __name__ == "__main__":
     root_folder = Path(__file__).parent
     json_stubs_folder = root_folder / "json_stubs"
     typings_folder = root_folder / "typings"
+
+    # Get a list of all filenames available
+    json_files = [
+        file.name
+        for file in json_stubs_folder.iterdir()
+        if file.is_file() and file.suffix == ".json"
+    ]
     for file_path in json_stubs_folder.iterdir():
-        if file_path.is_file():
+        if file_path.is_file() and file_path.suffix == ".json":
             # Read the Markdown content from the file or fetch it from a URL.
             object_data = None
-
-            with open(file_path, "r") as f:
+            with open(file_path, "r", encoding="utf-8") as f:
                 object_data = json.load(f)
 
             stubs_content, imports_to_add = genStubs(object_data)
 
-            imports = "from typing import" if add_any or add_overload else ""
+            imports_list = []
             if add_any:
-                imports += " Any"
+                imports_list.append("Any")
             if add_overload:
-                imports += ", overload"
-            if add_any or add_overload:
-                imports += "\n\n"
+                imports_list.append("overload")
+            if add_literal:
+                imports_list.append("Literal")
+
+            imports = (
+                "from typing import " + ", ".join(imports_list) + "\n\n"
+                if imports_list
+                else ""
+            )
 
             if len(imports_to_add) > 0:
                 for imp in imports_to_add:
-                    imports += f"from {imp} import _{imp}\n"
+                    if imp not in local_non_existing_types:
+                        imports += f"from {imp} import _{imp}\n"
+                if len(local_non_existing_types) > 0:
+                    imports += "from _non_existing import "
+                    for i, imp in enumerate(local_non_existing_types):
+                        if i > 0:
+                            imports += ", "
+                        imports += f"_{imp}"
+                    imports += "\n"
                 imports += "\n\n"
 
             stubs_content = imports + stubs_content
-            stubs_content += f'\n{object_data["name"]} = _{object_data["name"]}'
-            stub_names.append(object_data["name"])
+            name_with_underscores = replaceWithUnderscore(object_data["name"])
+            stubs_content += f"\n{name_with_underscores} = _{name_with_underscores}"
+            stub_names.append(name_with_underscores)
 
             # Save the stubs to a .pyi file
             with open(
@@ -311,13 +480,15 @@ if __name__ == "__main__":
             ) as f:
                 f.write(stubs_content)
 
-        butilins_content = "".join(
-            f"from {name} import {name}\n" for name in stub_names
-        )
-        butilins_content += "\n__all__ = ["
-        for name in stub_names:
-            butilins_content += f'\n\t"{name}",'
-        butilins_content += "\n]"
+    with open(f'{typings_folder / "_non_existing.pyi"}', "w", encoding="utf-8") as f:
+        f.write(generateNonExistingClasses(non_existing_types))
 
-        with open(f'{typings_folder / "__builtins__.pyi"}', "w", encoding="utf-8") as f:
-            f.write(butilins_content)
+    butilins_content = (
+        "".join(f"from {name} import {name}\n" for name in stub_names) + "\n__all__ = ["
+    )
+    for name in stub_names:
+        butilins_content += f'\n\t"{name}",'
+    butilins_content += "\n]"
+
+    with open(f'{typings_folder / "__builtins__.pyi"}', "w", encoding="utf-8") as f:
+        f.write(butilins_content)
