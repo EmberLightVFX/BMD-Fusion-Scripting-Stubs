@@ -11,9 +11,13 @@
         "reportUnknownVariableType": "none",
         "reportUnknownParameterType": "none",
         "reportMissingParameterType": "none",
-        "reportUnknownMemberType": "none"
+        "reportUnknownMemberType": "none",
+        "reportPrivateUsage": "none"
     },
     "python.analysis.inlayHints.pytestParameters": false,
     "python.analysis.inlayHints.functionReturnTypes": false,
-    "python.analysis.inlayHints.variableTypes": false
+    "python.analysis.inlayHints.variableTypes": false,
+    "ruff.args": [
+        "--ignore=E501,E101"
+    ],
 }
