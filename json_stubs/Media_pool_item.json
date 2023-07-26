@@ -1,1 +1,1 @@
-{"name":"Media pool item","methods":{"info_text":"Manually added methods are known but not documented or discoverable","GetFlags":{"short_help":"Deprecated"},"header_text":"Added Methods"}}
+{"methods":{"header_text":"Added Methods","info_text":"Manually added methods are known but not documented or discoverable","GetFlags":{"short_help":"Deprecated"}},"name":"Media pool item"}

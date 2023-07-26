@@ -1,1 +1,1 @@
-{"name":"Folder","methods":{"GetClips":{"short_help":"Deprecated"},"info_text":"Manually added methods are known but not documented or discoverable","GetSubFolders":{"short_help":"Deprecated"},"header_text":"Added Methods"}}
+{"methods":{"header_text":"Added Methods","info_text":"Manually added methods are known but not documented or discoverable","GetClips":{"short_help":"Deprecated"},"GetSubFolders":{"short_help":"Deprecated"}},"name":"Folder"}

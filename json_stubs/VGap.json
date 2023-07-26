@@ -1,1 +1,1 @@
-{"name":"VGap","methods":{"info_text":"Discovered methods might be available in many contexts, but most typically in Fuse scripts","VGap":{"usage":["VGap VGap(TagList tags)"],"short_help":"VGap constructor"},"header_text":"Discovered Methods"},"class_inheritance":["LayoutObj","Gap"]}
+{"name":"VGap","methods":{"header_text":"Discovered Methods","info_text":"Discovered methods might be available in many contexts, but most typically in Fuse scripts","VGap":{"short_help":"VGap constructor","usage":["VGap VGap(TagList tags)"]}},"class_inheritance":["LayoutObj","Gap"]}

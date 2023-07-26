@@ -1,1 +1,7 @@
-{"name":"ImageOverlayControl","class_inheritance":["Object","PreviewControl"]}
+{
+    "class_inheritance": [
+        "Object",
+        "PreviewControl"
+    ],
+    "name": "ImageOverlayControl"
+}

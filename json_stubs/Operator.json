@@ -1,1 +1,387 @@
-{"methods":{"GetChildrenList":{"short_help":"Returns a list of all children tools, or selected children tools","usage":["table :GetChildrenList([boolean selected], [string regid])"],"description":"Arguments:\n   selected - pass 'true' to get only selected tools\n   RegID    - pass a Registry ID string to get only tools of that type"},"GetOutputList":{"see_also":"[GetInputList()](#GetInputList)","short_help":"Return a table of all outputs on this tool","usage":["table :GetOutputList([string type])"]},"GetInputList":{"see_also":"[GetOutputList()](#GetOutputList)","short_help":"Return a table of all inputs on this tool","usage":["table :GetInputList([string type])"]},"Delete":{"usage":[" :Delete()"],"short_help":"Delete this tool"},"AddModifier":{"see_also":"[Input()](#Input)","short_help":"Creates a modifier and connects it to an input","usage":["boolean :AddModifier(string input, string modifier)"],"description":"Arguments:\n\tinput\t- ID of the input to be connected to\n\tmodifier\t- ID of the modifier to be created"},"FindMainOutput":{"see_also":"[Output()](#Output)","short_help":"Returns the tool's main (visible) output","usage":["Output :FindMainOutput(number index)"],"description":"Arguments:\n\tindex\t- Output index value of 1 or greater"},"FindMainInput":{"see_also":"[Input()](#Input)","short_help":"Returns the tool's main (visible) input","usage":["Input :FindMainInput(number index)"],"description":"Arguments:\n\tindex\t- Input index value of 1 or greater"},"Refresh":{"short_help":"Refreshes the tool, showing updated user controls","usage":[" :Refresh()"],"description":"Returns: handle to the new (refreshed) tool"},"ShowControlPage":{"short_help":"Makes the specified control page visible","usage":[" :ShowControlPage(string name)"],"description":"Arguments:\n\tname\t- Control page to show"},"GetControlPageNames":{"short_help":"Returns a table of control page names","usage":["table :GetControlPageNames()"],"description":"Returns: table of control page names, indexed by page number"},"IsGPUEnabled":{"usage":["boolean :IsGPUEnabled(Request req)"]},"RemoveControlPage":{"usage":["boolean :RemoveControlPage(string name)"]},"header_text":"Discovered Methods","SetRegion":{"usage":[" :SetRegion(TimeRegion tr)"]},"GetKeyFrames":{"see_also":"[GetKeyFrames()](PlainInput.md#GetKeyFrames)","short_help":"Return a table of all keyframe times for this tool","usage":["table :GetKeyFrames()"]},"UpdateControls":{"usage":[" :UpdateControls()"]},"_CloneInput":{"usage":["Input :_CloneInput(Input from, string id, TagList tags)"]},"info_text":"Discovered methods might be available in many contexts, but most typically in Fuse scripts","EndUndo":{"usage":[" :EndUndo(boolean keep)"]},"StartUndo":{"usage":[" :StartUndo(string name)"]},"AddControlPage":{"usage":["int32 :AddControlPage(string name, TagList tags)"]},"_AddInput":{"usage":["Input :_AddInput(string name, string id, TagList tags)"]},"SetProgress":{"usage":["boolean :SetProgress(float64 prog)"]},"GetSourceTool":{"usage":["Operator :GetSourceTool(string name)"]},"GetRegion":{"usage":["TimeRegion :GetRegion()"]},"GetPrevKeyTime":{"usage":["TimeStamp :GetPrevKeyTime(TimeStamp t)"]},"GetNextKeyTime":{"usage":["TimeStamp :GetNextKeyTime(TimeStamp t)"]},"FindSubInputs":{"usage":["SubInputs :FindSubInputs(string name)"]},"GetData":{"see_also":"[SetData()](#SetData)","short_help":"Get custom persistent data","usage":["(number|string|boolean|table) :GetData([string name])"]},"SetData":{"see_also":"[GetData()](#GetData)","short_help":"Set custom persistent data","usage":[" :SetData(string name, (number|string|boolean|table) value)"]},"GetInput":{"see_also":"[SetInput()](#SetInput)","short_help":"Fetches the value of an input at a given time","usage":["(number|string|Parameter) :GetInput(string id, [number time])"],"description":"Arguments:\n\tid\t- ID of input\n\ttime\t- keyframe to fetch (not required for non-animated inputs)"},"AddSpacer":{"usage":["Input :AddSpacer(string id, TagList tags)"]},"AddSeparator":{"usage":["Input :AddSeparator(string id, TagList tags)"]},"AddSubInputs":{"usage":["SubInputs :AddSubInputs(string subid, TagList tags)"]},"LoadSettings":{"see_also":"[SaveSettings()](#SaveSettings)","short_help":"Load the tools's settings from a file or table","usage":["boolean :LoadSettings(string filename)","boolean :LoadSettings(table settings)"]},"ConnectInput":{"see_also":"[Input()](#Input), [Output()](#Output)","short_help":"Connect or disconnect an Input","usage":["boolean :ConnectInput(string input, (Tool|Output|nil) target)"],"description":"Arguments:\n\tinput\t- ID of the input to be connected/disconnected\n\ttarget\t- Tool or Output to connect the Input to, or nil to disconnect"},"BeginControlNest":{"usage":["Input :BeginControlNest(string name, string id, boolean expand, TagList tags)"]},"AddOutput":{"usage":["Output :AddOutput(string name, string id, TagList tags)"]},"SetCurrentSettings":{"see_also":"[GetCurrentSettings()](#GetCurrentSettings)","short_help":"Sets the tool's current settings slot","usage":["number :SetCurrentSettings()"]},"EndControlNest":{"usage":[" :EndControlNest()"]},"GetCurrentSettings":{"see_also":"[SetCurrentSettings()](#SetCurrentSettings)","short_help":"Returns the index of the tool's current settings slot","usage":["number :GetCurrentSettings()"]},"SaveSettings":{"see_also":"[LoadSettings()](#LoadSettings)","short_help":"Save the tool's current settings to a file or table","usage":["boolean :SaveSettings(string filename)","table :SaveSettings(boolean customdata)"]},"FindInput":{"usage":["Input :FindInput(string name)"]},"SetInput":{"see_also":"[GetInput()](#GetInput)","short_help":"Sets the value of an input at a given time","usage":[" :SetInput(string id, (number|string|Parameter) value, number time)"],"description":"Arguments:\n\tinputID\t- ID of input\n\tvalue\t- number, string or Parameter object to set\n\ttime\t- keyframe to set (not required for non-animated inputs)"},"FindOutput":{"usage":["Output :FindOutput(string name)"]}},"attributes":{"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGS_Name":{"type":"Operator","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGI_ClassType":{"type":"0 = CT_Any","value":"number (integer)"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGS_VersionString":{"type":"Built: Jul 19 2023","value":"string"},"REGS_ID":{"type":"Operator","value":"string"},"REGB_ControlView":{"type":"false","value":"boolean"},"REGI_Priority":{"type":"0","value":"number (integer)"}},"name":"Operator","properties":{"Composition":{"return_type":"Composition","short_help":"The composition that this tool belongs to","access_class":"Read Only"},"ProgressScale":{"return_type":"uint16","access_class":"Read/Write"},"ProgressCount":{"return_type":"uint16","access_class":"Read/Write"},"Status":{"return_type":"string","access_class":"Read Only"},"Document":{"return_type":"FusionDoc","access_class":"Read Only"},"ParentTool":{"return_type":"Tool","short_help":"The parent tool of this tool","access_class":"Read Only"},"UserControls":{"return_type":"table","short_help":"Table of user-control definitions","access_class":"Read/Write"},"FillColor":{"return_type":"table","description":"Examples: tool.FillColor = { R=0.5, G=0.3, B=0.2}\n          tool.FillColor = nil","see_also":"[TileColor](#TileColor), [TextColor](#TextColor)","access_class":"Read/Write"},"TextColor":{"see_also":"[TileColor](#TileColor), [FillColor](#FillColor)","short_help":"Color of a tool's icon text in the Flow view","return_type":"table","description":"Examples: tool.TextColor = { R=0.5, G=0.3, B=0.2}\n          tool.TextColor = nil","access_class":"Read/Write"},"ID":{"return_type":"string","short_help":"Registry ID of this tool","access_class":"Read Only"},"IsBeingLoaded":{"return_type":"boolean","access_class":"Read Only"},"info_text":"Discovered properties might be available in many contexts, but most typically in Fuse scripts","TileColor":{"see_also":"[TextColor](#TextColor), [FillColor](#FillColor)","short_help":"Color of a tool's icon in the Flow view","return_type":"table","description":"Examples: tool.TileColor = { R=0.5, G=0.3, B=0.2}\n          tool.TileColor = nil","access_class":"Read/Write"},"Override":{"return_type":"uint32","access_class":"Read/Write"},"Name":{"return_type":"string","short_help":"Friendly name of this tool","access_class":"Read Only"},"header_text":"Discovered Properties"},"class_inheritance":["Object"]}
+{
+    "name": "Operator",
+    "properties": {
+        "Status": {
+            "return_type": "string",
+            "access_class": "Read Only"
+        },
+        "info_text": "Discovered properties might be available in many contexts, but most typically in Fuse scripts",
+        "ProgressScale": {
+            "return_type": "uint16",
+            "access_class": "Read/Write"
+        },
+        "Name": {
+            "short_help": "Friendly name of this tool",
+            "return_type": "string",
+            "access_class": "Read Only"
+        },
+        "ProgressCount": {
+            "return_type": "uint16",
+            "access_class": "Read/Write"
+        },
+        "ParentTool": {
+            "short_help": "The parent tool of this tool",
+            "return_type": "Tool",
+            "access_class": "Read Only"
+        },
+        "UserControls": {
+            "short_help": "Table of user-control definitions",
+            "return_type": "table",
+            "access_class": "Read/Write"
+        },
+        "FillColor": {
+            "return_type": "table",
+            "description": "Examples: tool.FillColor = { R=0.5, G=0.3, B=0.2}\n          tool.FillColor = nil",
+            "see_also": "[TileColor](#TileColor), [TextColor](#TextColor)",
+            "access_class": "Read/Write"
+        },
+        "header_text": "Discovered Properties",
+        "TextColor": {
+            "see_also": "[TileColor](#TileColor), [FillColor](#FillColor)",
+            "description": "Examples: tool.TextColor = { R=0.5, G=0.3, B=0.2}\n          tool.TextColor = nil",
+            "short_help": "Color of a tool's icon text in the Flow view",
+            "return_type": "table",
+            "access_class": "Read/Write"
+        },
+        "TileColor": {
+            "see_also": "[TextColor](#TextColor), [FillColor](#FillColor)",
+            "description": "Examples: tool.TileColor = { R=0.5, G=0.3, B=0.2}\n          tool.TileColor = nil",
+            "short_help": "Color of a tool's icon in the Flow view",
+            "return_type": "table",
+            "access_class": "Read/Write"
+        },
+        "IsBeingLoaded": {
+            "return_type": "boolean",
+            "access_class": "Read Only"
+        },
+        "ID": {
+            "short_help": "Registry ID of this tool",
+            "return_type": "string",
+            "access_class": "Read Only"
+        },
+        "Document": {
+            "return_type": "FusionDoc",
+            "access_class": "Read Only"
+        },
+        "Composition": {
+            "short_help": "The composition that this tool belongs to",
+            "return_type": "Composition",
+            "access_class": "Read Only"
+        },
+        "Override": {
+            "return_type": "uint32",
+            "access_class": "Read/Write"
+        }
+    },
+    "class_inheritance": [
+        "Object"
+    ],
+    "methods": {
+        "GetInput": {
+            "short_help": "Fetches the value of an input at a given time",
+            "description": "Arguments:\n\tid\t- ID of input\n\ttime\t- keyframe to fetch (not required for non-animated inputs)",
+            "see_also": "[SetInput()](#SetInput)",
+            "usage": [
+                "(number|string|Parameter) :GetInput(string id, [number time])"
+            ]
+        },
+        "GetChildrenList": {
+            "short_help": "Returns a list of all children tools, or selected children tools",
+            "description": "Arguments:\n   selected - pass 'true' to get only selected tools\n   RegID    - pass a Registry ID string to get only tools of that type",
+            "usage": [
+                "table :GetChildrenList([boolean selected], [string regid])"
+            ]
+        },
+        "GetOutputList": {
+            "short_help": "Return a table of all outputs on this tool",
+            "see_also": "[GetInputList()](#GetInputList)",
+            "usage": [
+                "table :GetOutputList([string type])"
+            ]
+        },
+        "GetInputList": {
+            "short_help": "Return a table of all inputs on this tool",
+            "see_also": "[GetOutputList()](#GetOutputList)",
+            "usage": [
+                "table :GetInputList([string type])"
+            ]
+        },
+        "Delete": {
+            "short_help": "Delete this tool",
+            "usage": [
+                " :Delete()"
+            ]
+        },
+        "AddModifier": {
+            "short_help": "Creates a modifier and connects it to an input",
+            "description": "Arguments:\n\tinput\t- ID of the input to be connected to\n\tmodifier\t- ID of the modifier to be created",
+            "see_also": "[Input()](#Input)",
+            "usage": [
+                "boolean :AddModifier(string input, string modifier)"
+            ]
+        },
+        "FindMainOutput": {
+            "short_help": "Returns the tool's main (visible) output",
+            "description": "Arguments:\n\tindex\t- Output index value of 1 or greater",
+            "see_also": "[Output()](#Output)",
+            "usage": [
+                "Output :FindMainOutput(number index)"
+            ]
+        },
+        "FindMainInput": {
+            "short_help": "Returns the tool's main (visible) input",
+            "description": "Arguments:\n\tindex\t- Input index value of 1 or greater",
+            "see_also": "[Input()](#Input)",
+            "usage": [
+                "Input :FindMainInput(number index)"
+            ]
+        },
+        "Refresh": {
+            "short_help": "Refreshes the tool, showing updated user controls",
+            "description": "Returns: handle to the new (refreshed) tool",
+            "usage": [
+                " :Refresh()"
+            ]
+        },
+        "ShowControlPage": {
+            "short_help": "Makes the specified control page visible",
+            "description": "Arguments:\n\tname\t- Control page to show",
+            "usage": [
+                " :ShowControlPage(string name)"
+            ]
+        },
+        "GetControlPageNames": {
+            "short_help": "Returns a table of control page names",
+            "description": "Returns: table of control page names, indexed by page number",
+            "usage": [
+                "table :GetControlPageNames()"
+            ]
+        },
+        "EndUndo": {
+            "usage": [
+                " :EndUndo(boolean keep)"
+            ]
+        },
+        "header_text": "Discovered Methods",
+        "FindInput": {
+            "usage": [
+                "Input :FindInput(string name)"
+            ]
+        },
+        "FindOutput": {
+            "usage": [
+                "Output :FindOutput(string name)"
+            ]
+        },
+        "FindSubInputs": {
+            "usage": [
+                "SubInputs :FindSubInputs(string name)"
+            ]
+        },
+        "GetNextKeyTime": {
+            "usage": [
+                "TimeStamp :GetNextKeyTime(TimeStamp t)"
+            ]
+        },
+        "AddOutput": {
+            "usage": [
+                "Output :AddOutput(string name, string id, TagList tags)"
+            ]
+        },
+        "AddSeparator": {
+            "usage": [
+                "Input :AddSeparator(string id, TagList tags)"
+            ]
+        },
+        "AddSpacer": {
+            "usage": [
+                "Input :AddSpacer(string id, TagList tags)"
+            ]
+        },
+        "AddSubInputs": {
+            "usage": [
+                "SubInputs :AddSubInputs(string subid, TagList tags)"
+            ]
+        },
+        "GetData": {
+            "short_help": "Get custom persistent data",
+            "see_also": "[SetData()](#SetData)",
+            "usage": [
+                "(number|string|boolean|table) :GetData([string name])"
+            ]
+        },
+        "BeginControlNest": {
+            "usage": [
+                "Input :BeginControlNest(string name, string id, boolean expand, TagList tags)"
+            ]
+        },
+        "GetPrevKeyTime": {
+            "usage": [
+                "TimeStamp :GetPrevKeyTime(TimeStamp t)"
+            ]
+        },
+        "SetData": {
+            "short_help": "Set custom persistent data",
+            "see_also": "[GetData()](#GetData)",
+            "usage": [
+                " :SetData(string name, (number|string|boolean|table) value)"
+            ]
+        },
+        "GetSourceTool": {
+            "usage": [
+                "Operator :GetSourceTool(string name)"
+            ]
+        },
+        "GetKeyFrames": {
+            "short_help": "Return a table of all keyframe times for this tool",
+            "see_also": "[GetKeyFrames()](PlainInput.md#GetKeyFrames)",
+            "usage": [
+                "table :GetKeyFrames()"
+            ]
+        },
+        "IsGPUEnabled": {
+            "usage": [
+                "boolean :IsGPUEnabled(Request req)"
+            ]
+        },
+        "RemoveControlPage": {
+            "usage": [
+                "boolean :RemoveControlPage(string name)"
+            ]
+        },
+        "SetProgress": {
+            "usage": [
+                "boolean :SetProgress(float64 prog)"
+            ]
+        },
+        "ConnectInput": {
+            "short_help": "Connect or disconnect an Input",
+            "description": "Arguments:\n\tinput\t- ID of the input to be connected/disconnected\n\ttarget\t- Tool or Output to connect the Input to, or nil to disconnect",
+            "see_also": "[Input()](#Input), [Output()](#Output)",
+            "usage": [
+                "boolean :ConnectInput(string input, (Tool|Output|nil) target)"
+            ]
+        },
+        "info_text": "Discovered methods might be available in many contexts, but most typically in Fuse scripts",
+        "SetRegion": {
+            "usage": [
+                " :SetRegion(TimeRegion tr)"
+            ]
+        },
+        "_AddInput": {
+            "usage": [
+                "Input :_AddInput(string name, string id, TagList tags)"
+            ]
+        },
+        "StartUndo": {
+            "usage": [
+                " :StartUndo(string name)"
+            ]
+        },
+        "GetRegion": {
+            "usage": [
+                "TimeRegion :GetRegion()"
+            ]
+        },
+        "UpdateControls": {
+            "usage": [
+                " :UpdateControls()"
+            ]
+        },
+        "EndControlNest": {
+            "usage": [
+                " :EndControlNest()"
+            ]
+        },
+        "AddControlPage": {
+            "usage": [
+                "int32 :AddControlPage(string name, TagList tags)"
+            ]
+        },
+        "_CloneInput": {
+            "usage": [
+                "Input :_CloneInput(Input from, string id, TagList tags)"
+            ]
+        },
+        "SetCurrentSettings": {
+            "short_help": "Sets the tool's current settings slot",
+            "see_also": "[GetCurrentSettings()](#GetCurrentSettings)",
+            "usage": [
+                "number :SetCurrentSettings()"
+            ]
+        },
+        "GetCurrentSettings": {
+            "short_help": "Returns the index of the tool's current settings slot",
+            "see_also": "[SetCurrentSettings()](#SetCurrentSettings)",
+            "usage": [
+                "number :GetCurrentSettings()"
+            ]
+        },
+        "SaveSettings": {
+            "short_help": "Save the tool's current settings to a file or table",
+            "see_also": "[LoadSettings()](#LoadSettings)",
+            "usage": [
+                "boolean :SaveSettings(string filename)",
+                "table :SaveSettings(boolean customdata)"
+            ]
+        },
+        "LoadSettings": {
+            "short_help": "Load the tools's settings from a file or table",
+            "see_also": "[SaveSettings()](#SaveSettings)",
+            "usage": [
+                "boolean :LoadSettings(string filename)",
+                "boolean :LoadSettings(table settings)"
+            ]
+        },
+        "SetInput": {
+            "short_help": "Sets the value of an input at a given time",
+            "description": "Arguments:\n\tinputID\t- ID of input\n\tvalue\t- number, string or Parameter object to set\n\ttime\t- keyframe to set (not required for non-animated inputs)",
+            "see_also": "[GetInput()](#GetInput)",
+            "usage": [
+                " :SetInput(string id, (number|string|Parameter) value, number time)"
+            ]
+        }
+    },
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "0 = CT_Any",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "Operator",
+            "value": "string"
+        },
+        "REGS_Name": {
+            "type": "Operator",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    }
+}

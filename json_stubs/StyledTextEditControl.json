@@ -1,1 +1,1 @@
-{"name":"StyledTextEditControl","class_inheritance":["Object","InputControl","TextEditControl"]}
+{"class_inheritance":["Object","InputControl","TextEditControl"],"name":"StyledTextEditControl"}
