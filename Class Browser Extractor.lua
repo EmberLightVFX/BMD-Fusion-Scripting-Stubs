@@ -1663,6 +1663,16 @@ local registry_attribute_descriptions =
 	REGB_ImageFormat_CanSave32bit = "Specify various capabilities of an image format class",
 }
 
+function clean(inputString)
+    -- Define a pattern to match all non-printable and non-ASCII characters
+    local pattern = "[^%w%p%s]"
+
+    -- Use the pattern to replace all matches with an empty string
+    local cleanedString = inputString:gsub(pattern, '')
+
+    return cleanedString
+end
+
 -- Counts the occurrences of the given pattern in a string
 local function count(text, pattern)
 	return select(2, text:gsub(pattern, ""))
@@ -4346,7 +4356,7 @@ function createPythonDocs(class_name)
 	end
 	local out = io.open(docsify_location..class_name:gsub(" ", "_")..".json", "w")
 	
-	out:write(json.encode(pythonDocs))
+	out:write(clean(json.encode(pythonDocs)))
 	out:close()
 
 end
@@ -4392,16 +4402,16 @@ local function initialize()
 	update_progress(6 * steps, 2) -- Setting step 6 twice makes it more likely that we have had time to draw the progress bar at 100%
 
 	-- Loop through all classes and generate all .MD files
-	-- sidebar = io.open(docsify_location.."_sidebar.md", "w")
-	-- sidebar:write("<!-- docs/_sidebar.md -->\n")
-	-- sidebar:write("- [Home](/)\n")
-	-- start_time = os.time()
-	-- class_names = {}
-	-- for _, class in ipairs(classes) do
-	-- 	if hide_classes_without_members == false or class.has_members then
-	-- 		class_names[#class_names+1] = class.name
-	-- 	end
-	-- end
+	sidebar = io.open(docsify_location.."_sidebar.md", "w")
+	sidebar:write("<!-- docs/_sidebar.md -->\n")
+	sidebar:write("- [Home](/)\n")
+	start_time = os.time()
+	class_names = {}
+	for _, class in ipairs(classes) do
+		if hide_classes_without_members == false or class.has_members then
+			class_names[#class_names+1] = class.name
+		end
+	end
 
 	-- Sort alphabetically
 	table.sort(class_names, function(a, b) return a:upper() < b:upper() end)
@@ -4410,8 +4420,8 @@ local function initialize()
 	
 	for i, name in pairs(class_names) do
 		display_class(name)
-		sidebar:write("- ["..name.."]("..name:gsub(" ", "_")..".json)\n")
-		update_progress(i * steps, 1, "Creating "..name:gsub(" ", "_")..".json")
+		sidebar:write("- ["..name.."]("..name:gsub(" ", "_")..".md)\n")
+		update_progress(i * steps, 1, "Creating "..name:gsub(" ", "_")..".md")
 	end
 
 	sidebar:close()
