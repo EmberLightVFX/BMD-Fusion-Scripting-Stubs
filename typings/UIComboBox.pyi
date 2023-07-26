@@ -1,8 +1,20 @@
-from typing import Any
+from typing import Any, Literal
 
 class _UIComboBox:
 
 	#---Properties---#
+	MaxVisibleItems: Any
+	"""
+	Read/Write
+	"""
+	SizeAdjustPolicy: Any
+	"""
+	Read/Write
+	"""
+	MinimumContentsLength: Any
+	"""
+	Read/Write
+	"""
 	InsertPolicy: Any
 	"""
 	Read/Write
@@ -11,7 +23,7 @@ class _UIComboBox:
 	"""
 	Read/Write
 	"""
-	AutoCompletionCaseSensitivity: Any
+	LineEdit: Any
 	"""
 	Read/Write
 	"""
@@ -19,9 +31,9 @@ class _UIComboBox:
 	"""
 	Read/Write
 	"""
-	MinimumContentsLength: Any
+	ItemText: Any
 	"""
-	Read/Write
+	Read Only
 	"""
 	Editable: Any
 	"""
@@ -31,9 +43,9 @@ class _UIComboBox:
 	"""
 	Read/Write
 	"""
-	ItemText: Any
+	IconSize: Any
 	"""
-	Read Only
+	Read/Write
 	"""
 	CurrentText: Any
 	"""
@@ -43,7 +55,7 @@ class _UIComboBox:
 	"""
 	Read/Write
 	"""
-	LineEdit: Any
+	AutoCompletionCaseSensitivity: Any
 	"""
 	Read/Write
 	"""
@@ -51,44 +63,42 @@ class _UIComboBox:
 	"""
 	Read/Write
 	"""
-	MaxVisibleItems: Any
-	"""
-	Read/Write
-	"""
-	SizeAdjustPolicy: Any
-	"""
-	Read/Write
-	"""
-	IconSize: Any
-	"""
-	Read/Write
-	"""
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGI_Version: int
 
-	REGS_VersionString: str
+	REGB_Hide: bool
+
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGB_ControlView: bool
-
 	REGS_ID: str
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
+	def GetFrame(self) -> None:
+		...
+	def SetSizeAdjustPolicy(self) -> None:
+		...
+	def GetSizeAdjustPolicy(self) -> None:
+		...
+	def SetInsertPolicy(self) -> None:
+		...
+	def GetInsertPolicy(self) -> None:
+		...
 	def SetAutoCompletionCaseSensitivity(self) -> None:
 		...
 	def GetAutoCompletionCaseSensitivity(self) -> None:
@@ -97,7 +107,7 @@ class _UIComboBox:
 		...
 	def GetItemText(self) -> None:
 		...
-	def AddItem(self) -> None:
+	def InsertItems(self) -> None:
 		...
 	def AddItems(self) -> None:
 		...
@@ -113,7 +123,7 @@ class _UIComboBox:
 		...
 	def ShowPopup(self) -> None:
 		...
-	def header_text(self):
+	def Count(self) -> None:
 		...
 	def RemoveItem(self) -> None:
 		...
@@ -123,7 +133,7 @@ class _UIComboBox:
 		...
 	def SetEditable(self) -> None:
 		...
-	def GetEditable(self) -> None:
+	def AddItem(self) -> None:
 		...
 	def SetCurrentText(self) -> None:
 		...
@@ -133,47 +143,37 @@ class _UIComboBox:
 		...
 	def GetCurrentIndex(self) -> None:
 		...
-	def SetIconSize(self) -> None:
+	def SetMinimumContentsLength(self) -> None:
 		...
 	def GetMinimumContentsLength(self) -> None:
+		...
+	def GetIconSize(self) -> None:
 		...
 	def SetDuplicatesEnabled(self) -> None:
 		...
 	def GetDuplicatesEnabled(self) -> None:
 		...
+	def Clear(self) -> None:
+		...
 	def SetFrame(self) -> None:
+		...
+	def SetIconSize(self) -> None:
 		...
 	def SetAutoCompletion(self) -> None:
 		...
 	def GetAutoCompletion(self) -> None:
 		...
+	def GetEditable(self) -> None:
+		...
 	def SetMaxCount(self) -> None:
 		...
 	def GetMaxCount(self) -> None:
 		...
+	def header_text(self):
+		...
 	def SetMaxVisibleItems(self) -> None:
 		...
-	def Clear(self) -> None:
-		...
-	def Count(self) -> None:
-		...
-	def SetMinimumContentsLength(self) -> None:
-		...
-	def GetFrame(self) -> None:
-		...
-	def InsertItems(self) -> None:
-		...
-	def GetIconSize(self) -> None:
-		...
-	def SetSizeAdjustPolicy(self) -> None:
-		...
-	def GetSizeAdjustPolicy(self) -> None:
-		...
 	def GetMaxVisibleItems(self) -> None:
-		...
-	def SetInsertPolicy(self) -> None:
-		...
-	def GetInsertPolicy(self) -> None:
 		...
 
 UIComboBox = _UIComboBox

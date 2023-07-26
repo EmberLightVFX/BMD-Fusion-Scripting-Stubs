@@ -4,43 +4,43 @@ from Object import _Object
 class _ChildGroup:
 
 	#---Properties---#
-	m_Owner: _Object
+	m_GroupID: str
 	"""
 	Read Only
 	"""
-	m_GroupID: str
+	m_Owner: _Object
 	"""
 	Read Only
 	"""
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
-
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGB_ControlView: bool
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
+
 
 	#---Methods---#
-	def GetOwner(self):
+	def header_text(self):
 		...
 	def GetID(self):
 		...
-	def header_text(self):
+	def GetOwner(self):
 		...
 
 ChildGroup = _ChildGroup

@@ -1,11 +1,49 @@
 from typing import Any
 
-from Tool import _Tool
+from _non_existing import _Tool
 
 
 class _FuFrame:
 
 	#---Properties---#
+	CurrentView: Any
+	"""
+	Represents the currently active view for this frame window
+
+			The CurrentView variable represents the currently active view for this frame window.
+
+	Read Only
+	"""
+	TransportView: Any
+	"""
+	Represents this frame window's transport controls view
+
+	Read Only
+	"""
+	ToolView: Any
+	"""
+	Represents this frame window's Tool controls view
+
+	Read Only
+	"""
+	TimelineView: Any
+	"""
+	Represents this frame window's Timeline view
+
+	Read Only
+	"""
+	TimeRulerView: Any
+	"""
+	Represents this frame window's time ruler
+
+	Read Only
+	"""
+	ModifierView: Any
+	"""
+	Represents this frame window's Modifier controls view
+
+	Read Only
+	"""
 	ConsoleView: Any
 	"""
 	Represents this frame window's console
@@ -14,9 +52,11 @@ class _FuFrame:
 
 	Read Only
 	"""
-	TransportView: Any
+	FlowView: Any
 	"""
-	Represents this frame window's transport controls view
+	Represents this frame window's Flow view
+
+			The FlowView variable represents the FuView object used to displaythe various tool connections for the frame's Composition.
 
 	Read Only
 	"""
@@ -42,46 +82,6 @@ class _FuFrame:
 
 	Read Only
 	"""
-	ModifierView: Any
-	"""
-	Represents this frame window's Modifier controls view
-
-	Read Only
-	"""
-	TimeRulerView: Any
-	"""
-	Represents this frame window's time ruler
-
-	Read Only
-	"""
-	CurrentView: Any
-	"""
-	Represents the currently active view for this frame window
-
-			The CurrentView variable represents the currently active view for this frame window.
-
-	Read Only
-	"""
-	ToolView: Any
-	"""
-	Represents this frame window's Tool controls view
-
-	Read Only
-	"""
-	TimelineView: Any
-	"""
-	Represents this frame window's Timeline view
-
-	Read Only
-	"""
-	FlowView: Any
-	"""
-	Represents this frame window's Flow view
-
-			The FlowView variable represents the FuView object used to displaythe various tool connections for the frame's Composition.
-
-	Read Only
-	"""
 	Composition: Any
 	"""
 	Represents this frame window's Composition
@@ -100,25 +100,25 @@ class _FuFrame:
 	"""
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
 
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
+	REGI_Priority: int
 
 	REGS_ID: str
 
-	REGB_ControlView: bool
+	REGS_Name: str
 
-	REGI_Priority: int
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
@@ -140,6 +140,8 @@ class _FuFrame:
 		If no arguments are supplied, all views are cleared.
 		"""
 		...
+	def header_text(self):
+		...
 	def GetViewList(self) -> dict[Any, Any]:
 		"""
 		Returns the list of views within this frame
@@ -152,8 +154,6 @@ class _FuFrame:
 		"""
 		Retrieves a table of previews
 		"""
-		...
-	def header_text(self):
 		...
 
 FuFrame = _FuFrame

@@ -1,17 +1,9 @@
-from typing import Any
-
-from Registry import _Registry
-from object import _object
-
+from typing import Literal
 
 class _Registry:
 
 	#---Properties---#
-	m_ClassFlags: int
-	"""
-	Read/Write
-	"""
-	m_ClassType: int
+	m_RegFlags: int
 	"""
 	Read/Write
 	"""
@@ -21,13 +13,27 @@ class _Registry:
 
 	Read Only
 	"""
+	Name: str
+	"""
+	Friendly name of this Registry node
+
+	Read Only
+	"""
+	m_ClassFlags: int
+	"""
+	Read/Write
+	"""
+	m_ClassType: int
+	"""
+	Read/Write
+	"""
 	m_EnvID: int
 	"""
 	Read/Write
 	"""
-	m_RegFlags: int
+	m_ID: str
 	"""
-	Read/Write
+	Read Only
 	"""
 	ID: str
 	"""
@@ -39,52 +45,35 @@ class _Registry:
 	"""
 	Read Only
 	"""
-	m_ID: str
-	"""
-	Read Only
-	"""
 	m_Parent: _Registry
 	"""
 	Read Only
 	"""
-	Name: str
-	"""
-	Friendly name of this Registry node
-
-	Read Only
-	"""
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
-
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGB_ControlView: bool
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
+
 
 	#---Methods---#
-	def GetParent(self) -> _Registry:
-		...
 	def info_text(self):
-		...
-	def New(self, object_saved_settings: dict[Any, Any] = dict[Any, Any]()) -> _object:
-		"""
-		Returns a new instance of this class type
-		"""
 		...
 	def IsRegClassType(self) -> bool:
 		"""
@@ -97,6 +86,8 @@ class _Registry:
 		"""
 		...
 	def header_text(self):
+		...
+	def GetParent(self) -> _Registry:
 		...
 
 Registry = _Registry

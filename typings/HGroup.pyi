@@ -1,17 +1,19 @@
-from HGroup HGroupTagList tags import _HGroup HGroupTagList tags
+from typing import Literal
+
+from TagList import _TagList
 
 
 class _HGroup:
 
 	#---Methods---#
-	def HGroup(self) -> _HGroup HGroupTagList tags:
-		"""
-		HGroup constructor
-		"""
+	def header_text(self):
 		...
 	def info_text(self):
 		...
-	def header_text(self):
+	def HGroup(self, tags: _TagList) -> _HGroup:
+		"""
+		HGroup constructor
+		"""
 		...
 
 HGroup = _HGroup

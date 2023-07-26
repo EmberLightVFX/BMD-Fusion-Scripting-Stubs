@@ -1,17 +1,19 @@
-from VGap VGapTagList tags import _VGap VGapTagList tags
+from typing import Literal
+
+from TagList import _TagList
 
 
 class _VGap:
 
 	#---Methods---#
+	def header_text(self):
+		...
 	def info_text(self):
 		...
-	def VGap(self) -> _VGap VGapTagList tags:
+	def VGap(self, tags: _TagList) -> _VGap:
 		"""
 		VGap constructor
 		"""
-		...
-	def header_text(self):
 		...
 
 VGap = _VGap

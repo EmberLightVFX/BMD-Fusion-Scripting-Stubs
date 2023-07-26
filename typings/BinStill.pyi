@@ -1,36 +1,36 @@
 class _BinStill:
 
 	#---Attributes---#
+	REGS_FileName: str
+
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
-	REGS_VersionString: str
-
 	REGI_ClassType: int
-
-	REGS_FileName: str
-
-	REGB_ControlView: bool
-
-	REGS_ID: str
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
+	def header_text(self):
+		...
 	def Defragment(self) -> None:
 		"""
 		Defragment this clip
 		"""
-		...
-	def header_text(self):
 		...
 
 BinStill = _BinStill

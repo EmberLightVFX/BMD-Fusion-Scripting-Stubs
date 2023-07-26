@@ -1,24 +1,26 @@
+from typing import Literal
+
 from TagList import _TagList
 
 
 class _ScriptObject:
 
 	#---Properties---#
-	TypeNamePtr: str
+	TypeName: str
 	"""
 	Read Only
 	"""
-	TypeName: str
+	TypeNamePtr: str
 	"""
 	Read Only
 	"""
 
 	#---Methods---#
-	def _SetAttrs(self, tags: _TagList) -> bool:
+	def header_text(self):
 		...
 	def info_text(self):
 		...
-	def header_text(self):
+	def _SetAttrs(self, tags: _TagList) -> bool:
 		...
 
 ScriptObject = _ScriptObject

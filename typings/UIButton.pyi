@@ -1,41 +1,9 @@
-from typing import Any
+from typing import Any, Literal
 
 class _UIButton:
 
 	#---Properties---#
-	Icon: Any
-	"""
-	Write Only
-	"""
-	Flat: Any
-	"""
-	Read/Write
-	"""
 	AutoRepeatInterval: Any
-	"""
-	Read/Write
-	"""
-	AutoDefault: Any
-	"""
-	Read/Write
-	"""
-	Text: Any
-	"""
-	Read/Write
-	"""
-	AutoRepeatDelay: Any
-	"""
-	Read/Write
-	"""
-	AutoExclusive: Any
-	"""
-	Read/Write
-	"""
-	Down: Any
-	"""
-	Read/Write
-	"""
-	AutoRepeat: Any
 	"""
 	Read/Write
 	"""
@@ -43,7 +11,31 @@ class _UIButton:
 	"""
 	Read/Write
 	"""
+	IconSize: Any
+	"""
+	Read/Write
+	"""
+	AutoRepeatDelay: Any
+	"""
+	Read/Write
+	"""
 	Checkable: Any
+	"""
+	Read/Write
+	"""
+	AutoExclusive: Any
+	"""
+	Read/Write
+	"""
+	AutoRepeat: Any
+	"""
+	Read/Write
+	"""
+	Flat: Any
+	"""
+	Read/Write
+	"""
+	Down: Any
 	"""
 	Read/Write
 	"""
@@ -51,77 +43,51 @@ class _UIButton:
 	"""
 	Read/Write
 	"""
-	IconSize: Any
+	Text: Any
 	"""
 	Read/Write
 	"""
+	AutoDefault: Any
+	"""
+	Read/Write
+	"""
+	Icon: Any
+	"""
+	Write Only
+	"""
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGI_Version: int
 
-	REGS_VersionString: str
+	REGB_Hide: bool
+
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGB_ControlView: bool
-
 	REGS_ID: str
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
-	def SetAutoExclusive(self) -> None:
-		...
-	def GetAutoExclusive(self) -> None:
-		...
-	def SetAutoRepeatInterval(self) -> None:
-		...
-	def GetAutoRepeatInterval(self) -> None:
-		...
-	def SetAutoRepeatDelay(self) -> None:
-		...
-	def GetAutoRepeatDelay(self) -> None:
-		...
-	def SetText(self) -> None:
-		...
-	def SetAutoRepeat(self) -> None:
-		...
-	def GetAutoRepeat(self) -> None:
-		...
-	def SetDown(self) -> None:
-		...
-	def GetDown(self) -> None:
-		...
-	def SetCheckable(self) -> None:
-		...
-	def GetCheckable(self) -> None:
-		...
-	def SetChecked(self) -> None:
-		...
-	def GetChecked(self) -> None:
-		...
 	def SetFlat(self) -> None:
 		...
 	def GetFlat(self) -> None:
 		...
-	def Toggle(self) -> None:
-		...
 	def SetAutoDefault(self) -> None:
 		...
 	def GetAutoDefault(self) -> None:
-		...
-	def SetIcon(self) -> None:
 		...
 	def SetDefault(self) -> None:
 		...
@@ -138,6 +104,40 @@ class _UIButton:
 	def header_text(self):
 		...
 	def GetText(self) -> None:
+		...
+	def SetAutoExclusive(self) -> None:
+		...
+	def GetAutoExclusive(self) -> None:
+		...
+	def SetAutoRepeatInterval(self) -> None:
+		...
+	def GetAutoRepeatInterval(self) -> None:
+		...
+	def SetAutoRepeatDelay(self) -> None:
+		...
+	def GetAutoRepeatDelay(self) -> None:
+		...
+	def Toggle(self) -> None:
+		...
+	def SetAutoRepeat(self) -> None:
+		...
+	def GetAutoRepeat(self) -> None:
+		...
+	def SetText(self) -> None:
+		...
+	def SetDown(self) -> None:
+		...
+	def GetDown(self) -> None:
+		...
+	def SetIcon(self) -> None:
+		...
+	def SetCheckable(self) -> None:
+		...
+	def GetCheckable(self) -> None:
+		...
+	def SetChecked(self) -> None:
+		...
+	def GetChecked(self) -> None:
 		...
 
 UIButton = _UIButton

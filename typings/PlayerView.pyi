@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Literal
 
 class _PlayerView:
 
@@ -12,33 +12,33 @@ class _PlayerView:
 	ImageWidth: Any
 
 	#---Attributes---#
+	REGS_FileName: str
+
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
-	REGS_VersionString: str
-
 	REGI_ClassType: int
-
-	REGS_FileName: str
-
-	REGB_ControlView: bool
-
-	REGS_ID: str
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
-	def Exit(self):
-		...
 	def header_text(self):
+		...
+	def Exit(self):
 		...
 
 PlayerView = _PlayerView

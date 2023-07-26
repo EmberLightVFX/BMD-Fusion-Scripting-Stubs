@@ -3,28 +3,30 @@ from typing import Any
 class _BinItem:
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
-
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGB_ControlView: bool
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
+
 
 	#---Methods---#
+	def header_text(self):
+		...
 	def Delete(self) -> None:
 		"""
 		Delete the BinItem
@@ -39,8 +41,6 @@ class _BinItem:
 		"""
 		Get custom persistent data
 		"""
-		...
-	def header_text(self):
 		...
 
 BinItem = _BinItem

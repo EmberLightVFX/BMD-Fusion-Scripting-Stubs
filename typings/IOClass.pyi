@@ -1,47 +1,49 @@
+from typing import Literal
+
 class _IOClass:
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
-
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGB_ControlView: bool
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
+
 
 	#---Methods---#
-	def Seek(self):
+	def GetFileSize(self):
 		...
 	def Close(self):
 		...
+	def WriteLine(self):
+		...
+	def Seek(self):
+		...
+	def GetFilePos(self):
+		...
 	def Flush(self):
 		...
-	def WriteLine(self):
+	def header_text(self):
 		...
 	def ReadLine(self):
 		...
 	def Write(self):
 		...
 	def Read(self):
-		...
-	def header_text(self):
-		...
-	def GetFilePos(self):
-		...
-	def GetFileSize(self):
 		...
 
 IOClass = _IOClass

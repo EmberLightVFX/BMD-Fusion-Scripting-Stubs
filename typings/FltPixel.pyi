@@ -1,26 +1,23 @@
-from FltPixel import _FltPixel
-
-
 class _FltPixel:
 
 	#---Properties---#
-	TypeNamePtr: str
+	TypeName: str
 	"""
 	Read Only
 	"""
-	TypeName: str
+	TypeNamePtr: str
 	"""
 	Read Only
 	"""
 
 	#---Methods---#
-	def _newDef(self) -> _FltPixel:
+	def header_text(self):
 		...
 	def info_text(self):
 		...
-	def Clear(self) -> None:
+	def _newDef(self) -> _FltPixel:
 		...
-	def header_text(self):
+	def Clear(self) -> None:
 		...
 
 FltPixel = _FltPixel

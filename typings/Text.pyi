@@ -1,5 +1,4 @@
-from Text Textstring val import _Text Textstring val
-
+from typing import Literal
 
 class _Text:
 
@@ -10,38 +9,38 @@ class _Text:
 	"""
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGI_Version: int
 
-	REGS_VersionString: str
+	REGB_Hide: bool
+
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGB_ControlView: bool
-
 	REGS_ID: str
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
+	def header_text(self):
+		...
 	def info_text(self):
 		...
-	def Text(self) -> _Text Textstring val:
+	def Text(self, val: str) -> _Text:
 		"""
 		Text constructor
 		"""
-		...
-	def header_text(self):
 		...
 
 Text = _Text

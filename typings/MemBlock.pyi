@@ -1,29 +1,28 @@
-from MemBlock MemBlock import _MemBlock MemBlock
-
+from typing import Literal
 
 class _MemBlock:
 
 	#---Properties---#
-	TypeNamePtr: str
+	TypeName: str
 	"""
 	Read Only
 	"""
-	TypeName: str
+	TypeNamePtr: str
 	"""
 	Read Only
 	"""
 
 	#---Methods---#
-	def Save(self, filename: str) -> bool:
+	def header_text(self):
 		...
 	def info_text(self):
 		...
-	def MemBlock(self) -> _MemBlock MemBlock:
+	def MemBlock(self) -> _MemBlock:
 		"""
 		MemBlock constructor
 		"""
 		...
-	def header_text(self):
+	def Save(self, filename: str) -> bool:
 		...
 
 MemBlock = _MemBlock

@@ -1,11 +1,13 @@
+from typing import Literal
+
 class _ImageRegion:
 
 	#---Properties---#
-	TypeNamePtr: str
+	TypeName: str
 	"""
 	Read Only
 	"""
-	TypeName: str
+	TypeNamePtr: str
 	"""
 	Read Only
 	"""

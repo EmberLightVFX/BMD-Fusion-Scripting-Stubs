@@ -1,8 +1,6 @@
-from typing import Any, overload
+from typing import Any, overload, Literal
 
 from GLViewer import _GLViewer
-from , import _,
-from  import _
 
 
 class _GLView:
@@ -14,38 +12,64 @@ class _GLView:
 	"""
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
-
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGB_ControlView: bool
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
+
 
 	#---Methods---#
-	def DisableSelectedTools(self) -> None:
+	@overload
+	def LoadPrefs(self) -> None:
 		"""
-		Pass-through the selected tools
+		Saves the current view prefs to a named configuration
 		"""
+		...
+	@overload
+	def LoadPrefs(self, configname: str) -> None:
+		"""
+		Saves the current view prefs to a named configuration
+		"""
+		...
+	def ShowLUTEditor(self) -> None:
+		"""
+		Pops up the Editor window for the current Monitor LUT
+		"""
+		...
+	def IsLUTEnabled(self) -> bool:
+		"""
+		Returns true if the current Monitor LUT is enabled
+		"""
+		...
+	def EnableLUT(self, enable: bool = bool()) -> None:
+		"""
+		Enables or disables the current Monitor LUT
+		"""
+		...
+	def AddToolAction(self):
+		...
+	def header_text(self):
 		...
 	def IsWipeEnabled(self):
 		...
 	def WipeEnable(self):
 		...
-	def GetStereoMethod(self) -> tuple[str, _,]:
+	def GetStereoMethod(self) -> str:
 		"""
 		Returns the method and options being used for stereo display
 
@@ -55,7 +79,7 @@ class _GLView:
 			option2 can be 'Monochrome', 'Half-color',	'Color', 'Optimised' or 'Dubois'
 		"""
 		...
-	def SetStereoMethod(self, method: str, option1: _ = _(), option2: _ = _()) -> None:
+	def SetStereoMethod(self, method: str, option1, option2) -> None:
 		"""
 		Sets the method for stereo display
 
@@ -81,16 +105,13 @@ class _GLView:
 		stackmethod will be 'Horizontal' or 'Vertical'
 		"""
 		...
-	@overload
-	def SavePrefs(self) -> None:
+	def SetStereoSource(self, ABsource: bool, stacked: bool, stackmethod: str = str()) -> None:
 		"""
-		Saves the current view prefs to a named configuration
-		"""
-		...
-	@overload
-	def SavePrefs(self, configname: str) -> None:
-		"""
-		Saves the current view prefs to a named configuration
+		Sets the source for the left & right stereo images
+
+		Pass true for ABsource to use the A and B buffers for left & right views.
+		Pass true for stacked to use the two halves of the image for left & right views.
+		stackmethod may be 'Horizontal' or 'Vertical' for side-by-side or over-under images, respectively.
 		"""
 		...
 	def IsStereoSwapped(self) -> bool:
@@ -98,7 +119,17 @@ class _GLView:
 		Indicates if the left & right stereo eyes are currently swapped
 		"""
 		...
-	def header_text(self):
+	@overload
+	def SwapStereo(self) -> None:
+		"""
+		Swaps left & right stereo eye views
+		"""
+		...
+	@overload
+	def SwapStereo(self, enable: bool = bool()) -> None:
+		"""
+		Swaps left & right stereo eye views
+		"""
 		...
 	def IsStereoEnabled(self) -> bool:
 		"""
@@ -125,7 +156,10 @@ class _GLView:
 			 angle = table[3]
 		"""
 		...
-	def AddToolAction(self):
+	def GetSplit(self) -> tuple[int, int, int]:
+		"""
+		Get the split position of the view
+		"""
 		...
 	def SetSplit(self, x: int, y: int, angle: int) -> None:
 		"""
@@ -137,9 +171,9 @@ class _GLView:
 		Pass-through the currently selected tools
 		"""
 		...
-	def SwapSubView(self) -> bool:
+	def SetPos(self, x: int, y: int, z: int = int()) -> bool:
 		"""
-		Swaps the SubView with the Main View
+		Set the position of the display
 		"""
 		...
 	def ShowingSubView(self) -> bool:
@@ -167,14 +201,14 @@ class _GLView:
 		Returns true if the display is locked
 		"""
 		...
-	def SetPos(self, x: int, y: int, z: int = int()) -> bool:
+	def SetLocked(self, enable: bool = bool()) -> None:
 		"""
-		Set the position of the display
+		Lock or unlock the display
 		"""
 		...
-	def GetPosTable(self) -> dict[Any, Any]:
+	def GetRotTable(self) -> dict[Any, Any]:
 		"""
-		Returns the position of the display as a table
+		Returns the x,y,z rotation of the display in degrees as a table
 
 		Returns:
 					 x = table[1]
@@ -182,9 +216,9 @@ class _GLView:
 					 z = table[3]
 		"""
 		...
-	def GetPos(self) -> tuple[int, int, int]:
+	def GetRot(self) -> tuple[int, int, int]:
 		"""
-		Returns the position of the display
+		Returns the x,y,z rotation of the display in degrees
 		"""
 		...
 	def SetRot(self, x: int, y: int, z: int) -> None:
@@ -192,11 +226,9 @@ class _GLView:
 		Set the x,y,z rotation of the display in degrees
 		"""
 		...
-	def GetPrefs(self) -> dict[Any, Any]:
+	def ResetView(self) -> None:
 		"""
-		Retrieve a table of preferences for this view
-
-		Returns a table of Preference attributes
+		Resets the display to default position etc
 		"""
 		...
 	def GetScaleFit(self) -> bool:
@@ -235,50 +267,19 @@ class _GLView:
 			 2 = A|B split
 		"""
 		...
-	def ShowLUTEditor(self) -> None:
+	def DisableSelectedTools(self) -> None:
 		"""
-		Pops up the Editor window for the current Monitor LUT
-		"""
-		...
-	def GetScale(self) -> int:
-		"""
-		Returns the scale of the display
+		Pass-through the selected tools
 		"""
 		...
-	def EnableLUT(self, enable: bool = bool()) -> None:
+	def SwapSubView(self) -> bool:
 		"""
-		Enables or disables the current Monitor LUT
-		"""
-		...
-	@overload
-	def SwapStereo(self) -> None:
-		"""
-		Swaps left & right stereo eye views
+		Swaps the SubView with the Main View
 		"""
 		...
-	@overload
-	def SwapStereo(self, enable: bool = bool()) -> None:
+	def GetPosTable(self) -> dict[Any, Any]:
 		"""
-		Swaps left & right stereo eye views
-		"""
-		...
-	def SetStereoSource(self, ABsource: bool, stacked: bool, stackmethod: str = str()) -> None:
-		"""
-		Sets the source for the left & right stereo images
-
-		Pass true for ABsource to use the A and B buffers for left & right views.
-		Pass true for stacked to use the two halves of the image for left & right views.
-		stackmethod may be 'Horizontal' or 'Vertical' for side-by-side or over-under images, respectively.
-		"""
-		...
-	def SetScale(self, scale: int) -> None:
-		"""
-		Set the scale of the display
-		"""
-		...
-	def GetRotTable(self) -> dict[Any, Any]:
-		"""
-		Returns the x,y,z rotation of the display in degrees as a table
+		Returns the position of the display as a table
 
 		Returns:
 					 x = table[1]
@@ -286,19 +287,16 @@ class _GLView:
 					 z = table[3]
 		"""
 		...
-	def SetLocked(self, enable: bool = bool()) -> None:
+	def GetPrefs(self) -> dict[Any, Any]:
 		"""
-		Lock or unlock the display
-		"""
-		...
-	def GetSplit(self) -> tuple[int, int, int]:
-		"""
-		Get the split position of the view
+		Retrieve a table of preferences for this view
+
+		Returns a table of Preference attributes
 		"""
 		...
-	def IsLUTEnabled(self) -> bool:
+	def GetPos(self) -> tuple[int, int, int]:
 		"""
-		Returns true if the current Monitor LUT is enabled
+		Returns the position of the display
 		"""
 		...
 	def LoadLUTFile(self, pathname: str) -> bool:
@@ -306,26 +304,26 @@ class _GLView:
 		Loads a LUT file, setting or LUT plugin ID into the Monitor LUT
 		"""
 		...
+	def SetScale(self, scale: int) -> None:
+		"""
+		Set the scale of the display
+		"""
+		...
+	def GetScale(self) -> int:
+		"""
+		Returns the scale of the display
+		"""
+		...
 	@overload
-	def LoadPrefs(self) -> None:
+	def SavePrefs(self) -> None:
 		"""
 		Saves the current view prefs to a named configuration
 		"""
 		...
 	@overload
-	def LoadPrefs(self, configname: str) -> None:
+	def SavePrefs(self, configname: str) -> None:
 		"""
 		Saves the current view prefs to a named configuration
-		"""
-		...
-	def ResetView(self) -> None:
-		"""
-		Resets the display to default position etc
-		"""
-		...
-	def GetRot(self) -> tuple[int, int, int]:
-		"""
-		Returns the x,y,z rotation of the display in degrees
 		"""
 		...
 

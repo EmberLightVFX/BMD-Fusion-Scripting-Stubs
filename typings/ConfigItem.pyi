@@ -7,7 +7,7 @@ class _ConfigItem:
 	"""
 	Read/Write
 	"""
-	ID: Any
+	UID: Any
 	"""
 	Read/Write
 	"""
@@ -15,7 +15,7 @@ class _ConfigItem:
 	"""
 	Read Only
 	"""
-	UID: Any
+	ID: Any
 	"""
 	Read/Write
 	"""
@@ -25,33 +25,33 @@ class _ConfigItem:
 	"""
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
-
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGB_ControlView: bool
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
+
 
 	#---Methods---#
+	def header_text(self):
+		...
 	def Set(self):
 		...
 	def Get(self):
-		...
-	def header_text(self):
 		...
 
 ConfigItem = _ConfigItem

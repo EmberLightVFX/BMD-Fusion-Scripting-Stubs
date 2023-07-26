@@ -1,39 +1,39 @@
 class _ActionManager:
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
-
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGB_ControlView: bool
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
+
 
 	#---Methods---#
-	def QueueAction(self):
+	def GetEvents(self):
 		...
 	def GetTargets(self):
 		...
-	def GetEvents(self):
-		...
-	def DoAction(self):
-		...
 	def GetActions(self):
 		...
+	def QueueAction(self):
+		...
 	def header_text(self):
+		...
+	def DoAction(self):
 		...
 
 ActionManager = _ActionManager

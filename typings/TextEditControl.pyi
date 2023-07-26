@@ -1,29 +1,31 @@
+from typing import Literal
+
 class _TextEditControl:
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
-
-	REGI_Version: int
+	REGS_FileName: str
 
 	REGS_VersionString: str
 
-	REGB_ControlView: bool
+	REGI_Version: int
+
+	REGB_Hide: bool
+
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGS_FileName: str
-
 	REGS_ID: str
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 TextEditControl = _TextEditControl

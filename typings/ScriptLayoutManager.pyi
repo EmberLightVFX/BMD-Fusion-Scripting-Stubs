@@ -1,19 +1,21 @@
-from ScriptLayoutManager ScriptLayoutManagerLayoutObj root import _ScriptLayoutManager ScriptLayoutManagerLayoutObj root
+from typing import Literal
+
+from LayoutObj import _LayoutObj
 
 
 class _ScriptLayoutManager:
 
 	#---Methods---#
-	def ScriptLayoutManager(self) -> _ScriptLayoutManager ScriptLayoutManagerLayoutObj root:
-		"""
-		ScriptLayoutManager constructor
-		"""
+	def header_text(self):
 		...
 	def info_text(self):
 		...
 	def Layout(self, x: int, y: int, w: int, h: int) -> None:
 		...
-	def header_text(self):
+	def ScriptLayoutManager(self, root: _LayoutObj) -> _ScriptLayoutManager:
+		"""
+		ScriptLayoutManager constructor
+		"""
 		...
 
 ScriptLayoutManager = _ScriptLayoutManager

@@ -1,17 +1,19 @@
-from Group GroupTagList tags import _Group GroupTagList tags
+from typing import Literal
+
+from TagList import _TagList
 
 
 class _Group:
 
 	#---Methods---#
-	def Group(self) -> _Group GroupTagList tags:
-		"""
-		Group constructor
-		"""
+	def header_text(self):
 		...
 	def info_text(self):
 		...
-	def header_text(self):
+	def Group(self, tags: _TagList) -> _Group:
+		"""
+		Group constructor
+		"""
 		...
 
 Group = _Group

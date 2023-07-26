@@ -1,10 +1,9 @@
+from typing import Literal
+
 class _ProjectManager:
 
 	#---Methods---#
-	def GetProjectsInCurrentFolder(self):
-		"""
-		Deprecated
-		"""
+	def header_text(self):
 		...
 	def info_text(self):
 		...
@@ -13,7 +12,10 @@ class _ProjectManager:
 		Deprecated
 		"""
 		...
-	def header_text(self):
+	def GetProjectsInCurrentFolder(self):
+		"""
+		Deprecated
+		"""
 		...
 
 ProjectManager = _ProjectManager

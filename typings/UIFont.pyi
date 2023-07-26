@@ -1,48 +1,8 @@
-from typing import Any
+from typing import Any, Literal
 
 class _UIFont:
 
 	#---Properties---#
-	Stretch: Any
-	"""
-	Read/Write
-	"""
-	StyleName: Any
-	"""
-	Read/Write
-	"""
-	PixelSize: Any
-	"""
-	Read/Write
-	"""
-	RawMode: Any
-	"""
-	Read/Write
-	"""
-	Kerning: Any
-	"""
-	Read/Write
-	"""
-	FixedPitch: Any
-	"""
-	Read/Write
-	"""
-	Underline: Any
-	"""
-	Read/Write
-	"""
-	StrikeOut: Any
-	"""
-	Read/Write
-	"""
-	Overline: Any
-	"""
-	Read/Write
-	"""
-	Weight: Any
-	"""
-	Read/Write
-	"""
 	Italic: Any
 	"""
 	Read/Write
@@ -63,39 +23,91 @@ class _UIFont:
 	"""
 	Read/Write
 	"""
+	Stretch: Any
+	"""
+	Read/Write
+	"""
+	StyleName: Any
+	"""
+	Read/Write
+	"""
 	Family: Any
+	"""
+	Read/Write
+	"""
+	RawMode: Any
+	"""
+	Read/Write
+	"""
+	Kerning: Any
+	"""
+	Read/Write
+	"""
+	Weight: Any
+	"""
+	Read/Write
+	"""
+	FixedPitch: Any
+	"""
+	Read/Write
+	"""
+	PixelSize: Any
+	"""
+	Read/Write
+	"""
+	StrikeOut: Any
+	"""
+	Read/Write
+	"""
+	Overline: Any
+	"""
+	Read/Write
+	"""
+	Underline: Any
 	"""
 	Read/Write
 	"""
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGI_Version: int
 
-	REGS_VersionString: str
+	REGB_Hide: bool
+
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGB_ControlView: bool
-
 	REGS_ID: str
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
+	def SetHintingPreference(self) -> None:
+		...
+	def GetHintingPreference(self) -> None:
+		...
+	def SetStyleStrategy(self) -> None:
+		...
+	def GetStyleStrategy(self) -> None:
+		...
+	def SetStretch(self) -> None:
+		...
+	def GetStretch(self) -> None:
+		...
 	def SetWeight(self) -> None:
 		...
-	def GetWeight(self) -> None:
+	def header_text(self):
 		...
 	def SetRawMode(self) -> None:
 		...
@@ -113,7 +125,7 @@ class _UIFont:
 		...
 	def GetStrikeOut(self) -> None:
 		...
-	def header_text(self):
+	def SetOverline(self) -> None:
 		...
 	def GetOverline(self) -> None:
 		...
@@ -145,19 +157,7 @@ class _UIFont:
 		...
 	def GetFamily(self) -> None:
 		...
-	def SetHintingPreference(self) -> None:
-		...
-	def GetHintingPreference(self) -> None:
-		...
-	def SetStyleStrategy(self) -> None:
-		...
-	def GetStyleStrategy(self) -> None:
-		...
-	def SetOverline(self) -> None:
-		...
-	def SetStretch(self) -> None:
-		...
-	def GetStretch(self) -> None:
+	def GetWeight(self) -> None:
 		...
 
 UIFont = _UIFont

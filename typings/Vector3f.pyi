@@ -1,28 +1,21 @@
-from Vector3f import _Vector3f
+from typing import Literal
+
 from Matrix4 import _Matrix4
 
 
 class _Vector3f:
 
 	#---Properties---#
-	TypeNamePtr: str
+	TypeName: str
 	"""
 	Read Only
 	"""
-	TypeName: str
+	TypeNamePtr: str
 	"""
 	Read Only
 	"""
 
 	#---Methods---#
-	def __eq(self, vec: _Vector3f) -> bool:
-		...
-	def _newVec3f(self, vec: _Vector3f) -> _Vector3f:
-		...
-	def __add(self, vec: _Vector3f) -> _Vector3f:
-		...
-	def __sub(self, vec: _Vector3f) -> _Vector3f:
-		...
 	def __div(self, num: float) -> _Vector3f:
 		...
 	def __pow(self, vec: _Vector3f) -> _Vector3f:
@@ -39,21 +32,29 @@ class _Vector3f:
 		...
 	def Equals(self, vec: _Vector3f) -> bool:
 		...
-	def _mulMat4(self, mat: _Matrix4) -> _Vector3f:
+	def header_text(self):
 		...
-	def Project(self, vec: _Vector3f) -> None:
+	def info_text(self):
+		...
+	def _mulMat4(self, mat: _Matrix4) -> _Vector3f:
 		...
 	def _mulNum(self, num: float) -> _Vector3f:
 		...
+	def Length(self) -> float:
+		...
+	def __eq(self, vec: _Vector3f) -> bool:
+		...
 	def Normalize(self) -> None:
+		...
+	def _newVec3f(self, vec: _Vector3f) -> _Vector3f:
 		...
 	def _newNums(self, x: float, y: float, z: float) -> _Vector3f:
 		...
-	def header_text(self):
+	def Project(self, vec: _Vector3f) -> None:
 		...
-	def Length(self) -> float:
+	def __add(self, vec: _Vector3f) -> _Vector3f:
 		...
-	def info_text(self):
+	def __sub(self, vec: _Vector3f) -> _Vector3f:
 		...
 
 Vector3f = _Vector3f

@@ -1,32 +1,32 @@
+from typing import Literal
+
 class _UIDialog:
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGI_Version: int
 
-	REGS_VersionString: str
+	REGB_Hide: bool
+
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGB_ControlView: bool
-
 	REGS_ID: str
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
-	def Exec(self) -> None:
-		...
 	def RecalcLayout(self) -> None:
 		...
 	def header_text(self):
@@ -34,6 +34,8 @@ class _UIDialog:
 	def Done(self) -> None:
 		...
 	def IsRunning(self) -> None:
+		...
+	def Exec(self) -> None:
 		...
 
 UIDialog = _UIDialog

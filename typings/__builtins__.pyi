@@ -110,7 +110,7 @@ from Matrix3 import Matrix3
 from Matrix4 import Matrix4
 from Matrix4f import Matrix4f
 from MediaStorage import MediaStorage
-from Media pool item import Media pool item
+from Media_pool_item import Media_pool_item
 from MemBlock import MemBlock
 from MergeInputs import MergeInputs
 from MeshControl import MeshControl
@@ -203,7 +203,6 @@ from UITreeItem import UITreeItem
 from UIWidget import UIWidget
 from UIWindow import UIWindow
 from Vector2 import Vector2
-from Vector3 import Vector3
 from Vector3f import Vector3f
 from Vector4 import Vector4
 from Vector4f import Vector4f
@@ -326,7 +325,7 @@ __all__ = [
 	"Matrix4",
 	"Matrix4f",
 	"MediaStorage",
-	"Media pool item",
+	"Media_pool_item",
 	"MemBlock",
 	"MergeInputs",
 	"MeshControl",
@@ -419,7 +418,6 @@ __all__ = [
 	"UIWidget",
 	"UIWindow",
 	"Vector2",
-	"Vector3",
 	"Vector3f",
 	"Vector4",
 	"Vector4f",

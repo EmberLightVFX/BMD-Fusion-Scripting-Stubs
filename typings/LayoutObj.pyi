@@ -1,10 +1,12 @@
-from LayoutObj LayoutObjTagList tags import _LayoutObj LayoutObjTagList tags
+from typing import Literal
+
+from TagList import _TagList
 
 
 class _LayoutObj:
 
 	#---Properties---#
-	m_PosY: int
+	m_SizeX: int
 	"""
 	Read/Write
 	"""
@@ -12,7 +14,7 @@ class _LayoutObj:
 	"""
 	Read/Write
 	"""
-	m_SizeX: int
+	m_PosY: int
 	"""
 	Read/Write
 	"""
@@ -22,14 +24,14 @@ class _LayoutObj:
 	"""
 
 	#---Methods---#
-	def LayoutObj(self) -> _LayoutObj LayoutObjTagList tags:
-		"""
-		LayoutObj constructor
-		"""
+	def header_text(self):
 		...
 	def info_text(self):
 		...
-	def header_text(self):
+	def LayoutObj(self, tags: _TagList) -> _LayoutObj:
+		"""
+		LayoutObj constructor
+		"""
 		...
 
 LayoutObj = _LayoutObj

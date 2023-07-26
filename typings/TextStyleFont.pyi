@@ -1,56 +1,24 @@
-from typing import Any
+from typing import Any, Literal
 
 from Vector2 import _Vector2
-from TextStyleFont TextStyleFontstring name import _TextStyleFont TextStyleFontstring name
-from string style import _string style
-from float64 size import _float64 size
-from TextStyleFont import _TextStyleFont
 
 
 class _TextStyleFont:
 
 	#---Properties---#
-	Size: float
-	"""
-	Read/Write
-	"""
-	SplitLigatures: bool
-	"""
-	Read/Write
-	"""
-	Strikeout: bool
-	"""
-	Read/Write
-	"""
-	StylisticSet: int
-	"""
-	Read/Write
-	"""
 	Underline: bool
 	"""
 	Read/Write
 	"""
-	TypeName: str
+	UnderlinePosition: int
 	"""
-	Read Only
+	Read/Write
 	"""
 	Name: str
 	"""
 	Read/Write
 	"""
 	Valid: bool
-	"""
-	Read/Write
-	"""
-	TypeNamePtr: str
-	"""
-	Read Only
-	"""
-	DoKerning: bool
-	"""
-	Read/Write
-	"""
-	DoLigatures: int
 	"""
 	Read/Write
 	"""
@@ -66,15 +34,11 @@ class _TextStyleFont:
 	"""
 	Read/Write
 	"""
+	DoLigatures: int
+	"""
+	Read/Write
+	"""
 	Monospaced: float
-	"""
-	Read/Write
-	"""
-	UnderlinePosition: int
-	"""
-	Read/Write
-	"""
-	Style: str
 	"""
 	Read/Write
 	"""
@@ -82,20 +46,52 @@ class _TextStyleFont:
 	"""
 	Read/Write
 	"""
+	Size: float
+	"""
+	Read/Write
+	"""
+	SplitLigatures: bool
+	"""
+	Read/Write
+	"""
+	Strikeout: bool
+	"""
+	Read/Write
+	"""
+	TypeName: str
+	"""
+	Read Only
+	"""
+	StylisticSet: int
+	"""
+	Read/Write
+	"""
+	DoKerning: bool
+	"""
+	Read/Write
+	"""
+	TypeNamePtr: str
+	"""
+	Read Only
+	"""
+	Style: str
+	"""
+	Read/Write
+	"""
 
 	#---Methods---#
-	def TextStyleFont(self) -> tuple[_TextStyleFont TextStyleFontstring name, _string style, _float64 size]:
+	def info_text(self):
+		...
+	def TextStyleFont(self, name: str, style: str, size: float) -> _TextStyleFont:
 		"""
 		TextStyleFont constructor
 		"""
 		...
-	def info_text(self):
-		...
 	def MetricsCompatibleWith(self, font: _TextStyleFont) -> bool:
 		...
-	def SetFeatures(self, features: str) -> None:
-		...
 	def header_text(self):
+		...
+	def SetFeatures(self, features: str) -> None:
 		...
 
 TextStyleFont = _TextStyleFont

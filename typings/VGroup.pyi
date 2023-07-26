@@ -1,17 +1,19 @@
-from VGroup VGroupTagList tags import _VGroup VGroupTagList tags
+from typing import Literal
+
+from TagList import _TagList
 
 
 class _VGroup:
 
 	#---Methods---#
+	def header_text(self):
+		...
 	def info_text(self):
 		...
-	def VGroup(self) -> _VGroup VGroupTagList tags:
+	def VGroup(self, tags: _TagList) -> _VGroup:
 		"""
 		VGroup constructor
 		"""
-		...
-	def header_text(self):
 		...
 
 VGroup = _VGroup

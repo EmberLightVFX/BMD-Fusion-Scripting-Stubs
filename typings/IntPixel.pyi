@@ -1,26 +1,25 @@
-from IntPixel import _IntPixel
-
+from typing import Literal
 
 class _IntPixel:
 
 	#---Properties---#
-	TypeNamePtr: str
+	TypeName: str
 	"""
 	Read Only
 	"""
-	TypeName: str
+	TypeNamePtr: str
 	"""
 	Read Only
 	"""
 
 	#---Methods---#
-	def _newDef(self) -> _IntPixel:
+	def header_text(self):
 		...
 	def info_text(self):
 		...
-	def Clear(self) -> None:
+	def _newDef(self) -> _IntPixel:
 		...
-	def header_text(self):
+	def Clear(self) -> None:
 		...
 
 IntPixel = _IntPixel

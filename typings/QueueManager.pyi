@@ -1,31 +1,31 @@
-from typing import Any, overload
+from typing import Any, overload, Literal
 
-from RenderNode import _RenderNode
 from RenderJob import _RenderJob
+from RenderNode import _RenderNode
 
 
 class _QueueManager:
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
 
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
+	REGI_Priority: int
 
 	REGS_ID: str
 
-	REGB_ControlView: bool
+	REGS_Name: str
 
-	REGI_Priority: int
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
@@ -33,12 +33,14 @@ class _QueueManager:
 		...
 	def Stop(self):
 		...
-	def Log(self, message: str) -> None:
+	def Start(self):
+		...
+	def RemoveJob(self, job: _RenderJob) -> None:
 		"""
-		Writes a message to the Render Log
+		Removes a job from the list
 		"""
 		...
-	def Start(self):
+	def NetJoinRender(self):
 		...
 	def UpdateItem(self):
 		...
@@ -78,9 +80,9 @@ class _QueueManager:
 		...
 	def RemoveWatch(self):
 		...
-	def GetID(self):
+	def AddWatch(self):
 		...
-	def NetJoinRender(self):
+	def GetID(self):
 		...
 	def ScanForRenderNodes(self) -> None:
 		"""
@@ -115,9 +117,9 @@ class _QueueManager:
 			 node	- the node object, or its hostname or IP address
 		"""
 		...
-	def RemoveJob(self, job: _RenderJob) -> None:
+	def Log(self, message: str) -> None:
 		"""
-		Removes a job from the list
+		Writes a message to the Render Log
 		"""
 		...
 	def MoveJob(self, job: _RenderJob, offset: int) -> None:
@@ -184,8 +186,6 @@ class _QueueManager:
 		"""
 		Get the list of available RenderNodes
 		"""
-		...
-	def AddWatch(self):
 		...
 
 QueueManager = _QueueManager

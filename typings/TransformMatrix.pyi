@@ -1,56 +1,26 @@
-from TagList import _TagList
-from Image import _Image
+from typing import Literal
+
 from Parameter import _Parameter
-from TransformMatrix TransformMatrixParameter img import _TransformMatrix TransformMatrixParameter img
-from Request req import _Request req
-from Input inp import _Input inp
-from int32 slot import _int32 slot
-from TimeStamp time import _TimeStamp time
+from TagList import _TagList
+from Request import _Request
+from Input import _Input
+from Image import _Image
+from _non_existing import _TimeStamp
 
 
 class _TransformMatrix:
 
 	#---Properties---#
-	OriginalXScale: int
-	"""
-	Unproxied pixel X Aspect
-
-	Read Only
-	"""
-	OriginalYScale: int
-	"""
-	Unproxied pixel Y Aspect
-
-	Read Only
-	"""
-	ProxyScale: int
-	"""
-	Image proxy scale multiplier
-
-			ProxyScale may be any positive integer, where 1 indicates no proxy.
-
-	Read Only
-	"""
-	Width: int
-	"""
-	Actual image width, in pixels
-
-	Read Only
-	"""
-	XOffset: int
-	"""
-	Image X Offset
-
-	Read Only
-	"""
 	XScale: int
 	"""
 	Pixel X Aspect
 
 	Read Only
 	"""
-	OriginalIXScale: float
+	YOffset: int
 	"""
+	Image X Offset
+
 	Read Only
 	"""
 	YScale: int
@@ -100,62 +70,92 @@ class _TransformMatrix:
 
 	Read Only
 	"""
-	OriginalIYScale: float
-	"""
-	Read Only
-	"""
 	OriginalWidth: int
 	"""
 	Unproxied image width, in pixels
 
 	Read Only
 	"""
-	YOffset: int
+	OriginalXScale: int
+	"""
+	Unproxied pixel X Aspect
+
+	Read Only
+	"""
+	OriginalYScale: int
+	"""
+	Unproxied pixel Y Aspect
+
+	Read Only
+	"""
+	OriginalIXScale: float
+	"""
+	Read Only
+	"""
+	OriginalIYScale: float
+	"""
+	Read Only
+	"""
+	Width: int
+	"""
+	Actual image width, in pixels
+
+	Read Only
+	"""
+	XOffset: int
 	"""
 	Image X Offset
 
 	Read Only
 	"""
+	ProxyScale: int
+	"""
+	Image proxy scale multiplier
+
+			ProxyScale may be any positive integer, where 1 indicates no proxy.
+
+	Read Only
+	"""
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGI_Version: int
 
-	REGS_VersionString: str
+	REGB_Hide: bool
+
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGB_ControlView: bool
-
 	REGS_ID: str
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
-	def ImageConcatenate(self, tags: _TagList) -> None:
-		...
-	def ApplyTransform(self, tags: _TagList) -> _Image:
-		...
 	def MergeConcatenate(self, fg: _Parameter, tags: _TagList) -> None:
-		...
-	def TransformMatrix(self) -> tuple[_TransformMatrix TransformMatrixParameter img, _Request req, _Input inp, _int32 slot, _TimeStamp time]:
-		"""
-		TransformMatrix constructor
-		"""
 		...
 	def info_text(self):
 		...
 	def header_text(self):
+		...
+	def TransformMatrix(self, img: _Parameter, req: _Request, inp: _Input, slot: int, time: _TimeStamp) -> _TransformMatrix:
+		"""
+		TransformMatrix constructor
+		"""
+		...
+	def ImageConcatenate(self, tags: _TagList) -> None:
+		...
+	def ApplyTransform(self, tags: _TagList) -> _Image:
 		...
 
 TransformMatrix = _TransformMatrix

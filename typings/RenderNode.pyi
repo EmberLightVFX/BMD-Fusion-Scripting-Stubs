@@ -1,25 +1,27 @@
+from typing import Literal
+
 class _RenderNode:
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
 
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
+	REGI_Priority: int
 
 	REGS_ID: str
 
-	REGB_ControlView: bool
+	REGS_Name: str
 
-	REGI_Priority: int
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
@@ -31,9 +33,9 @@ class _RenderNode:
 		...
 	def GetJob(self):
 		...
-	def IsProcessing(self):
-		...
 	def header_text(self):
+		...
+	def IsProcessing(self):
 		...
 
 RenderNode = _RenderNode

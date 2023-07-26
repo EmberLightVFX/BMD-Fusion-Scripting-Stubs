@@ -1,33 +1,49 @@
 from typing import Any
 
-from FontList import _FontList
-
-
 class _FontList:
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
-
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGB_ControlView: bool
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
+
 
 	#---Methods---#
+	def AddFont(self, fontfile: str) -> bool:
+		"""
+		Adds the specified font to the global font list
+
+		where fontfile is the full path to a font to be added.
+		"""
+		...
+	def GetFontList(self) -> dict[Any, Any]:
+		"""
+		Returns all font files in the global font list
+
+		where fonts is a table of subtables, indexed by font name,
+		and each subtable contains filename strings, indexed by style name.
+		"""
+		...
+	def GetFontManager(self) -> _FontList:
+		...
+	def header_text(self):
+		...
 	def ScanDir(self, dirname: str = str()) -> None:
 		"""
 		Adds the specified dir to the global font list
@@ -42,25 +58,6 @@ class _FontList:
 	def Clear(self) -> None:
 		"""
 		Empties the global font list
-		"""
-		...
-	def header_text(self):
-		...
-	def AddFont(self, fontfile: str) -> bool:
-		"""
-		Adds the specified font to the global font list
-
-		where fontfile is the full path to a font to be added.
-		"""
-		...
-	def GetFontManager(self) -> _FontList:
-		...
-	def GetFontList(self) -> dict[Any, Any]:
-		"""
-		Returns all font files in the global font list
-
-		where fonts is a table of subtables, indexed by font name,
-		and each subtable contains filename strings, indexed by style name.
 		"""
 		...
 

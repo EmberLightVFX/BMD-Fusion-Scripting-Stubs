@@ -1,17 +1,9 @@
-from typing import Any
+from typing import Any, Literal
 
 class _UILabel:
 
 	#---Properties---#
-	WordWrap: Any
-	"""
-	Read/Write
-	"""
 	Alignment: Any
-	"""
-	Read/Write
-	"""
-	Margin: Any
 	"""
 	Read/Write
 	"""
@@ -19,19 +11,7 @@ class _UILabel:
 	"""
 	Read/Write
 	"""
-	TextInteractionFlags: Any
-	"""
-	Read/Write
-	"""
-	LineWidth: Any
-	"""
-	Read/Write
-	"""
-	Text: Any
-	"""
-	Read/Write
-	"""
-	ScaledContents: Any
+	Margin: Any
 	"""
 	Read/Write
 	"""
@@ -47,7 +27,7 @@ class _UILabel:
 	"""
 	Read/Write
 	"""
-	MidLineWidth: Any
+	WordWrap: Any
 	"""
 	Read/Write
 	"""
@@ -55,7 +35,23 @@ class _UILabel:
 	"""
 	Read/Write
 	"""
+	LineWidth: Any
+	"""
+	Read/Write
+	"""
+	Text: Any
+	"""
+	Read/Write
+	"""
 	FrameRect: Any
+	"""
+	Read/Write
+	"""
+	ScaledContents: Any
+	"""
+	Read/Write
+	"""
+	MidLineWidth: Any
 	"""
 	Read/Write
 	"""
@@ -63,37 +59,39 @@ class _UILabel:
 	"""
 	Read/Write
 	"""
+	TextInteractionFlags: Any
+	"""
+	Read/Write
+	"""
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGI_Version: int
 
-	REGS_VersionString: str
+	REGB_Hide: bool
+
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGB_ControlView: bool
-
 	REGS_ID: str
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
-	def SetAlignment(self) -> None:
+	def SetFrameStyle(self) -> None:
 		...
-	def GetAlignment(self) -> None:
-		...
-	def SetText(self) -> None:
+	def GetFrameStyle(self) -> None:
 		...
 	def SelectionStart(self) -> None:
 		...
@@ -102,6 +100,8 @@ class _UILabel:
 	def HasSelectedText(self) -> None:
 		...
 	def SetSelection(self) -> None:
+		...
+	def header_text(self):
 		...
 	def SetTextInteractionFlags(self) -> None:
 		...
@@ -115,6 +115,8 @@ class _UILabel:
 		...
 	def GetOpenExternalLinks(self) -> None:
 		...
+	def GetAlignment(self) -> None:
+		...
 	def SetMargin(self) -> None:
 		...
 	def GetMargin(self) -> None:
@@ -123,11 +125,11 @@ class _UILabel:
 		...
 	def GetIndent(self) -> None:
 		...
-	def GetText(self) -> None:
-		...
 	def SetWordWrap(self) -> None:
 		...
 	def GetWordWrap(self) -> None:
+		...
+	def GetText(self) -> None:
 		...
 	def FrameWidth(self) -> None:
 		...
@@ -147,19 +149,17 @@ class _UILabel:
 		...
 	def GetFrameRect(self) -> None:
 		...
+	def SetText(self) -> None:
+		...
 	def SetMidLineWidth(self) -> None:
 		...
 	def GetMidLineWidth(self) -> None:
 		...
+	def SetAlignment(self) -> None:
+		...
 	def SetLineWidth(self) -> None:
 		...
 	def GetLineWidth(self) -> None:
-		...
-	def SetFrameStyle(self) -> None:
-		...
-	def GetFrameStyle(self) -> None:
-		...
-	def header_text(self):
 		...
 
 UILabel = _UILabel

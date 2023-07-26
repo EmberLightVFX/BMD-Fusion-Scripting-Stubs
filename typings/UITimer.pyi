@@ -1,17 +1,17 @@
-from typing import Any
+from typing import Any, Literal
 
 class _UITimer:
 
 	#---Properties---#
+	Interval: Any
+	"""
+	Read/Write
+	"""
 	IsActive: Any
 	"""
 	Read Only
 	"""
 	SingleShot: Any
-	"""
-	Read/Write
-	"""
-	Interval: Any
 	"""
 	Read/Write
 	"""
@@ -29,53 +29,53 @@ class _UITimer:
 	"""
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGI_Version: int
 
-	REGS_VersionString: str
+	REGB_Hide: bool
+
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGB_ControlView: bool
-
 	REGS_ID: str
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
-	def SetSingleShot(self) -> None:
-		...
-	def GetSingleShot(self) -> None:
-		...
-	def SetTimerType(self) -> None:
-		...
-	def GetTimerType(self) -> None:
-		...
 	def GetIsActive(self) -> None:
 		...
 	def GetTimerID(self) -> None:
 		...
-	def Stop(self) -> None:
-		...
 	def GetRemainingTime(self) -> None:
-		...
-	def Start(self) -> None:
 		...
 	def SetInterval(self) -> None:
 		...
 	def GetInterval(self) -> None:
 		...
+	def SetSingleShot(self) -> None:
+		...
+	def GetSingleShot(self) -> None:
+		...
+	def Stop(self) -> None:
+		...
 	def header_text(self):
+		...
+	def SetTimerType(self) -> None:
+		...
+	def GetTimerType(self) -> None:
+		...
+	def Start(self) -> None:
 		...
 
 UITimer = _UITimer

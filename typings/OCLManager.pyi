@@ -1,6 +1,7 @@
+from typing import Literal
+
 from FusionDoc import _FusionDoc
 from OCLProgram import _OCLProgram
-from OCLManager OCLManager import _OCLManager OCLManager
 from Registry import _Registry
 
 
@@ -15,11 +16,11 @@ class _OCLManager:
 	"""
 	Read Only
 	"""
-	GLSync: bool
+	FP64: bool
 	"""
 	Read Only
 	"""
-	FP64: bool
+	GLSync: bool
 	"""
 	Read Only
 	"""
@@ -29,25 +30,25 @@ class _OCLManager:
 	"""
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
 
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
+	REGI_Priority: int
 
 	REGS_ID: str
 
-	REGB_ControlView: bool
+	REGS_Name: str
 
-	REGI_Priority: int
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
@@ -55,18 +56,18 @@ class _OCLManager:
 		...
 	def _BuildCachedProgramFile(self, id: str, doc: _FusionDoc, filename: str, source: str, len: int, opts: str) -> _OCLProgram:
 		...
-	def OCLManager(self) -> _OCLManager OCLManager:
+	def _BuildCachedProgramReg(self, reg: _Registry, doc: _FusionDoc, source: str, len: int, opts: str) -> _OCLProgram:
+		...
+	def header_text(self):
+		...
+	def OCLManager(self) -> _OCLManager:
 		"""
 		OCLManager constructor
 		"""
 		...
-	def _BuildCachedProgramReg(self, reg: _Registry, doc: _FusionDoc, source: str, len: int, opts: str) -> _OCLProgram:
-		...
-	def Create(self, device: str) -> bool:
-		...
 	def BuildProgram(self, doc: _FusionDoc, source: str, len: int, opts: str) -> _OCLProgram:
 		...
-	def header_text(self):
+	def Create(self, device: str) -> bool:
 		...
 
 OCLManager = _OCLManager

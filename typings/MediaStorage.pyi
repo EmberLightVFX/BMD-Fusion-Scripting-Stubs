@@ -1,3 +1,5 @@
+from typing import Literal
+
 class _MediaStorage:
 
 	#---Methods---#
@@ -13,17 +15,17 @@ class _MediaStorage:
 		Deprecated
 		"""
 		...
-	def GetFiles(self):
-		"""
-		Deprecated
-		"""
+	def header_text(self):
 		...
 	def AddItemsToMediaPool(self):
 		"""
 		Deprecated
 		"""
 		...
-	def header_text(self):
+	def GetFiles(self):
+		"""
+		Deprecated
+		"""
 		...
 
 MediaStorage = _MediaStorage

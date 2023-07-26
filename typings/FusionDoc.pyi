@@ -1,9 +1,29 @@
-from TimeStamp import _TimeStamp
+from _non_existing import _TimeStamp
 
 
 class _FusionDoc:
 
 	#---Properties---#
+	GlobalEnd: _TimeStamp
+	"""
+	Read Only
+	"""
+	GlobalStart: _TimeStamp
+	"""
+	Read Only
+	"""
+	Name: str
+	"""
+	Read Only
+	"""
+	HiQ: bool
+	"""
+	Read Only
+	"""
+	Filename: str
+	"""
+	Read Only
+	"""
 	LastFrameTime: float
 	"""
 	Read Only
@@ -12,47 +32,7 @@ class _FusionDoc:
 	"""
 	Read Only
 	"""
-	Modified: bool
-	"""
-	Read Only
-	"""
-	ProxyScale: int
-	"""
-	Read Only
-	"""
 	Proxy: bool
-	"""
-	Read Only
-	"""
-	RenderEnd: _TimeStamp
-	"""
-	Read Only
-	"""
-	RenderFlags: int
-	"""
-	Read Only
-	"""
-	Name: str
-	"""
-	Read Only
-	"""
-	AudioOffset: _TimeStamp
-	"""
-	Read Only
-	"""
-	RenderStep: int
-	"""
-	Read Only
-	"""
-	AverageFrameTime: float
-	"""
-	Read Only
-	"""
-	Rendering: bool
-	"""
-	Read Only
-	"""
-	CurrentTime: _TimeStamp
 	"""
 	Read Only
 	"""
@@ -60,11 +40,11 @@ class _FusionDoc:
 	"""
 	Read Only
 	"""
-	ElapsedTime: float
+	RenderEnd: _TimeStamp
 	"""
 	Read Only
 	"""
-	RenderStart: _TimeStamp
+	Rendering: bool
 	"""
 	Read Only
 	"""
@@ -72,19 +52,35 @@ class _FusionDoc:
 	"""
 	Read Only
 	"""
-	GlobalStart: _TimeStamp
+	RenderStep: int
 	"""
 	Read Only
 	"""
-	Filename: str
+	AudioOffset: _TimeStamp
 	"""
 	Read Only
 	"""
-	HiQ: bool
+	RenderStart: _TimeStamp
 	"""
 	Read Only
 	"""
-	GlobalEnd: _TimeStamp
+	AverageFrameTime: float
+	"""
+	Read Only
+	"""
+	RenderFlags: int
+	"""
+	Read Only
+	"""
+	CurrentTime: _TimeStamp
+	"""
+	Read Only
+	"""
+	ProxyScale: int
+	"""
+	Read Only
+	"""
+	ElapsedTime: float
 	"""
 	Read Only
 	"""
@@ -92,15 +88,19 @@ class _FusionDoc:
 	"""
 	Read Only
 	"""
+	Modified: bool
+	"""
+	Read Only
+	"""
 
 	#---Methods---#
-	def StartUndo(self, name: str) -> None:
+	def header_text(self):
 		...
 	def info_text(self):
 		...
-	def EndUndo(self, keep: bool) -> None:
+	def StartUndo(self, name: str) -> None:
 		...
-	def header_text(self):
+	def EndUndo(self, keep: bool) -> None:
 		...
 
 FusionDoc = _FusionDoc

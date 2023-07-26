@@ -1,60 +1,30 @@
 from typing import Any, overload
 
-from Bins import _Bins
-from HotkeyManager import _HotkeyManager
 from QueueManager import _QueueManager
-from CacheManager import _CacheManager
-from UIManager import _UIManager
-from ActionManager import _ActionManager
-from FontList import _FontList
 from Composition import _Composition
-from MenuManager import _MenuManager
+from FontList import _FontList
+from ActionManager import _ActionManager
+from HotkeyManager import _HotkeyManager
+from UIManager import _UIManager
 from MailMessage import _MailMessage
 from Registry import _Registry
 from RenderJob import _RenderJob
 from MemBlock import _MemBlock
-from File import _File
+from _non_existing import _Bins, _CacheManager, _MenuManager, _File
 
 
 class _Fusion:
 
 	#---Properties---#
-	FileLogging: Any
-	"""
-	Read/Write
-	"""
-	BinManager: _Bins
-	"""
-	Bins
-
-	Read Only
-	"""
-	HotkeyManager: _HotkeyManager
-	"""
-	The Global Hotkey Manager
-
-	Read Only
-	"""
 	QueueManager: _QueueManager
 	"""
 	The global render manager for this instance of Fusion
 
 	Read Only
 	"""
-	RenderManager: _QueueManager
+	BinManager: _Bins
 	"""
-	The global render manager for this instance of Fusion
-
-	Read Only
-	"""
-	CurrentFrame: Any
-	"""
-	Read Only
-	"""
-	Build: int
-	"""
-	The build number of Fusion.
-
+	Bins
 
 	Read Only
 	"""
@@ -64,34 +34,23 @@ class _Fusion:
 
 	Read Only
 	"""
-	Version: int
-	"""
-	The version number of Fusion.
-
-
-	Read Only
-	"""
 	MouseX: Any
 	"""
 	Read Only
 	"""
-	UIManager: _UIManager
+	RenderManager: _QueueManager
 	"""
+	The global render manager for this instance of Fusion
+
 	Read Only
 	"""
 	MouseY: Any
 	"""
 	Read Only
 	"""
-	ActionManager: _ActionManager
+	MenuManager: _MenuManager
 	"""
-	The Global Action Manager
-
-	Read Only
-	"""
-	FontManager: _FontList
-	"""
-	The Global Font Manager
+	The Global Menu Manager
 
 	Read Only
 	"""
@@ -103,10 +62,48 @@ class _Fusion:
 
 	Read Only
 	"""
-	MenuManager: _MenuManager
+	FileLogging: Any
 	"""
-	The Global Menu Manager
+	Read/Write
+	"""
+	FontManager: _FontList
+	"""
+	The Global Font Manager
 
+	Read Only
+	"""
+	Build: int
+	"""
+	The build number of Fusion.
+
+
+	Read Only
+	"""
+	ActionManager: _ActionManager
+	"""
+	The Global Action Manager
+
+	Read Only
+	"""
+	HotkeyManager: _HotkeyManager
+	"""
+	The Global Hotkey Manager
+
+	Read Only
+	"""
+	Version: int
+	"""
+	The version number of Fusion.
+
+
+	Read Only
+	"""
+	CurrentFrame: Any
+	"""
+	Read Only
+	"""
+	UIManager: _UIManager
+	"""
 	Read Only
 	"""
 	Bins: _Bins
@@ -117,28 +114,112 @@ class _Fusion:
 	"""
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
-
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGB_ControlView: bool
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
+
 
 	#---Methods---#
+	def InstallFile(self):
+		...
+	def GetRLMLicenseInfo(self):
+		...
+	def GetCurrentComp(self) -> _Composition:
+		"""
+		Returns the currently active composition
+		"""
+		...
+	def GetFairlight(self):
+		...
+	def GetResolve(self):
+		...
+	def RemoveConfig(self):
+		...
+	def AddConfig(self):
+		...
+	def GetToolIcon(self) -> None:
+		...
+	def SetFusionApp(self) -> None:
+		...
+	def MapPathSegments(self, path: str) -> dict[Any, Any]:
+		"""
+		Expands all path mappings in a multipath
+
+		Returns a table of path strings with all mappings expanded. All paths of a multipath are returned.
+		"""
+		...
+	def _Memory_Purge(self, seconds: int) -> None:
+		...
+	def EditScript(self) -> None:
+		"""
+		Edit Script
+		"""
+		...
+	def GetRecentFileName(self):
+		...
+	def GetNumRecentFiles(self):
+		...
+	def CustomizeToolbars(self):
+		...
+	def ShowUI(self):
+		...
+	def IsUIVisible(self):
+		...
+	def SetActiveWndIndex(self):
+		...
+	def SetActiveFrameIndex(self):
+		...
+	def GetActiveWndIndex(self):
+		...
+	def GetActiveFrameIndex(self):
+		...
+	def GetRecentCompList(self):
+		...
+	def ClearRecentCompList(self):
+		...
+	def DeselectAll(self):
+		...
+	def GetPreviewList(self) -> dict[Any, Any]:
+		"""
+		Retrieves a table of global previews
+		"""
+		...
+	def Delete(self):
+		...
+	def PasteSettings(self):
+		...
+	def Cut(self):
+		...
+	def SetOnlyActiveComp(self):
+		...
+	def NewFloatFrame(self):
+		...
+	def NewTabbedFrame(self):
+		...
+	def NewImageView(self):
+		...
+	def IsNetworkAllowed(self):
+		...
+	def AllowNetwork(self):
+		...
+	def CreateFloatingView(self):
+		...
 	def SetBatch(self):
 		...
 	def ClearFileLog(self):
@@ -156,22 +237,21 @@ class _Fusion:
 				SW_RESTORE		- restores the window to normal size/position
 		"""
 		...
-	def DumpGLObjects(self, filename: str) -> bool:
+	def Paste(self):
+		...
+	def SetClipboard(self) -> tuple[bool, str | bool, dict[Any, Any]]:
 		"""
-		Dumps OpenGL Objects
+		Sets the clipboard to contain the tool(s) specifed by a table or as ASCII text.
 		"""
 		...
-	def Print(self):
-		...
-	def Execute(self):
-		...
-	def GetGlobalPathMap(self, built_ins: bool = bool(), defaults: bool = bool()) -> dict[Any, Any]:
+	def GetClipboard(self) -> tuple[dict[Any, Any], str]:
 		"""
-		Returns a table of all global path maps
-
-		Args:	built_ins - include built-in path maps (default: true)
-					 defaults	- include factory default path maps (default: true)
-		Returns: Table of path strings, keyed by map name.
+		Retrieves the tool(s) on the clipboard, as tables and as ASCII text.
+		"""
+		...
+	def GetPrefs(self, prefname: str = str(), exclude_defaults: bool = bool()) -> dict[Any, Any]:
+		"""
+		Retrieve a table of preferences
 		"""
 		...
 	def CreateMail(self) -> _MailMessage:
@@ -179,12 +259,25 @@ class _Fusion:
 		Create an empty Mail message object
 		"""
 		...
-	def GetArgs(self) -> dict[Any, Any]:
+	def GetRegList(self, typemask: int) -> dict[Any, Any]:
 		"""
-		Get command line arguments
+		Retrieve a list of all registry objects known to the system
 		"""
 		...
-	def Copy(self):
+	def OpenFile(self, filename: str, mode: int) -> _File:
+		"""
+		Open a file
+
+		Arguments:
+
+			filename: specifies the full path and name of the file to open
+
+			mode: Specifies the mode(s) of file access required, from a combination of the following constants:
+				FILE_MODE_READ				- Read access
+				FILE_MODE_WRITE			 - Write access
+				FILE_MODE_UNBUFFERED	- Unbuffered access
+				FILE_MODE_SHARED			- Shared access
+		"""
 		...
 	def GetEnv(self, name: str) -> str:
 		"""
@@ -287,55 +380,47 @@ class _Fusion:
 		Creates a new composition
 		"""
 		...
-	def GetVersion(self):
+	def OpenLibraryStudio(self):
 		...
-	def OpenFile(self, filename: str, mode: int) -> _File:
-		"""
-		Open a file
-
-		Arguments:
-
-			filename: specifies the full path and name of the file to open
-
-			mode: Specifies the mode(s) of file access required, from a combination of the following constants:
-				FILE_MODE_READ				- Read access
-				FILE_MODE_WRITE			 - Write access
-				FILE_MODE_UNBUFFERED	- Unbuffered access
-				FILE_MODE_SHARED			- Shared access
-		"""
+	def OpenLibrary(self):
 		...
-	def _Memory_Purge(self, seconds: int) -> None:
-		...
-	def UpdateMenus(self):
-		...
-	def ToggleUtility(self, id: str) -> None:
-		"""
-		Shows or hides a Utility plugin
-		"""
+	def header_text(self):
 		...
 	def ToggleRenderManager(self) -> None:
 		"""
 		Shows or hides the Render Manager
 		"""
 		...
+	def IsUtilityOpen(self, id: str) -> None:
+		...
+	def ToggleUtility(self, id: str) -> None:
+		"""
+		Shows or hides a Utility plugin
+		"""
+		...
+	def GetMainWindow(self):
+		...
+	def GetCPULoad(self):
+		...
+	def GetAppInfo(self):
+		...
+	def GetMousePos(self):
+		...
+	def UpdateMenus(self):
+		...
+	def Test(self):
+		...
+	def Print(self):
+		...
 	def ToggleBins(self) -> None:
 		"""
 		Shows or hides the Bins window
 		"""
 		...
-	def Test(self):
-		...
-	def Quit(self, exitcode: int) -> None:
+	def GetRegSummary(self, typemask: int, hidden: bool = bool()) -> dict[Any, Any]:
 		"""
-		Quit Fusion
-
-		The Quit() function will cause Fusion to exit, without saving changes.
-		If no exitcode is specified, the Fusion process will return 0.
+		Retrieve a list of basic info for all registry objects known to the system
 		"""
-		...
-	def Sleep(self, seconds: int) -> None:
-		...
-	def Delete(self):
 		...
 	def ShowPrefs(self, pageid: str = str(), showall: bool = bool(), comp: _Composition = _Composition()) -> None:
 		"""
@@ -343,7 +428,7 @@ class _Fusion:
 		"""
 		...
 	@overload
-	def SetPrefs(self, prefname: str, val: int) -> None:
+	def SetPrefs(self, prefname: str, val: float) -> None:
 		"""
 		Set preferences from a table of attributes
 		"""
@@ -354,44 +439,14 @@ class _Fusion:
 		Set preferences from a table of attributes
 		"""
 		...
-	def GetCurrentComp(self) -> _Composition:
-		"""
-		Returns the currently active composition
-		"""
-		...
-	def SetOnlyActiveComp(self):
-		...
-	def IsUtilityOpen(self, id: str) -> None:
-		...
-	def SetFusionApp(self) -> None:
+	def SetMasterApp(self) -> None:
 		...
 	def SetData(self, name: str, value: int | str | bool | dict[Any, Any]) -> None:
 		"""
 		Set custom persistent data
 		"""
 		...
-	@overload
-	def SetClipboard(self) -> tuple[bool, dict[Any, Any]]:
-		"""
-		Sets the clipboard to contain the tool(s) specifed by a table or as ASCII text.
-		"""
-		...
-	@overload
-	def SetClipboard(self) -> tuple[bool, str]:
-		"""
-		Sets the clipboard to contain the tool(s) specifed by a table or as ASCII text.
-		"""
-		...
-	def DeselectAll(self):
-		...
-	def Paste(self):
-		...
-	def ClearRecentCompList(self):
-		...
-	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any]:
-		"""
-		Get custom persistent data
-		"""
+	def SelectAll(self):
 		...
 	def RunScript(self, filename: str) -> None:
 		"""
@@ -405,51 +460,46 @@ class _Fusion:
 		Returns the path string relative to nearest applicable mapped path.
 		"""
 		...
-	def RemoveConfig(self):
-		...
-	def header_text(self):
-		...
-	def GetClipboard(self) -> tuple[dict[Any, Any], str]:
+	def Quit(self, exitcode: int) -> None:
 		"""
-		Retrieves the tool(s) on the clipboard, as tables and as ASCII text.
-		"""
-		...
-	def GetMousePos(self):
-		...
-	def GetAppInfo(self):
-		...
-	def GetCPULoad(self):
-		...
-	def GetRLMLicenseInfo(self):
-		...
-	def GetRegSummary(self, typemask: int, hidden: bool = bool()) -> dict[Any, Any]:
-		"""
-		Retrieve a list of basic info for all registry objects known to the system
+		Quit Fusion
+
+		The Quit() function will cause Fusion to exit, without saving changes.
+		If no exitcode is specified, the Fusion process will return 0.
 		"""
 		...
-	def GetActiveFrameIndex(self):
+	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any]:
+		"""
+		Get custom persistent data
+		"""
 		...
-	def InstallFile(self):
+	def Sleep(self, seconds: int) -> None:
 		...
-	def GetToolList(self) -> None:
+	def GetArgs(self) -> dict[Any, Any]:
+		"""
+		Get command line arguments
+		"""
+		...
+	def Execute(self):
+		...
+	def GetGlobalPathMap(self, built_ins: bool = bool(), defaults: bool = bool()) -> dict[Any, Any]:
+		"""
+		Returns a table of all global path maps
+
+		Args:	built_ins - include built-in path maps (default: true)
+					 defaults	- include factory default path maps (default: true)
+		Returns: Table of path strings, keyed by map name.
+		"""
+		...
+	def DumpGLObjects(self, filename: str) -> bool:
+		"""
+		Dumps OpenGL Objects
+		"""
 		...
 	def DeactivateLicense(self) -> None:
 		"""
 		Deactivate Fusion Studio on this machine
 		"""
-		...
-	def GetFairlight(self):
-		...
-	def GetResolve(self):
-		...
-	def GetPrefs(self, prefname: str = str(), exclude_defaults: bool = bool()) -> dict[Any, Any]:
-		"""
-		Retrieve a table of preferences
-		"""
-		...
-	def AddConfig(self):
-		...
-	def GetToolIcon(self) -> None:
 		...
 	def MapPath(self, path: str) -> str:
 		"""
@@ -458,71 +508,11 @@ class _Fusion:
 		Returns the path string with all mappings expanded. Only the first path of a multipath is returned.
 		"""
 		...
-	def SetMasterApp(self) -> None:
+	def Copy(self):
 		...
-	def MapPathSegments(self, path: str) -> dict[Any, Any]:
-		"""
-		Expands all path mappings in a multipath
-
-		Returns a table of path strings with all mappings expanded. All paths of a multipath are returned.
-		"""
+	def GetVersion(self):
 		...
-	def EditScript(self) -> None:
-		"""
-		Edit Script
-		"""
-		...
-	def GetRecentFileName(self):
-		...
-	def GetNumRecentFiles(self):
-		...
-	def CustomizeToolbars(self):
-		...
-	def ShowUI(self):
-		...
-	def IsUIVisible(self):
-		...
-	def SetActiveWndIndex(self):
-		...
-	def SetActiveFrameIndex(self):
-		...
-	def GetActiveWndIndex(self):
-		...
-	def GetRegList(self, typemask: int) -> dict[Any, Any]:
-		"""
-		Retrieve a list of all registry objects known to the system
-		"""
-		...
-	def GetRecentCompList(self):
-		...
-	def OpenLibraryStudio(self):
-		...
-	def OpenLibrary(self):
-		...
-	def SelectAll(self):
-		...
-	def GetPreviewList(self) -> dict[Any, Any]:
-		"""
-		Retrieves a table of global previews
-		"""
-		...
-	def PasteSettings(self):
-		...
-	def Cut(self):
-		...
-	def GetMainWindow(self):
-		...
-	def NewFloatFrame(self):
-		...
-	def NewTabbedFrame(self):
-		...
-	def NewImageView(self):
-		...
-	def IsNetworkAllowed(self):
-		...
-	def AllowNetwork(self):
-		...
-	def CreateFloatingView(self):
+	def GetToolList(self) -> None:
 		...
 
 Fusion = _Fusion

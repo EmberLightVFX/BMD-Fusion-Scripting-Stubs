@@ -1,47 +1,49 @@
-from MtlGraph3D MtlGraph3DFusionDoc doc import _MtlGraph3D MtlGraph3DFusionDoc doc
-from Request req import _Request req
-from MtlData3D import _MtlData3D
+from typing import Literal
+
+from FusionDoc import _FusionDoc
+from Request import _Request
+from _non_existing import _MtlData3D
 
 
 class _MtlGraph3D:
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGI_Version: int
 
-	REGS_VersionString: str
+	REGB_Hide: bool
 
-	REGS_UIName: str
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGB_ControlView: bool
-
 	REGS_ID: str
+
+	REGB_ControlView: bool
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGS_UIName: str
 
 
 	#---Methods---#
-	def MtlGraph3D(self) -> tuple[_MtlGraph3D MtlGraph3DFusionDoc doc, _Request req]:
+	def header_text(self):
+		...
+	def info_text(self):
+		...
+	def MtlGraph3D(self, doc: _FusionDoc, req: _Request) -> _MtlGraph3D:
 		"""
 		MtlGraph3D constructor
 		"""
 		...
-	def info_text(self):
-		...
 	def SetRoot(self, root: _MtlData3D) -> None:
-		...
-	def header_text(self):
 		...
 
 MtlGraph3D = _MtlGraph3D

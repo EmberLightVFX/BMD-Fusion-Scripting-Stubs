@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Literal
 
 from Registry import _Registry
 from FusionDoc import _FusionDoc
@@ -17,56 +17,56 @@ class _Object:
 	"""
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
-
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGB_ControlView: bool
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
+
 
 	#---Methods---#
-	def SetData(self, name: str, value: int | str | bool | dict[Any, Any]) -> None:
+	def QueueAction(self):
+		...
+	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any]:
 		"""
-		Set custom persistent data
+		Get custom persistent data
 		"""
 		...
 	def GetReg(self):
 		...
 	def GetID(self):
 		...
+	def GetComp(self) -> _FusionDoc:
+		...
 	def Comp(self):
+		...
+	def info_text(self):
+		...
+	def TriggerEvent(self):
+		...
+	def header_text(self):
 		...
 	def DoAction(self):
 		...
 	def Composition(self):
 		...
-	def GetComp(self) -> _FusionDoc:
-		...
-	def info_text(self):
-		...
-	def header_text(self):
-		...
-	def QueueAction(self):
-		...
-	def TriggerEvent(self):
-		...
-	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any]:
+	def SetData(self, name: str, value: int | str | bool | dict[Any, Any]) -> None:
 		"""
-		Get custom persistent data
+		Set custom persistent data
 		"""
 		...
 

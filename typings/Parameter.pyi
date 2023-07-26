@@ -1,16 +1,13 @@
-from typing import Any
-
-from Parameter import _Parameter
-
+from typing import Any, Literal
 
 class _Parameter:
 
 	#---Properties---#
-	Metadata: Any
+	Name: str
 	"""
-	Get or set metadata tables
+	Friendly name of this Parameter
 
-	Read/Write
+	Read Only
 	"""
 	ID: str
 	"""
@@ -18,33 +15,33 @@ class _Parameter:
 
 	Read Only
 	"""
-	Name: str
+	Metadata: Any
 	"""
-	Friendly name of this Parameter
+	Get or set metadata tables
 
-	Read Only
+	Read/Write
 	"""
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
 
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
+	REGI_Priority: int
 
 	REGS_ID: str
 
-	REGB_ControlView: bool
+	REGS_Name: str
 
-	REGI_Priority: int
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
@@ -55,16 +52,16 @@ class _Parameter:
 		...
 	def info_text(self):
 		...
-	def Copy(self) -> _Parameter:
-		...
-	def InterpolateWith(self, weight: float, param: _Parameter) -> _Parameter:
-		...
 	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any]:
 		"""
 		Get custom persistent data
 		"""
 		...
 	def header_text(self):
+		...
+	def InterpolateWith(self, weight: float, param: _Parameter) -> _Parameter:
+		...
+	def Copy(self) -> _Parameter:
 		...
 
 Parameter = _Parameter

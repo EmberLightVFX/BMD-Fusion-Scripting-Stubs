@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Literal
 
 class _UIDoubleSpinBox:
 
@@ -11,17 +11,9 @@ class _UIDoubleSpinBox:
 	"""
 	Read/Write
 	"""
-	Frame: Any
-	"""
-	Read/Write
-	"""
 	CleanText: Any
 	"""
 	Read Only
-	"""
-	Decimals: Any
-	"""
-	Read/Write
 	"""
 	Minimum: Any
 	"""
@@ -32,6 +24,10 @@ class _UIDoubleSpinBox:
 	Read/Write
 	"""
 	ReadOnly: Any
+	"""
+	Read/Write
+	"""
+	KeyboardTracking: Any
 	"""
 	Read/Write
 	"""
@@ -51,11 +47,15 @@ class _UIDoubleSpinBox:
 	"""
 	Read/Write
 	"""
+	Frame: Any
+	"""
+	Read/Write
+	"""
 	Prefix: Any
 	"""
 	Read/Write
 	"""
-	GroupSeparatorShown: Any
+	Decimals: Any
 	"""
 	Read/Write
 	"""
@@ -63,11 +63,11 @@ class _UIDoubleSpinBox:
 	"""
 	Read/Write
 	"""
-	Accelerated: Any
+	GroupSeparatorShown: Any
 	"""
 	Read/Write
 	"""
-	KeyboardTracking: Any
+	Accelerated: Any
 	"""
 	Read/Write
 	"""
@@ -77,30 +77,72 @@ class _UIDoubleSpinBox:
 	"""
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGI_Version: int
 
-	REGS_VersionString: str
+	REGB_Hide: bool
+
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGB_ControlView: bool
-
 	REGS_ID: str
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
+	def SetRange(self) -> None:
+		...
+	def GetCleanText(self) -> None:
+		...
+	def SetDecimals(self) -> None:
+		...
+	def GetDecimals(self) -> None:
+		...
+	def GetFrame(self) -> None:
+		...
+	def GetMaximum(self) -> None:
+		...
+	def SetMinimum(self) -> None:
+		...
+	def GetMinimum(self) -> None:
+		...
+	def SetSingleStep(self) -> None:
+		...
+	def GetSingleStep(self) -> None:
+		...
+	def SetSuffix(self) -> None:
+		...
+	def GetSuffix(self) -> None:
+		...
+	def SetPrefix(self) -> None:
+		...
+	def GetPrefix(self) -> None:
+		...
+	def SetValue(self) -> None:
+		...
+	def SelectAll(self) -> None:
+		...
+	def StepDown(self) -> None:
+		...
+	def Clear(self) -> None:
+		...
+	def StepBy(self) -> None:
+		...
+	def SetCorrectionMode(self) -> None:
+		...
+	def GetCorrectionMode(self) -> None:
+		...
 	def SetButtonSymbols(self) -> None:
 		...
 	def GetButtonSymbols(self) -> None:
@@ -133,57 +175,15 @@ class _UIDoubleSpinBox:
 		...
 	def GetSpecialValueText(self) -> None:
 		...
-	def GetValue(self) -> None:
-		...
-	def GetFrame(self) -> None:
-		...
 	def SetFrame(self) -> None:
 		...
-	def SetRange(self) -> None:
-		...
-	def GetCleanText(self) -> None:
-		...
-	def SetDecimals(self) -> None:
-		...
-	def GetDecimals(self) -> None:
-		...
-	def SetMaximum(self) -> None:
-		...
-	def GetMaximum(self) -> None:
-		...
-	def SetMinimum(self) -> None:
-		...
-	def GetMinimum(self) -> None:
-		...
-	def SetSingleStep(self) -> None:
-		...
-	def GetSingleStep(self) -> None:
-		...
-	def SetSuffix(self) -> None:
-		...
-	def GetSuffix(self) -> None:
-		...
-	def SetPrefix(self) -> None:
-		...
-	def GetPrefix(self) -> None:
-		...
-	def header_text(self):
-		...
-	def SetValue(self) -> None:
-		...
-	def SelectAll(self) -> None:
-		...
-	def StepDown(self) -> None:
+	def GetValue(self) -> None:
 		...
 	def StepUp(self) -> None:
 		...
-	def StepBy(self) -> None:
+	def header_text(self):
 		...
-	def SetCorrectionMode(self) -> None:
-		...
-	def GetCorrectionMode(self) -> None:
-		...
-	def Clear(self) -> None:
+	def SetMaximum(self) -> None:
 		...
 
 UIDoubleSpinBox = _UIDoubleSpinBox

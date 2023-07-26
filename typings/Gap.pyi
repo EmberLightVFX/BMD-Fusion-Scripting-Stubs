@@ -1,17 +1,19 @@
-from Gap GapTagList tags import _Gap GapTagList tags
+from typing import Literal
+
+from TagList import _TagList
 
 
 class _Gap:
 
 	#---Methods---#
+	def header_text(self):
+		...
 	def info_text(self):
 		...
-	def Gap(self) -> _Gap GapTagList tags:
+	def Gap(self, tags: _TagList) -> _Gap:
 		"""
 		Gap constructor
 		"""
-		...
-	def header_text(self):
 		...
 
 Gap = _Gap

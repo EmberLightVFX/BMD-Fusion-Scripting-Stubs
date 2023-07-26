@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Literal
 
 class _UIActionStrip:
 
@@ -13,30 +13,34 @@ class _UIActionStrip:
 	"""
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGI_Version: int
 
-	REGS_VersionString: str
+	REGB_Hide: bool
+
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGB_ControlView: bool
-
 	REGS_ID: str
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
+	def AddPopup(self):
+		...
+	def AddSlider(self):
+		...
 	def AddEdit(self):
 		...
 	def AddButton(self):
@@ -57,17 +61,13 @@ class _UIActionStrip:
 		...
 	def Update(self) -> None:
 		...
-	def SetZonesPerSide(self) -> None:
+	def header_text(self):
 		...
 	def GetZonesPerSide(self) -> None:
 		...
-	def header_text(self):
+	def SetZonesPerSide(self) -> None:
 		...
 	def SetTarget(self):
-		...
-	def AddPopup(self):
-		...
-	def AddSlider(self):
 		...
 
 UIActionStrip = _UIActionStrip

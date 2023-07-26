@@ -1,5 +1,4 @@
-from Number Numberfloat64 val import _Number Numberfloat64 val
-
+from typing import Literal
 
 class _Number:
 
@@ -10,38 +9,38 @@ class _Number:
 	"""
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGI_Version: int
 
-	REGS_VersionString: str
+	REGB_Hide: bool
+
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGB_ControlView: bool
-
 	REGS_ID: str
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
+	def header_text(self):
+		...
 	def info_text(self):
 		...
-	def Number(self) -> _Number Numberfloat64 val:
+	def Number(self, val: float) -> _Number:
 		"""
 		Number constructor
 		"""
-		...
-	def header_text(self):
 		...
 
 Number = _Number

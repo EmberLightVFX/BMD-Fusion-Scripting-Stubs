@@ -1,25 +1,22 @@
-from Matrix4 import _Matrix4
-from Vector3f import _Vector3f
+from typing import Literal
+
 from Vector4 import _Vector4
+from Vector3f import _Vector3f
 
 
 class _Matrix4:
 
 	#---Properties---#
-	TypeNamePtr: str
+	TypeName: str
 	"""
 	Read Only
 	"""
-	TypeName: str
+	TypeNamePtr: str
 	"""
 	Read Only
 	"""
 
 	#---Methods---#
-	def InverseTranspose(self) -> _Matrix4:
-		...
-	def TransformNormal(self, norm: _Vector3f) -> _Vector3f:
-		...
 	def RotX(self, a: float) -> None:
 		...
 	def RotY(self, a: float) -> None:
@@ -36,17 +33,17 @@ class _Matrix4:
 		...
 	def __mul(self, mat: _Matrix4) -> _Matrix4:
 		...
-	def info_text(self):
-		...
 	def _Ortho6(self, xmin: float, xmax: float, ymin: float, ymax: float, zmin: float, zmax: float) -> None:
 		...
 	def _Ortho3(self, width: float, height: float, depth: float) -> None:
 		...
-	def SetIdentity(self) -> None:
+	def Adjoint(self) -> None:
 		...
 	def TransformPoint(self, out: _Vector4, inp: _Vector4) -> None:
 		...
 	def header_text(self):
+		...
+	def SetIdentity(self) -> None:
 		...
 	def Identity(self) -> None:
 		...
@@ -54,7 +51,7 @@ class _Matrix4:
 		...
 	def SetOne(self) -> None:
 		...
-	def Adjoint(self) -> None:
+	def info_text(self):
 		...
 	def Determinant(self) -> float:
 		...
@@ -79,6 +76,10 @@ class _Matrix4:
 	def Inverse(self) -> _Matrix4:
 		...
 	def Transpose(self) -> _Matrix4:
+		...
+	def InverseTranspose(self) -> _Matrix4:
+		...
+	def TransformNormal(self, norm: _Vector3f) -> _Vector3f:
 		...
 
 Matrix4 = _Matrix4

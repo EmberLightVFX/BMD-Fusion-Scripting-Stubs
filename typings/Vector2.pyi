@@ -1,4 +1,5 @@
-from Vector2 import _Vector2
+from typing import Literal
+
 from Matrix3 import _Matrix3
 from Matrix4 import _Matrix4
 
@@ -6,11 +7,11 @@ from Matrix4 import _Matrix4
 class _Vector2:
 
 	#---Properties---#
-	TypeNamePtr: str
+	TypeName: str
 	"""
 	Read Only
 	"""
-	TypeName: str
+	TypeNamePtr: str
 	"""
 	Read Only
 	"""
@@ -18,33 +19,35 @@ class _Vector2:
 	#---Methods---#
 	def _newVec2(self, vec: _Vector2) -> _Vector2:
 		...
-	def __unm(self) -> _Vector2:
-		...
-	def _newNums(self, x: float, y: float) -> _Vector2:
+	def info_text(self):
 		...
 	def _mulMat3(self, mat: _Matrix3) -> _Vector2:
 		...
 	def _mulMat4(self, mat: _Matrix4) -> _Vector2:
 		...
-	def __eq(self, vec: _Vector2) -> bool:
+	def __unm(self) -> _Vector2:
+		...
+	def _newNums(self, x: float, y: float) -> _Vector2:
 		...
 	def _mulNum(self, num: float) -> _Vector2:
 		...
-	def header_text(self):
-		...
-	def info_text(self):
+	def Length(self) -> float:
 		...
 	def IsNull(self) -> bool:
 		...
 	def Normalize(self) -> None:
 		...
+	def Distance(self, vec: _Vector2) -> float:
+		...
+	def __div(self, num: float) -> _Vector2:
+		...
+	def header_text(self):
+		...
+	def __eq(self, vec: _Vector2) -> bool:
+		...
 	def __add(self, vec: _Vector2) -> _Vector2:
 		...
 	def __sub(self, vec: _Vector2) -> _Vector2:
-		...
-	def Length(self) -> float:
-		...
-	def __div(self, num: float) -> _Vector2:
 		...
 
 Vector2 = _Vector2

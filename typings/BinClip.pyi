@@ -1,32 +1,34 @@
 class _BinClip:
 
 	#---Attributes---#
+	REGS_FileName: str
+
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
-	REGS_VersionString: str
-
-	REGS_UIName: str
-
 	REGI_ClassType: int
-
-	REGS_FileName: str
-
-	REGB_ControlView: bool
-
-	REGS_ID: str
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGB_ControlView: bool
+
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGS_UIName: str
 
 
 	#---Methods---#
+	def header_text(self):
+		...
 	def DeleteStamp(self) -> None:
 		"""
 		Delete the stamp for this BinClip
@@ -41,8 +43,6 @@ class _BinClip:
 		"""
 		Defragment this clip
 		"""
-		...
-	def header_text(self):
 		...
 
 BinClip = _BinClip

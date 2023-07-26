@@ -3,9 +3,7 @@ from typing import Any
 class _BezierSpline:
 
 	#---Attributes---#
-	REGB_NoMotionBlurCtrls: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGB_ControlView: bool
 
@@ -23,40 +21,32 @@ class _BezierSpline:
 
 	REGB_Source_SizeCtrls: bool
 
-	REGB_Hide: bool
-
 	REGB_Source_AspectCtrls: bool
 
 	REGB_NoAutoProxy: bool
 
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGI_Version: int
-
-	REGI_Priority: int
-
-	REGB_OperatorControl: bool
-
-	REGB_NoBlendCtrls: bool
+	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
+	REGS_Name: str
+
+	REGI_Priority: int
+
+	REGB_NoBlendCtrls: bool
+
 	REGB_NoObjMatCtrls: bool
+
+	REGS_ID: str
+
+	REGB_NoMotionBlurCtrls: bool
+
+	REGI_Version: int
+
+	REGB_OperatorControl: bool
 
 
 	#---Methods---#
-	def GetKeyFrames(self) -> dict[Any, Any]:
-		"""
-		Get a table of keyframes
-		"""
-		...
-	def SetKeyFrames(self, keyframes: dict[Any, Any], replace: bool = bool()) -> None:
-		"""
-		Set a table of keyframes
-		"""
-		...
 	def DeleteKeyFrames(self, start: int, end: int = int()) -> None:
 		"""
 		Delete key frames
@@ -72,7 +62,17 @@ class _BezierSpline:
 		pivotx, pivoty: optional values to scale around. Default is zero
 		"""
 		...
+	def GetKeyFrames(self) -> dict[Any, Any]:
+		"""
+		Get a table of keyframes
+		"""
+		...
 	def header_text(self):
+		...
+	def SetKeyFrames(self, keyframes: dict[Any, Any], replace: bool = bool()) -> None:
+		"""
+		Set a table of keyframes
+		"""
 		...
 
 BezierSpline = _BezierSpline

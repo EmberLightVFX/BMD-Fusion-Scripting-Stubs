@@ -1,36 +1,36 @@
-from typing import Any, overload
+from typing import Any, overload, Literal
 
-from object import _object
+from _non_existing import _object
 
 
 class _SplineEditorView:
 
 	#---Properties---#
-	ZoomX: Any
 	ZoomY: Any
+	ZoomX: Any
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
-	REGS_VersionString: str
-
 	REGI_ClassType: int
 
-	REGB_Unpredictable: bool
-
-	REGS_UIName: str
+	REGI_Priority: int
 
 	REGS_ID: str
 
 	REGB_ControlView: bool
 
-	REGI_Priority: int
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGS_UIName: str
 
 
 	#---Methods---#
@@ -39,17 +39,12 @@ class _SplineEditorView:
 		Zoom to Rectangle
 		"""
 		...
-	def ZoomIn(self) -> None:
-		"""
-		Increases the scale (zoom) of the view
-		"""
-		...
 	def ZoomOut(self) -> None:
 		"""
 		Decreases the scale (zoom) of the view
 		"""
 		...
-	def Paste(self, desttime: int, spline1: _object, spline2...: _object = _object(), points: dict[Any, Any] = dict[Any, Any]()) -> bool:
+	def Paste(self, desttime: int, spline1: _object, spline2___: _object = _object(), points: dict[Any, Any] = dict[Any, Any]()) -> bool:
 		"""
 		Paste points to given splines at given time from the Clipboard
 		"""
@@ -96,17 +91,22 @@ class _SplineEditorView:
 		Fill the view with the specified rectangle
 		"""
 		...
-	def ZoomFit(self) -> None:
-		"""
-		Changes scale to fit all displayed splines within the view
-		"""
+	def header_text(self):
 		...
 	def InZoomToRectMode(self) -> bool:
 		"""
 		Use TimeStretch
 		"""
 		...
-	def header_text(self):
+	def ZoomIn(self) -> None:
+		"""
+		Increases the scale (zoom) of the view
+		"""
+		...
+	def ZoomFit(self) -> None:
+		"""
+		Changes scale to fit all displayed splines within the view
+		"""
 		...
 
 SplineEditorView = _SplineEditorView

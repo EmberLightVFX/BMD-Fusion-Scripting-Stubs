@@ -1,3 +1,5 @@
+from typing import Literal
+
 from Request import _Request
 from Image import _Image
 from TagList import _TagList
@@ -6,33 +8,33 @@ from TagList import _TagList
 class _GamutInputs:
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
-
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGB_ControlView: bool
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
+
 
 	#---Methods---#
-	def _ProcessOf(self, req: _Request, img: _Image, out: _Image, depth: int, clippingmode: str, tags: _TagList) -> _Image:
+	def header_text(self):
 		...
 	def info_text(self):
 		...
-	def header_text(self):
+	def _ProcessOf(self, req: _Request, img: _Image, out: _Image, depth: int, clippingmode: str, tags: _TagList) -> _Image:
 		...
 
 GamutInputs = _GamutInputs

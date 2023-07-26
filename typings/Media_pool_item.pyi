@@ -1,6 +1,10 @@
-class _Media pool item:
+from typing import Literal
+
+class _Media_pool_item:
 
 	#---Methods---#
+	def header_text(self):
+		...
 	def info_text(self):
 		...
 	def GetFlags(self):
@@ -8,7 +12,5 @@ class _Media pool item:
 		Deprecated
 		"""
 		...
-	def header_text(self):
-		...
 
-Media pool item = _Media pool item
+Media_pool_item = _Media_pool_item

@@ -1,14 +1,13 @@
-from Noise3 Noise3 import _Noise3 Noise3
-
+from typing import Literal
 
 class _Noise3:
 
 	#---Properties---#
-	TypeNamePtr: str
+	TypeName: str
 	"""
 	Read Only
 	"""
-	TypeName: str
+	TypeNamePtr: str
 	"""
 	Read Only
 	"""
@@ -18,14 +17,14 @@ class _Noise3:
 		...
 	def noise(self, x: float, y: float, z: float, octaves: float) -> float:
 		...
-	def Noise3(self) -> _Noise3 Noise3:
-		"""
-		Noise3 constructor
-		"""
+	def header_text(self):
 		...
 	def _noise(self, x: float, y: float, z: float) -> float:
 		...
-	def header_text(self):
+	def Noise3(self) -> _Noise3:
+		"""
+		Noise3 constructor
+		"""
 		...
 
 Noise3 = _Noise3

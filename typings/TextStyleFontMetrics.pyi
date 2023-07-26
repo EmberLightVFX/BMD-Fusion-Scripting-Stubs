@@ -1,52 +1,20 @@
-from char32_t import _char32_t
-from TextStyleFontMetrics TextStyleFontMetricsTextStyleFont font import _TextStyleFontMetrics TextStyleFontMetricsTextStyleFont font
-from int direction import _int direction
+from typing import Literal
+
+from TextStyleFont import _TextStyleFont
 
 
 class _TextStyleFontMetrics:
 
 	#---Properties---#
-	UnderlineThickness: float
+	StrikeoutOffset: float
 	"""
 	Read/Write
-	"""
-	CharWidthAverage: float
-	"""
-	Read/Write
-	"""
-	CharWidthSpace: float
-	"""
-	Read/Write
-	"""
-	DoStrikeout: bool
-	"""
-	Read/Write
-	"""
-	DoUnderline: bool
-	"""
-	Read/Write
-	"""
-	TypeName: str
-	"""
-	Read Only
-	"""
-	FontSize: float
-	"""
-	Read/Write
-	"""
-	TypeNamePtr: str
-	"""
-	Read Only
 	"""
 	StrikeoutThickness: float
 	"""
 	Read/Write
 	"""
 	TextAscent: float
-	"""
-	Read/Write
-	"""
-	Scale: float
 	"""
 	Read/Write
 	"""
@@ -62,11 +30,43 @@ class _TextStyleFontMetrics:
 	"""
 	Read/Write
 	"""
-	StrikeoutOffset: float
+	UnderlineOffsetH: float
 	"""
 	Read/Write
 	"""
-	UnderlineOffsetH: float
+	UnderlineThickness: float
+	"""
+	Read/Write
+	"""
+	Scale: float
+	"""
+	Read/Write
+	"""
+	CharWidthAverage: float
+	"""
+	Read/Write
+	"""
+	CharWidthSpace: float
+	"""
+	Read/Write
+	"""
+	TypeName: str
+	"""
+	Read Only
+	"""
+	DoStrikeout: bool
+	"""
+	Read/Write
+	"""
+	DoUnderline: bool
+	"""
+	Read/Write
+	"""
+	TypeNamePtr: str
+	"""
+	Read Only
+	"""
+	FontSize: float
 	"""
 	Read/Write
 	"""
@@ -76,20 +76,20 @@ class _TextStyleFontMetrics:
 		...
 	def info_text(self):
 		...
-	def CharacterKerning(self, first: _char32_t, second: _char32_t) -> float:
-		...
-	def GetError(self) -> int:
-		...
-	def TextStyleFontMetrics(self) -> tuple[_TextStyleFontMetrics TextStyleFontMetricsTextStyleFont font, _int direction]:
+	def TextStyleFontMetrics(self, font: _TextStyleFont, direction: int) -> _TextStyleFontMetrics:
 		"""
 		TextStyleFontMetrics constructor
 		"""
 		...
-	def CharacterWidth(self, ch: _char32_t) -> float:
+	def GetError(self) -> int:
 		...
 	def header_text(self):
 		...
 	def CalcCharacterWidth(self, ch: int) -> float:
+		...
+	def CharacterWidth(self, ch: str) -> float:
+		...
+	def CharacterKerning(self, first: str, second: str) -> float:
 		...
 
 TextStyleFontMetrics = _TextStyleFontMetrics

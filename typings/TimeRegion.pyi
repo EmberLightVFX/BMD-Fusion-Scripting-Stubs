@@ -1,8 +1,7 @@
-from typing import Any
+from typing import Any, Literal
 
-from TimeRegion import _TimeRegion
 from TimeExtent import _TimeExtent
-from TimeStamp import _TimeStamp
+from _non_existing import _TimeStamp
 
 
 class _TimeRegion:
@@ -18,75 +17,75 @@ class _TimeRegion:
 	"""
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
-
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGB_ControlView: bool
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
+
 
 	#---Methods---#
-	def _IntersectRgn(self, rgn: _TimeRegion) -> None:
-		...
-	def _UnionExt(self, ext: _TimeExtent) -> None:
-		...
 	def _UnionRgn(self, rgn: _TimeRegion) -> None:
-		...
-	def IsEmpty(self) -> bool:
 		...
 	def _newString(self, str: str) -> _TimeRegion:
 		...
 	def _newTR(self, tr: _TimeRegion) -> _TimeRegion:
 		...
-	def FromTable(self, frames: dict[Any, Any]) -> None:
-		"""
-		Reads a table of {start, end} pairs
-		"""
+	def IsEmpty(self) -> bool:
 		...
-	def ToTable(self) -> dict[Any, Any]:
-		"""
-		Returns a table of {start, end} pairs
-		"""
+	def header_text(self):
 		...
-	def FromFrameString(self, frames: str) -> None:
-		"""
-		Reads a string description
-		"""
+	def _newDef(self) -> _TimeRegion:
+		...
+	def info_text(self):
+		...
+	def _newNums(self, s: float, e: float, l: float) -> _TimeRegion:
+		...
+	def FromString(self, str: str) -> None:
+		...
+	def IsWithin(self, t: _TimeStamp) -> bool:
 		...
 	def ToFrameString(self) -> str:
 		"""
 		Returns a string description
 		"""
 		...
-	def FromString(self, str: str) -> None:
-		...
-	def _newDef(self) -> _TimeRegion:
-		...
-	def IsWithin(self, t: _TimeStamp) -> bool:
-		...
-	def header_text(self):
-		...
-	def _newNums(self, s: float, e: float, l: float) -> _TimeRegion:
-		...
 	def ToString(self) -> str:
+		...
+	def ToTable(self) -> dict[Any, Any]:
+		"""
+		Returns a table of {start, end} pairs
+		"""
 		...
 	def _IntersectExt(self, ext: _TimeExtent) -> None:
 		...
-	def info_text(self):
+	def FromTable(self, frames: dict[Any, Any]) -> None:
+		"""
+		Reads a table of {start, end} pairs
+		"""
+		...
+	def _IntersectRgn(self, rgn: _TimeRegion) -> None:
+		...
+	def FromFrameString(self, frames: str) -> None:
+		"""
+		Reads a string description
+		"""
+		...
+	def _UnionExt(self, ext: _TimeExtent) -> None:
 		...
 
 TimeRegion = _TimeRegion

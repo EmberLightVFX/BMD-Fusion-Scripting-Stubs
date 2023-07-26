@@ -1,3 +1,5 @@
+from typing import Literal
+
 from GLView import _GLView
 
 
@@ -14,14 +16,6 @@ class _GLPreview:
 	"""
 
 	#---Attributes---#
-	REGB_Preview_CanSaveImage: bool
-
-	REGB_Preview_CanSaveAnim: bool
-
-	REGB_Preview_CanCopyImage: bool
-
-	REGB_Preview_CanCopyAnim: bool
-
 	REGB_Preview_CanRecord: bool
 
 	REGB_Preview_UsesFilenames: bool
@@ -36,17 +30,17 @@ class _GLPreview:
 
 	REGS_ID: str
 
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
 	REGS_VersionString: str
 
 	REGS_UIName: str
 
+	REGS_Name: str
+
+	REGI_Version: int
+
 	REGB_CreateStaticPreview: bool
 
-	REGS_Name: str
+	REGB_SupportsDoD: bool
 
 	REGB_CreateFramePreview: bool
 
@@ -54,11 +48,19 @@ class _GLPreview:
 
 	REGB_Preview_CanDisplayImage: bool
 
-	REGI_Version: int
+	REGB_Hide: bool
 
 	REGB_Preview_CanCreateAnim: bool
 
 	REGB_Preview_CanPlayAnim: bool
+
+	REGB_Preview_CanSaveImage: bool
+
+	REGB_Preview_CanSaveAnim: bool
+
+	REGB_Preview_CanCopyImage: bool
+
+	REGB_Preview_CanCopyAnim: bool
 
 
 GLPreview = _GLPreview

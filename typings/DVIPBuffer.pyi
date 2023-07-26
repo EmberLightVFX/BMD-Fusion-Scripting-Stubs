@@ -1,19 +1,18 @@
-from DVIPBuffer DVIPBufferRequest req import _DVIPBuffer DVIPBufferRequest req
-from Image image import _Image image
-from boolean writable import _boolean writable
+from Request import _Request
+from Image import _Image
 
 
 class _DVIPBuffer:
 
 	#---Methods---#
+	def header_text(self):
+		...
 	def info_text(self):
 		...
-	def DVIPBuffer(self) -> tuple[_DVIPBuffer DVIPBufferRequest req, _Image image, _boolean writable]:
+	def DVIPBuffer(self, req: _Request, image: _Image, writable: bool) -> _DVIPBuffer:
 		"""
 		DVIPBuffer constructor
 		"""
-		...
-	def header_text(self):
 		...
 
 DVIPBuffer = _DVIPBuffer

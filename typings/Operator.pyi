@@ -1,43 +1,37 @@
-from typing import Any, overload
+from typing import Any, overload, Literal
 
-from Composition import _Composition
 from FusionDoc import _FusionDoc
-from Tool import _Tool
+from Composition import _Composition
+from Parameter import _Parameter
 from Output import _Output
 from Input import _Input
+from SubInputs import _SubInputs
+from TagList import _TagList
 from Request import _Request
 from TimeRegion import _TimeRegion
-from TagList import _TagList
-from Operator import _Operator
-from TimeStamp import _TimeStamp
-from SubInputs import _SubInputs
-from Parameter import _Parameter
+from _non_existing import _Tool, _TimeStamp
 
 
 class _Operator:
 
 	#---Properties---#
-	Composition: _Composition
+	Status: str
 	"""
-	The composition that this tool belongs to
-
 	Read Only
 	"""
 	ProgressScale: int
 	"""
 	Read/Write
 	"""
+	Name: str
+	"""
+	Friendly name of this tool
+
+	Read Only
+	"""
 	ProgressCount: int
 	"""
 	Read/Write
-	"""
-	Status: str
-	"""
-	Read Only
-	"""
-	Document: _FusionDoc
-	"""
-	Read Only
 	"""
 	ParentTool: _Tool
 	"""
@@ -67,16 +61,6 @@ class _Operator:
 
 	Read/Write
 	"""
-	ID: str
-	"""
-	Registry ID of this tool
-
-	Read Only
-	"""
-	IsBeingLoaded: bool
-	"""
-	Read Only
-	"""
 	TileColor: dict[Any, Any]
 	"""
 	Color of a tool's icon in the Flow view
@@ -86,40 +70,63 @@ class _Operator:
 
 	Read/Write
 	"""
+	IsBeingLoaded: bool
+	"""
+	Read Only
+	"""
+	ID: str
+	"""
+	Registry ID of this tool
+
+	Read Only
+	"""
+	Document: _FusionDoc
+	"""
+	Read Only
+	"""
+	Composition: _Composition
+	"""
+	The composition that this tool belongs to
+
+	Read Only
+	"""
 	Override: int
 	"""
 	Read/Write
 	"""
-	Name: str
-	"""
-	Friendly name of this tool
-
-	Read Only
-	"""
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
-
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGB_ControlView: bool
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
+
 
 	#---Methods---#
+	def GetInput(self, id: str, time: int = int()) -> int | str | _Parameter:
+		"""
+		Fetches the value of an input at a given time
+
+		Arguments:
+			id	- ID of input
+			time	- keyframe to fetch (not required for non-animated inputs)
+		"""
+		...
 	def GetChildrenList(self, selected: bool = bool(), regid: str = str()) -> dict[Any, Any]:
 		"""
 		Returns a list of all children tools, or selected children tools
@@ -191,81 +198,52 @@ class _Operator:
 		Returns: table of control page names, indexed by page number
 		"""
 		...
-	def IsGPUEnabled(self, req: _Request) -> bool:
-		...
-	def RemoveControlPage(self, name: str) -> bool:
+	def EndUndo(self, keep: bool) -> None:
 		...
 	def header_text(self):
 		...
-	def SetRegion(self, tr: _TimeRegion) -> None:
+	def FindInput(self, name: str) -> _Input:
 		...
-	def GetKeyFrames(self) -> dict[Any, Any]:
-		"""
-		Return a table of all keyframe times for this tool
-		"""
+	def FindOutput(self, name: str) -> _Output:
 		...
-	def UpdateControls(self) -> None:
-		...
-	def _CloneInput(self, from: _Input, id: str, tags: _TagList) -> _Input:
-		...
-	def info_text(self):
-		...
-	def EndUndo(self, keep: bool) -> None:
-		...
-	def StartUndo(self, name: str) -> None:
-		...
-	def AddControlPage(self, name: str, tags: _TagList) -> int:
-		...
-	def _AddInput(self, name: str, id: str, tags: _TagList) -> _Input:
-		...
-	def SetProgress(self, prog: float) -> bool:
-		...
-	def GetSourceTool(self, name: str) -> _Operator:
-		...
-	def GetRegion(self) -> _TimeRegion:
-		...
-	def GetPrevKeyTime(self, t: _TimeStamp) -> _TimeStamp:
+	def FindSubInputs(self, name: str) -> _SubInputs:
 		...
 	def GetNextKeyTime(self, t: _TimeStamp) -> _TimeStamp:
 		...
-	def FindSubInputs(self, name: str) -> _SubInputs:
+	def AddOutput(self, name: str, id: str, tags: _TagList) -> _Output:
+		...
+	def AddSeparator(self, id: str, tags: _TagList) -> _Input:
+		...
+	def AddSpacer(self, id: str, tags: _TagList) -> _Input:
+		...
+	def AddSubInputs(self, subid: str, tags: _TagList) -> _SubInputs:
 		...
 	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any]:
 		"""
 		Get custom persistent data
 		"""
 		...
+	def BeginControlNest(self, name: str, id: str, expand: bool, tags: _TagList) -> _Input:
+		...
+	def GetPrevKeyTime(self, t: _TimeStamp) -> _TimeStamp:
+		...
 	def SetData(self, name: str, value: int | str | bool | dict[Any, Any]) -> None:
 		"""
 		Set custom persistent data
 		"""
 		...
-	def GetInput(self, id: str, time: int = int()) -> int | str | _Parameter:
+	def GetSourceTool(self, name: str) -> _Operator:
+		...
+	def GetKeyFrames(self) -> dict[Any, Any]:
 		"""
-		Fetches the value of an input at a given time
-
-		Arguments:
-			id	- ID of input
-			time	- keyframe to fetch (not required for non-animated inputs)
+		Return a table of all keyframe times for this tool
 		"""
 		...
-	def AddSpacer(self, id: str, tags: _TagList) -> _Input:
+	def IsGPUEnabled(self, req: _Request) -> bool:
 		...
-	def AddSeparator(self, id: str, tags: _TagList) -> _Input:
+	def RemoveControlPage(self, name: str) -> bool:
 		...
-	def AddSubInputs(self, subid: str, tags: _TagList) -> _SubInputs:
-		...
-	@overload
-	def LoadSettings(self, filename: str) -> bool:
-		"""
-		Load the tools's settings from a file or table
-		"""
-		...
-	@overload
-	def LoadSettings(self, settings: dict[Any, Any]) -> bool:
-		"""
-		Load the tools's settings from a file or table
-		"""
+	def SetProgress(self, prog: float) -> bool:
 		...
 	def ConnectInput(self, input: str, target: _Tool | _Output | None) -> bool:
 		"""
@@ -276,16 +254,28 @@ class _Operator:
 			target	- Tool or Output to connect the Input to, or nil to disconnect
 		"""
 		...
-	def BeginControlNest(self, name: str, id: str, expand: bool, tags: _TagList) -> _Input:
+	def info_text(self):
 		...
-	def AddOutput(self, name: str, id: str, tags: _TagList) -> _Output:
+	def SetRegion(self, tr: _TimeRegion) -> None:
+		...
+	def _AddInput(self, name: str, id: str, tags: _TagList) -> _Input:
+		...
+	def StartUndo(self, name: str) -> None:
+		...
+	def GetRegion(self) -> _TimeRegion:
+		...
+	def UpdateControls(self) -> None:
+		...
+	def EndControlNest(self) -> None:
+		...
+	def AddControlPage(self, name: str, tags: _TagList) -> int:
+		...
+	def _CloneInput(self, from_: _Input, id: str, tags: _TagList) -> _Input:
 		...
 	def SetCurrentSettings(self) -> int:
 		"""
 		Sets the tool's current settings slot
 		"""
-		...
-	def EndControlNest(self) -> None:
 		...
 	def GetCurrentSettings(self) -> int:
 		"""
@@ -304,7 +294,17 @@ class _Operator:
 		Save the tool's current settings to a file or table
 		"""
 		...
-	def FindInput(self, name: str) -> _Input:
+	@overload
+	def LoadSettings(self, filename: str) -> bool:
+		"""
+		Load the tools's settings from a file or table
+		"""
+		...
+	@overload
+	def LoadSettings(self, settings: dict[Any, Any]) -> bool:
+		"""
+		Load the tools's settings from a file or table
+		"""
 		...
 	def SetInput(self, id: str, value: int | str | _Parameter, time: int) -> None:
 		"""
@@ -315,8 +315,6 @@ class _Operator:
 			value	- number, string or Parameter object to set
 			time	- keyframe to set (not required for non-animated inputs)
 		"""
-		...
-	def FindOutput(self, name: str) -> _Output:
 		...
 
 Operator = _Operator

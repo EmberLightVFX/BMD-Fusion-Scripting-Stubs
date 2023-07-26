@@ -18,11 +18,11 @@ class _FusionApp:
 	"""
 
 	#---Methods---#
+	def header_text(self):
+		...
 	def info_text(self):
 		...
 	def PurgeCache(self) -> None:
-		...
-	def header_text(self):
 		...
 
 FusionApp = _FusionApp

@@ -1,29 +1,30 @@
-from TimeExtent import _TimeExtent
-from TimeStamp import _TimeStamp
+from typing import Literal
+
+from _non_existing import _TimeStamp
 
 
 class _TimeExtent:
 
 	#---Properties---#
-	TypeNamePtr: str
+	TypeName: str
 	"""
 	Read Only
 	"""
-	TypeName: str
+	TypeNamePtr: str
 	"""
 	Read Only
 	"""
 
 	#---Methods---#
-	def _newExt(self, ext: _TimeExtent) -> _TimeExtent:
-		...
-	def _newNum(self, s: _TimeStamp, e: _TimeStamp, l: _TimeStamp) -> _TimeExtent:
+	def _newDef(self) -> _TimeExtent:
 		...
 	def info_text(self):
 		...
-	def _newDef(self) -> _TimeExtent:
+	def _newNum(self, s: _TimeStamp, e: _TimeStamp, l: _TimeStamp) -> _TimeExtent:
 		...
 	def header_text(self):
+		...
+	def _newExt(self, ext: _TimeExtent) -> _TimeExtent:
 		...
 
 TimeExtent = _TimeExtent

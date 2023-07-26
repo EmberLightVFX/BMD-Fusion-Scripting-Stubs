@@ -1,45 +1,57 @@
-from typing import Any
+from typing import Any, Literal
 
 class _UIWidget:
 
 	#---Properties---#
-	ContextMenuPolicy: Any
+	SizeIncrement: Any
 	"""
 	Read/Write
 	"""
-	ToolTip: Any
+	BaseSize: Any
 	"""
 	Read/Write
 	"""
-	StatusTip: Any
+	WindowTitle: Any
 	"""
 	Read/Write
 	"""
-	FocusPolicy: Any
+	WindowFlags: Any
 	"""
 	Read/Write
 	"""
-	Geometry: Any
+	MouseTracking: Any
 	"""
 	Read/Write
 	"""
-	WindowModality: Any
+	MinimumSize: Any
 	"""
 	Read/Write
 	"""
-	WindowState: Any
+	MaximumSize: Any
 	"""
 	Read/Write
 	"""
-	Hidden: Any
+	Enabled: Any
 	"""
 	Read/Write
 	"""
-	StyleSheet: Any
+	BackgroundColor: Any
+	"""
+	Read/Write
+	"""
+	FocusProxy: Any
+	"""
+	Read/Write
+	"""
+	Visible: Any
 	"""
 	Read/Write
 	"""
 	WindowFilePath: Any
+	"""
+	Read/Write
+	"""
+	ToolTip: Any
 	"""
 	Read/Write
 	"""
@@ -51,15 +63,24 @@ class _UIWidget:
 	"""
 	Read/Write
 	"""
+	Hidden: Any
+	"""
+	Read/Write
+	"""
 	AccessibleDescription: Any
 	"""
 	Read/Write
 	"""
-	UpdatesEnabled: Any
+	Font: Any
+	StatusTip: Any
 	"""
 	Read/Write
 	"""
 	AccessibleName: Any
+	"""
+	Read/Write
+	"""
+	StyleSheet: Any
 	"""
 	Read/Write
 	"""
@@ -75,7 +96,23 @@ class _UIWidget:
 	"""
 	Read/Write
 	"""
+	UpdatesEnabled: Any
+	"""
+	Read/Write
+	"""
+	WindowState: Any
+	"""
+	Read/Write
+	"""
 	WindowOpacity: Any
+	"""
+	Read/Write
+	"""
+	FocusPolicy: Any
+	"""
+	Read/Write
+	"""
+	ContextMenuPolicy: Any
 	"""
 	Read/Write
 	"""
@@ -83,44 +120,7 @@ class _UIWidget:
 	"""
 	Write Only
 	"""
-	BackgroundColor: Any
-	"""
-	Read/Write
-	"""
-	SizeIncrement: Any
-	"""
-	Read/Write
-	"""
-	WindowFlags: Any
-	"""
-	Read/Write
-	"""
-	BaseSize: Any
-	"""
-	Read/Write
-	"""
-	WindowTitle: Any
-	"""
-	Read/Write
-	"""
-	Enabled: Any
-	"""
-	Read/Write
-	"""
-	MouseTracking: Any
-	"""
-	Read/Write
-	"""
-	MaximumSize: Any
-	"""
-	Read/Write
-	"""
-	Font: Any
-	FocusProxy: Any
-	"""
-	Read/Write
-	"""
-	MinimumSize: Any
+	Geometry: Any
 	"""
 	Read/Write
 	"""
@@ -128,124 +128,36 @@ class _UIWidget:
 	"""
 	Read/Write
 	"""
-	Visible: Any
+	WindowModality: Any
 	"""
 	Read/Write
 	"""
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGI_Version: int
 
-	REGS_VersionString: str
+	REGB_Hide: bool
+
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGB_ControlView: bool
-
 	REGS_ID: str
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
-	def SetStatusTip(self) -> None:
-		...
-	def GetStatusTip(self) -> None:
-		...
-	def SetHidden(self) -> None:
-		...
-	def GetHidden(self) -> None:
-		...
-	def Size(self) -> None:
-		...
-	def AddChild(self) -> None:
-		...
-	def HasFocus(self) -> None:
-		...
-	def FrameSize(self) -> None:
-		...
-	def Pos(self) -> None:
-		...
-	def UpdateGeometry(self) -> None:
-		...
-	def AdjustSize(self) -> None:
-		...
-	def ChildrenRect(self) -> None:
-		...
-	def Rect(self) -> None:
-		...
-	def NormalGeometry(self) -> None:
-		...
-	def SetGeometry(self) -> None:
-		...
-	def GetGeometry(self) -> None:
-		...
-	def FrameGeometry(self) -> None:
-		...
-	def OverrideWindowFlags(self) -> None:
-		...
-	def OverrideWindowState(self) -> None:
-		...
-	def TestAttribute(self) -> None:
-		...
-	def SetAttribute(self) -> None:
-		...
-	def ReleaseKeyboard(self) -> None:
-		...
-	def GrabKeyboard(self) -> None:
-		...
-	def ReleaseMouse(self) -> None:
-		...
-	def GrabMouse(self) -> None:
-		...
-	def MinimumSizeHint(self) -> None:
-		...
-	def KeyboardGrabber(self) -> None:
-		...
-	def MouseGrabber(self) -> None:
-		...
-	def IsEnabledTo(self) -> None:
-		...
-	def Move(self) -> None:
-		...
-	def PreviousInFocusChain(self) -> None:
-		...
-	def NextInFocusChain(self) -> None:
-		...
-	def FocusWidget(self) -> None:
-		...
-	def StackUnder(self) -> None:
-		...
-	def ChildAt(self) -> None:
-		...
-	def IsAncestorOf(self) -> None:
-		...
-	def NativeParentWidget(self) -> None:
-		...
-	def ParentWidget(self) -> None:
-		...
-	def ClearFocus(self) -> None:
-		...
-	def ActivateWindow(self) -> None:
-		...
-	def IsActiveWindow(self) -> None:
-		...
-	def Raise(self) -> None:
-		...
-	def ShowNormal(self) -> None:
-		...
-	def ShowFullScreen(self) -> None:
-		...
 	def ShowMaximized(self) -> None:
 		...
 	def ShowMinimized(self) -> None:
@@ -278,11 +190,11 @@ class _UIWidget:
 		...
 	def MapToGlobal(self) -> None:
 		...
-	def SetVisible(self) -> None:
+	def GetItems(self) -> None:
 		...
 	def GetVisible(self) -> None:
 		...
-	def SetMouseTracking(self) -> None:
+	def SetFocus(self) -> None:
 		...
 	def GetMouseTracking(self) -> None:
 		...
@@ -312,9 +224,21 @@ class _UIWidget:
 		...
 	def SetWindowFlags(self) -> None:
 		...
+	def AddChild(self) -> None:
+		...
+	def Update(self) -> None:
+		...
+	def RemoveChild(self) -> None:
+		...
+	def Close(self) -> None:
+		...
+	def Lower(self) -> None:
+		...
+	def Move(self) -> None:
+		...
 	def GetWindowFlags(self) -> None:
 		...
-	def QueueEvent(self) -> None:
+	def SetFocusProxy(self) -> None:
 		...
 	def GetFocusProxy(self) -> None:
 		...
@@ -330,7 +254,7 @@ class _UIWidget:
 		...
 	def GetWindowIconText(self) -> None:
 		...
-	def Height(self) -> None:
+	def SetUpdatesEnabled(self) -> None:
 		...
 	def GetUpdatesEnabled(self) -> None:
 		...
@@ -382,61 +306,137 @@ class _UIWidget:
 		...
 	def SetPaletteColor(self) -> None:
 		...
-	def Find(self) -> None:
-		...
 	def GetChildren(self) -> None:
 		...
 	def SetTabOrder(self) -> None:
 		...
-	def Repaint(self) -> None:
+	def Height(self) -> None:
 		...
 	def SetParent(self) -> None:
 		...
-	def header_text(self):
-		...
-	def Show(self) -> None:
-		...
-	def X(self) -> None:
+	def Width(self) -> None:
 		...
 	def Y(self) -> None:
 		...
-	def Hide(self) -> None:
+	def X(self) -> None:
 		...
-	def RemoveChild(self) -> None:
-		...
-	def WindowType(self) -> None:
+	def SetAttribute(self) -> None:
 		...
 	def Window(self) -> None:
 		...
-	def GetItems(self) -> None:
+	def GrabKeyboard(self) -> None:
 		...
-	def Resize(self) -> None:
+	def GetStatusTip(self) -> None:
 		...
-	def SetFocus(self) -> None:
-		...
-	def Width(self) -> None:
-		...
-	def Update(self) -> None:
-		...
-	def Close(self) -> None:
-		...
-	def SetFocusProxy(self) -> None:
-		...
-	def Lower(self) -> None:
-		...
-	def IsVisibleTo(self) -> None:
+	def Repaint(self) -> None:
 		...
 	def SizeHint(self) -> None:
 		...
-	def SetWhatsThis(self) -> None:
+	def Size(self) -> None:
+		...
+	def header_text(self):
+		...
+	def SetVisible(self) -> None:
+		...
+	def SetMouseTracking(self) -> None:
+		...
+	def ActivateWindow(self) -> None:
+		...
+	def ClearFocus(self) -> None:
+		...
+	def Resize(self) -> None:
+		...
+	def QueueEvent(self) -> None:
+		...
+	def Show(self) -> None:
+		...
+	def WindowType(self) -> None:
+		...
+	def Hide(self) -> None:
+		...
+	def OverrideWindowFlags(self) -> None:
+		...
+	def Find(self) -> None:
 		...
 	def GetWhatsThis(self) -> None:
 		...
-	def SetUpdatesEnabled(self) -> None:
+	def GetToolTip(self) -> None:
+		...
+	def HasFocus(self) -> None:
+		...
+	def FrameSize(self) -> None:
+		...
+	def Pos(self) -> None:
+		...
+	def UpdateGeometry(self) -> None:
+		...
+	def AdjustSize(self) -> None:
+		...
+	def ChildrenRect(self) -> None:
+		...
+	def Rect(self) -> None:
+		...
+	def NormalGeometry(self) -> None:
+		...
+	def SetGeometry(self) -> None:
+		...
+	def GetGeometry(self) -> None:
+		...
+	def FrameGeometry(self) -> None:
+		...
+	def SetWhatsThis(self) -> None:
+		...
+	def OverrideWindowState(self) -> None:
+		...
+	def TestAttribute(self) -> None:
 		...
 	def SetToolTip(self) -> None:
 		...
-	def GetToolTip(self) -> None:
+	def ReleaseKeyboard(self) -> None:
+		...
+	def SetStatusTip(self) -> None:
+		...
+	def ReleaseMouse(self) -> None:
+		...
+	def GrabMouse(self) -> None:
+		...
+	def MinimumSizeHint(self) -> None:
+		...
+	def KeyboardGrabber(self) -> None:
+		...
+	def MouseGrabber(self) -> None:
+		...
+	def IsEnabledTo(self) -> None:
+		...
+	def IsVisibleTo(self) -> None:
+		...
+	def PreviousInFocusChain(self) -> None:
+		...
+	def NextInFocusChain(self) -> None:
+		...
+	def FocusWidget(self) -> None:
+		...
+	def StackUnder(self) -> None:
+		...
+	def ChildAt(self) -> None:
+		...
+	def IsAncestorOf(self) -> None:
+		...
+	def NativeParentWidget(self) -> None:
+		...
+	def ParentWidget(self) -> None:
+		...
+	def SetHidden(self) -> None:
+		...
+	def GetHidden(self) -> None:
+		...
+	def IsActiveWindow(self) -> None:
+		...
+	def Raise(self) -> None:
+		...
+	def ShowNormal(self) -> None:
+		...
+	def ShowFullScreen(self) -> None:
 		...
 
 UIWidget = _UIWidget

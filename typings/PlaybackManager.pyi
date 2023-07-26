@@ -1,8 +1,16 @@
-from typing import Any
+from typing import Any, Literal
 
 class _PlaybackManager:
 
 	#---Properties---#
+	PlaybackDevice: Any
+	"""
+	Read/Write
+	"""
+	LoopEnabled: Any
+	"""
+	Read/Write
+	"""
 	LoopOut: Any
 	"""
 	Read/Write
@@ -11,6 +19,7 @@ class _PlaybackManager:
 	"""
 	Read/Write
 	"""
+	LoopMode: Any
 	ShowMetadata: Any
 	"""
 	Read/Write
@@ -19,12 +28,11 @@ class _PlaybackManager:
 	"""
 	Read/Write
 	"""
-	LoopMode: Any
-	PlaybackDevice: Any
+	SyncMode: Any
 	"""
 	Read/Write
 	"""
-	SyncMode: Any
+	CurrentTime: Any
 	"""
 	Read/Write
 	"""
@@ -36,42 +44,62 @@ class _PlaybackManager:
 	"""
 	Read/Write
 	"""
-	CurrentTime: Any
-	"""
-	Read/Write
-	"""
 	FPS: Any
-	"""
-	Read/Write
-	"""
-	LoopEnabled: Any
 	"""
 	Read/Write
 	"""
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
-
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGB_ControlView: bool
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
+
 
 	#---Methods---#
+	def LoopSetShot(self):
+		...
+	def TrimSetOut(self):
+		...
+	def TrimSetIn(self):
+		...
+	def IsReverse(self):
+		...
+	def IsPlaying(self):
+		...
+	def Stop(self):
+		...
+	def SeekEnd(self):
+		...
+	def header_text(self):
+		...
+	def SeekNext(self):
+		...
+	def SeekStart(self):
+		...
+	def SeekTo(self):
+		...
+	def SeekBy(self):
+		...
+	def Play(self):
+		...
+	def GuideSelect(self):
+		...
 	def GuideEnable(self):
 		...
 	def GuideIsEnabled(self):
@@ -90,35 +118,7 @@ class _PlaybackManager:
 		...
 	def TrimExit(self):
 		...
-	def LoopSetShot(self):
-		...
-	def TrimSetOut(self):
-		...
-	def TrimSetIn(self):
-		...
-	def header_text(self):
-		...
-	def IsReverse(self):
-		...
-	def IsPlaying(self):
-		...
-	def Stop(self):
-		...
-	def SeekEnd(self):
-		...
 	def SeekPrev(self):
-		...
-	def SeekNext(self):
-		...
-	def SeekStart(self):
-		...
-	def SeekTo(self):
-		...
-	def SeekBy(self):
-		...
-	def Play(self):
-		...
-	def GuideSelect(self):
 		...
 
 PlaybackManager = _PlaybackManager

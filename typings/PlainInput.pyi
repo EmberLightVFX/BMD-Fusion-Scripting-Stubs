@@ -1,4 +1,4 @@
-from typing import Any, overload
+from typing import Any, overload, Literal
 
 from Output import _Output
 
@@ -6,33 +6,28 @@ from Output import _Output
 class _PlainInput:
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
-
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGB_ControlView: bool
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
+
 
 	#---Methods---#
-	def GetKeyFrames(self) -> dict[Any, Any]:
-		"""
-		Return a table of all keyframe times for this input
-		"""
-		...
 	def GetExpression(self):
 		...
 	def SetExpression(self):
@@ -63,10 +58,12 @@ class _PlainInput:
 					Hides/Shows can be nested.
 		"""
 		...
-	def GetConnectedOutput(self) -> _Output:
+	def GetKeyFrames(self) -> dict[Any, Any]:
 		"""
-		Returns the output that this input is connected to
+		Return a table of all keyframe times for this input
 		"""
+		...
+	def header_text(self):
 		...
 	@overload
 	def ConnectTo(self) -> bool:
@@ -80,7 +77,10 @@ class _PlainInput:
 		Connect the Input to an Output
 		"""
 		...
-	def header_text(self):
+	def GetConnectedOutput(self) -> _Output:
+		"""
+		Returns the output that this input is connected to
+		"""
 		...
 
 PlainInput = _PlainInput

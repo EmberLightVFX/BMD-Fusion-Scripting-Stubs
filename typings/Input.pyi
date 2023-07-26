@@ -1,3 +1,5 @@
+from typing import Literal
+
 from Output import _Output
 from Request import _Request
 from Parameter import _Parameter
@@ -6,6 +8,10 @@ from Parameter import _Parameter
 class _Input:
 
 	#---Properties---#
+	ICClass: str
+	"""
+	Read Only
+	"""
 	PCClass: str
 	"""
 	Read Only
@@ -14,41 +20,37 @@ class _Input:
 	"""
 	Read Only
 	"""
-	ICClass: str
-	"""
-	Read Only
-	"""
 
 	#---Attributes---#
+	REGS_VersionString: str
+
+	REGI_Version: int
+
 	REGB_Hide: bool
 
 	REGB_SupportsDoD: bool
 
-	REGS_Name: str
-
-	REGI_Version: int
-
 	REGI_ClassType: int
-
-	REGB_Unpredictable: bool
-
-	REGS_VersionString: str
-
-	REGS_ID: str
-
-	REGB_ControlView: bool
 
 	REGI_Priority: int
 
+	REGS_ID: str
+
+	REGS_Name: str
+
+	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
+
 
 	#---Methods---#
-	def IsAnimated(self) -> bool:
+	def header_text(self):
 		...
 	def info_text(self):
 		...
-	def GetValue(self, req: _Request, slot: int) -> _Parameter:
+	def IsAnimated(self) -> bool:
 		...
-	def header_text(self):
+	def GetValue(self, req: _Request, slot: int) -> _Parameter:
 		...
 
 Input = _Input

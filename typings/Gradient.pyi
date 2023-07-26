@@ -1,6 +1,5 @@
-from typing import Any
+from typing import Any, Literal
 
-from Gradient import _Gradient
 from FltPixel import _FltPixel
 
 
@@ -15,51 +14,51 @@ class _Gradient:
 	"""
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGI_Version: int
 
-	REGS_VersionString: str
+	REGB_Hide: bool
+
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGB_ControlView: bool
-
 	REGS_ID: str
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
+	def GetColor(self, pos: float) -> _FltPixel:
+		...
+	def info_text(self):
+		...
+	def GetColorCount(self) -> int:
+		...
+	def QuickEvaluate(self, pos: float, cstr: str) -> _FltPixel:
+		...
 	def SetPreset(self, pstr: str) -> None:
 		...
 	def _newGrad(self, grad: _Gradient) -> _Gradient:
+		...
+	def AddColor(self, pos: float, pix: _FltPixel) -> None:
+		...
+	def header_text(self):
 		...
 	def _newPreset(self, pstr: str) -> _Gradient:
 		...
 	def ClearTables(self) -> None:
 		...
-	def info_text(self):
-		...
-	def GetColor(self, pos: float) -> _FltPixel:
-		...
 	def Clear(self) -> None:
-		...
-	def GetColorCount(self) -> int:
-		...
-	def AddColor(self, pos: float, pix: _FltPixel) -> None:
-		...
-	def QuickEvaluate(self, pos: float, cstr: str) -> _FltPixel:
-		...
-	def header_text(self):
 		...
 
 Gradient = _Gradient

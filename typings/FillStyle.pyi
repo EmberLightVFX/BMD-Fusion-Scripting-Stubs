@@ -1,7 +1,3 @@
-from FillStyle FillStyle import _FillStyle FillStyle
-from FillStyle import _FillStyle
-
-
 class _FillStyle:
 
 	#---Properties---#
@@ -9,17 +5,9 @@ class _FillStyle:
 	"""
 	Read/Write
 	"""
-	TypeNamePtr: str
-	"""
-	Read Only
-	"""
 	Overlap: str
 	"""
 	Read/Write
-	"""
-	TypeName: str
-	"""
-	Read Only
 	"""
 	AdaptToPerspective: bool
 	"""
@@ -37,19 +25,23 @@ class _FillStyle:
 	"""
 	Read/Write
 	"""
-	Type: str
+	ExpandType: str
 	"""
 	Read/Write
+	"""
+	TypeNamePtr: str
+	"""
+	Read Only
 	"""
 	JoinType: str
 	"""
 	Read/Write
 	"""
-	LineType: str
+	TypeName: str
 	"""
-	Read/Write
+	Read Only
 	"""
-	ExpandType: str
+	Type: str
 	"""
 	Read/Write
 	"""
@@ -57,18 +49,22 @@ class _FillStyle:
 	"""
 	Read/Write
 	"""
+	LineType: str
+	"""
+	Read/Write
+	"""
 
 	#---Methods---#
 	def info_text(self):
 		...
-	def FillStyle(self) -> _FillStyle FillStyle:
+	def FillStyle(self) -> _FillStyle:
 		"""
 		FillStyle constructor
 		"""
 		...
-	def IsTraceCompatibleWith(self, style: _FillStyle) -> bool:
-		...
 	def header_text(self):
+		...
+	def IsTraceCompatibleWith(self, style: _FillStyle) -> bool:
 		...
 	def ActualThickness(self) -> float:
 		...

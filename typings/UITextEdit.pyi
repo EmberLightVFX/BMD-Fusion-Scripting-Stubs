@@ -1,53 +1,13 @@
-from typing import Any
+from typing import Any, Literal
 
 class _UITextEdit:
 
 	#---Properties---#
-	FontItalic: Any
+	Alignment: Any
 	"""
 	Read/Write
 	"""
-	FontUnderline: Any
-	"""
-	Read/Write
-	"""
-	FontWeight: Any
-	"""
-	Read/Write
-	"""
-	LineWrapMode: Any
-	"""
-	Read/Write
-	"""
-	FontFamily: Any
-	"""
-	Read/Write
-	"""
-	FontPointSize: Any
-	"""
-	Read/Write
-	"""
-	ReadOnly: Any
-	"""
-	Read/Write
-	"""
-	WordWrapMode: Any
-	"""
-	Read/Write
-	"""
-	CursorWidth: Any
-	"""
-	Read/Write
-	"""
-	TextInteractionFlags: Any
-	"""
-	Read/Write
-	"""
-	TabStopWidth: Any
-	"""
-	Read/Write
-	"""
-	LineWrapColumnOrWidth: Any
+	FrameStyle: Any
 	"""
 	Read/Write
 	"""
@@ -59,7 +19,7 @@ class _UITextEdit:
 	"""
 	Read/Write
 	"""
-	Alignment: Any
+	HTML: Any
 	"""
 	Read/Write
 	"""
@@ -67,39 +27,7 @@ class _UITextEdit:
 	"""
 	Read/Write
 	"""
-	Text: Any
-	"""
-	Write Only
-	"""
-	FrameShadow: Any
-	"""
-	Read/Write
-	"""
-	FrameShape: Any
-	"""
-	Read/Write
-	"""
-	LexerColors: Any
-	"""
-	Read/Write
-	"""
-	FrameRect: Any
-	"""
-	Read/Write
-	"""
-	Lexer: Any
-	"""
-	Read/Write
-	"""
-	MidLineWidth: Any
-	"""
-	Read/Write
-	"""
-	LineWidth: Any
-	"""
-	Read/Write
-	"""
-	UndoRedoEnabled: Any
+	AutoFormatting: Any
 	"""
 	Read/Write
 	"""
@@ -107,31 +35,7 @@ class _UITextEdit:
 	"""
 	Write Only
 	"""
-	TextColor: Any
-	"""
-	Read/Write
-	"""
-	DocumentTitle: Any
-	"""
-	Read/Write
-	"""
 	PlaceholderText: Any
-	"""
-	Read/Write
-	"""
-	AutoFormatting: Any
-	"""
-	Read/Write
-	"""
-	FrameStyle: Any
-	"""
-	Read/Write
-	"""
-	PlainText: Any
-	"""
-	Read/Write
-	"""
-	HTML: Any
 	"""
 	Read/Write
 	"""
@@ -139,73 +43,139 @@ class _UITextEdit:
 	"""
 	Read/Write
 	"""
+	TextColor: Any
+	"""
+	Read/Write
+	"""
+	TextInteractionFlags: Any
+	"""
+	Read/Write
+	"""
+	LineWrapMode: Any
+	"""
+	Read/Write
+	"""
+	PlainText: Any
+	"""
+	Read/Write
+	"""
+	FontItalic: Any
+	"""
+	Read/Write
+	"""
+	ReadOnly: Any
+	"""
+	Read/Write
+	"""
+	Text: Any
+	"""
+	Write Only
+	"""
+	FontUnderline: Any
+	"""
+	Read/Write
+	"""
+	WordWrapMode: Any
+	"""
+	Read/Write
+	"""
+	Lexer: Any
+	"""
+	Read/Write
+	"""
+	UndoRedoEnabled: Any
+	"""
+	Read/Write
+	"""
+	FrameShadow: Any
+	"""
+	Read/Write
+	"""
+	FontFamily: Any
+	"""
+	Read/Write
+	"""
+	CursorWidth: Any
+	"""
+	Read/Write
+	"""
+	DocumentTitle: Any
+	"""
+	Read/Write
+	"""
+	FontPointSize: Any
+	"""
+	Read/Write
+	"""
+	LexerColors: Any
+	"""
+	Read/Write
+	"""
+	FrameShape: Any
+	"""
+	Read/Write
+	"""
+	FrameRect: Any
+	"""
+	Read/Write
+	"""
+	LineWidth: Any
+	"""
+	Read/Write
+	"""
+	LineWrapColumnOrWidth: Any
+	"""
+	Read/Write
+	"""
+	MidLineWidth: Any
+	"""
+	Read/Write
+	"""
+	FontWeight: Any
+	"""
+	Read/Write
+	"""
+	TabStopWidth: Any
+	"""
+	Read/Write
+	"""
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGI_Version: int
 
-	REGS_VersionString: str
+	REGB_Hide: bool
+
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGB_ControlView: bool
-
 	REGS_ID: str
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
-	def SetFontUnderline(self) -> None:
-		...
-	def GetFontUnderline(self) -> None:
-		...
-	def SetFontWeight(self) -> None:
-		...
-	def GetFontWeight(self) -> None:
-		...
-	def ScrollToAnchor(self) -> None:
-		...
-	def SetFontFamily(self) -> None:
-		...
-	def GetFontFamily(self) -> None:
-		...
-	def SetFontPointSize(self) -> None:
-		...
-	def GetFontPointSize(self) -> None:
-		...
-	def SetDocumentTitle(self) -> None:
-		...
-	def GetDocumentTitle(self) -> None:
-		...
-	def SetCursorWidth(self) -> None:
-		...
-	def GetCursorWidth(self) -> None:
-		...
-	def SetTextInteractionFlags(self) -> None:
-		...
-	def GetTextInteractionFlags(self) -> None:
-		...
-	def GetTabStopWidth(self) -> None:
-		...
-	def Paste(self) -> None:
-		...
 	def SetLineWrapColumnOrWidth(self) -> None:
 		...
 	def GetLineWrapColumnOrWidth(self) -> None:
 		...
+	def SetReadOnly(self) -> None:
+		...
 	def SetAcceptRichText(self) -> None:
 		...
 	def GetAcceptRichText(self) -> None:
+		...
+	def SetText(self) -> None:
 		...
 	def SetOverwriteMode(self) -> None:
 		...
@@ -219,6 +189,24 @@ class _UITextEdit:
 		...
 	def GetTabChangesFocus(self) -> None:
 		...
+	def SelectAll(self) -> None:
+		...
+	def Clear(self) -> None:
+		...
+	def SetTextInteractionFlags(self) -> None:
+		...
+	def GetTextInteractionFlags(self) -> None:
+		...
+	def SetAlignment(self) -> None:
+		...
+	def ScrollToAnchor(self) -> None:
+		...
+	def Copy(self) -> None:
+		...
+	def FrameWidth(self) -> None:
+		...
+	def GetReadOnly(self) -> None:
+		...
 	def SetFrameShadow(self) -> None:
 		...
 	def GetFrameShadow(self) -> None:
@@ -227,27 +215,35 @@ class _UITextEdit:
 		...
 	def GetFrameShape(self) -> None:
 		...
-	def GetLexerColors(self) -> None:
-		...
 	def SetFrameRect(self) -> None:
 		...
 	def GetFrameRect(self) -> None:
-		...
-	def GetLexer(self) -> None:
 		...
 	def SetMidLineWidth(self) -> None:
 		...
 	def GetMidLineWidth(self) -> None:
 		...
-	def CanPaste(self) -> None:
+	def SetLineWidth(self) -> None:
 		...
-	def AnchorAt(self) -> None:
-		...
-	def MoveCursor(self) -> None:
-		...
-	def EnsureCursorVisible(self) -> None:
+	def GetLineWidth(self) -> None:
 		...
 	def SetFrameStyle(self) -> None:
+		...
+	def GetFrameStyle(self) -> None:
+		...
+	def Find(self) -> None:
+		...
+	def header_text(self):
+		...
+	def ZoomIn(self) -> None:
+		...
+	def Undo(self) -> None:
+		...
+	def SetHTML(self) -> None:
+		...
+	def SetLexerColors(self) -> None:
+		...
+	def SetPlaceholderText(self) -> None:
 		...
 	def InsertHTML(self) -> None:
 		...
@@ -257,85 +253,89 @@ class _UITextEdit:
 		...
 	def GetAutoFormatting(self) -> None:
 		...
+	def GetDocumentTitle(self) -> None:
+		...
 	def SetCurrentFont(self) -> None:
+		...
+	def GetFontFamily(self) -> None:
 		...
 	def SetTextBackgroundColor(self) -> None:
 		...
 	def GetTextBackgroundColor(self) -> None:
 		...
+	def GetFontUnderline(self) -> None:
+		...
 	def SetTextColor(self) -> None:
 		...
 	def GetTextColor(self) -> None:
 		...
-	def SetAlignment(self) -> None:
+	def SetLexer(self) -> None:
 		...
-	def GetAlignment(self) -> None:
+	def SetWordWrapMode(self) -> None:
+		...
+	def GetWordWrapMode(self) -> None:
 		...
 	def SetLineWrapMode(self) -> None:
 		...
 	def GetLineWrapMode(self) -> None:
 		...
-	def SetHTML(self) -> None:
+	def GetAlignment(self) -> None:
 		...
-	def SetReadOnly(self) -> None:
-		...
-	def header_text(self):
-		...
-	def ZoomOut(self) -> None:
-		...
-	def Cut(self) -> None:
-		...
-	def Redo(self) -> None:
-		...
-	def Undo(self) -> None:
-		...
-	def ZoomIn(self) -> None:
-		...
-	def SetWordWrapMode(self) -> None:
-		...
-	def SetText(self) -> None:
-		...
-	def SetTabStopWidth(self) -> None:
-		...
-	def GetLineWidth(self) -> None:
-		...
-	def Append(self) -> None:
-		...
-	def SetLineWidth(self) -> None:
-		...
-	def SetLexerColors(self) -> None:
-		...
-	def SetLexer(self) -> None:
-		...
-	def GetWordWrapMode(self) -> None:
-		...
-	def FrameWidth(self) -> None:
-		...
-	def Find(self) -> None:
-		...
-	def GetReadOnly(self) -> None:
-		...
-	def Clear(self) -> None:
+	def Paste(self) -> None:
 		...
 	def GetHTML(self) -> None:
-		...
-	def SelectAll(self) -> None:
-		...
-	def GetFrameStyle(self) -> None:
-		...
-	def SetPlaceholderText(self) -> None:
-		...
-	def GetPlaceholderText(self) -> None:
 		...
 	def SetPlainText(self) -> None:
 		...
 	def GetPlainText(self) -> None:
 		...
-	def Copy(self) -> None:
+	def GetLexer(self) -> None:
 		...
 	def SetFontItalic(self) -> None:
 		...
 	def GetFontItalic(self) -> None:
+		...
+	def GetFontPointSize(self) -> None:
+		...
+	def SetFontUnderline(self) -> None:
+		...
+	def GetLexerColors(self) -> None:
+		...
+	def Cut(self) -> None:
+		...
+	def SetFontWeight(self) -> None:
+		...
+	def GetFontWeight(self) -> None:
+		...
+	def MoveCursor(self) -> None:
+		...
+	def SetFontFamily(self) -> None:
+		...
+	def CanPaste(self) -> None:
+		...
+	def AnchorAt(self) -> None:
+		...
+	def SetFontPointSize(self) -> None:
+		...
+	def EnsureCursorVisible(self) -> None:
+		...
+	def ZoomOut(self) -> None:
+		...
+	def SetDocumentTitle(self) -> None:
+		...
+	def Append(self) -> None:
+		...
+	def Redo(self) -> None:
+		...
+	def SetCursorWidth(self) -> None:
+		...
+	def GetCursorWidth(self) -> None:
+		...
+	def GetPlaceholderText(self) -> None:
+		...
+	def SetTabStopWidth(self) -> None:
+		...
+	def GetTabStopWidth(self) -> None:
 		...
 
 UITextEdit = _UITextEdit

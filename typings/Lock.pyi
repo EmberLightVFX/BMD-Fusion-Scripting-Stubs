@@ -1,23 +1,25 @@
+from typing import Literal
+
 class _Lock:
 
 	#---Properties---#
-	TypeNamePtr: str
+	TypeName: str
 	"""
 	Read Only
 	"""
-	TypeName: str
+	TypeNamePtr: str
 	"""
 	Read Only
 	"""
 
 	#---Methods---#
-	def ReleaseLock(self) -> None:
+	def header_text(self):
 		...
 	def info_text(self):
 		...
 	def ObtainLock(self) -> None:
 		...
-	def header_text(self):
+	def ReleaseLock(self) -> None:
 		...
 
 Lock = _Lock

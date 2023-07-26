@@ -1,53 +1,54 @@
-from ScriptVal import _ScriptVal
-from ScriptValType import _ScriptValType
+from typing import Literal
+
+from _non_existing import _ScriptValType
 
 
 class _ScriptVal:
 
 	#---Properties---#
-	TypeNamePtr: str
+	TypeName: str
 	"""
 	Read Only
 	"""
-	TypeName: str
+	TypeNamePtr: str
 	"""
 	Read Only
 	"""
 
 	#---Attributes---#
-	REGB_Hide: bool
-
-	REGB_SupportsDoD: bool
-
-	REGS_Name: str
+	REGS_VersionString: str
 
 	REGI_Version: int
 
-	REGS_VersionString: str
+	REGB_Hide: bool
+
+	REGB_SupportsDoD: bool
 
 	REGI_ClassType: int
 
 	REGI_Priority: int
 
-	REGB_ControlView: bool
-
 	REGS_ID: str
 
 	REGB_Utility_Toggle: bool
 
+	REGS_Name: str
+
 	REGB_Unpredictable: bool
+
+	REGB_ControlView: bool
 
 
 	#---Methods---#
 	def _newDef(self) -> _ScriptVal:
-		...
-	def Type(self) -> _ScriptValType:
 		...
 	def info_text(self):
 		...
 	def _newScriptVal(self, sv: _ScriptVal) -> _ScriptVal:
 		...
 	def header_text(self):
+		...
+	def Type(self) -> _ScriptValType:
 		...
 
 ScriptVal = _ScriptVal
