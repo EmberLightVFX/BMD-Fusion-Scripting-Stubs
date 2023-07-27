@@ -63,7 +63,7 @@ class PolylineMask_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def ConvertToBezier(self) -> None:
 		"""

@@ -146,7 +146,7 @@ class MailMessage_:
 						 log		 - nil, or a string containing a log of error messages
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def SetBody(self, bodytext: str) -> None:
 		"""

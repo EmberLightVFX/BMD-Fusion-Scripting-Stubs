@@ -22,9 +22,9 @@ class LayoutObj_:
 	"""
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def info_text(self):
+	def info_text(self) -> None:
 		...
 	def LayoutObj(self, tags: TagList_) -> LayoutObj_:
 		"""

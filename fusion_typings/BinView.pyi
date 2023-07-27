@@ -25,11 +25,11 @@ class BinView_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def ExitPlayer(self):
+	def ExitPlayer(self) -> None:
 		...
-	def Paste(self):
+	def Paste(self) -> None:
 		...
 
 BinView = BinView_

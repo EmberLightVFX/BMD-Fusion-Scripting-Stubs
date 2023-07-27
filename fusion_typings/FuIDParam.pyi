@@ -7,9 +7,9 @@ class FuIDParam_:
 	"""
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def info_text(self):
+	def info_text(self) -> None:
 		...
 	def FuIDParam(self, str: str) -> FuIDParam_:
 		"""

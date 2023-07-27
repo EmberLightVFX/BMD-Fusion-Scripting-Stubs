@@ -80,7 +80,7 @@ class TextStyleFont_:
 	"""
 
 	#---Methods---#
-	def info_text(self):
+	def info_text(self) -> None:
 		...
 	def TextStyleFont(self, name: str, style: str, size: float) -> TextStyleFont_:
 		"""
@@ -89,7 +89,7 @@ class TextStyleFont_:
 		...
 	def MetricsCompatibleWith(self, font: TextStyleFont_) -> bool:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def SetFeatures(self, features: str) -> None:
 		...

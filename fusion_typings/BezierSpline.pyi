@@ -67,7 +67,7 @@ class BezierSpline_:
 		Get a table of keyframes
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def SetKeyFrames(self, keyframes: dict[Any, Any], replace: bool = bool()) -> None:
 		"""

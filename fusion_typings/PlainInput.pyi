@@ -28,9 +28,9 @@ class PlainInput_:
 
 
 	#---Methods---#
-	def GetExpression(self):
+	def GetExpression(self) -> None:
 		...
-	def SetExpression(self):
+	def SetExpression(self) -> None:
 		...
 	def WindowControlsVisible(self) -> bool:
 		"""
@@ -63,7 +63,7 @@ class PlainInput_:
 		Return a table of all keyframe times for this input
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	@overload
 	def ConnectTo(self) -> bool:

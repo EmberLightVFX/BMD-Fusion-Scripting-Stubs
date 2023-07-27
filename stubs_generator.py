@@ -454,7 +454,7 @@ def genStubs(o) -> tuple[str, list[str]]:
                     content += ":\n"
                     content += short_help
             else:
-                content += f"\tdef {name}(self):\n{short_help}"
+                content += f"\tdef {name}(self) -> None:\n{short_help}"
 
     return content, return_types
 

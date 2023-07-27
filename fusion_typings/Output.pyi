@@ -27,9 +27,9 @@ class Output_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def info_text(self):
+	def info_text(self) -> None:
 		...
 	def _SetParam(self, req: Request_, param: Parameter_) -> None:
 		...

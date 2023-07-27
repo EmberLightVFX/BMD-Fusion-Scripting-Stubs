@@ -82,7 +82,7 @@ class GL3DViewer_:
 		Centers this view on the selected object
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 
 GL3DViewer = GL3DViewer_

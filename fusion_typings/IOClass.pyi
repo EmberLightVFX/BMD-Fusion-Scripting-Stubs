@@ -23,25 +23,25 @@ class IOClass_:
 
 
 	#---Methods---#
-	def GetFileSize(self):
+	def GetFileSize(self) -> None:
 		...
-	def Close(self):
+	def Close(self) -> None:
 		...
-	def WriteLine(self):
+	def WriteLine(self) -> None:
 		...
-	def Seek(self):
+	def Seek(self) -> None:
 		...
-	def GetFilePos(self):
+	def GetFilePos(self) -> None:
 		...
-	def Flush(self):
+	def Flush(self) -> None:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def ReadLine(self):
+	def ReadLine(self) -> None:
 		...
-	def Write(self):
+	def Write(self) -> None:
 		...
-	def Read(self):
+	def Read(self) -> None:
 		...
 
 IOClass = IOClass_

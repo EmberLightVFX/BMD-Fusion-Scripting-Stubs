@@ -59,7 +59,7 @@ class Loader_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def SetMultiClip(self, filename: str, startframe: int = int(), trimin: int = int(), trimout: int = int()) -> None:
 		"""

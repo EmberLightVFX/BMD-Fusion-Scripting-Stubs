@@ -96,7 +96,7 @@ class TimelineView_:
 		Fill the view with the specified rectangle
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def InZoomToRectMode(self) -> bool:
 		"""

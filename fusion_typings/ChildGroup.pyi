@@ -36,11 +36,11 @@ class ChildGroup_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def GetID(self):
+	def GetID(self) -> None:
 		...
-	def GetOwner(self):
+	def GetOwner(self) -> None:
 		...
 
 ChildGroup = ChildGroup_

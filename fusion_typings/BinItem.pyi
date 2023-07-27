@@ -25,7 +25,7 @@ class BinItem_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def Delete(self) -> None:
 		"""

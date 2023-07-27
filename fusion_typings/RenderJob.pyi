@@ -33,7 +33,7 @@ class RenderJob_:
 		Gets a table of slaves assigned to this job
 		"""
 		...
-	def GetRenderReport(self):
+	def GetRenderReport(self) -> None:
 		...
 	def RetryRenderNode(self, node: RenderNode_ = RenderNode_()) -> None:
 		"""
@@ -49,7 +49,7 @@ class RenderJob_:
 		Clears the list of completed frames, restarting the render
 		"""
 		...
-	def _Heartbeat(self):
+	def _Heartbeat(self) -> None:
 		...
 	def GetUnrenderedFrames(self) -> str:
 		"""
@@ -63,7 +63,7 @@ class RenderJob_:
 		Returns true if job is currently rendering
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def GetFrames(self) -> str:
 		"""

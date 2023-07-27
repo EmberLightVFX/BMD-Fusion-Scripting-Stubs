@@ -140,7 +140,7 @@ class FuFrame_:
 		If no arguments are supplied, all views are cleared.
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def GetViewList(self) -> dict[Any, Any]:
 		"""

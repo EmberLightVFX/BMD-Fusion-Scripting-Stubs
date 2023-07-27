@@ -23,17 +23,17 @@ class ActionManager_:
 
 
 	#---Methods---#
-	def GetEvents(self):
+	def GetEvents(self) -> None:
 		...
-	def GetTargets(self):
+	def GetTargets(self) -> None:
 		...
-	def GetActions(self):
+	def GetActions(self) -> None:
 		...
-	def QueueAction(self):
+	def QueueAction(self) -> None:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def DoAction(self):
+	def DoAction(self) -> None:
 		...
 
 ActionManager = ActionManager_

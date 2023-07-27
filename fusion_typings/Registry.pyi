@@ -71,7 +71,7 @@ class Registry_:
 
 
 	#---Methods---#
-	def info_text(self):
+	def info_text(self) -> None:
 		...
 	def IsRegClassType(self) -> bool:
 		"""
@@ -83,7 +83,7 @@ class Registry_:
 		Returns whether a tool's ID or any of its parent's IDs is a particular Registry ID
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def GetParent(self) -> Registry_:
 		...

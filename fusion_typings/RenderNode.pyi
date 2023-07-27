@@ -23,17 +23,17 @@ class RenderNode_:
 
 
 	#---Methods---#
-	def Abort(self):
+	def Abort(self) -> None:
 		...
-	def IsDisconnecting(self):
+	def IsDisconnecting(self) -> None:
 		...
-	def IsIdle(self):
+	def IsIdle(self) -> None:
 		...
-	def GetJob(self):
+	def GetJob(self) -> None:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def IsProcessing(self):
+	def IsProcessing(self) -> None:
 		...
 
 RenderNode = RenderNode_

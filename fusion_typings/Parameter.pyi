@@ -50,14 +50,14 @@ class Parameter_:
 		Set custom persistent data
 		"""
 		...
-	def info_text(self):
+	def info_text(self) -> None:
 		...
 	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any]:
 		"""
 		Get custom persistent data
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def InterpolateWith(self, weight: float, param: Parameter_) -> Parameter_:
 		...

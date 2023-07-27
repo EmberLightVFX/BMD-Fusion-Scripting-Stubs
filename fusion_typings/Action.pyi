@@ -65,13 +65,13 @@ class Action_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def SetName(self):
+	def SetName(self) -> None:
 		...
-	def SetOwner(self):
+	def SetOwner(self) -> None:
 		...
-	def Update(self):
+	def Update(self) -> None:
 		...
 
 Action = Action_

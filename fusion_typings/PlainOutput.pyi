@@ -65,9 +65,9 @@ class PlainOutput_:
 			UseNetwork: Use Network Rendering when PreRendering (default false)
 		"""
 		...
-	def GetConnectedInputs(self):
+	def GetConnectedInputs(self) -> None:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def ShowDiskCacheDlg(self) -> bool:
 		"""

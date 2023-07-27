@@ -36,9 +36,9 @@ class PlayerView_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def Exit(self):
+	def Exit(self) -> None:
 		...
 
 PlayerView = PlayerView_

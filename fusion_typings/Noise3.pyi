@@ -11,11 +11,11 @@ class Noise3_:
 	"""
 
 	#---Methods---#
-	def info_text(self):
+	def info_text(self) -> None:
 		...
 	def noise(self, x: float, y: float, z: float, octaves: float) -> float:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def _noise(self, x: float, y: float, z: float) -> float:
 		...

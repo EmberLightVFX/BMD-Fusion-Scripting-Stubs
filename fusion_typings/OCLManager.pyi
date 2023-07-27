@@ -50,13 +50,13 @@ class OCLManager_:
 
 
 	#---Methods---#
-	def info_text(self):
+	def info_text(self) -> None:
 		...
 	def _BuildCachedProgramFile(self, id: str, doc: FusionDoc_, filename: str, source: str, len: int, opts: str) -> OCLProgram_:
 		...
 	def _BuildCachedProgramReg(self, reg: Registry_, doc: FusionDoc_, source: str, len: int, opts: str) -> OCLProgram_:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def OCLManager(self) -> OCLManager_:
 		"""

@@ -31,11 +31,11 @@ class ActionMode_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def Set(self):
+	def Set(self) -> None:
 		...
-	def Get(self):
+	def Get(self) -> None:
 		...
 
 ActionMode = ActionMode_

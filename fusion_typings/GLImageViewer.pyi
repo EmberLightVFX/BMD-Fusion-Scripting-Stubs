@@ -49,13 +49,13 @@ class GLImageViewer_:
 		Enables or disables the current View LUT
 		"""
 		...
-	def ShowGainGamma(self):
+	def ShowGainGamma(self) -> None:
 		...
-	def IsShowGainGamma(self):
+	def IsShowGainGamma(self) -> None:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def IsDoDShown(self):
+	def IsDoDShown(self) -> None:
 		...
 	def ShowDoD(self, enable: bool = bool()) -> None:
 		"""
@@ -95,7 +95,7 @@ class GLImageViewer_:
 		Enables or disables drawing the current View RoI rectangle
 		"""
 		...
-	def IsEnableRoI(self):
+	def IsEnableRoI(self) -> None:
 		...
 	def EnableRoI(self, enable: bool = bool()) -> None:
 		"""

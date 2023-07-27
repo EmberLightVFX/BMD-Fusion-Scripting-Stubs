@@ -47,7 +47,7 @@ class Link_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def SetData(self, name: str, value: int | str | bool | dict[Any, Any]) -> None:
 		"""

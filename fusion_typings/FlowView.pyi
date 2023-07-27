@@ -75,7 +75,7 @@ class FlowView_:
 		Moves a tool to a new position
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def GetPosTable(self, tool: object_) -> dict[Any, Any]:
 		"""
@@ -96,7 +96,7 @@ class FlowView_:
 		Selects or deselects a tool
 		"""
 		...
-	def FrameAll(self):
+	def FrameAll(self) -> None:
 		...
 	def SetScale(self, scale: int) -> None:
 		"""

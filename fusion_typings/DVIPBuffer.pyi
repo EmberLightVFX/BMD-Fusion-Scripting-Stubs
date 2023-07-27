@@ -5,9 +5,9 @@ from Image import Image_
 class DVIPBuffer_:
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def info_text(self):
+	def info_text(self) -> None:
 		...
 	def DVIPBuffer(self, req: Request_, image: Image_, writable: bool) -> DVIPBuffer_:
 		"""

@@ -25,11 +25,11 @@ class GLViewer_:
 
 
 	#---Methods---#
-	def IsLUTEnabled(self):
+	def IsLUTEnabled(self) -> None:
 		...
 	def EnableLUT(self, enable: bool = bool()) -> None:
 		...
-	def IsCheckerEnabled(self):
+	def IsCheckerEnabled(self) -> None:
 		...
 	def EnableChecker(self, enable: bool = bool()) -> None:
 		"""
@@ -51,7 +51,7 @@ class GLViewer_:
 		Returns true if image guides are being displayed on the view
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def AreControlsShown(self) -> bool:
 		"""

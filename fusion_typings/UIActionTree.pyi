@@ -25,13 +25,13 @@ class UIActionTree_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def AddAction(self):
+	def AddAction(self) -> None:
 		...
-	def Clear(self):
+	def Clear(self) -> None:
 		...
-	def SetTarget(self):
+	def SetTarget(self) -> None:
 		...
 
 UIActionTree = UIActionTree_

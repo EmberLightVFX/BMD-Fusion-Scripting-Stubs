@@ -28,9 +28,9 @@ class GamutInputs_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def info_text(self):
+	def info_text(self) -> None:
 		...
 	def _ProcessOf(self, req: Request_, img: Image_, out: Image_, depth: int, clippingmode: str, tags: TagList_) -> Image_:
 		...

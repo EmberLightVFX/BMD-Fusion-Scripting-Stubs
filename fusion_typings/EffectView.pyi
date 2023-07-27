@@ -23,14 +23,14 @@ class EffectView_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def Search(self):
+	def Search(self) -> None:
 		"""
 		Filters item list
 		"""
 		...
-	def ShowSearch(self):
+	def ShowSearch(self) -> None:
 		"""
 		Toggles search panel
 		"""

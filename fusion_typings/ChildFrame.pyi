@@ -25,7 +25,7 @@ class ChildFrame_:
 
 
 	#---Methods---#
-	def SwitchLayout(self):
+	def SwitchLayout(self) -> None:
 		...
 	def GetControlViewList(self) -> dict[Any, Any]:
 		"""
@@ -55,7 +55,7 @@ class ChildFrame_:
 		e.g. 'ControlView', 'ModifierView'
 		"""
 		...
-	def SetScreenLayout(self):
+	def SetScreenLayout(self) -> None:
 		...
 	def GetMainViewList(self) -> dict[Any, Any]:
 		"""
@@ -75,7 +75,7 @@ class ChildFrame_:
 		Activates the previous frame window
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def ActivateFrame(self) -> None:
 		"""

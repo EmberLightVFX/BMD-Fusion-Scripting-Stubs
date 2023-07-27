@@ -76,11 +76,11 @@ class Composition_:
 		Lock the composition from updating
 		"""
 		...
-	def IsViewShowing(self):
+	def IsViewShowing(self) -> None:
 		...
-	def ShowView(self):
+	def ShowView(self) -> None:
 		...
-	def AskRenderSettings(self):
+	def AskRenderSettings(self) -> None:
 		...
 	def IsRendering(self) -> bool:
 		...
@@ -122,11 +122,11 @@ class Composition_:
 		Returns a table of path strings with all mappings expanded. All paths of a multipath are returned.
 		"""
 		...
-	def GetConsoleHistory(self):
+	def GetConsoleHistory(self) -> None:
 		...
-	def UpdateViews(self):
+	def UpdateViews(self) -> None:
 		...
-	def GetFrameList(self):
+	def GetFrameList(self) -> None:
 		...
 	@overload
 	def Loop(self, enable: bool) -> None:
@@ -179,9 +179,9 @@ class Composition_:
 		Run a script
 		"""
 		...
-	def _Output_Error(self):
+	def _Output_Error(self) -> None:
 		...
-	def _Output_Print(self):
+	def _Output_Print(self) -> None:
 		...
 	def GetPreviewList(self, include_globals: bool = bool()) -> dict[Any, Any]:
 		"""
@@ -235,7 +235,7 @@ class Composition_:
 		If no args are given, the currently selected tools will be copied.
 		"""
 		...
-	def GetUndoStack(self):
+	def GetUndoStack(self) -> None:
 		...
 	def IsLocked(self) -> bool:
 		...
@@ -251,19 +251,19 @@ class Composition_:
 		Start a render
 		"""
 		...
-	def Reset(self):
+	def Reset(self) -> None:
 		...
-	def AbortRender(self):
+	def AbortRender(self) -> None:
 		...
-	def IsZoneExpanded(self):
+	def IsZoneExpanded(self) -> None:
 		...
-	def NetRenderAbort(self):
+	def NetRenderAbort(self) -> None:
 		...
-	def NetRenderTime(self):
+	def NetRenderTime(self) -> None:
 		...
-	def NetRenderEnd(self):
+	def NetRenderEnd(self) -> None:
 		...
-	def NetRenderStart(self):
+	def NetRenderStart(self) -> None:
 		...
 	def Paste(self, settings: dict[Any, Any] = dict[Any, Any]()) -> bool:
 		"""
@@ -342,7 +342,7 @@ class Composition_:
 		Set the currently active tool
 		"""
 		...
-	def _SetCurrentTime(self):
+	def _SetCurrentTime(self) -> None:
 		...
 	def FindTool(self, name: str) -> Tool_:
 		"""
@@ -381,7 +381,7 @@ class Composition_:
 		Save the composition
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def GetToolList(self, selected: bool = bool(), regid: str = str()) -> dict[Any, Any]:
 		"""
@@ -391,9 +391,9 @@ class Composition_:
 		regid		- pass a Registry ID string to get only tools of that type
 		"""
 		...
-	def Print(self):
+	def Print(self) -> None:
 		...
-	def IsReadOnly(self):
+	def IsReadOnly(self) -> None:
 		...
 	def GetPrevKeyTime(self, time: int = int(), tool: Tool_ = Tool_()) -> int:
 		"""
@@ -414,14 +414,14 @@ class Composition_:
 		Save a copy of the composition
 		"""
 		...
-	def _Save(self):
+	def _Save(self) -> None:
 		...
 	def Close(self) -> None:
 		"""
 		Close the composition
 		"""
 		...
-	def SetReadOnly(self):
+	def SetReadOnly(self) -> None:
 		...
 	def DisableSelectedTools(self) -> None:
 		"""
@@ -433,17 +433,17 @@ class Composition_:
 		Start an undo event
 		"""
 		...
-	def GetViewList(self):
+	def GetViewList(self) -> None:
 		...
-	def ExpandZone(self):
+	def ExpandZone(self) -> None:
 		...
-	def Execute(self):
+	def Execute(self) -> None:
 		...
-	def Heartbeat(self):
+	def Heartbeat(self) -> None:
 		...
-	def AbortRenderUI(self):
+	def AbortRenderUI(self) -> None:
 		...
-	def AddMedia(self):
+	def AddMedia(self) -> None:
 		...
 	def Export(self, filename: str) -> bool:
 		"""
@@ -452,7 +452,7 @@ class Composition_:
 		This saves the composition to an external .comp file, translating as required.
 		"""
 		...
-	def GetRedoStack(self):
+	def GetRedoStack(self) -> None:
 		...
 	def MapPath(self, path: str) -> str:
 		"""

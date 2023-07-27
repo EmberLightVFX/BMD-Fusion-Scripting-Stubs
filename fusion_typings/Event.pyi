@@ -25,9 +25,9 @@ class Event_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def Default(self):
+	def Default(self) -> None:
 		...
 
 Event = Event_

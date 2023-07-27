@@ -1,21 +1,21 @@
 class ScriptServer_:
 
 	#---Methods---#
-	def FindHost(self):
+	def FindHost(self) -> None:
 		...
-	def NotifyHosts(self):
+	def NotifyHosts(self) -> None:
 		...
-	def Connect(self):
+	def Connect(self) -> None:
 		...
-	def AddHost(self):
+	def AddHost(self) -> None:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def StartHost(self):
+	def StartHost(self) -> None:
 		...
-	def GetHostList(self):
+	def GetHostList(self) -> None:
 		...
-	def RemoveHost(self):
+	def RemoveHost(self) -> None:
 		...
 
 ScriptServer = ScriptServer_

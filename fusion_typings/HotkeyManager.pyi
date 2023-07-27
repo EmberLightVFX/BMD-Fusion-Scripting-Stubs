@@ -23,15 +23,15 @@ class HotkeyManager_:
 
 
 	#---Methods---#
-	def GetKeyNames(self):
+	def GetKeyNames(self) -> None:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def GetKeys(self):
+	def GetKeys(self) -> None:
 		...
-	def GetSuffixNames(self):
+	def GetSuffixNames(self) -> None:
 		...
-	def GetModifierNames(self):
+	def GetModifierNames(self) -> None:
 		...
 
 HotkeyManager = HotkeyManager_

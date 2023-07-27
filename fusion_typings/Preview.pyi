@@ -62,7 +62,7 @@ class Preview_:
 		Stops playback
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def DisplayImage(self, img: Image_) -> bool:
 		"""

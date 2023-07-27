@@ -142,9 +142,9 @@ class TransformMatrix_:
 	#---Methods---#
 	def MergeConcatenate(self, fg: Parameter_, tags: TagList_) -> None:
 		...
-	def info_text(self):
+	def info_text(self) -> None:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def TransformMatrix(self, img: Parameter_, req: Request_, inp: Input_, slot: int, time: TimeStamp_) -> TransformMatrix_:
 		"""

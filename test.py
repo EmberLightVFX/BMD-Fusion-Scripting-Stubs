@@ -1,1 +1,1 @@
-a = Fusion.GetData()
+a = fusion.Copy()

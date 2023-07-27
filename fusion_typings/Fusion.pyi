@@ -136,22 +136,22 @@ class Fusion_:
 
 
 	#---Methods---#
-	def InstallFile(self):
+	def InstallFile(self) -> None:
 		...
-	def GetRLMLicenseInfo(self):
+	def GetRLMLicenseInfo(self) -> None:
 		...
 	def GetCurrentComp(self) -> Composition_:
 		"""
 		Returns the currently active composition
 		"""
 		...
-	def GetFairlight(self):
+	def GetFairlight(self) -> None:
 		...
-	def GetResolve(self):
+	def GetResolve(self) -> None:
 		...
-	def RemoveConfig(self):
+	def RemoveConfig(self) -> None:
 		...
-	def AddConfig(self):
+	def AddConfig(self) -> None:
 		...
 	def GetToolIcon(self) -> None:
 		...
@@ -171,58 +171,58 @@ class Fusion_:
 		Edit Script
 		"""
 		...
-	def GetRecentFileName(self):
+	def GetRecentFileName(self) -> None:
 		...
-	def GetNumRecentFiles(self):
+	def GetNumRecentFiles(self) -> None:
 		...
-	def CustomizeToolbars(self):
+	def CustomizeToolbars(self) -> None:
 		...
-	def ShowUI(self):
+	def ShowUI(self) -> None:
 		...
-	def IsUIVisible(self):
+	def IsUIVisible(self) -> None:
 		...
-	def SetActiveWndIndex(self):
+	def SetActiveWndIndex(self) -> None:
 		...
-	def SetActiveFrameIndex(self):
+	def SetActiveFrameIndex(self) -> None:
 		...
-	def GetActiveWndIndex(self):
+	def GetActiveWndIndex(self) -> None:
 		...
-	def GetActiveFrameIndex(self):
+	def GetActiveFrameIndex(self) -> None:
 		...
-	def GetRecentCompList(self):
+	def GetRecentCompList(self) -> None:
 		...
-	def ClearRecentCompList(self):
+	def ClearRecentCompList(self) -> None:
 		...
-	def DeselectAll(self):
+	def DeselectAll(self) -> None:
 		...
 	def GetPreviewList(self) -> dict[Any, Any]:
 		"""
 		Retrieves a table of global previews
 		"""
 		...
-	def Delete(self):
+	def Delete(self) -> None:
 		...
-	def PasteSettings(self):
+	def PasteSettings(self) -> None:
 		...
-	def Cut(self):
+	def Cut(self) -> None:
 		...
-	def SetOnlyActiveComp(self):
+	def SetOnlyActiveComp(self) -> None:
 		...
-	def NewFloatFrame(self):
+	def NewFloatFrame(self) -> None:
 		...
-	def NewTabbedFrame(self):
+	def NewTabbedFrame(self) -> None:
 		...
-	def NewImageView(self):
+	def NewImageView(self) -> None:
 		...
-	def IsNetworkAllowed(self):
+	def IsNetworkAllowed(self) -> None:
 		...
-	def AllowNetwork(self):
+	def AllowNetwork(self) -> None:
 		...
-	def CreateFloatingView(self):
+	def CreateFloatingView(self) -> None:
 		...
-	def SetBatch(self):
+	def SetBatch(self) -> None:
 		...
-	def ClearFileLog(self):
+	def ClearFileLog(self) -> None:
 		...
 	def ShowWindow(self, mode: int) -> None:
 		"""
@@ -237,7 +237,7 @@ class Fusion_:
 				SW_RESTORE		- restores the window to normal size/position
 		"""
 		...
-	def Paste(self):
+	def Paste(self) -> None:
 		...
 	def SetClipboard(self) -> tuple[bool, str | bool, dict[Any, Any]]:
 		"""
@@ -380,11 +380,11 @@ class Fusion_:
 		Creates a new composition
 		"""
 		...
-	def OpenLibraryStudio(self):
+	def OpenLibraryStudio(self) -> None:
 		...
-	def OpenLibrary(self):
+	def OpenLibrary(self) -> None:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def ToggleRenderManager(self) -> None:
 		"""
@@ -398,19 +398,19 @@ class Fusion_:
 		Shows or hides a Utility plugin
 		"""
 		...
-	def GetMainWindow(self):
+	def GetMainWindow(self) -> None:
 		...
-	def GetCPULoad(self):
+	def GetCPULoad(self) -> None:
 		...
-	def GetAppInfo(self):
+	def GetAppInfo(self) -> None:
 		...
-	def GetMousePos(self):
+	def GetMousePos(self) -> None:
 		...
-	def UpdateMenus(self):
+	def UpdateMenus(self) -> None:
 		...
-	def Test(self):
+	def Test(self) -> None:
 		...
-	def Print(self):
+	def Print(self) -> None:
 		...
 	def ToggleBins(self) -> None:
 		"""
@@ -446,7 +446,7 @@ class Fusion_:
 		Set custom persistent data
 		"""
 		...
-	def SelectAll(self):
+	def SelectAll(self) -> None:
 		...
 	def RunScript(self, filename: str) -> None:
 		"""
@@ -480,7 +480,7 @@ class Fusion_:
 		Get command line arguments
 		"""
 		...
-	def Execute(self):
+	def Execute(self) -> None:
 		...
 	def GetGlobalPathMap(self, built_ins: bool = bool(), defaults: bool = bool()) -> dict[Any, Any]:
 		"""
@@ -508,9 +508,9 @@ class Fusion_:
 		Returns the path string with all mappings expanded. Only the first path of a multipath is returned.
 		"""
 		...
-	def Copy(self):
+	def Copy(self) -> None:
 		...
-	def GetVersion(self):
+	def GetVersion(self) -> None:
 		...
 	def GetToolList(self) -> None:
 		...

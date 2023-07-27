@@ -25,15 +25,15 @@ class ReelView_:
 
 
 	#---Methods---#
-	def ExitPlayer(self):
+	def ExitPlayer(self) -> None:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def ZoomOut(self):
+	def ZoomOut(self) -> None:
 		...
-	def ZoomIn(self):
+	def ZoomIn(self) -> None:
 		...
-	def DeleteSelected(self):
+	def DeleteSelected(self) -> None:
 		...
 
 ReelView = ReelView_

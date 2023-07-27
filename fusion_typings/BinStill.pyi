@@ -25,7 +25,7 @@ class BinStill_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def Defragment(self) -> None:
 		"""

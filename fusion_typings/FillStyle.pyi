@@ -55,14 +55,14 @@ class FillStyle_:
 	"""
 
 	#---Methods---#
-	def info_text(self):
+	def info_text(self) -> None:
 		...
 	def FillStyle(self) -> FillStyle_:
 		"""
 		FillStyle constructor
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def IsTraceCompatibleWith(self, style: FillStyle_) -> bool:
 		...

@@ -39,30 +39,30 @@ class Object_:
 
 
 	#---Methods---#
-	def QueueAction(self):
+	def QueueAction(self) -> None:
 		...
 	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any]:
 		"""
 		Get custom persistent data
 		"""
 		...
-	def GetReg(self):
+	def GetReg(self) -> None:
 		...
-	def GetID(self):
+	def GetID(self) -> None:
 		...
 	def GetComp(self) -> FusionDoc_:
 		...
-	def Comp(self):
+	def Comp(self) -> None:
 		...
-	def info_text(self):
+	def info_text(self) -> None:
 		...
-	def TriggerEvent(self):
+	def TriggerEvent(self) -> None:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def DoAction(self):
+	def DoAction(self) -> None:
 		...
-	def Composition(self):
+	def Composition(self) -> None:
 		...
 	def SetData(self, name: str, value: int | str | bool | dict[Any, Any]) -> None:
 		"""

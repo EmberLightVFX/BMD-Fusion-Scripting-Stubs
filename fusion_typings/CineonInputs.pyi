@@ -28,9 +28,9 @@ class CineonInputs_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def info_text(self):
+	def info_text(self) -> None:
 		...
 	def _ProcessOf(self, req: Request_, img: Image_, out: Image_, clippingmode: str, depth: int, dir: int, tags: TagList_) -> Image_:
 		...

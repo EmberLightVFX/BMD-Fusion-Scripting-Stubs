@@ -1,26 +1,26 @@
 class MediaStorage_:
 
 	#---Methods---#
-	def info_text(self):
+	def info_text(self) -> None:
 		...
-	def GetMountedVolumes(self):
+	def GetMountedVolumes(self) -> None:
 		"""
 		Deprecated
 		"""
 		...
-	def GetSubFolders(self):
+	def GetSubFolders(self) -> None:
 		"""
 		Deprecated
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def AddItemsToMediaPool(self):
+	def AddItemsToMediaPool(self) -> None:
 		"""
 		Deprecated
 		"""
 		...
-	def GetFiles(self):
+	def GetFiles(self) -> None:
 		"""
 		Deprecated
 		"""

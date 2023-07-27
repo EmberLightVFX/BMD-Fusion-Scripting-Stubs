@@ -29,34 +29,34 @@ class QueueManager_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def Stop(self):
+	def Stop(self) -> None:
 		...
-	def Start(self):
+	def Start(self) -> None:
 		...
 	def RemoveJob(self, job: RenderJob_) -> None:
 		"""
 		Removes a job from the list
 		"""
 		...
-	def NetJoinRender(self):
+	def NetJoinRender(self) -> None:
 		...
-	def UpdateItem(self):
+	def UpdateItem(self) -> None:
 		...
-	def DeleteItem(self):
+	def DeleteItem(self) -> None:
 		...
-	def AddItem(self):
+	def AddItem(self) -> None:
 		...
-	def GetRootData(self):
+	def GetRootData(self) -> None:
 		...
-	def GetSchemaList(self):
+	def GetSchemaList(self) -> None:
 		...
-	def GetItemList(self):
+	def GetItemList(self) -> None:
 		...
-	def GetRenderNodeFromID(self):
+	def GetRenderNodeFromID(self) -> None:
 		...
-	def GetJobFromID(self):
+	def GetJobFromID(self) -> None:
 		...
 	def SaveRenderNodeList(self, filename: str = str()) -> bool:
 		"""
@@ -74,15 +74,15 @@ class QueueManager_:
 			 filename - The file to load from (defaults to Queues:Slaves.slv)
 		"""
 		...
-	def GetJobs(self):
+	def GetJobs(self) -> None:
 		...
-	def GetRenderNodes(self):
+	def GetRenderNodes(self) -> None:
 		...
-	def RemoveWatch(self):
+	def RemoveWatch(self) -> None:
 		...
-	def AddWatch(self):
+	def AddWatch(self) -> None:
 		...
-	def GetID(self):
+	def GetID(self) -> None:
 		...
 	def ScanForRenderNodes(self) -> None:
 		"""

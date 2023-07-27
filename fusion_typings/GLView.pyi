@@ -61,13 +61,13 @@ class GLView_:
 		Enables or disables the current Monitor LUT
 		"""
 		...
-	def AddToolAction(self):
+	def AddToolAction(self) -> None:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def IsWipeEnabled(self):
+	def IsWipeEnabled(self) -> None:
 		...
-	def WipeEnable(self):
+	def WipeEnable(self) -> None:
 		...
 	def GetStereoMethod(self) -> str:
 		"""

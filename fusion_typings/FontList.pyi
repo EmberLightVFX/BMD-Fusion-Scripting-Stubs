@@ -42,7 +42,7 @@ class FontList_:
 		...
 	def GetFontManager(self) -> FontList_:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def ScanDir(self, dirname: str = str()) -> None:
 		"""
@@ -53,7 +53,7 @@ class FontList_:
 		font directory will be rescanned.
 		"""
 		...
-	def info_text(self):
+	def info_text(self) -> None:
 		...
 	def Clear(self) -> None:
 		"""

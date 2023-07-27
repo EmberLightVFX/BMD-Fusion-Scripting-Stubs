@@ -1,16 +1,16 @@
 class Folder_:
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def info_text(self):
+	def info_text(self) -> None:
 		...
-	def GetClips(self):
+	def GetClips(self) -> None:
 		"""
 		Deprecated
 		"""
 		...
-	def GetSubFolders(self):
+	def GetSubFolders(self) -> None:
 		"""
 		Deprecated
 		"""

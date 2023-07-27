@@ -48,7 +48,7 @@ class FuView_:
 		Redraw this view
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def ShowTabs(self) -> None:
 		"""

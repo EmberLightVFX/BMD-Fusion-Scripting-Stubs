@@ -11,9 +11,9 @@ class RefObject_:
 	"""
 
 	#---Methods---#
-	def info_text(self):
+	def info_text(self) -> None:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def IncRef(self) -> None:
 		...

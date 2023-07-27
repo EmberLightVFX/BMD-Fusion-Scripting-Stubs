@@ -39,13 +39,13 @@ class Clip_:
 
 
 	#---Methods---#
-	def info_text(self):
+	def info_text(self) -> None:
 		...
 	def PutFrame(self, frame: int, img: Image_) -> bool:
 		...
 	def GetFrame(self, frame: int) -> Image_:
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def Clip(self, name: str, save: bool, doc: FusionDoc_) -> Clip_:
 		"""

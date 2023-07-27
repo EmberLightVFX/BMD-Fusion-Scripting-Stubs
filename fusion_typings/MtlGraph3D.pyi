@@ -32,9 +32,9 @@ class MtlGraph3D_:
 
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def info_text(self):
+	def info_text(self) -> None:
 		...
 	def MtlGraph3D(self, doc: FusionDoc_, req: Request_) -> MtlGraph3D_:
 		"""

@@ -95,7 +95,7 @@ class GLHydraViewer_:
 		Centers this view on the selected object
 		"""
 		...
-	def header_text(self):
+	def header_text(self) -> None:
 		...
 	def GetShading(self) -> None:
 		"""

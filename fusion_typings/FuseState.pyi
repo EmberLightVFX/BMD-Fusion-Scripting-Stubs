@@ -14,9 +14,9 @@ class FuseState_:
 	"""
 
 	#---Methods---#
-	def header_text(self):
+	def header_text(self) -> None:
 		...
-	def info_text(self):
+	def info_text(self) -> None:
 		...
 	def _FuRegisterClass(self, id: str, classtype: int, tags: TagList_, filename: str, tpb: str, tpw: int, tph: int, bc: str, bclen: int) -> None:
 		...
