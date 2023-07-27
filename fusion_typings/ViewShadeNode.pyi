@@ -1,11 +1,11 @@
-from Image import _Image
-from TagList import _TagList
-from Matrix4 import _Matrix4
-from Vector3f import _Vector3f
-from _non_existing import _ViewShadeNodeGroup
+from Image import Image_
+from TagList import TagList_
+from Matrix4 import Matrix4_
+from Vector3f import Vector3f_
+from _non_existing import ViewShadeNodeGroup_
 
 
-class _ViewShadeNode:
+class ViewShadeNode_:
 
 	#---Properties---#
 	NumUniforms: int
@@ -22,16 +22,16 @@ class _ViewShadeNode:
 		...
 	def _SetParamBool(self, idx: int, val: bool) -> None:
 		...
-	def ViewShadeNode(self, group: _ViewShadeNodeGroup, name: str, params: str, code: str) -> _ViewShadeNode:
+	def ViewShadeNode(self, group: ViewShadeNodeGroup_, name: str, params: str, code: str) -> ViewShadeNode_:
 		"""
 		ViewShadeNode constructor
 		"""
 		...
-	def _SetParamImg(self, idx: int, img: _Image, _chan: int, tags: _TagList) -> None:
+	def _SetParamImg(self, idx: int, img: Image_, _chan: int, tags: TagList_) -> None:
 		...
-	def _SetParamMat4(self, idx: int, mat: _Matrix4) -> None:
+	def _SetParamMat4(self, idx: int, mat: Matrix4_) -> None:
 		...
-	def _SetParamVec3f(self, idx: int, vec: _Vector3f) -> None:
+	def _SetParamVec3f(self, idx: int, vec: Vector3f_) -> None:
 		...
 	def _SetParamNums1(self, idx: int, x: float) -> None:
 		...
@@ -44,4 +44,4 @@ class _ViewShadeNode:
 	def _SetParamNums3(self, idx: int, x: float, y: float, z: float) -> None:
 		...
 
-ViewShadeNode = _ViewShadeNode
+ViewShadeNode = ViewShadeNode_

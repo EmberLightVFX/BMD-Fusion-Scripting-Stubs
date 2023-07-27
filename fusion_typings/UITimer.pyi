@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UITimer:
+class UITimer_:
 
 	#---Properties---#
 	Interval: Any
@@ -78,4 +78,4 @@ class _UITimer:
 	def Start(self) -> None:
 		...
 
-UITimer = _UITimer
+UITimer = UITimer_

@@ -1,4 +1,4 @@
-class _PointControl:
+class PointControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _PointControl:
 	REGB_ControlView: bool
 
 
-PointControl = _PointControl
+PointControl = PointControl_

@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UITextEdit:
+class UITextEdit_:
 
 	#---Properties---#
 	Alignment: Any
@@ -338,4 +338,4 @@ class _UITextEdit:
 	def GetTabStopWidth(self) -> None:
 		...
 
-UITextEdit = _UITextEdit
+UITextEdit = UITextEdit_

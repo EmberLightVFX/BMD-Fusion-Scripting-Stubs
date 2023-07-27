@@ -1,17 +1,17 @@
-from TagList import _TagList
+from TagList import TagList_
 
 
-class _Container:
+class Container_:
 
 	#---Methods---#
 	def header_text(self):
 		...
 	def info_text(self):
 		...
-	def Container(self, tags: _TagList) -> _Container:
+	def Container(self, tags: TagList_) -> Container_:
 		"""
 		Container constructor
 		"""
 		...
 
-Container = _Container
+Container = Container_

@@ -1,9 +1,9 @@
 from typing import Any
 
-from _non_existing import _object
+from _non_existing import object_
 
 
-class _FlowView:
+class FlowView_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -70,14 +70,14 @@ class _FlowView:
 		Returns the current scale of the contents
 		"""
 		...
-	def SetPos(self, tool: _object, x: int, y: int) -> None:
+	def SetPos(self, tool: object_, x: int, y: int) -> None:
 		"""
 		Moves a tool to a new position
 		"""
 		...
 	def header_text(self):
 		...
-	def GetPosTable(self, tool: _object) -> dict[Any, Any]:
+	def GetPosTable(self, tool: object_) -> dict[Any, Any]:
 		"""
 		Returns the position of a tool as a table
 
@@ -86,12 +86,12 @@ class _FlowView:
 					 number y = table[2]
 		"""
 		...
-	def GetPos(self, Tool: _object) -> tuple[int, int]:
+	def GetPos(self, Tool: object_) -> tuple[int, int]:
 		"""
 		Returns the position of a tool
 		"""
 		...
-	def Select(self, tool: _object, select: bool = bool()) -> None:
+	def Select(self, tool: object_, select: bool = bool()) -> None:
 		"""
 		Selects or deselects a tool
 		"""
@@ -103,7 +103,7 @@ class _FlowView:
 		Change the scale of the contents
 		"""
 		...
-	def QueueSetPos(self, tool: _object, x: int, y: int) -> None:
+	def QueueSetPos(self, tool: object_, x: int, y: int) -> None:
 		"""
 		Queues the moving of a tool to a new position
 		"""
@@ -114,4 +114,4 @@ class _FlowView:
 		"""
 		...
 
-FlowView = _FlowView
+FlowView = FlowView_

@@ -1,17 +1,17 @@
-from TagList import _TagList
+from TagList import TagList_
 
 
-class _HGap:
+class HGap_:
 
 	#---Methods---#
 	def header_text(self):
 		...
 	def info_text(self):
 		...
-	def HGap(self, tags: _TagList) -> _HGap:
+	def HGap(self, tags: TagList_) -> HGap_:
 		"""
 		HGap constructor
 		"""
 		...
 
-HGap = _HGap
+HGap = HGap_

@@ -1,4 +1,4 @@
-class _ScrewControl:
+class ScrewControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _ScrewControl:
 	REGB_ControlView: bool
 
 
-ScrewControl = _ScrewControl
+ScrewControl = ScrewControl_

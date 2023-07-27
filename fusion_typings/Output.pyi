@@ -1,8 +1,8 @@
-from Request import _Request
-from Parameter import _Parameter
+from Request import Request_
+from Parameter import Parameter_
 
 
-class _Output:
+class Output_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -31,9 +31,9 @@ class _Output:
 		...
 	def info_text(self):
 		...
-	def _SetParam(self, req: _Request, param: _Parameter) -> None:
+	def _SetParam(self, req: Request_, param: Parameter_) -> None:
 		...
-	def _SetNum(self, req: _Request, num: float) -> None:
+	def _SetNum(self, req: Request_, num: float) -> None:
 		...
 
-Output = _Output
+Output = Output_

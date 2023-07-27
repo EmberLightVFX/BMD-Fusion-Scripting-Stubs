@@ -1,6 +1,6 @@
 from typing import Any
 
-class _PolylineMask:
+class PolylineMask_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -84,4 +84,4 @@ class _PolylineMask:
 		"""
 		...
 
-PolylineMask = _PolylineMask
+PolylineMask = PolylineMask_

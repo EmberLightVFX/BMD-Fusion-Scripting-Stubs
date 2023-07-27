@@ -1,11 +1,11 @@
-from FillStyle import _FillStyle
-from Image import _Image
-from ImageRegion import _ImageRegion
-from ChannelStyle import _ChannelStyle
-from Shape import _Shape
+from FillStyle import FillStyle_
+from Image import Image_
+from ImageRegion import ImageRegion_
+from ChannelStyle import ChannelStyle_
+from Shape import Shape_
 
 
-class _ImageChannel:
+class ImageChannel_:
 
 	#---Properties---#
 	TypeName: str
@@ -18,11 +18,11 @@ class _ImageChannel:
 	"""
 
 	#---Methods---#
-	def SetStyleFill(self, style: _FillStyle) -> None:
+	def SetStyleFill(self, style: FillStyle_) -> None:
 		...
 	def info_text(self):
 		...
-	def ImageChannel(self, img: _Image, super: int, rgn: _ImageRegion, map: bool) -> _ImageChannel:
+	def ImageChannel(self, img: Image_, super: int, rgn: ImageRegion_, map: bool) -> ImageChannel_:
 		"""
 		ImageChannel constructor
 		"""
@@ -31,11 +31,11 @@ class _ImageChannel:
 		...
 	def header_text(self):
 		...
-	def PutToImage(self, str: str, cs: _ChannelStyle) -> None:
+	def PutToImage(self, str: str, cs: ChannelStyle_) -> None:
 		...
-	def ShapeFill(self, shape: _Shape, str: str) -> None:
+	def ShapeFill(self, shape: Shape_, str: str) -> None:
 		...
-	def SimpleShapeFill(self, shape: _Shape, invert: bool, str: str) -> None:
+	def SimpleShapeFill(self, shape: Shape_, invert: bool, str: str) -> None:
 		...
 
-ImageChannel = _ImageChannel
+ImageChannel = ImageChannel_

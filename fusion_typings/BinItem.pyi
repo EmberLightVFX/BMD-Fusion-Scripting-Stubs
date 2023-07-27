@@ -1,6 +1,6 @@
 from typing import Any
 
-class _BinItem:
+class BinItem_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -43,4 +43,4 @@ class _BinItem:
 		"""
 		...
 
-BinItem = _BinItem
+BinItem = BinItem_

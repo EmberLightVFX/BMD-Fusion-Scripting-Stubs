@@ -1,8 +1,8 @@
-from Matrix4 import _Matrix4
-from Vector2 import _Vector2
+from Matrix4 import Matrix4_
+from Vector2 import Vector2_
 
 
-class _Shape:
+class Shape_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -27,50 +27,50 @@ class _Shape:
 
 
 	#---Methods---#
-	def TransformOfShape(self, mat: _Matrix4) -> _Shape:
+	def TransformOfShape(self, mat: Matrix4_) -> Shape_:
 		...
-	def _AddRectangle(self, v1: _Vector2, v2: _Vector2, round: float, prec: int) -> None:
+	def _AddRectangle(self, v1: Vector2_, v2: Vector2_, round: float, prec: int) -> None:
 		...
-	def _BezierTo(self, v1: _Vector2, v2: _Vector2, v3: _Vector2, close: bool) -> None:
+	def _BezierTo(self, v1: Vector2_, v2: Vector2_, v3: Vector2_, close: bool) -> None:
 		...
 	def IsEmpty(self) -> bool:
 		...
-	def _ConicTo(self, v1: _Vector2, v2: _Vector2, close: bool) -> None:
+	def _ConicTo(self, v1: Vector2_, v2: Vector2_, close: bool) -> None:
 		...
-	def _FitSourceTo(self, v1: _Vector2, v2: _Vector2, v3: _Vector2, v4: _Vector2, keepaspect: bool) -> None:
+	def _FitSourceTo(self, v1: Vector2_, v2: Vector2_, v3: Vector2_, v4: Vector2_, keepaspect: bool) -> None:
 		...
-	def Shape(self) -> _Shape:
+	def Shape(self) -> Shape_:
 		"""
 		Shape constructor
 		"""
 		...
-	def _FitTo(self, v1: _Vector2, v2: _Vector2, keepaspect: bool) -> None:
+	def _FitTo(self, v1: Vector2_, v2: Vector2_, keepaspect: bool) -> None:
 		...
 	def info_text(self):
 		...
-	def _FlatBezierTo(self, v1: _Vector2, v2: _Vector2, v3: _Vector2, prec: int, close: bool) -> None:
+	def _FlatBezierTo(self, v1: Vector2_, v2: Vector2_, v3: Vector2_, prec: int, close: bool) -> None:
 		...
-	def ExpandOfShape(self, thick: float, prec: int, fprec: int, mod: bool) -> _Shape:
+	def ExpandOfShape(self, thick: float, prec: int, fprec: int, mod: bool) -> Shape_:
 		...
-	def _FlatConicTo(self, v1: _Vector2, v2: _Vector2, prec: int, close: bool) -> None:
+	def _FlatConicTo(self, v1: Vector2_, v2: Vector2_, prec: int, close: bool) -> None:
 		...
-	def _LineTo(self, v1: _Vector2) -> None:
+	def _LineTo(self, v1: Vector2_) -> None:
 		...
 	def Close(self) -> None:
 		...
-	def _MoveTo(self, v1: _Vector2) -> None:
+	def _MoveTo(self, v1: Vector2_) -> None:
 		...
-	def FlattenOfShape(self, prec: int) -> _Shape:
+	def FlattenOfShape(self, prec: int) -> Shape_:
 		...
 	def GetCount(self) -> int:
 		...
 	def Clear(self) -> None:
 		...
-	def Copy(self) -> _Shape:
+	def Copy(self) -> Shape_:
 		...
 	def IsFlat(self) -> bool:
 		...
 	def header_text(self):
 		...
 
-Shape = _Shape
+Shape = Shape_

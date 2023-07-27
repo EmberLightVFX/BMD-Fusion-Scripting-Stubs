@@ -1,18 +1,18 @@
-from Request import _Request
-from Image import _Image
+from Request import Request_
+from Image import Image_
 
 
-class _DVIPBuffer:
+class DVIPBuffer_:
 
 	#---Methods---#
 	def header_text(self):
 		...
 	def info_text(self):
 		...
-	def DVIPBuffer(self, req: _Request, image: _Image, writable: bool) -> _DVIPBuffer:
+	def DVIPBuffer(self, req: Request_, image: Image_, writable: bool) -> DVIPBuffer_:
 		"""
 		DVIPBuffer constructor
 		"""
 		...
 
-DVIPBuffer = _DVIPBuffer
+DVIPBuffer = DVIPBuffer_

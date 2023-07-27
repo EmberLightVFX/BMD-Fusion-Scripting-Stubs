@@ -1,7 +1,7 @@
-from ImgRectI import _ImgRectI
+from ImgRectI import ImgRectI_
 
 
-class _ImageDomain:
+class ImageDomain_:
 
 	#---Properties---#
 	XScale: float
@@ -28,7 +28,7 @@ class _ImageDomain:
 	"""
 	Read Only
 	"""
-	ImageWindow: _ImgRectI
+	ImageWindow: ImgRectI_
 	"""
 	Read Only
 	"""
@@ -60,7 +60,7 @@ class _ImageDomain:
 	"""
 	Read Only
 	"""
-	ValidWindow: _ImgRectI
+	ValidWindow: ImgRectI_
 	"""
 	Read Only
 	"""
@@ -114,21 +114,21 @@ class _ImageDomain:
 		...
 	def ValidWidth(self) -> int:
 		...
-	def _new_Ints(self, dom: _ImageDomain, l: int, b: int, r: int, t: int) -> _ImageDomain:
+	def _new_Ints(self, dom: ImageDomain_, l: int, b: int, r: int, t: int) -> ImageDomain_:
 		...
-	def _Intersect_FuRectInt(self, rect: _ImgRectI) -> _ImgRectI:
+	def _Intersect_FuRectInt(self, rect: ImgRectI_) -> ImgRectI_:
 		...
-	def _new_FuRectInt(self, dom: _ImageDomain, rect: _ImgRectI) -> _ImageDomain:
+	def _new_FuRectInt(self, dom: ImageDomain_, rect: ImgRectI_) -> ImageDomain_:
 		...
-	def _Intersect_ImageDomain(self, dom: _ImageDomain) -> _ImgRectI:
+	def _Intersect_ImageDomain(self, dom: ImageDomain_) -> ImgRectI_:
 		...
-	def _newDom(self, dom: _ImageDomain) -> _ImageDomain:
+	def _newDom(self, dom: ImageDomain_) -> ImageDomain_:
 		...
-	def _Intersect_Ints(self, l: int, b: int, r: int, t: int) -> _ImgRectI:
+	def _Intersect_Ints(self, l: int, b: int, r: int, t: int) -> ImgRectI_:
 		...
 	def info_text(self):
 		...
-	def _Set_FuRectInt(self, rect: _ImgRectI) -> None:
+	def _Set_FuRectInt(self, rect: ImgRectI_) -> None:
 		...
 	def __tostring(self) -> str:
 		...
@@ -136,15 +136,15 @@ class _ImageDomain:
 		...
 	def Normalise(self) -> None:
 		...
-	def _Union_FuRectInt(self, rect: _ImgRectI) -> _ImgRectI:
+	def _Union_FuRectInt(self, rect: ImgRectI_) -> ImgRectI_:
 		...
-	def IsWithin(self, dom: _ImageDomain) -> bool:
+	def IsWithin(self, dom: ImageDomain_) -> bool:
 		...
 	def IsNull(self) -> bool:
 		...
-	def _Union_ImageDomain(self, dom: _ImageDomain) -> _ImgRectI:
+	def _Union_ImageDomain(self, dom: ImageDomain_) -> ImgRectI_:
 		...
-	def _Union_Ints(self, l: int, b: int, r: int, t: int) -> _ImgRectI:
+	def _Union_Ints(self, l: int, b: int, r: int, t: int) -> ImgRectI_:
 		...
 	def Offset(self, x: float, y: float) -> None:
 		...
@@ -157,4 +157,4 @@ class _ImageDomain:
 	def ImageWidth(self) -> int:
 		...
 
-ImageDomain = _ImageDomain
+ImageDomain = ImageDomain_

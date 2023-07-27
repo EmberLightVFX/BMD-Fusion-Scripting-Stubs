@@ -1,9 +1,9 @@
 from typing import Any
 
-from Tool import _Tool
+from Tool import Tool_
 
 
-class _FuFrame:
+class FuFrame_:
 
 	#---Properties---#
 	CurrentView: Any
@@ -130,7 +130,7 @@ class _FuFrame:
 		 e.g. 'FlowView', 'ConsoleView', 'TimelineView', 'SplineEditorView'
 		"""
 		...
-	def ViewOn(self, tool: _Tool = _Tool(), view: int = int()) -> None:
+	def ViewOn(self, tool: Tool_ = Tool_(), view: int = int()) -> None:
 		"""
 		Displays a tool on a numbered view
 
@@ -156,4 +156,4 @@ class _FuFrame:
 		"""
 		...
 
-FuFrame = _FuFrame
+FuFrame = FuFrame_

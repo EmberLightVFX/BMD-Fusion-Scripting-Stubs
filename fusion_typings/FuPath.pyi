@@ -1,4 +1,4 @@
-class _FuPath:
+class FuPath_:
 
 	#---Methods---#
 	def info_text(self):
@@ -27,10 +27,10 @@ class _FuPath:
 		...
 	def IsDir(self, str: str) -> bool:
 		...
-	def FuPath(self, str: str) -> _FuPath:
+	def FuPath(self, str: str) -> FuPath_:
 		"""
 		FuPath constructor
 		"""
 		...
 
-FuPath = _FuPath
+FuPath = FuPath_

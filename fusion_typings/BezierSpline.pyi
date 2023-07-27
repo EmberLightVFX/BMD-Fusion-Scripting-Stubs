@@ -1,6 +1,6 @@
 from typing import Any
 
-class _BezierSpline:
+class BezierSpline_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -75,4 +75,4 @@ class _BezierSpline:
 		"""
 		...
 
-BezierSpline = _BezierSpline
+BezierSpline = BezierSpline_

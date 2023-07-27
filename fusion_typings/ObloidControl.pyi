@@ -1,4 +1,4 @@
-class _ObloidControl:
+class ObloidControl_:
 	...
 
-ObloidControl = _ObloidControl
+ObloidControl = ObloidControl_

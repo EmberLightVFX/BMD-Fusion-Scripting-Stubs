@@ -1,4 +1,4 @@
-class _PolylineControl:
+class PolylineControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _PolylineControl:
 	REGB_ControlView: bool
 
 
-PolylineControl = _PolylineControl
+PolylineControl = PolylineControl_

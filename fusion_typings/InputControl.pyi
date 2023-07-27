@@ -1,4 +1,4 @@
-class _InputControl:
+class InputControl_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -22,4 +22,4 @@ class _InputControl:
 	REGB_ControlView: bool
 
 
-InputControl = _InputControl
+InputControl = InputControl_

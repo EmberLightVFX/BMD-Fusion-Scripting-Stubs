@@ -1,7 +1,7 @@
-from TextStyleFont import _TextStyleFont
+from TextStyleFont import TextStyleFont_
 
 
-class _TextStyleFontMetrics:
+class TextStyleFontMetrics_:
 
 	#---Properties---#
 	StrikeoutOffset: float
@@ -74,7 +74,7 @@ class _TextStyleFontMetrics:
 		...
 	def info_text(self):
 		...
-	def TextStyleFontMetrics(self, font: _TextStyleFont, direction: int) -> _TextStyleFontMetrics:
+	def TextStyleFontMetrics(self, font: TextStyleFont_, direction: int) -> TextStyleFontMetrics_:
 		"""
 		TextStyleFontMetrics constructor
 		"""
@@ -90,4 +90,4 @@ class _TextStyleFontMetrics:
 	def CharacterKerning(self, first: str, second: str) -> float:
 		...
 
-TextStyleFontMetrics = _TextStyleFontMetrics
+TextStyleFontMetrics = TextStyleFontMetrics_

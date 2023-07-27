@@ -1,7 +1,7 @@
-from _non_existing import _ScriptValType
+from _non_existing import ScriptValType_
 
 
-class _ScriptVal:
+class ScriptVal_:
 
 	#---Properties---#
 	TypeName: str
@@ -38,15 +38,15 @@ class _ScriptVal:
 
 
 	#---Methods---#
-	def _newDef(self) -> _ScriptVal:
+	def _newDef(self) -> ScriptVal_:
 		...
 	def info_text(self):
 		...
-	def _newScriptVal(self, sv: _ScriptVal) -> _ScriptVal:
+	def _newScriptVal(self, sv: ScriptVal_) -> ScriptVal_:
 		...
 	def header_text(self):
 		...
-	def Type(self) -> _ScriptValType:
+	def Type(self) -> ScriptValType_:
 		...
 
-ScriptVal = _ScriptVal
+ScriptVal = ScriptVal_

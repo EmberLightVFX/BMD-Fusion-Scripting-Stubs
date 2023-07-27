@@ -1,4 +1,4 @@
-class _BinStill:
+class BinStill_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -33,4 +33,4 @@ class _BinStill:
 		"""
 		...
 
-BinStill = _BinStill
+BinStill = BinStill_

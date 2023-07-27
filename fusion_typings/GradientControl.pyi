@@ -1,4 +1,4 @@
-class _GradientControl:
+class GradientControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _GradientControl:
 	REGB_ControlView: bool
 
 
-GradientControl = _GradientControl
+GradientControl = GradientControl_

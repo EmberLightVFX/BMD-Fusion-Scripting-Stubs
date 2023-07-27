@@ -1,4 +1,4 @@
-class _OperatorControl:
+class OperatorControl_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -24,4 +24,4 @@ class _OperatorControl:
 	REGB_ControlView: bool
 
 
-OperatorControl = _OperatorControl
+OperatorControl = OperatorControl_

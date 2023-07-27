@@ -1,12 +1,12 @@
-from Fusion import _Fusion
-from Composition import _Composition
-from Tool import _Tool
+from Fusion import Fusion_
+from Composition import Composition_
+from Tool import Tool_
 
-fusion = _Fusion()
-fu = _Fusion()
+fusion = Fusion_()
+fu = Fusion_()
 
-composition = _Composition()
-comp = _Composition()
+composition = Composition_()
+comp = Composition_()
 
-tool = _Tool()
+tool = Tool_()
 

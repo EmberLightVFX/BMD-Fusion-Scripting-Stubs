@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UISlider:
+class UISlider_:
 
 	#---Properties---#
 	SliderDown: Any
@@ -140,4 +140,4 @@ class _UISlider:
 	def SetMinimum(self) -> None:
 		...
 
-UISlider = _UISlider
+UISlider = UISlider_

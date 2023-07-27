@@ -1,4 +1,4 @@
-class _GammaControl:
+class GammaControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _GammaControl:
 	REGB_ControlView: bool
 
 
-GammaControl = _GammaControl
+GammaControl = GammaControl_

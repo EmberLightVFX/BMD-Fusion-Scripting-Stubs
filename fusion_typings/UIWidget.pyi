@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UIWidget:
+class UIWidget_:
 
 	#---Properties---#
 	SizeIncrement: Any
@@ -439,4 +439,4 @@ class _UIWidget:
 	def ShowFullScreen(self) -> None:
 		...
 
-UIWidget = _UIWidget
+UIWidget = UIWidget_

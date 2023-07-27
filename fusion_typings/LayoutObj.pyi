@@ -1,7 +1,7 @@
-from TagList import _TagList
+from TagList import TagList_
 
 
-class _LayoutObj:
+class LayoutObj_:
 
 	#---Properties---#
 	m_SizeX: int
@@ -26,10 +26,10 @@ class _LayoutObj:
 		...
 	def info_text(self):
 		...
-	def LayoutObj(self, tags: _TagList) -> _LayoutObj:
+	def LayoutObj(self, tags: TagList_) -> LayoutObj_:
 		"""
 		LayoutObj constructor
 		"""
 		...
 
-LayoutObj = _LayoutObj
+LayoutObj = LayoutObj_

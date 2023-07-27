@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UITabBar:
+class UITabBar_:
 
 	#---Properties---#
 	TabsClosable: Any
@@ -146,4 +146,4 @@ class _UITabBar:
 	def GetTabsClosable(self) -> None:
 		...
 
-UITabBar = _UITabBar
+UITabBar = UITabBar_

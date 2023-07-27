@@ -1,34 +1,34 @@
 from typing import Any, overload
 
-from QueueManager import _QueueManager
-from Composition import _Composition
-from FontList import _FontList
-from ActionManager import _ActionManager
-from HotkeyManager import _HotkeyManager
-from UIManager import _UIManager
-from MailMessage import _MailMessage
-from Registry import _Registry
-from RenderJob import _RenderJob
-from MemBlock import _MemBlock
-from _non_existing import _Bins, _CacheManager, _MenuManager, _File
+from QueueManager import QueueManager_
+from Composition import Composition_
+from FontList import FontList_
+from ActionManager import ActionManager_
+from HotkeyManager import HotkeyManager_
+from UIManager import UIManager_
+from MailMessage import MailMessage_
+from Registry import Registry_
+from RenderJob import RenderJob_
+from MemBlock import MemBlock_
+from _non_existing import Bins_, CacheManager_, MenuManager_, File_
 
 
-class _Fusion:
+class Fusion_:
 
 	#---Properties---#
-	QueueManager: _QueueManager
+	QueueManager: QueueManager_
 	"""
 	The global render manager for this instance of Fusion
 
 	Read Only
 	"""
-	BinManager: _Bins
+	BinManager: Bins_
 	"""
 	Bins
 
 	Read Only
 	"""
-	CacheManager: _CacheManager
+	CacheManager: CacheManager_
 	"""
 	The Global Cache Manager
 
@@ -38,7 +38,7 @@ class _Fusion:
 	"""
 	Read Only
 	"""
-	RenderManager: _QueueManager
+	RenderManager: QueueManager_
 	"""
 	The global render manager for this instance of Fusion
 
@@ -48,13 +48,13 @@ class _Fusion:
 	"""
 	Read Only
 	"""
-	MenuManager: _MenuManager
+	MenuManager: MenuManager_
 	"""
 	The Global Menu Manager
 
 	Read Only
 	"""
-	CurrentComp: _Composition
+	CurrentComp: Composition_
 	"""
 	Represents the currently active composition
 
@@ -66,7 +66,7 @@ class _Fusion:
 	"""
 	Read/Write
 	"""
-	FontManager: _FontList
+	FontManager: FontList_
 	"""
 	The Global Font Manager
 
@@ -79,13 +79,13 @@ class _Fusion:
 
 	Read Only
 	"""
-	ActionManager: _ActionManager
+	ActionManager: ActionManager_
 	"""
 	The Global Action Manager
 
 	Read Only
 	"""
-	HotkeyManager: _HotkeyManager
+	HotkeyManager: HotkeyManager_
 	"""
 	The Global Hotkey Manager
 
@@ -102,11 +102,11 @@ class _Fusion:
 	"""
 	Read Only
 	"""
-	UIManager: _UIManager
+	UIManager: UIManager_
 	"""
 	Read Only
 	"""
-	Bins: _Bins
+	Bins: Bins_
 	"""
 	Bins
 
@@ -140,7 +140,7 @@ class _Fusion:
 		...
 	def GetRLMLicenseInfo(self):
 		...
-	def GetCurrentComp(self) -> _Composition:
+	def GetCurrentComp(self) -> Composition_:
 		"""
 		Returns the currently active composition
 		"""
@@ -254,7 +254,7 @@ class _Fusion:
 		Retrieve a table of preferences
 		"""
 		...
-	def CreateMail(self) -> _MailMessage:
+	def CreateMail(self) -> MailMessage_:
 		"""
 		Create an empty Mail message object
 		"""
@@ -264,7 +264,7 @@ class _Fusion:
 		Retrieve a list of all registry objects known to the system
 		"""
 		...
-	def OpenFile(self, filename: str, mode: int) -> _File:
+	def OpenFile(self, filename: str, mode: int) -> File_:
 		"""
 		Open a file
 
@@ -299,7 +299,7 @@ class _Fusion:
 		masterprefs: pathname of overriding prefs file
 		"""
 		...
-	def FindReg(self, id: str, type: int = int()) -> _Registry:
+	def FindReg(self, id: str, type: int = int()) -> Registry_:
 		"""
 		Find a registry object by ID
 		"""
@@ -320,7 +320,7 @@ class _Fusion:
 		"""
 		...
 	@overload
-	def QueueComp(self, filename: str, start: int = int(), end: int = int(), group: str = str()) -> _RenderJob:
+	def QueueComp(self, filename: str, start: int = int(), end: int = int(), group: str = str()) -> RenderJob_:
 		"""
 		Queue a composition to be rendered locally
 
@@ -334,7 +334,7 @@ class _Fusion:
 		"""
 		...
 	@overload
-	def QueueComp(self, args: dict[Any, Any]) -> _RenderJob:
+	def QueueComp(self, args: dict[Any, Any]) -> RenderJob_:
 		"""
 		Queue a composition to be rendered locally
 
@@ -347,35 +347,35 @@ class _Fusion:
 		Returns: The new RenderJob object, if successful, else nil
 		"""
 		...
-	def LoadRecentComp(self, index: int, quiet: bool = bool(), autoclose: bool = bool(), hidden: bool = bool()) -> _Composition:
+	def LoadRecentComp(self, index: int, quiet: bool = bool(), autoclose: bool = bool(), hidden: bool = bool()) -> Composition_:
 		"""
 		Loads an composition from the recent file list
 		"""
 		...
 	@overload
-	def LoadComp(self, filename: str, quiet: bool = bool(), autoclose: bool = bool(), hidden: bool = bool()) -> _Composition:
+	def LoadComp(self, filename: str, quiet: bool = bool(), autoclose: bool = bool(), hidden: bool = bool()) -> Composition_:
 		"""
 		Loads an existing composition
 		"""
 		...
 	@overload
-	def LoadComp(self, filename: str, options: dict[Any, Any]) -> _Composition:
+	def LoadComp(self, filename: str, options: dict[Any, Any]) -> Composition_:
 		"""
 		Loads an existing composition
 		"""
 		...
 	@overload
-	def LoadComp(self, savedcomp: _MemBlock, options: dict[Any, Any]) -> _Composition:
+	def LoadComp(self, savedcomp: MemBlock_, options: dict[Any, Any]) -> Composition_:
 		"""
 		Loads an existing composition
 		"""
 		...
-	def NewComp(self, quiet: bool = bool(), autoclose: bool = bool(), hidden: bool = bool()) -> _Composition:
+	def NewComp(self, quiet: bool = bool(), autoclose: bool = bool(), hidden: bool = bool()) -> Composition_:
 		"""
 		Creates a new composition
 		"""
 		...
-	def _NewComp(self, quiet: bool = bool(), autoclose: bool = bool(), hidden: bool = bool()) -> _Composition:
+	def _NewComp(self, quiet: bool = bool(), autoclose: bool = bool(), hidden: bool = bool()) -> Composition_:
 		"""
 		Creates a new composition
 		"""
@@ -422,7 +422,7 @@ class _Fusion:
 		Retrieve a list of basic info for all registry objects known to the system
 		"""
 		...
-	def ShowPrefs(self, pageid: str = str(), showall: bool = bool(), comp: _Composition = _Composition()) -> None:
+	def ShowPrefs(self, pageid: str = str(), showall: bool = bool(), comp: Composition_ = Composition_()) -> None:
 		"""
 		Display the Preferences dialog
 		"""
@@ -515,4 +515,4 @@ class _Fusion:
 	def GetToolList(self) -> None:
 		...
 
-Fusion = _Fusion
+Fusion = Fusion_

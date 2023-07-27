@@ -1,4 +1,4 @@
-class _Noise3:
+class Noise3_:
 
 	#---Properties---#
 	TypeName: str
@@ -19,10 +19,10 @@ class _Noise3:
 		...
 	def _noise(self, x: float, y: float, z: float) -> float:
 		...
-	def Noise3(self) -> _Noise3:
+	def Noise3(self) -> Noise3_:
 		"""
 		Noise3 constructor
 		"""
 		...
 
-Noise3 = _Noise3
+Noise3 = Noise3_

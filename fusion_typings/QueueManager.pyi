@@ -1,10 +1,10 @@
 from typing import Any, overload
 
-from RenderJob import _RenderJob
-from RenderNode import _RenderNode
+from RenderJob import RenderJob_
+from RenderNode import RenderNode_
 
 
-class _QueueManager:
+class QueueManager_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -35,7 +35,7 @@ class _QueueManager:
 		...
 	def Start(self):
 		...
-	def RemoveJob(self, job: _RenderJob) -> None:
+	def RemoveJob(self, job: RenderJob_) -> None:
 		"""
 		Removes a job from the list
 		"""
@@ -89,7 +89,7 @@ class _QueueManager:
 		Scans local network for new RenderNodes
 		"""
 		...
-	def AddRenderNode(self, name: str, groups: str = str(), unused: bool = bool()) -> _RenderNode:
+	def AddRenderNode(self, name: str, groups: str = str(), unused: bool = bool()) -> RenderNode_:
 		"""
 		Adds a RenderNode to the node list
 
@@ -100,7 +100,7 @@ class _QueueManager:
 		"""
 		...
 	@overload
-	def RemoveRenderNode(self, node: _RenderNode) -> None:
+	def RemoveRenderNode(self, node: RenderNode_) -> None:
 		"""
 		Removes a RenderNode from the node list
 
@@ -122,7 +122,7 @@ class _QueueManager:
 		Writes a message to the Render Log
 		"""
 		...
-	def MoveJob(self, job: _RenderJob, offset: int) -> None:
+	def MoveJob(self, job: RenderJob_, offset: int) -> None:
 		"""
 		Moves a job up or down the list
 
@@ -133,7 +133,7 @@ class _QueueManager:
 		"""
 		...
 	@overload
-	def AddJob(self, filename: str, groups: str = str(), frames: str = str(), endscript: str = str()) -> _RenderJob:
+	def AddJob(self, filename: str, groups: str = str(), frames: str = str(), endscript: str = str()) -> RenderJob_:
 		"""
 		Adds a job to the list
 
@@ -148,7 +148,7 @@ class _QueueManager:
 		"""
 		...
 	@overload
-	def AddJob(self, args: dict[Any, Any]) -> _RenderJob:
+	def AddJob(self, args: dict[Any, Any]) -> RenderJob_:
 		"""
 		Adds a job to the list
 
@@ -188,4 +188,4 @@ class _QueueManager:
 		"""
 		...
 
-QueueManager = _QueueManager
+QueueManager = QueueManager_

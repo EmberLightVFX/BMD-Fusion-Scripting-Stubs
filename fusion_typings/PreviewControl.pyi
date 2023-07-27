@@ -1,4 +1,4 @@
-class _PreviewControl:
+class PreviewControl_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -24,4 +24,4 @@ class _PreviewControl:
 	REGB_ControlView: bool
 
 
-PreviewControl = _PreviewControl
+PreviewControl = PreviewControl_

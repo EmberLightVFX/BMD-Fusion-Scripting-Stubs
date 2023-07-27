@@ -1,6 +1,6 @@
 from typing import Any, overload
 
-class _MailMessage:
+class MailMessage_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -154,4 +154,4 @@ class _MailMessage:
 		"""
 		...
 
-MailMessage = _MailMessage
+MailMessage = MailMessage_

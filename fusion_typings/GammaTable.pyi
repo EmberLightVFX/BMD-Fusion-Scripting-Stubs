@@ -1,4 +1,4 @@
-class _GammaTable:
+class GammaTable_:
 
 	#---Properties---#
 	TypeName: str
@@ -25,10 +25,10 @@ class _GammaTable:
 		...
 	def LookupFlt(self, x: float) -> float:
 		...
-	def GammaTable(self) -> _GammaTable:
+	def GammaTable(self) -> GammaTable_:
 		"""
 		GammaTable constructor
 		"""
 		...
 
-GammaTable = _GammaTable
+GammaTable = GammaTable_

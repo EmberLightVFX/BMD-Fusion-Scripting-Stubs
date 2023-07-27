@@ -1,4 +1,4 @@
-class _SplineControl:
+class SplineControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _SplineControl:
 	REGB_ControlView: bool
 
 
-SplineControl = _SplineControl
+SplineControl = SplineControl_

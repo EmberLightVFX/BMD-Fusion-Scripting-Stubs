@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UITreeItem:
+class UITreeItem_:
 
 	#---Properties---#
 	ToolTip: Any
@@ -206,4 +206,4 @@ class _UITreeItem:
 	def AddChildren(self) -> None:
 		...
 
-UITreeItem = _UITreeItem
+UITreeItem = UITreeItem_

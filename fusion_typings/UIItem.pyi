@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UIItem:
+class UIItem_:
 
 	#---Properties---#
 	ID: Any
@@ -40,4 +40,4 @@ class _UIItem:
 	def Get(self) -> None:
 		...
 
-UIItem = _UIItem
+UIItem = UIItem_

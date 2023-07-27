@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UIColorPicker:
+class UIColorPicker_:
 
 	#---Properties---#
 	Color: Any
@@ -64,4 +64,4 @@ class _UIColorPicker:
 	def GetTracking(self) -> None:
 		...
 
-UIColorPicker = _UIColorPicker
+UIColorPicker = UIColorPicker_

@@ -1,4 +1,4 @@
-class _CameraControl:
+class CameraControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _CameraControl:
 	REGB_ControlView: bool
 
 
-CameraControl = _CameraControl
+CameraControl = CameraControl_

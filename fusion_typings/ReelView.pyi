@@ -1,4 +1,4 @@
-class _ReelView:
+class ReelView_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -36,4 +36,4 @@ class _ReelView:
 	def DeleteSelected(self):
 		...
 
-ReelView = _ReelView
+ReelView = ReelView_

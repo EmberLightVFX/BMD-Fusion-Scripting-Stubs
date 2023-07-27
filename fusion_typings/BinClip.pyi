@@ -1,4 +1,4 @@
-class _BinClip:
+class BinClip_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -45,4 +45,4 @@ class _BinClip:
 		"""
 		...
 
-BinClip = _BinClip
+BinClip = BinClip_

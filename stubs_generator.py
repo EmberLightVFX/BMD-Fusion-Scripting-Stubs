@@ -78,35 +78,35 @@ def fixMultiInputNames(string: str) -> str:
 
 
 def generateNonExistingClasses(non_existing_types: list[str]) -> str:
-    content = "".join(f"class _{obj}:\n\t...\n" for obj in non_existing_types) + "\n"
+    content = "".join(f"class {obj}_:\n\t...\n" for obj in non_existing_types) + "\n"
     for obj in non_existing_types:
-        content += f"{obj} = _{obj}\n"
+        content += f"{obj} = {obj}_\n"
     content += "\n"
     return content
 
 
 def generateToolClass() -> str:
     return """\
-from Operator import _Operator
+from Operator import Operator_
 
-_Tool = _Operator
+Tool_ = Operator_
 
 """
 
 
 def generateToolScripts() -> str:
     return """\
-from Fusion import _Fusion
-from Composition import _Composition
-from Tool import _Tool
+from Fusion import Fusion_
+from Composition import Composition_
+from Tool import Tool_
 
-fusion = _Fusion()
-fu = _Fusion()
+fusion = Fusion_()
+fu = Fusion_()
 
-composition = _Composition()
-comp = _Composition()
+composition = Composition_()
+comp = Composition_()
 
-tool = _Tool()
+tool = Tool_()
 
 """
 
@@ -173,7 +173,7 @@ def typeConverter(type_string: str, is_optional=False, name: str = "") -> str:
     elif type_string == "nil":
         return_string = "None"
     else:
-        return_string = f"_{type_string}"
+        return_string = f"{type_string}_"
         global return_types
         if type_string != name and type_string not in return_types:
             return_types.append(type_string)
@@ -216,7 +216,7 @@ def genInputType(txt: str, is_optional=False, name=""):
 
 def genStubs(o) -> tuple[str, list[str]]:
     print("Name: ", o["name"])
-    content = f'class _{replaceWithUnderscore(o["name"])}:\n'
+    content = f'class {replaceWithUnderscore(o["name"])}_:\n'
     global return_types
     global add_overload
     global add_any
@@ -398,9 +398,7 @@ def genStubs(o) -> tuple[str, list[str]]:
                                             is_literal = False
                                             filtered_matches.append(match)
                                         else:  # Literals - Add § between each object
-                                            filtered_matches[
-                                                len(filtered_matches) - 1
-                                            ] += f"§{match}"
+                                            filtered_matches[-1] += f"§{match}"
                                     else:
                                         filtered_matches.append(match)
 
@@ -441,7 +439,7 @@ def genStubs(o) -> tuple[str, list[str]]:
                             if len(construct_split) > 1 and removeParents(
                                 construct_split[0]
                             ) == removeParents(construct_split[1]):
-                                content += f"_{removeParents(construct_split[0])}"
+                                content += f"{removeParents(construct_split[0])}_"
 
                             else:  # Normal return type
                                 if len(usage_splits) > 1:
@@ -503,19 +501,19 @@ if __name__ == "__main__":
             if len(imports_to_add) > 0:
                 for imp in imports_to_add:
                     if imp not in local_non_existing_types:
-                        imports += f"from {imp} import _{imp}\n"
+                        imports += f"from {imp} import {imp}_\n"
                 if len(local_non_existing_types) > 0:
                     imports += "from _non_existing import "
                     for i, imp in enumerate(local_non_existing_types):
                         if i > 0:
                             imports += ", "
-                        imports += f"_{imp}"
+                        imports += f"{imp}_"
                     imports += "\n"
                 imports += "\n\n"
 
             stubs_content = imports + stubs_content
             name_with_underscores = replaceWithUnderscore(object_data["name"])
-            stubs_content += f"\n{name_with_underscores} = _{name_with_underscores}"
+            stubs_content += f"\n{name_with_underscores} = {name_with_underscores}_"
             stub_names.append(name_with_underscores)
 
             # Save the stubs to a .pyi file

@@ -1,8 +1,8 @@
-from Image import _Image
-from FusionDoc import _FusionDoc
+from Image import Image_
+from FusionDoc import FusionDoc_
 
 
-class _Clip:
+class Clip_:
 
 	#---Properties---#
 	Filename: str
@@ -41,13 +41,13 @@ class _Clip:
 	#---Methods---#
 	def info_text(self):
 		...
-	def PutFrame(self, frame: int, img: _Image) -> bool:
+	def PutFrame(self, frame: int, img: Image_) -> bool:
 		...
-	def GetFrame(self, frame: int) -> _Image:
+	def GetFrame(self, frame: int) -> Image_:
 		...
 	def header_text(self):
 		...
-	def Clip(self, name: str, save: bool, doc: _FusionDoc) -> _Clip:
+	def Clip(self, name: str, save: bool, doc: FusionDoc_) -> Clip_:
 		"""
 		Clip constructor
 		"""
@@ -57,4 +57,4 @@ class _Clip:
 	def Close(self) -> None:
 		...
 
-Clip = _Clip
+Clip = Clip_

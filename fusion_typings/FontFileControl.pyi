@@ -1,4 +1,4 @@
-class _FontFileControl:
+class FontFileControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _FontFileControl:
 	REGB_ControlView: bool
 
 
-FontFileControl = _FontFileControl
+FontFileControl = FontFileControl_

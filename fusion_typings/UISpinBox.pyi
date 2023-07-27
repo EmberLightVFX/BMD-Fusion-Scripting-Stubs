@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UISpinBox:
+class UISpinBox_:
 
 	#---Properties---#
 	Alignment: Any
@@ -186,4 +186,4 @@ class _UISpinBox:
 	def SetMinimum(self) -> None:
 		...
 
-UISpinBox = _UISpinBox
+UISpinBox = UISpinBox_

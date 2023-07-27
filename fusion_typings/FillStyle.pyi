@@ -1,4 +1,4 @@
-class _FillStyle:
+class FillStyle_:
 
 	#---Properties---#
 	OutsideOnly: bool
@@ -57,16 +57,16 @@ class _FillStyle:
 	#---Methods---#
 	def info_text(self):
 		...
-	def FillStyle(self) -> _FillStyle:
+	def FillStyle(self) -> FillStyle_:
 		"""
 		FillStyle constructor
 		"""
 		...
 	def header_text(self):
 		...
-	def IsTraceCompatibleWith(self, style: _FillStyle) -> bool:
+	def IsTraceCompatibleWith(self, style: FillStyle_) -> bool:
 		...
 	def ActualThickness(self) -> float:
 		...
 
-FillStyle = _FillStyle
+FillStyle = FillStyle_

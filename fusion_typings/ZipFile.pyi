@@ -1,12 +1,12 @@
-from _non_existing import _void
+from _non_existing import void_
 
 
-class _ZipFile:
+class ZipFile_:
 
 	#---Methods---#
-	def WriteFile(self, buf: _void, len: int) -> int:
+	def WriteFile(self, buf: void_, len: int) -> int:
 		...
-	def ReadFile(self, buf: _void, len: int) -> int:
+	def ReadFile(self, buf: void_, len: int) -> int:
 		...
 	def GetFileTime(self) -> int:
 		...
@@ -18,7 +18,7 @@ class _ZipFile:
 		...
 	def GetFileExternalAttrs(self) -> int:
 		...
-	def ZipFile(self, name: str, write: bool) -> _ZipFile:
+	def ZipFile(self, name: str, write: bool) -> ZipFile_:
 		"""
 		ZipFile constructor
 		"""
@@ -50,4 +50,4 @@ class _ZipFile:
 	def CloseFile(self) -> bool:
 		...
 
-ZipFile = _ZipFile
+ZipFile = ZipFile_

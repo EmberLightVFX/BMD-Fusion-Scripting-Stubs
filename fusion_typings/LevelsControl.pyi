@@ -1,4 +1,4 @@
-class _LevelsControl:
+class LevelsControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _LevelsControl:
 	REGB_ControlView: bool
 
 
-LevelsControl = _LevelsControl
+LevelsControl = LevelsControl_

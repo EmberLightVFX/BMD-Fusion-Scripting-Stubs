@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UIButton:
+class UIButton_:
 
 	#---Properties---#
 	AutoRepeatInterval: Any
@@ -140,4 +140,4 @@ class _UIButton:
 	def GetChecked(self) -> None:
 		...
 
-UIButton = _UIButton
+UIButton = UIButton_

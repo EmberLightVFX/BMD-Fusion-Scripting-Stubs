@@ -1,4 +1,4 @@
-class _float16:
+class float16_:
 
 	#---Properties---#
 	TypeName: str
@@ -17,10 +17,10 @@ class _float16:
 		...
 	def _tofloat16h(self, v: float) -> int:
 		...
-	def float16(self, f: float) -> _float16:
+	def float16(self, f: float) -> float16_:
 		"""
 		float16 constructor
 		"""
 		...
 
-float16 = _float16
+float16 = float16_

@@ -1,7 +1,7 @@
-from ImageCacheManager import _ImageCacheManager
+from ImageCacheManager import ImageCacheManager_
 
 
-class _FusionApp:
+class FusionApp_:
 
 	#---Properties---#
 	MouseX: int
@@ -12,7 +12,7 @@ class _FusionApp:
 	"""
 	Read Only
 	"""
-	CacheManager: _ImageCacheManager
+	CacheManager: ImageCacheManager_
 	"""
 	Read Only
 	"""
@@ -25,4 +25,4 @@ class _FusionApp:
 	def PurgeCache(self) -> None:
 		...
 
-FusionApp = _FusionApp
+FusionApp = FusionApp_

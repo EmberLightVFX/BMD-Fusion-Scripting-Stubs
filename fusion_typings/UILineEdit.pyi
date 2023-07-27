@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UILineEdit:
+class UILineEdit_:
 
 	#---Properties---#
 	CursorMoveStyle: Any
@@ -186,4 +186,4 @@ class _UILineEdit:
 	def GetClearButtonEnabled(self) -> None:
 		...
 
-UILineEdit = _UILineEdit
+UILineEdit = UILineEdit_

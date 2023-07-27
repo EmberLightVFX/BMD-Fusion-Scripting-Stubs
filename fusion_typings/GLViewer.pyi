@@ -1,6 +1,6 @@
 from typing import Any
 
-class _GLViewer:
+class GLViewer_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -166,4 +166,4 @@ Scale of 0 indicates Fit to View
 		"""
 		...
 
-GLViewer = _GLViewer
+GLViewer = GLViewer_

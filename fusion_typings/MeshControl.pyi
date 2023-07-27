@@ -1,4 +1,4 @@
-class _MeshControl:
+class MeshControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _MeshControl:
 	REGB_ControlView: bool
 
 
-MeshControl = _MeshControl
+MeshControl = MeshControl_

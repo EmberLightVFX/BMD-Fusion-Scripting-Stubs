@@ -1,4 +1,4 @@
-class _ComboControl:
+class ComboControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _ComboControl:
 	REGB_ControlView: bool
 
 
-ComboControl = _ComboControl
+ComboControl = ComboControl_

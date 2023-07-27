@@ -1,4 +1,4 @@
-class _Event:
+class Event_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -30,4 +30,4 @@ class _Event:
 	def Default(self):
 		...
 
-Event = _Event
+Event = Event_

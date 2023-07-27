@@ -1,19 +1,19 @@
 from typing import Any, overload
 
-from Tool import _Tool
-from FusionDoc import _FusionDoc
-from Composition import _Composition
-from Parameter import _Parameter
-from Output import _Output
-from Input import _Input
-from SubInputs import _SubInputs
-from TagList import _TagList
-from Request import _Request
-from TimeRegion import _TimeRegion
-from _non_existing import _TimeStamp
+from Tool import Tool_
+from FusionDoc import FusionDoc_
+from Composition import Composition_
+from Parameter import Parameter_
+from Output import Output_
+from Input import Input_
+from SubInputs import SubInputs_
+from TagList import TagList_
+from Request import Request_
+from TimeRegion import TimeRegion_
+from _non_existing import TimeStamp_
 
 
-class _Operator:
+class Operator_:
 
 	#---Properties---#
 	Status: str
@@ -34,7 +34,7 @@ class _Operator:
 	"""
 	Read/Write
 	"""
-	ParentTool: _Tool
+	ParentTool: Tool_
 	"""
 	The parent tool of this tool
 
@@ -81,11 +81,11 @@ class _Operator:
 
 	Read Only
 	"""
-	Document: _FusionDoc
+	Document: FusionDoc_
 	"""
 	Read Only
 	"""
-	Composition: _Composition
+	Composition: Composition_
 	"""
 	The composition that this tool belongs to
 
@@ -119,7 +119,7 @@ class _Operator:
 
 
 	#---Methods---#
-	def GetInput(self, id: str, time: int = int()) -> int | str | _Parameter:
+	def GetInput(self, id: str, time: int = int()) -> int | str | Parameter_:
 		"""
 		Fetches the value of an input at a given time
 
@@ -161,7 +161,7 @@ class _Operator:
 			modifier	- ID of the modifier to be created
 		"""
 		...
-	def FindMainOutput(self, index: int) -> _Output:
+	def FindMainOutput(self, index: int) -> Output_:
 		"""
 		Returns the tool's main (visible) output
 
@@ -169,7 +169,7 @@ class _Operator:
 			index	- Output index value of 1 or greater
 		"""
 		...
-	def FindMainInput(self, index: int) -> _Input:
+	def FindMainInput(self, index: int) -> Input_:
 		"""
 		Returns the tool's main (visible) input
 
@@ -203,50 +203,50 @@ class _Operator:
 		...
 	def header_text(self):
 		...
-	def FindInput(self, name: str) -> _Input:
+	def FindInput(self, name: str) -> Input_:
 		...
-	def FindOutput(self, name: str) -> _Output:
+	def FindOutput(self, name: str) -> Output_:
 		...
-	def FindSubInputs(self, name: str) -> _SubInputs:
+	def FindSubInputs(self, name: str) -> SubInputs_:
 		...
-	def GetNextKeyTime(self, t: _TimeStamp) -> _TimeStamp:
+	def GetNextKeyTime(self, t: TimeStamp_) -> TimeStamp_:
 		...
-	def AddOutput(self, name: str, id: str, tags: _TagList) -> _Output:
+	def AddOutput(self, name: str, id: str, tags: TagList_) -> Output_:
 		...
-	def AddSeparator(self, id: str, tags: _TagList) -> _Input:
+	def AddSeparator(self, id: str, tags: TagList_) -> Input_:
 		...
-	def AddSpacer(self, id: str, tags: _TagList) -> _Input:
+	def AddSpacer(self, id: str, tags: TagList_) -> Input_:
 		...
-	def AddSubInputs(self, subid: str, tags: _TagList) -> _SubInputs:
+	def AddSubInputs(self, subid: str, tags: TagList_) -> SubInputs_:
 		...
 	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any]:
 		"""
 		Get custom persistent data
 		"""
 		...
-	def BeginControlNest(self, name: str, id: str, expand: bool, tags: _TagList) -> _Input:
+	def BeginControlNest(self, name: str, id: str, expand: bool, tags: TagList_) -> Input_:
 		...
-	def GetPrevKeyTime(self, t: _TimeStamp) -> _TimeStamp:
+	def GetPrevKeyTime(self, t: TimeStamp_) -> TimeStamp_:
 		...
 	def SetData(self, name: str, value: int | str | bool | dict[Any, Any]) -> None:
 		"""
 		Set custom persistent data
 		"""
 		...
-	def GetSourceTool(self, name: str) -> _Operator:
+	def GetSourceTool(self, name: str) -> Operator_:
 		...
 	def GetKeyFrames(self) -> dict[Any, Any]:
 		"""
 		Return a table of all keyframe times for this tool
 		"""
 		...
-	def IsGPUEnabled(self, req: _Request) -> bool:
+	def IsGPUEnabled(self, req: Request_) -> bool:
 		...
 	def RemoveControlPage(self, name: str) -> bool:
 		...
 	def SetProgress(self, prog: float) -> bool:
 		...
-	def ConnectInput(self, input: str, target: _Tool | _Output | None) -> bool:
+	def ConnectInput(self, input: str, target: Tool_ | Output_ | None) -> bool:
 		"""
 		Connect or disconnect an Input
 
@@ -257,21 +257,21 @@ class _Operator:
 		...
 	def info_text(self):
 		...
-	def SetRegion(self, tr: _TimeRegion) -> None:
+	def SetRegion(self, tr: TimeRegion_) -> None:
 		...
-	def _AddInput(self, name: str, id: str, tags: _TagList) -> _Input:
+	def _AddInput(self, name: str, id: str, tags: TagList_) -> Input_:
 		...
 	def StartUndo(self, name: str) -> None:
 		...
-	def GetRegion(self) -> _TimeRegion:
+	def GetRegion(self) -> TimeRegion_:
 		...
 	def UpdateControls(self) -> None:
 		...
 	def EndControlNest(self) -> None:
 		...
-	def AddControlPage(self, name: str, tags: _TagList) -> int:
+	def AddControlPage(self, name: str, tags: TagList_) -> int:
 		...
-	def _CloneInput(self, from_: _Input, id: str, tags: _TagList) -> _Input:
+	def _CloneInput(self, from_: Input_, id: str, tags: TagList_) -> Input_:
 		...
 	def SetCurrentSettings(self) -> int:
 		"""
@@ -307,7 +307,7 @@ class _Operator:
 		Load the tools's settings from a file or table
 		"""
 		...
-	def SetInput(self, id: str, value: int | str | _Parameter, time: int) -> None:
+	def SetInput(self, id: str, value: int | str | Parameter_, time: int) -> None:
 		"""
 		Sets the value of an input at a given time
 
@@ -318,4 +318,4 @@ class _Operator:
 		"""
 		...
 
-Operator = _Operator
+Operator = Operator_

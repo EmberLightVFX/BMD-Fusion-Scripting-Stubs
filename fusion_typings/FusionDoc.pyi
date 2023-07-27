@@ -1,14 +1,14 @@
-from _non_existing import _TimeStamp
+from _non_existing import TimeStamp_
 
 
-class _FusionDoc:
+class FusionDoc_:
 
 	#---Properties---#
-	GlobalEnd: _TimeStamp
+	GlobalEnd: TimeStamp_
 	"""
 	Read Only
 	"""
-	GlobalStart: _TimeStamp
+	GlobalStart: TimeStamp_
 	"""
 	Read Only
 	"""
@@ -40,7 +40,7 @@ class _FusionDoc:
 	"""
 	Read Only
 	"""
-	RenderEnd: _TimeStamp
+	RenderEnd: TimeStamp_
 	"""
 	Read Only
 	"""
@@ -56,11 +56,11 @@ class _FusionDoc:
 	"""
 	Read Only
 	"""
-	AudioOffset: _TimeStamp
+	AudioOffset: TimeStamp_
 	"""
 	Read Only
 	"""
-	RenderStart: _TimeStamp
+	RenderStart: TimeStamp_
 	"""
 	Read Only
 	"""
@@ -72,7 +72,7 @@ class _FusionDoc:
 	"""
 	Read Only
 	"""
-	CurrentTime: _TimeStamp
+	CurrentTime: TimeStamp_
 	"""
 	Read Only
 	"""
@@ -84,7 +84,7 @@ class _FusionDoc:
 	"""
 	Read Only
 	"""
-	LastFrameRendered: _TimeStamp
+	LastFrameRendered: TimeStamp_
 	"""
 	Read Only
 	"""
@@ -103,4 +103,4 @@ class _FusionDoc:
 	def EndUndo(self, keep: bool) -> None:
 		...
 
-FusionDoc = _FusionDoc
+FusionDoc = FusionDoc_

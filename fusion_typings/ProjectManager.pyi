@@ -1,4 +1,4 @@
-class _ProjectManager:
+class ProjectManager_:
 
 	#---Methods---#
 	def header_text(self):
@@ -16,4 +16,4 @@ class _ProjectManager:
 		"""
 		...
 
-ProjectManager = _ProjectManager
+ProjectManager = ProjectManager_

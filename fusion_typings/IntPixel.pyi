@@ -1,4 +1,4 @@
-class _IntPixel:
+class IntPixel_:
 
 	#---Properties---#
 	TypeName: str
@@ -15,9 +15,9 @@ class _IntPixel:
 		...
 	def info_text(self):
 		...
-	def _newDef(self) -> _IntPixel:
+	def _newDef(self) -> IntPixel_:
 		...
 	def Clear(self) -> None:
 		...
 
-IntPixel = _IntPixel
+IntPixel = IntPixel_

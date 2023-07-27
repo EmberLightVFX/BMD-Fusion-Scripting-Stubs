@@ -1,4 +1,4 @@
-class _ListControl:
+class ListControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _ListControl:
 	REGB_ControlView: bool
 
 
-ListControl = _ListControl
+ListControl = ListControl_

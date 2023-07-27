@@ -1,4 +1,4 @@
-class _StyledText:
+class StyledText_:
 
 	#---Properties---#
 	Value: str
@@ -37,10 +37,10 @@ class _StyledText:
 		...
 	def info_text(self):
 		...
-	def StyledText(self, val: str) -> _StyledText:
+	def StyledText(self, val: str) -> StyledText_:
 		"""
 		StyledText constructor
 		"""
 		...
 
-StyledText = _StyledText
+StyledText = StyledText_

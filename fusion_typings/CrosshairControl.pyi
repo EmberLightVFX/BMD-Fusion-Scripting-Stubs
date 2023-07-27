@@ -1,4 +1,4 @@
-class _CrosshairControl:
+class CrosshairControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _CrosshairControl:
 	REGB_ControlView: bool
 
 
-CrosshairControl = _CrosshairControl
+CrosshairControl = CrosshairControl_

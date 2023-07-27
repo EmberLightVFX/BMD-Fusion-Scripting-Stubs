@@ -1,4 +1,4 @@
-class _IOClass:
+class IOClass_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -44,4 +44,4 @@ class _IOClass:
 	def Read(self):
 		...
 
-IOClass = _IOClass
+IOClass = IOClass_

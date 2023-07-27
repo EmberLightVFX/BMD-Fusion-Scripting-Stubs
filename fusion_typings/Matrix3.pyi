@@ -1,4 +1,4 @@
-class _Matrix3:
+class Matrix3_:
 
 	#---Properties---#
 	TypeName: str
@@ -10,4 +10,4 @@ class _Matrix3:
 	Read Only
 	"""
 
-Matrix3 = _Matrix3
+Matrix3 = Matrix3_

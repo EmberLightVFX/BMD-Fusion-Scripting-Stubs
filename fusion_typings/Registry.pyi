@@ -1,11 +1,11 @@
-class _Registry:
+class Registry_:
 
 	#---Properties---#
 	m_RegFlags: int
 	"""
 	Read/Write
 	"""
-	Parent: _Registry
+	Parent: Registry_
 	"""
 	Parent of this Registry node
 
@@ -43,7 +43,7 @@ class _Registry:
 	"""
 	Read Only
 	"""
-	m_Parent: _Registry
+	m_Parent: Registry_
 	"""
 	Read Only
 	"""
@@ -85,7 +85,7 @@ class _Registry:
 		...
 	def header_text(self):
 		...
-	def GetParent(self) -> _Registry:
+	def GetParent(self) -> Registry_:
 		...
 
-Registry = _Registry
+Registry = Registry_

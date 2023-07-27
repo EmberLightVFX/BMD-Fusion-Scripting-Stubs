@@ -1,4 +1,4 @@
-class _FusionUI:
+class FusionUI_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -84,4 +84,4 @@ class _FusionUI:
 	def IsUIVisible(self):
 		...
 
-FusionUI = _FusionUI
+FusionUI = FusionUI_

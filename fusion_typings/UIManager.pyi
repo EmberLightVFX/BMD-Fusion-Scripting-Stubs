@@ -1,4 +1,4 @@
-class _UIManager:
+class UIManager_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -38,4 +38,4 @@ class _UIManager:
 	def AddNotify(self) -> None:
 		...
 
-UIManager = _UIManager
+UIManager = UIManager_

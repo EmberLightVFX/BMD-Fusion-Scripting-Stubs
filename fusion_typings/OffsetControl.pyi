@@ -1,4 +1,4 @@
-class _OffsetControl:
+class OffsetControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _OffsetControl:
 	REGB_ControlView: bool
 
 
-OffsetControl = _OffsetControl
+OffsetControl = OffsetControl_

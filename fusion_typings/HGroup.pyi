@@ -1,17 +1,17 @@
-from TagList import _TagList
+from TagList import TagList_
 
 
-class _HGroup:
+class HGroup_:
 
 	#---Methods---#
 	def header_text(self):
 		...
 	def info_text(self):
 		...
-	def HGroup(self, tags: _TagList) -> _HGroup:
+	def HGroup(self, tags: TagList_) -> HGroup_:
 		"""
 		HGroup constructor
 		"""
 		...
 
-HGroup = _HGroup
+HGroup = HGroup_

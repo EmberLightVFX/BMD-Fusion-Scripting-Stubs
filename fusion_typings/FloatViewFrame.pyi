@@ -1,4 +1,4 @@
-class _FloatViewFrame:
+class FloatViewFrame_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -41,4 +41,4 @@ class _FloatViewFrame:
 		"""
 		...
 
-FloatViewFrame = _FloatViewFrame
+FloatViewFrame = FloatViewFrame_

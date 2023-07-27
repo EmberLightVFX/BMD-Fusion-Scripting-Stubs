@@ -1,17 +1,17 @@
-from TagList import _TagList
+from TagList import TagList_
 
 
-class _VGap:
+class VGap_:
 
 	#---Methods---#
 	def header_text(self):
 		...
 	def info_text(self):
 		...
-	def VGap(self, tags: _TagList) -> _VGap:
+	def VGap(self, tags: TagList_) -> VGap_:
 		"""
 		VGap constructor
 		"""
 		...
 
-VGap = _VGap
+VGap = VGap_

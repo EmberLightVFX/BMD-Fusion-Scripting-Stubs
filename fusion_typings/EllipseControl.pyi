@@ -1,4 +1,4 @@
-class _EllipseControl:
+class EllipseControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _EllipseControl:
 	REGB_ControlView: bool
 
 
-EllipseControl = _EllipseControl
+EllipseControl = EllipseControl_

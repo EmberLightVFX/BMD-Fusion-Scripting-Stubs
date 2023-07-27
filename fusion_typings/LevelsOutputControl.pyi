@@ -1,4 +1,4 @@
-class _LevelsOutputControl:
+class LevelsOutputControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _LevelsOutputControl:
 	REGB_ControlView: bool
 
 
-LevelsOutputControl = _LevelsOutputControl
+LevelsOutputControl = LevelsOutputControl_

@@ -1,4 +1,4 @@
-class _SubInputs:
+class SubInputs_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -22,4 +22,4 @@ class _SubInputs:
 	REGB_ControlView: bool
 
 
-SubInputs = _SubInputs
+SubInputs = SubInputs_

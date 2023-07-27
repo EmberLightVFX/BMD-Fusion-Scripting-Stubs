@@ -1,4 +1,4 @@
-class _LabelControl:
+class LabelControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _LabelControl:
 	REGB_ControlView: bool
 
 
-LabelControl = _LabelControl
+LabelControl = LabelControl_

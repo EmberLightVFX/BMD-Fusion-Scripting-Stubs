@@ -1,6 +1,6 @@
 from typing import Any
 
-class _BinManager:
+class BinManager_:
 
 	#---Properties---#
 	IconSize: Any
@@ -81,4 +81,4 @@ class _BinManager:
 	def Refresh(self):
 		...
 
-BinManager = _BinManager
+BinManager = BinManager_

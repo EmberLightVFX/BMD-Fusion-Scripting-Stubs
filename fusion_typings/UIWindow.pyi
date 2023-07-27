@@ -1,4 +1,4 @@
-class _UIWindow:
+class UIWindow_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -34,4 +34,4 @@ class _UIWindow:
 	def Show(self) -> None:
 		...
 
-UIWindow = _UIWindow
+UIWindow = UIWindow_

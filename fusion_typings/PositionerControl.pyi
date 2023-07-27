@@ -1,4 +1,4 @@
-class _PositionerControl:
+class PositionerControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _PositionerControl:
 	REGB_ControlView: bool
 
 
-PositionerControl = _PositionerControl
+PositionerControl = PositionerControl_

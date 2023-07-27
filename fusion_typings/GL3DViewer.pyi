@@ -1,4 +1,4 @@
-class _GL3DViewer:
+class GL3DViewer_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -85,4 +85,4 @@ class _GL3DViewer:
 	def header_text(self):
 		...
 
-GL3DViewer = _GL3DViewer
+GL3DViewer = GL3DViewer_

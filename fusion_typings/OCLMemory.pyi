@@ -1,10 +1,10 @@
-from Image import _Image
+from Image import Image_
 
 
-class _OCLMemory:
+class OCLMemory_:
 
 	#---Methods---#
-	def OCLMemory(self) -> _OCLMemory:
+	def OCLMemory(self) -> OCLMemory_:
 		"""
 		OCLMemory constructor
 		"""
@@ -17,9 +17,9 @@ class _OCLMemory:
 		...
 	def Release(self) -> bool:
 		...
-	def Download(self, img: _Image) -> bool:
+	def Download(self, img: Image_) -> bool:
 		...
 	def ReleaseCLObject(self) -> bool:
 		...
 
-OCLMemory = _OCLMemory
+OCLMemory = OCLMemory_

@@ -1,7 +1,7 @@
-from LayoutObj import _LayoutObj
+from LayoutObj import LayoutObj_
 
 
-class _ScriptLayoutManager:
+class ScriptLayoutManager_:
 
 	#---Methods---#
 	def header_text(self):
@@ -10,10 +10,10 @@ class _ScriptLayoutManager:
 		...
 	def Layout(self, x: int, y: int, w: int, h: int) -> None:
 		...
-	def ScriptLayoutManager(self, root: _LayoutObj) -> _ScriptLayoutManager:
+	def ScriptLayoutManager(self, root: LayoutObj_) -> ScriptLayoutManager_:
 		"""
 		ScriptLayoutManager constructor
 		"""
 		...
 
-ScriptLayoutManager = _ScriptLayoutManager
+ScriptLayoutManager = ScriptLayoutManager_

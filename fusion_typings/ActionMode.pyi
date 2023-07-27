@@ -1,6 +1,6 @@
 from typing import Any
 
-class _ActionMode:
+class ActionMode_:
 
 	#---Properties---#
 	StartPosX: Any
@@ -38,4 +38,4 @@ class _ActionMode:
 	def Get(self):
 		...
 
-ActionMode = _ActionMode
+ActionMode = ActionMode_

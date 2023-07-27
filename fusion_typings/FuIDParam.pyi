@@ -1,4 +1,4 @@
-class _FuIDParam:
+class FuIDParam_:
 
 	#---Properties---#
 	Value: str
@@ -11,10 +11,10 @@ class _FuIDParam:
 		...
 	def info_text(self):
 		...
-	def FuIDParam(self, str: str) -> _FuIDParam:
+	def FuIDParam(self, str: str) -> FuIDParam_:
 		"""
 		FuIDParam constructor
 		"""
 		...
 
-FuIDParam = _FuIDParam
+FuIDParam = FuIDParam_

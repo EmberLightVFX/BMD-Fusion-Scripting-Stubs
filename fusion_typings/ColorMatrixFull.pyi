@@ -1,7 +1,7 @@
-from ColorMatrix import _ColorMatrix
+from ColorMatrix import ColorMatrix_
 
 
-class _ColorMatrixFull:
+class ColorMatrixFull_:
 
 	#---Properties---#
 	TypeName: str
@@ -32,7 +32,7 @@ class _ColorMatrixFull:
 		...
 	def RotR(self, angle: float) -> None:
 		...
-	def _newDef(self) -> _ColorMatrixFull:
+	def _newDef(self) -> ColorMatrixFull_:
 		...
 	def info_text(self):
 		...
@@ -40,23 +40,23 @@ class _ColorMatrixFull:
 		...
 	def Scale(self, r: float, g: float, b: float, a: float) -> None:
 		...
-	def _mulCMF(self, cm: _ColorMatrixFull) -> _ColorMatrixFull:
+	def _mulCMF(self, cm: ColorMatrixFull_) -> ColorMatrixFull_:
 		...
-	def __eq(self, cm: _ColorMatrixFull) -> bool:
+	def __eq(self, cm: ColorMatrixFull_) -> bool:
 		...
-	def _newCMF(self, cm: _ColorMatrixFull) -> _ColorMatrixFull:
+	def _newCMF(self, cm: ColorMatrixFull_) -> ColorMatrixFull_:
 		...
-	def _newCM(self, cm: _ColorMatrix) -> _ColorMatrixFull:
+	def _newCM(self, cm: ColorMatrix_) -> ColorMatrixFull_:
 		...
-	def _mulNum(self, num: float) -> _ColorMatrixFull:
+	def _mulNum(self, num: float) -> ColorMatrixFull_:
 		...
-	def Inverse(self) -> _ColorMatrixFull:
+	def Inverse(self) -> ColorMatrixFull_:
 		...
 	def Adjoint(self) -> None:
 		...
-	def __add(self, cm: _ColorMatrixFull) -> _ColorMatrixFull:
+	def __add(self, cm: ColorMatrixFull_) -> ColorMatrixFull_:
 		...
 	def YUVtoRGB(self) -> None:
 		...
 
-ColorMatrixFull = _ColorMatrixFull
+ColorMatrixFull = ColorMatrixFull_

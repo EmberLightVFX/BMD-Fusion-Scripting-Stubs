@@ -1,9 +1,9 @@
 from typing import Any
 
-from Parameter import _Parameter
+from Parameter import Parameter_
 
 
-class _PlainOutput:
+class PlainOutput_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -28,7 +28,7 @@ class _PlainOutput:
 
 
 	#---Methods---#
-	def GetValue(self, time: int = int(), flags: int = int(), proxy: int = int()) -> tuple[_Parameter, dict[Any, Any]]:
+	def GetValue(self, time: int = int(), flags: int = int(), proxy: int = int()) -> tuple[Parameter_, dict[Any, Any]]:
 		"""
 		Returns the value at the given time
 
@@ -97,4 +97,4 @@ class _PlainOutput:
 		"""
 		...
 
-PlainOutput = _PlainOutput
+PlainOutput = PlainOutput_

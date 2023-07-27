@@ -1,7 +1,7 @@
-from _non_existing import _TimeStamp
+from _non_existing import TimeStamp_
 
 
-class _TimeExtent:
+class TimeExtent_:
 
 	#---Properties---#
 	TypeName: str
@@ -14,15 +14,15 @@ class _TimeExtent:
 	"""
 
 	#---Methods---#
-	def _newDef(self) -> _TimeExtent:
+	def _newDef(self) -> TimeExtent_:
 		...
 	def info_text(self):
 		...
-	def _newNum(self, s: _TimeStamp, e: _TimeStamp, l: _TimeStamp) -> _TimeExtent:
+	def _newNum(self, s: TimeStamp_, e: TimeStamp_, l: TimeStamp_) -> TimeExtent_:
 		...
 	def header_text(self):
 		...
-	def _newExt(self, ext: _TimeExtent) -> _TimeExtent:
+	def _newExt(self, ext: TimeExtent_) -> TimeExtent_:
 		...
 
-TimeExtent = _TimeExtent
+TimeExtent = TimeExtent_

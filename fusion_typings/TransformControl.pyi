@@ -1,4 +1,4 @@
-class _TransformControl:
+class TransformControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _TransformControl:
 	REGB_ControlView: bool
 
 
-TransformControl = _TransformControl
+TransformControl = TransformControl_

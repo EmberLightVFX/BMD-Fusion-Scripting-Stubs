@@ -1,4 +1,4 @@
-class _MemBlock:
+class MemBlock_:
 
 	#---Properties---#
 	TypeName: str
@@ -15,7 +15,7 @@ class _MemBlock:
 		...
 	def info_text(self):
 		...
-	def MemBlock(self) -> _MemBlock:
+	def MemBlock(self) -> MemBlock_:
 		"""
 		MemBlock constructor
 		"""
@@ -23,4 +23,4 @@ class _MemBlock:
 	def Save(self, filename: str) -> bool:
 		...
 
-MemBlock = _MemBlock
+MemBlock = MemBlock_

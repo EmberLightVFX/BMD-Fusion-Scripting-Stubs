@@ -1,9 +1,9 @@
-from TagList import _TagList
-from LUT import _LUT
-from Object import _Object
+from TagList import TagList_
+from LUT import LUT_
+from Object import Object_
 
 
-class _LookUpTable:
+class LookUpTable_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -30,17 +30,17 @@ class _LookUpTable:
 
 
 	#---Methods---#
-	def _newDef(self) -> _LookUpTable:
+	def _newDef(self) -> LookUpTable_:
 		...
 	def info_text(self):
 		...
-	def _newCopy(self, lut: _LookUpTable) -> _LookUpTable:
+	def _newCopy(self, lut: LookUpTable_) -> LookUpTable_:
 		...
-	def GetTable(self, tags: _TagList) -> _LUT:
+	def GetTable(self, tags: TagList_) -> LUT_:
 		...
-	def Attach(self, obj: _Object) -> None:
+	def Attach(self, obj: Object_) -> None:
 		...
-	def _newLUT(self, lut: _LUT, id: str) -> _LookUpTable:
+	def _newLUT(self, lut: LUT_, id: str) -> LookUpTable_:
 		...
 	def Detach(self) -> None:
 		...
@@ -53,4 +53,4 @@ class _LookUpTable:
 	def IsOneToOne(self) -> bool:
 		...
 
-LookUpTable = _LookUpTable
+LookUpTable = LookUpTable_

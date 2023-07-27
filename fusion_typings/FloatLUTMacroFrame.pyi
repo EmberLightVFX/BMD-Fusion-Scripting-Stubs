@@ -1,10 +1,10 @@
-from Composition import _Composition
+from Composition import Composition_
 
 
-class _FloatLUTMacroFrame:
+class FloatLUTMacroFrame_:
 
 	#---Properties---#
-	Composition: _Composition
+	Composition: Composition_
 	"""
 	Represents this frame window's Composition
 
@@ -35,4 +35,4 @@ class _FloatLUTMacroFrame:
 	REGB_ControlView: bool
 
 
-FloatLUTMacroFrame = _FloatLUTMacroFrame
+FloatLUTMacroFrame = FloatLUTMacroFrame_

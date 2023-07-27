@@ -1,4 +1,4 @@
-class _AngleControl:
+class AngleControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _AngleControl:
 	REGB_ControlView: bool
 
 
-AngleControl = _AngleControl
+AngleControl = AngleControl_

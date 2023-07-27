@@ -1,12 +1,12 @@
-from Request import _Request
-from Image import _Image
-from _non_existing import _void
+from Request import Request_
+from Image import Image_
+from _non_existing import void_
 
 
-class _DVIPComputeNode:
+class DVIPComputeNode_:
 
 	#---Methods---#
-	def SetParamStructCopy(self, params: _void, size: int) -> None:
+	def SetParamStructCopy(self, params: void_, size: int) -> None:
 		...
 	def info_text(self):
 		...
@@ -18,18 +18,18 @@ class _DVIPComputeNode:
 		...
 	def AddSampler(self, name: str, filterMode: int, addressMode: int, normCoordsMode: int) -> None:
 		...
-	def DVIPComputeNode(self, req: _Request, kernelName: str, source: str, kernelParamsName: str, kernelParams: str) -> _DVIPComputeNode:
+	def DVIPComputeNode(self, req: Request_, kernelName: str, source: str, kernelParamsName: str, kernelParams: str) -> DVIPComputeNode_:
 		"""
 		DVIPComputeNode constructor
 		"""
 		...
-	def AddInput(self, name: str, img: _Image) -> None:
+	def AddInput(self, name: str, img: Image_) -> None:
 		...
 	def GetParamsHash(self, paramStr: str) -> int:
 		...
-	def AddOutput(self, name: str, img: _Image) -> None:
+	def AddOutput(self, name: str, img: Image_) -> None:
 		...
-	def RunSession(self, req: _Request) -> bool:
+	def RunSession(self, req: Request_) -> bool:
 		...
 	def header_text(self):
 		...
@@ -40,4 +40,4 @@ class _DVIPComputeNode:
 	def ForceRebuild(self) -> None:
 		...
 
-DVIPComputeNode = _DVIPComputeNode
+DVIPComputeNode = DVIPComputeNode_

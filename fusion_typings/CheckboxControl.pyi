@@ -1,4 +1,4 @@
-class _CheckboxControl:
+class CheckboxControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _CheckboxControl:
 	REGB_ControlView: bool
 
 
-CheckboxControl = _CheckboxControl
+CheckboxControl = CheckboxControl_

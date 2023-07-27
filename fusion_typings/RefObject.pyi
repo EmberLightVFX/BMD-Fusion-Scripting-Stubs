@@ -1,8 +1,8 @@
-from TagList import _TagList
-from _non_existing import _Tag, _void
+from TagList import TagList_
+from _non_existing import Tag_, void_
 
 
-class _RefObject:
+class RefObject_:
 
 	#---Properties---#
 	UseCount: int
@@ -19,25 +19,25 @@ class _RefObject:
 		...
 	def DecRef(self) -> None:
 		...
-	def SetAttrsTagList(self, tags: _TagList) -> bool:
+	def SetAttrsTagList(self, tags: TagList_) -> bool:
 		...
-	def _GetAttr_int32(self, tag: _Tag, def_: int) -> int:
+	def _GetAttr_int32(self, tag: Tag_, def_: int) -> int:
 		...
-	def _GetAttr_uint32(self, tag: _Tag, def_: int) -> int:
+	def _GetAttr_uint32(self, tag: Tag_, def_: int) -> int:
 		...
-	def _GetAttr_float64(self, tag: _Tag, def_: float) -> float:
+	def _GetAttr_float64(self, tag: Tag_, def_: float) -> float:
 		...
-	def _GetAttr_Ptr(self, tag: _Tag, def_: _void) -> None:
+	def _GetAttr_Ptr(self, tag: Tag_, def_: void_) -> None:
 		...
-	def _GetAttr_String(self, tag: _Tag, def_: str) -> str:
+	def _GetAttr_String(self, tag: Tag_, def_: str) -> str:
 		...
-	def _GetAttr_ID(self, tag: _Tag, def_: str) -> str:
+	def _GetAttr_ID(self, tag: Tag_, def_: str) -> str:
 		...
-	def _GetAttr_bool(self, tag: _Tag, def_: bool) -> bool:
+	def _GetAttr_bool(self, tag: Tag_, def_: bool) -> bool:
 		...
-	def _GetAttr_Object(self, tag: _Tag, def_: _RefObject) -> _RefObject:
+	def _GetAttr_Object(self, tag: Tag_, def_: RefObject_) -> RefObject_:
 		...
-	def _GetAttr_TagList(self, tag: _Tag, def_: _TagList) -> _TagList:
+	def _GetAttr_TagList(self, tag: Tag_, def_: TagList_) -> TagList_:
 		...
 
-RefObject = _RefObject
+RefObject = RefObject_

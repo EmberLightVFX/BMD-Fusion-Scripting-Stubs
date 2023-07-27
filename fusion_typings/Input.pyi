@@ -1,9 +1,9 @@
-from Output import _Output
-from Request import _Request
-from Parameter import _Parameter
+from Output import Output_
+from Request import Request_
+from Parameter import Parameter_
 
 
-class _Input:
+class Input_:
 
 	#---Properties---#
 	ICClass: str
@@ -14,7 +14,7 @@ class _Input:
 	"""
 	Read Only
 	"""
-	Source: _Output
+	Source: Output_
 	"""
 	Read Only
 	"""
@@ -48,7 +48,7 @@ class _Input:
 		...
 	def IsAnimated(self) -> bool:
 		...
-	def GetValue(self, req: _Request, slot: int) -> _Parameter:
+	def GetValue(self, req: Request_, slot: int) -> Parameter_:
 		...
 
-Input = _Input
+Input = Input_

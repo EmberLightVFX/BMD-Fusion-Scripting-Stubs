@@ -1,9 +1,9 @@
-from Request import _Request
-from Image import _Image
-from TagList import _TagList
+from Request import Request_
+from Image import Image_
+from TagList import TagList_
 
 
-class _CineonInputs:
+class CineonInputs_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -32,7 +32,7 @@ class _CineonInputs:
 		...
 	def info_text(self):
 		...
-	def _ProcessOf(self, req: _Request, img: _Image, out: _Image, clippingmode: str, depth: int, dir: int, tags: _TagList) -> _Image:
+	def _ProcessOf(self, req: Request_, img: Image_, out: Image_, clippingmode: str, depth: int, dir: int, tags: TagList_) -> Image_:
 		...
 
-CineonInputs = _CineonInputs
+CineonInputs = CineonInputs_

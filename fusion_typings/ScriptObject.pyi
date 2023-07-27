@@ -1,7 +1,7 @@
-from TagList import _TagList
+from TagList import TagList_
 
 
-class _ScriptObject:
+class ScriptObject_:
 
 	#---Properties---#
 	TypeName: str
@@ -18,7 +18,7 @@ class _ScriptObject:
 		...
 	def info_text(self):
 		...
-	def _SetAttrs(self, tags: _TagList) -> bool:
+	def _SetAttrs(self, tags: TagList_) -> bool:
 		...
 
-ScriptObject = _ScriptObject
+ScriptObject = ScriptObject_

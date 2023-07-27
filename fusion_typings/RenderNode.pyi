@@ -1,4 +1,4 @@
-class _RenderNode:
+class RenderNode_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -36,4 +36,4 @@ class _RenderNode:
 	def IsProcessing(self):
 		...
 
-RenderNode = _RenderNode
+RenderNode = RenderNode_

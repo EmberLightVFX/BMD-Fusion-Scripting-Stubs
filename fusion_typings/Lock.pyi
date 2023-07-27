@@ -1,4 +1,4 @@
-class _Lock:
+class Lock_:
 
 	#---Properties---#
 	TypeName: str
@@ -20,4 +20,4 @@ class _Lock:
 	def ReleaseLock(self) -> None:
 		...
 
-Lock = _Lock
+Lock = Lock_

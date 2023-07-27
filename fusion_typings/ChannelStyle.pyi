@@ -1,10 +1,10 @@
-from Matrix4 import _Matrix4
-from FltPixel import _FltPixel
-from Gradient import _Gradient
-from Image import _Image
+from Matrix4 import Matrix4_
+from FltPixel import FltPixel_
+from Gradient import Gradient_
+from Image import Image_
 
 
-class _ChannelStyle:
+class ChannelStyle_:
 
 	#---Properties---#
 	ColorMappingAspect: float
@@ -15,7 +15,7 @@ class _ChannelStyle:
 	"""
 	Read/Write
 	"""
-	ImageTransform: _Matrix4
+	ImageTransform: Matrix4_
 	"""
 	Read/Write
 	"""
@@ -27,7 +27,7 @@ class _ChannelStyle:
 	"""
 	Read/Write
 	"""
-	BgColor: _FltPixel
+	BgColor: FltPixel_
 	"""
 	Read/Write
 	"""
@@ -43,11 +43,11 @@ class _ChannelStyle:
 	"""
 	Read/Write
 	"""
-	Color: _FltPixel
+	Color: FltPixel_
 	"""
 	Read/Write
 	"""
-	ColorGradient: _Gradient
+	ColorGradient: Gradient_
 	"""
 	Read/Write
 	"""
@@ -59,7 +59,7 @@ class _ChannelStyle:
 	"""
 	Read/Write
 	"""
-	ColorImage: _Image
+	ColorImage: Image_
 	"""
 	Read/Write
 	"""
@@ -67,7 +67,7 @@ class _ChannelStyle:
 	"""
 	Read/Write
 	"""
-	ColorImageBevel: _Image
+	ColorImageBevel: Image_
 	"""
 	Read/Write
 	"""
@@ -105,20 +105,20 @@ class _ChannelStyle:
 	"""
 
 	#---Methods---#
-	def GetImageTransformInverse(self) -> _Matrix4:
+	def GetImageTransformInverse(self) -> Matrix4_:
 		...
 	def info_text(self):
 		...
-	def IsRenderCompatibleWith(self, cs: _ChannelStyle) -> bool:
+	def IsRenderCompatibleWith(self, cs: ChannelStyle_) -> bool:
 		...
 	def header_text(self):
 		...
 	def RequiresNewImage(self, line: int, tab: int, word: int, ch: int) -> bool:
 		...
-	def ChannelStyle(self) -> _ChannelStyle:
+	def ChannelStyle(self) -> ChannelStyle_:
 		"""
 		ChannelStyle constructor
 		"""
 		...
 
-ChannelStyle = _ChannelStyle
+ChannelStyle = ChannelStyle_

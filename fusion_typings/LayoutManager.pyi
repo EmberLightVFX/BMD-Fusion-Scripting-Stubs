@@ -1,4 +1,4 @@
-class _LayoutManager:
+class LayoutManager_:
 	...
 
-LayoutManager = _LayoutManager
+LayoutManager = LayoutManager_

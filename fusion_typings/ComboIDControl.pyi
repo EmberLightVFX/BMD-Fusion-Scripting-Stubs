@@ -1,4 +1,4 @@
-class _ComboIDControl:
+class ComboIDControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _ComboIDControl:
 	REGB_ControlView: bool
 
 
-ComboIDControl = _ComboIDControl
+ComboIDControl = ComboIDControl_

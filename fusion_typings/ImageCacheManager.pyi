@@ -1,4 +1,4 @@
-class _ImageCacheManager:
+class ImageCacheManager_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -34,4 +34,4 @@ class _ImageCacheManager:
 	def GetSize(self) -> int:
 		...
 
-ImageCacheManager = _ImageCacheManager
+ImageCacheManager = ImageCacheManager_

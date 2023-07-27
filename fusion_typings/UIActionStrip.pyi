@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UIActionStrip:
+class UIActionStrip_:
 
 	#---Properties---#
 	ZonesPerSide: Any
@@ -70,4 +70,4 @@ class _UIActionStrip:
 	def SetTarget(self):
 		...
 
-UIActionStrip = _UIActionStrip
+UIActionStrip = UIActionStrip_

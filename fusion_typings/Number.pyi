@@ -1,4 +1,4 @@
-class _Number:
+class Number_:
 
 	#---Properties---#
 	Value: float
@@ -35,10 +35,10 @@ class _Number:
 		...
 	def info_text(self):
 		...
-	def Number(self, val: float) -> _Number:
+	def Number(self, val: float) -> Number_:
 		"""
 		Number constructor
 		"""
 		...
 
-Number = _Number
+Number = Number_

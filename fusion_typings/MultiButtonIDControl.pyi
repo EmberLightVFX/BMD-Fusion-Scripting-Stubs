@@ -1,4 +1,4 @@
-class _MultiButtonIDControl:
+class MultiButtonIDControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _MultiButtonIDControl:
 	REGB_ControlView: bool
 
 
-MultiButtonIDControl = _MultiButtonIDControl
+MultiButtonIDControl = MultiButtonIDControl_

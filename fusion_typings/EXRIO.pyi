@@ -1,8 +1,8 @@
-from ImgRectI import _ImgRectI
-from Image import _Image
+from ImgRectI import ImgRectI_
+from Image import Image_
 
 
-class _EXRIO:
+class EXRIO_:
 
 	#---Properties---#
 	IsOpen: bool
@@ -23,22 +23,22 @@ class _EXRIO:
 		...
 	def WriteHeader(self) -> bool:
 		...
-	def DataWindow(self, partnum: int) -> _ImgRectI:
+	def DataWindow(self, partnum: int) -> ImgRectI_:
 		...
 	def _PartR(self, partnum: int) -> int:
 		...
-	def EXRIO(self) -> _EXRIO:
+	def EXRIO(self) -> EXRIO_:
 		"""
 		EXRIO constructor
 		"""
 		...
-	def _PartW(self, name: str, dispw: _ImgRectI, dataw: _ImgRectI, aspect: float) -> int:
+	def _PartW(self, name: str, dispw: ImgRectI_, dataw: ImgRectI_, aspect: float) -> int:
 		...
 	def header_text(self):
 		...
-	def ChannelImage(self, name: str, type: int, img: _Image, ichan: int, def_: float, cv: float) -> None:
+	def ChannelImage(self, name: str, type: int, img: Image_, ichan: int, def_: float, cv: float) -> None:
 		...
-	def _WritePart(self, partnum: int, imgs: _Image) -> bool:
+	def _WritePart(self, partnum: int, imgs: Image_) -> bool:
 		...
 	def info_text(self):
 		...
@@ -46,11 +46,11 @@ class _EXRIO:
 		...
 	def Close(self) -> bool:
 		...
-	def DisplayWindow(self, partnum: int) -> _ImgRectI:
+	def DisplayWindow(self, partnum: int) -> ImgRectI_:
 		...
 	def FindPart(self, name: str) -> int:
 		...
-	def _ReadPart(self, partnum: int, imgs: _Image) -> bool:
+	def _ReadPart(self, partnum: int, imgs: Image_) -> bool:
 		...
 	def GetLastError(self) -> str:
 		...
@@ -61,4 +61,4 @@ class _EXRIO:
 	def WriteOpen(self, filename: str, frame: int) -> None:
 		...
 
-EXRIO = _EXRIO
+EXRIO = EXRIO_

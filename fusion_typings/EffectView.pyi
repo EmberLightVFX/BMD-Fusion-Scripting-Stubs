@@ -1,4 +1,4 @@
-class _EffectView:
+class EffectView_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -36,4 +36,4 @@ class _EffectView:
 		"""
 		...
 
-EffectView = _EffectView
+EffectView = EffectView_

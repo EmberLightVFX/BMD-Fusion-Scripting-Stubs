@@ -1,8 +1,8 @@
-from Tool import _Tool
-from Image import _Image
+from Tool import Tool_
+from Image import Image_
 
 
-class _Preview:
+class Preview_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -32,7 +32,7 @@ class _Preview:
 		Plays the current clip
 		"""
 		...
-	def Create(self, tool: _Tool, filename: str = str()) -> bool:
+	def Create(self, tool: Tool_, filename: str = str()) -> bool:
 		"""
 		Renders a new preview clip
 		"""
@@ -47,7 +47,7 @@ class _Preview:
 		Closes the current clip
 		"""
 		...
-	def ViewOn(self, tool: _Tool) -> bool:
+	def ViewOn(self, tool: Tool_) -> bool:
 		"""
 		Attaches a Preview to a Tool to display its output
 		"""
@@ -64,7 +64,7 @@ class _Preview:
 		...
 	def header_text(self):
 		...
-	def DisplayImage(self, img: _Image) -> bool:
+	def DisplayImage(self, img: Image_) -> bool:
 		"""
 		Displays an Image object
 		"""
@@ -75,4 +75,4 @@ class _Preview:
 		"""
 		...
 
-Preview = _Preview
+Preview = Preview_

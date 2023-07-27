@@ -1,4 +1,4 @@
-class _GLHydraViewer:
+class GLHydraViewer_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -113,4 +113,4 @@ class _GLHydraViewer:
 		"""
 		...
 
-GLHydraViewer = _GLHydraViewer
+GLHydraViewer = GLHydraViewer_

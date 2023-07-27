@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UIDoubleSpinBox:
+class UIDoubleSpinBox_:
 
 	#---Properties---#
 	Alignment: Any
@@ -186,4 +186,4 @@ class _UIDoubleSpinBox:
 	def SetMaximum(self) -> None:
 		...
 
-UIDoubleSpinBox = _UIDoubleSpinBox
+UIDoubleSpinBox = UIDoubleSpinBox_

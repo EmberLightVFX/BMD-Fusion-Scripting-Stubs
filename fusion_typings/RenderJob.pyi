@@ -1,9 +1,9 @@
 from typing import Any
 
-from RenderNode import _RenderNode
+from RenderNode import RenderNode_
 
 
-class _RenderJob:
+class RenderJob_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -35,7 +35,7 @@ class _RenderJob:
 		...
 	def GetRenderReport(self):
 		...
-	def RetryRenderNode(self, node: _RenderNode = _RenderNode()) -> None:
+	def RetryRenderNode(self, node: RenderNode_ = RenderNode_()) -> None:
 		"""
 		Attempts to reuse slaves that have previously failed
 
@@ -86,4 +86,4 @@ class _RenderJob:
 		"""
 		...
 
-RenderJob = _RenderJob
+RenderJob = RenderJob_

@@ -1,4 +1,4 @@
-class _LogControl:
+class LogControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _LogControl:
 	REGB_ControlView: bool
 
 
-LogControl = _LogControl
+LogControl = LogControl_

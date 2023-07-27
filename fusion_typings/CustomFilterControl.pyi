@@ -1,4 +1,4 @@
-class _CustomFilterControl:
+class CustomFilterControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _CustomFilterControl:
 	REGB_ControlView: bool
 
 
-CustomFilterControl = _CustomFilterControl
+CustomFilterControl = CustomFilterControl_

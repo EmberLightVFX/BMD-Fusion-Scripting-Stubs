@@ -1,4 +1,4 @@
-class _HistogramControl:
+class HistogramControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _HistogramControl:
 	REGB_ControlView: bool
 
 
-HistogramControl = _HistogramControl
+HistogramControl = HistogramControl_

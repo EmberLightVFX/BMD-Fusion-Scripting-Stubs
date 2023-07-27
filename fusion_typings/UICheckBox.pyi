@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UICheckBox:
+class UICheckBox_:
 
 	#---Properties---#
 	AutoRepeatInterval: Any
@@ -118,4 +118,4 @@ class _UICheckBox:
 	def GetChecked(self) -> None:
 		...
 
-UICheckBox = _UICheckBox
+UICheckBox = UICheckBox_

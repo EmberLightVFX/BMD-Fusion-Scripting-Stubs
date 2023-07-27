@@ -1,4 +1,4 @@
-class _RangeControl:
+class RangeControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _RangeControl:
 	REGB_ControlView: bool
 
 
-RangeControl = _RangeControl
+RangeControl = RangeControl_

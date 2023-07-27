@@ -1,13 +1,13 @@
 from typing import Any
 
-from Operator import _Operator
-from Tool import _Tool
+from Operator import Operator_
+from Tool import Tool_
 
 
-class _Link:
+class Link_:
 
 	#---Properties---#
-	Owner: _Operator
+	Owner: Operator_
 	"""
 	Read Only
 	"""
@@ -59,10 +59,10 @@ class _Link:
 		Get custom persistent data
 		"""
 		...
-	def GetTool(self) -> _Tool:
+	def GetTool(self) -> Tool_:
 		"""
 		Returns the Tool object that owns this Link
 		"""
 		...
 
-Link = _Link
+Link = Link_

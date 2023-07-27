@@ -1,4 +1,4 @@
-class _BinView:
+class BinView_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -32,4 +32,4 @@ class _BinView:
 	def Paste(self):
 		...
 
-BinView = _BinView
+BinView = BinView_

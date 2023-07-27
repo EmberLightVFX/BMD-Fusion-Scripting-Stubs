@@ -1,4 +1,4 @@
-class _ScriptValListControl:
+class ScriptValListControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _ScriptValListControl:
 	REGB_ControlView: bool
 
 
-ScriptValListControl = _ScriptValListControl
+ScriptValListControl = ScriptValListControl_

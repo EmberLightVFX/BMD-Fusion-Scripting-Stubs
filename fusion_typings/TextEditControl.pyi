@@ -1,4 +1,4 @@
-class _TextEditControl:
+class TextEditControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _TextEditControl:
 	REGB_ControlView: bool
 
 
-TextEditControl = _TextEditControl
+TextEditControl = TextEditControl_

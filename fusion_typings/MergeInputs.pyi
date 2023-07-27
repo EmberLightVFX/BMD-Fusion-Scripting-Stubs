@@ -1,10 +1,10 @@
-from Request import _Request
-from TransformMatrix import _TransformMatrix
-from TagList import _TagList
-from Image import _Image
+from Request import Request_
+from TransformMatrix import TransformMatrix_
+from TagList import TagList_
+from Image import Image_
 
 
-class _MergeInputs:
+class MergeInputs_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -29,15 +29,15 @@ class _MergeInputs:
 
 
 	#---Methods---#
-	def _Merge_TransformMatrix(self, req: _Request, tm: _TransformMatrix, tags: _TagList) -> bool:
+	def _Merge_TransformMatrix(self, req: Request_, tm: TransformMatrix_, tags: TagList_) -> bool:
 		...
 	def info_text(self):
 		...
-	def MergeOf(self, req: _Request, img: _Image, tags: _TagList) -> _Image:
+	def MergeOf(self, req: Request_, img: Image_, tags: TagList_) -> Image_:
 		...
 	def header_text(self):
 		...
-	def _Merge_Image(self, req: _Request, img: _Image, tags: _TagList) -> bool:
+	def _Merge_Image(self, req: Request_, img: Image_, tags: TagList_) -> bool:
 		...
 
-MergeInputs = _MergeInputs
+MergeInputs = MergeInputs_

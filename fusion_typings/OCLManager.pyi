@@ -1,9 +1,9 @@
-from FusionDoc import _FusionDoc
-from OCLProgram import _OCLProgram
-from Registry import _Registry
+from FusionDoc import FusionDoc_
+from OCLProgram import OCLProgram_
+from Registry import Registry_
 
 
-class _OCLManager:
+class OCLManager_:
 
 	#---Properties---#
 	SupportsImage: bool
@@ -52,20 +52,20 @@ class _OCLManager:
 	#---Methods---#
 	def info_text(self):
 		...
-	def _BuildCachedProgramFile(self, id: str, doc: _FusionDoc, filename: str, source: str, len: int, opts: str) -> _OCLProgram:
+	def _BuildCachedProgramFile(self, id: str, doc: FusionDoc_, filename: str, source: str, len: int, opts: str) -> OCLProgram_:
 		...
-	def _BuildCachedProgramReg(self, reg: _Registry, doc: _FusionDoc, source: str, len: int, opts: str) -> _OCLProgram:
+	def _BuildCachedProgramReg(self, reg: Registry_, doc: FusionDoc_, source: str, len: int, opts: str) -> OCLProgram_:
 		...
 	def header_text(self):
 		...
-	def OCLManager(self) -> _OCLManager:
+	def OCLManager(self) -> OCLManager_:
 		"""
 		OCLManager constructor
 		"""
 		...
-	def BuildProgram(self, doc: _FusionDoc, source: str, len: int, opts: str) -> _OCLProgram:
+	def BuildProgram(self, doc: FusionDoc_, source: str, len: int, opts: str) -> OCLProgram_:
 		...
 	def Create(self, device: str) -> bool:
 		...
 
-OCLManager = _OCLManager
+OCLManager = OCLManager_

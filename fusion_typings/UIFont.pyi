@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UIFont:
+class UIFont_:
 
 	#---Properties---#
 	Italic: Any
@@ -160,4 +160,4 @@ class _UIFont:
 	def GetWeight(self) -> None:
 		...
 
-UIFont = _UIFont
+UIFont = UIFont_

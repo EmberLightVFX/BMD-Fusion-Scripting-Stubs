@@ -1,12 +1,12 @@
-from Parameter import _Parameter
-from TagList import _TagList
-from Request import _Request
-from Input import _Input
-from Image import _Image
-from _non_existing import _TimeStamp
+from Parameter import Parameter_
+from TagList import TagList_
+from Request import Request_
+from Input import Input_
+from Image import Image_
+from _non_existing import TimeStamp_
 
 
-class _TransformMatrix:
+class TransformMatrix_:
 
 	#---Properties---#
 	XScale: int
@@ -140,20 +140,20 @@ class _TransformMatrix:
 
 
 	#---Methods---#
-	def MergeConcatenate(self, fg: _Parameter, tags: _TagList) -> None:
+	def MergeConcatenate(self, fg: Parameter_, tags: TagList_) -> None:
 		...
 	def info_text(self):
 		...
 	def header_text(self):
 		...
-	def TransformMatrix(self, img: _Parameter, req: _Request, inp: _Input, slot: int, time: _TimeStamp) -> _TransformMatrix:
+	def TransformMatrix(self, img: Parameter_, req: Request_, inp: Input_, slot: int, time: TimeStamp_) -> TransformMatrix_:
 		"""
 		TransformMatrix constructor
 		"""
 		...
-	def ImageConcatenate(self, tags: _TagList) -> None:
+	def ImageConcatenate(self, tags: TagList_) -> None:
 		...
-	def ApplyTransform(self, tags: _TagList) -> _Image:
+	def ApplyTransform(self, tags: TagList_) -> Image_:
 		...
 
-TransformMatrix = _TransformMatrix
+TransformMatrix = TransformMatrix_

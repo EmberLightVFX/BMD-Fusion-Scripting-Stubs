@@ -1,6 +1,6 @@
 from typing import Any
 
-class _PlayerView:
+class PlayerView_:
 
 	#---Properties---#
 	ViewHeight: Any
@@ -41,4 +41,4 @@ class _PlayerView:
 	def Exit(self):
 		...
 
-PlayerView = _PlayerView
+PlayerView = PlayerView_

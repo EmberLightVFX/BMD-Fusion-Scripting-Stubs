@@ -1,4 +1,4 @@
-class _TrimView:
+class TrimView_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -30,4 +30,4 @@ class _TrimView:
 	def Exit(self):
 		...
 
-TrimView = _TrimView
+TrimView = TrimView_

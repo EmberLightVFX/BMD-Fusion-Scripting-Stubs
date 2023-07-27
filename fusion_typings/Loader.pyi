@@ -1,4 +1,4 @@
-class _Loader:
+class Loader_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -67,4 +67,4 @@ class _Loader:
 		"""
 		...
 
-Loader = _Loader
+Loader = Loader_

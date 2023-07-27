@@ -1,4 +1,4 @@
-class _PatternControl:
+class PatternControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _PatternControl:
 	REGB_ControlView: bool
 
 
-PatternControl = _PatternControl
+PatternControl = PatternControl_

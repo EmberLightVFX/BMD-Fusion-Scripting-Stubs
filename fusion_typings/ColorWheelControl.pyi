@@ -1,4 +1,4 @@
-class _ColorWheelControl:
+class ColorWheelControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _ColorWheelControl:
 	REGB_ControlView: bool
 
 
-ColorWheelControl = _ColorWheelControl
+ColorWheelControl = ColorWheelControl_

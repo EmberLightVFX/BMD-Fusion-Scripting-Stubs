@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UILabel:
+class UILabel_:
 
 	#---Properties---#
 	Alignment: Any
@@ -162,4 +162,4 @@ class _UILabel:
 	def GetLineWidth(self) -> None:
 		...
 
-UILabel = _UILabel
+UILabel = UILabel_

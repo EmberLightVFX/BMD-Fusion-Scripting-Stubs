@@ -1,9 +1,9 @@
 from typing import Any, overload
 
-from _non_existing import _object
+from _non_existing import object_
 
 
-class _TimelineView:
+class TimelineView_:
 
 	#---Properties---#
 	ZoomY: Any
@@ -49,7 +49,7 @@ class _TimelineView:
 		Decreases the scale (zoom) of the view
 		"""
 		...
-	def Paste(self, desttime: int, spline1: _object, spline2___: _object = _object(), points: dict[Any, Any] = dict[Any, Any]()) -> bool:
+	def Paste(self, desttime: int, spline1: object_, spline2___: object_ = object_(), points: dict[Any, Any] = dict[Any, Any]()) -> bool:
 		"""
 		Paste points to given splines at given time from the Clipboard
 		"""
@@ -114,4 +114,4 @@ class _TimelineView:
 		"""
 		...
 
-TimelineView = _TimelineView
+TimelineView = TimelineView_

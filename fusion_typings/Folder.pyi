@@ -1,4 +1,4 @@
-class _Folder:
+class Folder_:
 
 	#---Methods---#
 	def header_text(self):
@@ -16,4 +16,4 @@ class _Folder:
 		"""
 		...
 
-Folder = _Folder
+Folder = Folder_

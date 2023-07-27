@@ -1,8 +1,8 @@
-from Matrix3 import _Matrix3
-from Matrix4 import _Matrix4
+from Matrix3 import Matrix3_
+from Matrix4 import Matrix4_
 
 
-class _Vector2:
+class Vector2_:
 
 	#---Properties---#
 	TypeName: str
@@ -15,19 +15,19 @@ class _Vector2:
 	"""
 
 	#---Methods---#
-	def _newVec2(self, vec: _Vector2) -> _Vector2:
+	def _newVec2(self, vec: Vector2_) -> Vector2_:
 		...
 	def info_text(self):
 		...
-	def _mulMat3(self, mat: _Matrix3) -> _Vector2:
+	def _mulMat3(self, mat: Matrix3_) -> Vector2_:
 		...
-	def _mulMat4(self, mat: _Matrix4) -> _Vector2:
+	def _mulMat4(self, mat: Matrix4_) -> Vector2_:
 		...
-	def __unm(self) -> _Vector2:
+	def __unm(self) -> Vector2_:
 		...
-	def _newNums(self, x: float, y: float) -> _Vector2:
+	def _newNums(self, x: float, y: float) -> Vector2_:
 		...
-	def _mulNum(self, num: float) -> _Vector2:
+	def _mulNum(self, num: float) -> Vector2_:
 		...
 	def Length(self) -> float:
 		...
@@ -35,17 +35,17 @@ class _Vector2:
 		...
 	def Normalize(self) -> None:
 		...
-	def Distance(self, vec: _Vector2) -> float:
+	def Distance(self, vec: Vector2_) -> float:
 		...
-	def __div(self, num: float) -> _Vector2:
+	def __div(self, num: float) -> Vector2_:
 		...
 	def header_text(self):
 		...
-	def __eq(self, vec: _Vector2) -> bool:
+	def __eq(self, vec: Vector2_) -> bool:
 		...
-	def __add(self, vec: _Vector2) -> _Vector2:
+	def __add(self, vec: Vector2_) -> Vector2_:
 		...
-	def __sub(self, vec: _Vector2) -> _Vector2:
+	def __sub(self, vec: Vector2_) -> Vector2_:
 		...
 
-Vector2 = _Vector2
+Vector2 = Vector2_

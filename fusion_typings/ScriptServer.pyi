@@ -1,4 +1,4 @@
-class _ScriptServer:
+class ScriptServer_:
 
 	#---Methods---#
 	def FindHost(self):
@@ -18,4 +18,4 @@ class _ScriptServer:
 	def RemoveHost(self):
 		...
 
-ScriptServer = _ScriptServer
+ScriptServer = ScriptServer_

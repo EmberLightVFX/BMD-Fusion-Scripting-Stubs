@@ -1,4 +1,4 @@
-class _Point:
+class Point_:
 
 	#---Properties---#
 	X: float
@@ -39,26 +39,26 @@ class _Point:
 
 
 	#---Methods---#
-	def __mul(self, num: float) -> _Point:
+	def __mul(self, num: float) -> Point_:
 		...
 	def info_text(self):
 		...
-	def Point(self, x: float, y: float, z: float) -> _Point:
+	def Point(self, x: float, y: float, z: float) -> Point_:
 		"""
 		Point constructor
 		"""
 		...
-	def __eq(self, pt: _Point) -> bool:
+	def __eq(self, pt: Point_) -> bool:
 		...
-	def __unm(self) -> _Point:
+	def __unm(self) -> Point_:
 		...
 	def header_text(self):
 		...
-	def __div(self, num: float) -> _Point:
+	def __div(self, num: float) -> Point_:
 		...
-	def __add(self, pt: _Point) -> _Point:
+	def __add(self, pt: Point_) -> Point_:
 		...
-	def __sub(self, pt: _Point) -> _Point:
+	def __sub(self, pt: Point_) -> Point_:
 		...
 
-Point = _Point
+Point = Point_

@@ -1,4 +1,4 @@
-class _FltPixel:
+class FltPixel_:
 
 	#---Properties---#
 	TypeName: str
@@ -15,9 +15,9 @@ class _FltPixel:
 		...
 	def info_text(self):
 		...
-	def _newDef(self) -> _FltPixel:
+	def _newDef(self) -> FltPixel_:
 		...
 	def Clear(self) -> None:
 		...
 
-FltPixel = _FltPixel
+FltPixel = FltPixel_

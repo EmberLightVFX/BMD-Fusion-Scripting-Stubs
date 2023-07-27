@@ -1,4 +1,4 @@
-class _ColorRangesControl:
+class ColorRangesControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _ColorRangesControl:
 	REGB_ControlView: bool
 
 
-ColorRangesControl = _ColorRangesControl
+ColorRangesControl = ColorRangesControl_

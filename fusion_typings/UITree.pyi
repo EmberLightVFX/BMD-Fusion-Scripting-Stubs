@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UITree:
+class UITree_:
 
 	#---Properties---#
 	Indentation: Any
@@ -322,4 +322,4 @@ class _UITree:
 	def GetTabKeyNavigation(self) -> None:
 		...
 
-UITree = _UITree
+UITree = UITree_

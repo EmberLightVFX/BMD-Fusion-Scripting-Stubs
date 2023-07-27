@@ -1,4 +1,4 @@
-class _ImageOverlayControl:
+class ImageOverlayControl_:
 	...
 
-ImageOverlayControl = _ImageOverlayControl
+ImageOverlayControl = ImageOverlayControl_

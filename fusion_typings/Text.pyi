@@ -1,4 +1,4 @@
-class _Text:
+class Text_:
 
 	#---Properties---#
 	Value: str
@@ -35,10 +35,10 @@ class _Text:
 		...
 	def info_text(self):
 		...
-	def Text(self, val: str) -> _Text:
+	def Text(self, val: str) -> Text_:
 		"""
 		Text constructor
 		"""
 		...
 
-Text = _Text
+Text = Text_

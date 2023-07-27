@@ -1,6 +1,6 @@
 from typing import Any, Literal
 
-class _FuView:
+class FuView_:
 
 	#---Properties---#
 	ID: Any
@@ -61,4 +61,4 @@ class _FuView:
 		"""
 		...
 
-FuView = _FuView
+FuView = FuView_

@@ -1,4 +1,4 @@
-from Operator import _Operator
+from Operator import Operator_
 
-_Tool = _Operator
+Tool_ = Operator_
 

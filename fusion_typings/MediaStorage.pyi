@@ -1,4 +1,4 @@
-class _MediaStorage:
+class MediaStorage_:
 
 	#---Methods---#
 	def info_text(self):
@@ -26,4 +26,4 @@ class _MediaStorage:
 		"""
 		...
 
-MediaStorage = _MediaStorage
+MediaStorage = MediaStorage_

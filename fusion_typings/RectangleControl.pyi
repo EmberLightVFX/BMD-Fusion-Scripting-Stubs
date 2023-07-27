@@ -1,4 +1,4 @@
-class _RectangleControl:
+class RectangleControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _RectangleControl:
 	REGB_ControlView: bool
 
 
-RectangleControl = _RectangleControl
+RectangleControl = RectangleControl_

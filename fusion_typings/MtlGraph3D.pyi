@@ -1,9 +1,9 @@
-from FusionDoc import _FusionDoc
-from Request import _Request
-from _non_existing import _MtlData3D
+from FusionDoc import FusionDoc_
+from Request import Request_
+from _non_existing import MtlData3D_
 
 
-class _MtlGraph3D:
+class MtlGraph3D_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -36,12 +36,12 @@ class _MtlGraph3D:
 		...
 	def info_text(self):
 		...
-	def MtlGraph3D(self, doc: _FusionDoc, req: _Request) -> _MtlGraph3D:
+	def MtlGraph3D(self, doc: FusionDoc_, req: Request_) -> MtlGraph3D_:
 		"""
 		MtlGraph3D constructor
 		"""
 		...
-	def SetRoot(self, root: _MtlData3D) -> None:
+	def SetRoot(self, root: MtlData3D_) -> None:
 		...
 
-MtlGraph3D = _MtlGraph3D
+MtlGraph3D = MtlGraph3D_

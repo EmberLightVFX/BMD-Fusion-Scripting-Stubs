@@ -1,14 +1,14 @@
-from Object import _Object
+from Object import Object_
 
 
-class _ChildGroup:
+class ChildGroup_:
 
 	#---Properties---#
 	m_GroupID: str
 	"""
 	Read Only
 	"""
-	m_Owner: _Object
+	m_Owner: Object_
 	"""
 	Read Only
 	"""
@@ -43,4 +43,4 @@ class _ChildGroup:
 	def GetOwner(self):
 		...
 
-ChildGroup = _ChildGroup
+ChildGroup = ChildGroup_

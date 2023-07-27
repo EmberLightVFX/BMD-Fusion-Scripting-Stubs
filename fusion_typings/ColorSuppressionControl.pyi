@@ -1,4 +1,4 @@
-class _ColorSuppressionControl:
+class ColorSuppressionControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _ColorSuppressionControl:
 	REGB_ControlView: bool
 
 
-ColorSuppressionControl = _ColorSuppressionControl
+ColorSuppressionControl = ColorSuppressionControl_

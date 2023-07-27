@@ -1,6 +1,6 @@
 from typing import Any
 
-class _Action:
+class Action_:
 
 	#---Properties---#
 	FullName: Any
@@ -74,4 +74,4 @@ class _Action:
 	def Update(self):
 		...
 
-Action = _Action
+Action = Action_

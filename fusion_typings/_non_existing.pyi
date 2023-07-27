@@ -1,38 +1,38 @@
-class _object:
+class object_:
 	...
-class _void:
+class void_:
 	...
-class _Bins:
+class Bins_:
 	...
-class _CacheManager:
+class CacheManager_:
 	...
-class _MenuManager:
+class MenuManager_:
 	...
-class _File:
+class File_:
 	...
-class _TimeStamp:
+class TimeStamp_:
 	...
-class _LookUpTable3D:
+class LookUpTable3D_:
 	...
-class _MtlData3D:
+class MtlData3D_:
 	...
-class _Tag:
+class Tag_:
 	...
-class _ScriptValType:
+class ScriptValType_:
 	...
-class _ViewShadeNodeGroup:
+class ViewShadeNodeGroup_:
 	...
 
-object = _object
-void = _void
-Bins = _Bins
-CacheManager = _CacheManager
-MenuManager = _MenuManager
-File = _File
-TimeStamp = _TimeStamp
-LookUpTable3D = _LookUpTable3D
-MtlData3D = _MtlData3D
-Tag = _Tag
-ScriptValType = _ScriptValType
-ViewShadeNodeGroup = _ViewShadeNodeGroup
+object = object_
+void = void_
+Bins = Bins_
+CacheManager = CacheManager_
+MenuManager = MenuManager_
+File = File_
+TimeStamp = TimeStamp_
+LookUpTable3D = LookUpTable3D_
+MtlData3D = MtlData3D_
+Tag = Tag_
+ScriptValType = ScriptValType_
+ViewShadeNodeGroup = ViewShadeNodeGroup_
 

@@ -1,8 +1,8 @@
-from Vector4 import _Vector4
-from Vector3f import _Vector3f
+from Vector4 import Vector4_
+from Vector3f import Vector3f_
 
 
-class _Matrix4:
+class Matrix4_:
 
 	#---Properties---#
 	TypeName: str
@@ -21,15 +21,15 @@ class _Matrix4:
 		...
 	def RotZ(self, a: float) -> None:
 		...
-	def LookAt(self, eye: _Vector4, at: _Vector4, up: _Vector4) -> None:
+	def LookAt(self, eye: Vector4_, at: Vector4_, up: Vector4_) -> None:
 		...
-	def _newNums(self, a11: float, a12: float, a13: float, a14: float, a21: float, a22: float, a23: float, a24: float, a31: float, a32: float, a33: float, a34: float, a41: float, a42: float, a43: float, a44: float) -> _Matrix4:
+	def _newNums(self, a11: float, a12: float, a13: float, a14: float, a21: float, a22: float, a23: float, a24: float, a31: float, a32: float, a33: float, a34: float, a41: float, a42: float, a43: float, a44: float) -> Matrix4_:
 		...
-	def _newMat4(self, mat: _Matrix4) -> _Matrix4:
+	def _newMat4(self, mat: Matrix4_) -> Matrix4_:
 		...
-	def _newDef(self) -> _Matrix4:
+	def _newDef(self) -> Matrix4_:
 		...
-	def __mul(self, mat: _Matrix4) -> _Matrix4:
+	def __mul(self, mat: Matrix4_) -> Matrix4_:
 		...
 	def _Ortho6(self, xmin: float, xmax: float, ymin: float, ymax: float, zmin: float, zmax: float) -> None:
 		...
@@ -37,7 +37,7 @@ class _Matrix4:
 		...
 	def Adjoint(self) -> None:
 		...
-	def TransformPoint(self, out: _Vector4, inp: _Vector4) -> None:
+	def TransformPoint(self, out: Vector4_, inp: Vector4_) -> None:
 		...
 	def header_text(self):
 		...
@@ -71,13 +71,13 @@ class _Matrix4:
 		...
 	def Rotate(self, x: float, y: float, z: float, order: str) -> None:
 		...
-	def Inverse(self) -> _Matrix4:
+	def Inverse(self) -> Matrix4_:
 		...
-	def Transpose(self) -> _Matrix4:
+	def Transpose(self) -> Matrix4_:
 		...
-	def InverseTranspose(self) -> _Matrix4:
+	def InverseTranspose(self) -> Matrix4_:
 		...
-	def TransformNormal(self, norm: _Vector3f) -> _Vector3f:
+	def TransformNormal(self, norm: Vector3f_) -> Vector3f_:
 		...
 
-Matrix4 = _Matrix4
+Matrix4 = Matrix4_

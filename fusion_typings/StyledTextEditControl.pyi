@@ -1,4 +1,4 @@
-class _StyledTextEditControl:
+class StyledTextEditControl_:
 	...
 
-StyledTextEditControl = _StyledTextEditControl
+StyledTextEditControl = StyledTextEditControl_

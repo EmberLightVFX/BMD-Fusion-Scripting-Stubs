@@ -1,6 +1,6 @@
 from typing import Any, overload
 
-class _GLImageViewer:
+class GLImageViewer_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -124,4 +124,4 @@ class _GLImageViewer:
 		"""
 		...
 
-GLImageViewer = _GLImageViewer
+GLImageViewer = GLImageViewer_

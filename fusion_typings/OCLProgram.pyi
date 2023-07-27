@@ -1,10 +1,10 @@
-from OCLMemory import _OCLMemory
-from Image import _Image
-from OCLManager import _OCLManager
-from FusionDoc import _FusionDoc
+from OCLMemory import OCLMemory_
+from Image import Image_
+from OCLManager import OCLManager_
+from FusionDoc import FusionDoc_
 
 
-class _OCLProgram:
+class OCLProgram_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -29,7 +29,7 @@ class _OCLProgram:
 
 
 	#---Methods---#
-	def ReleaseMemory(self, mem: _OCLMemory) -> bool:
+	def ReleaseMemory(self, mem: OCLMemory_) -> bool:
 		...
 	def info_text(self):
 		...
@@ -39,7 +39,7 @@ class _OCLProgram:
 		...
 	def Build(self, wait: bool, opts: str) -> bool:
 		...
-	def CopyToBuffer(self, img: _Image, mem: _OCLMemory, offset: int, wait: bool) -> int:
+	def CopyToBuffer(self, img: Image_, mem: OCLMemory_, offset: int, wait: bool) -> int:
 		...
 	def SetWorkgroupSize(self, xsize: int, ysize: int) -> None:
 		...
@@ -53,10 +53,10 @@ class _OCLProgram:
 		...
 	def Lock(self) -> None:
 		...
-	def OCLProgram(self, mgr: _OCLManager, doc: _FusionDoc, src: str, len: int) -> _OCLProgram:
+	def OCLProgram(self, mgr: OCLManager_, doc: FusionDoc_, src: str, len: int) -> OCLProgram_:
 		"""
 		OCLProgram constructor
 		"""
 		...
 
-OCLProgram = _OCLProgram
+OCLProgram = OCLProgram_

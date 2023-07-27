@@ -1,4 +1,4 @@
-class _ChanLUTs:
+class ChanLUTs_:
 
 	#---Properties---#
 	TypeName: str
@@ -10,4 +10,4 @@ class _ChanLUTs:
 	Read Only
 	"""
 
-ChanLUTs = _ChanLUTs
+ChanLUTs = ChanLUTs_

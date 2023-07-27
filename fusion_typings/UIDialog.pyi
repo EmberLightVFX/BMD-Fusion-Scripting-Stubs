@@ -1,4 +1,4 @@
-class _UIDialog:
+class UIDialog_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -36,4 +36,4 @@ class _UIDialog:
 	def Exec(self) -> None:
 		...
 
-UIDialog = _UIDialog
+UIDialog = UIDialog_

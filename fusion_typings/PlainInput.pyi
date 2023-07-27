@@ -1,9 +1,9 @@
 from typing import Any, overload
 
-from Output import _Output
+from Output import Output_
 
 
-class _PlainInput:
+class PlainInput_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -72,15 +72,15 @@ class _PlainInput:
 		"""
 		...
 	@overload
-	def ConnectTo(self, out: _Output) -> bool:
+	def ConnectTo(self, out: Output_) -> bool:
 		"""
 		Connect the Input to an Output
 		"""
 		...
-	def GetConnectedOutput(self) -> _Output:
+	def GetConnectedOutput(self) -> Output_:
 		"""
 		Returns the output that this input is connected to
 		"""
 		...
 
-PlainInput = _PlainInput
+PlainInput = PlainInput_

@@ -1,12 +1,12 @@
 from typing import Any, overload
 
-from GLViewer import _GLViewer
+from GLViewer import GLViewer_
 
 
-class _GLView:
+class GLView_:
 
 	#---Properties---#
-	CurrentViewer: _GLViewer
+	CurrentViewer: GLViewer_
 	"""
 	Read/Write
 	"""
@@ -327,4 +327,4 @@ class _GLView:
 		"""
 		...
 
-GLView = _GLView
+GLView = GLView_

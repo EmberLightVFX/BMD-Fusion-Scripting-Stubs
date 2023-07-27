@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UIComboBox:
+class UIComboBox_:
 
 	#---Properties---#
 	MaxVisibleItems: Any
@@ -176,4 +176,4 @@ class _UIComboBox:
 	def GetMaxVisibleItems(self) -> None:
 		...
 
-UIComboBox = _UIComboBox
+UIComboBox = UIComboBox_

@@ -1,9 +1,9 @@
 from typing import Any
 
-from FltPixel import _FltPixel
+from FltPixel import FltPixel_
 
 
-class _Gradient:
+class Gradient_:
 
 	#---Properties---#
 	Value: dict[Any, Any]
@@ -38,27 +38,27 @@ class _Gradient:
 
 
 	#---Methods---#
-	def GetColor(self, pos: float) -> _FltPixel:
+	def GetColor(self, pos: float) -> FltPixel_:
 		...
 	def info_text(self):
 		...
 	def GetColorCount(self) -> int:
 		...
-	def QuickEvaluate(self, pos: float, cstr: str) -> _FltPixel:
+	def QuickEvaluate(self, pos: float, cstr: str) -> FltPixel_:
 		...
 	def SetPreset(self, pstr: str) -> None:
 		...
-	def _newGrad(self, grad: _Gradient) -> _Gradient:
+	def _newGrad(self, grad: Gradient_) -> Gradient_:
 		...
-	def AddColor(self, pos: float, pix: _FltPixel) -> None:
+	def AddColor(self, pos: float, pix: FltPixel_) -> None:
 		...
 	def header_text(self):
 		...
-	def _newPreset(self, pstr: str) -> _Gradient:
+	def _newPreset(self, pstr: str) -> Gradient_:
 		...
 	def ClearTables(self) -> None:
 		...
 	def Clear(self) -> None:
 		...
 
-Gradient = _Gradient
+Gradient = Gradient_

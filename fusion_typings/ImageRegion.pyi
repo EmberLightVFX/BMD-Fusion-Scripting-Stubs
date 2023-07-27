@@ -1,4 +1,4 @@
-class _ImageRegion:
+class ImageRegion_:
 
 	#---Properties---#
 	TypeName: str
@@ -10,4 +10,4 @@ class _ImageRegion:
 	Read Only
 	"""
 
-ImageRegion = _ImageRegion
+ImageRegion = ImageRegion_

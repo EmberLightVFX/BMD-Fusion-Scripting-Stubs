@@ -1,4 +1,4 @@
-class _ActionManager:
+class ActionManager_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -36,4 +36,4 @@ class _ActionManager:
 	def DoAction(self):
 		...
 
-ActionManager = _ActionManager
+ActionManager = ActionManager_

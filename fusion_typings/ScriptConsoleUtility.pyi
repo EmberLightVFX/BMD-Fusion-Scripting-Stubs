@@ -1,4 +1,4 @@
-class _ScriptConsoleUtility:
+class ScriptConsoleUtility_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -32,4 +32,4 @@ class _ScriptConsoleUtility:
 	def Print(self, str: str) -> None:
 		...
 
-ScriptConsoleUtility = _ScriptConsoleUtility
+ScriptConsoleUtility = ScriptConsoleUtility_

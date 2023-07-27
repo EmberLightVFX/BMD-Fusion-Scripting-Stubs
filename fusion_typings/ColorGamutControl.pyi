@@ -1,4 +1,4 @@
-class _ColorGamutControl:
+class ColorGamutControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _ColorGamutControl:
 	REGB_ControlView: bool
 
 
-ColorGamutControl = _ColorGamutControl
+ColorGamutControl = ColorGamutControl_

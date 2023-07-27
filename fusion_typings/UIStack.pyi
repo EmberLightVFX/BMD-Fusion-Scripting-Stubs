@@ -1,6 +1,6 @@
 from typing import Any
 
-class _UIStack:
+class UIStack_:
 
 	#---Properties---#
 	CurrentIndex: Any
@@ -40,4 +40,4 @@ class _UIStack:
 	def SetCurrentIndex(self) -> None:
 		...
 
-UIStack = _UIStack
+UIStack = UIStack_

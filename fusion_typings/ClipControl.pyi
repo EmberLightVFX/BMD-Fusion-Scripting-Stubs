@@ -1,4 +1,4 @@
-class _ClipControl:
+class ClipControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _ClipControl:
 	REGB_ControlView: bool
 
 
-ClipControl = _ClipControl
+ClipControl = ClipControl_

@@ -1,4 +1,4 @@
-class _Custom:
+class Custom_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -72,4 +72,4 @@ class _Custom:
 	def GetLUT(self, inp: int, v: float) -> float:
 		...
 
-Custom = _Custom
+Custom = Custom_

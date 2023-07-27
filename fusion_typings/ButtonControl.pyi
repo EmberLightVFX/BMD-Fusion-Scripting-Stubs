@@ -1,4 +1,4 @@
-class _ButtonControl:
+class ButtonControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _ButtonControl:
 	REGB_ControlView: bool
 
 
-ButtonControl = _ButtonControl
+ButtonControl = ButtonControl_

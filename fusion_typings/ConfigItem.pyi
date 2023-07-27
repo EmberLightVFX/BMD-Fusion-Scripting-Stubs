@@ -1,6 +1,6 @@
 from typing import Any
 
-class _ConfigItem:
+class ConfigItem_:
 
 	#---Properties---#
 	Owner: Any
@@ -54,4 +54,4 @@ class _ConfigItem:
 	def Get(self):
 		...
 
-ConfigItem = _ConfigItem
+ConfigItem = ConfigItem_

@@ -1,12 +1,12 @@
-from ViewShadeNode import _ViewShadeNode
-from TagList import _TagList
-from Input import _Input
+from ViewShadeNode import ViewShadeNode_
+from TagList import TagList_
+from Input import Input_
 
 
-class _ScriptViewShader:
+class ScriptViewShader_:
 
 	#---Properties---#
-	m_ViewShadeNode: _ViewShadeNode
+	m_ViewShadeNode: ViewShadeNode_
 	"""
 	Read/Write
 	"""
@@ -58,9 +58,9 @@ class _ScriptViewShader:
 		...
 	def info_text(self):
 		...
-	def AddControlPage(self, name: str, tags: _TagList) -> int:
+	def AddControlPage(self, name: str, tags: TagList_) -> int:
 		...
-	def _AddInput(self, name: str, id: str, tags: _TagList) -> _Input:
+	def _AddInput(self, name: str, id: str, tags: TagList_) -> Input_:
 		...
 
-ScriptViewShader = _ScriptViewShader
+ScriptViewShader = ScriptViewShader_

@@ -1,6 +1,6 @@
 from typing import Any
 
-class _PlaybackManager:
+class PlaybackManager_:
 
 	#---Properties---#
 	PlaybackDevice: Any
@@ -121,4 +121,4 @@ class _PlaybackManager:
 	def SeekPrev(self):
 		...
 
-PlaybackManager = _PlaybackManager
+PlaybackManager = PlaybackManager_

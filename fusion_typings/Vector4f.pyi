@@ -1,4 +1,4 @@
-class _Vector4f:
+class Vector4f_:
 
 	#---Properties---#
 	TypeName: str
@@ -10,4 +10,4 @@ class _Vector4f:
 	Read Only
 	"""
 
-Vector4f = _Vector4f
+Vector4f = Vector4f_

@@ -1,9 +1,9 @@
 from typing import Any
 
-from TagList import _TagList
+from TagList import TagList_
 
 
-class _LUT:
+class LUT_:
 
 	#---Properties---#
 	m_EndIn: float
@@ -82,7 +82,7 @@ class _LUT:
 		...
 	def info_text(self):
 		...
-	def _newLUT(self, lut: _LUT) -> _LUT:
+	def _newLUT(self, lut: LUT_) -> LUT_:
 		...
 	def Table(self):
 		...
@@ -90,9 +90,9 @@ class _LUT:
 		...
 	def EntrySize(self, ty: int) -> int:
 		...
-	def _newNums(self, num: int, ty: int) -> _LUT:
+	def _newNums(self, num: int, ty: int) -> LUT_:
 		...
-	def _newTags(self, tags: _TagList) -> _LUT:
+	def _newTags(self, tags: TagList_) -> LUT_:
 		...
 
-LUT = _LUT
+LUT = LUT_

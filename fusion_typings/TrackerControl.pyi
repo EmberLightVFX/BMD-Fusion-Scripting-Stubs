@@ -1,4 +1,4 @@
-class _TrackerControl:
+class TrackerControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _TrackerControl:
 	REGB_ControlView: bool
 
 
-TrackerControl = _TrackerControl
+TrackerControl = TrackerControl_

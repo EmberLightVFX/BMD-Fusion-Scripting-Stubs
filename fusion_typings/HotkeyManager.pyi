@@ -1,4 +1,4 @@
-class _HotkeyManager:
+class HotkeyManager_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -34,4 +34,4 @@ class _HotkeyManager:
 	def GetModifierNames(self):
 		...
 
-HotkeyManager = _HotkeyManager
+HotkeyManager = HotkeyManager_

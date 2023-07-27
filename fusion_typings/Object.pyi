@@ -1,17 +1,17 @@
 from typing import Any
 
-from Registry import _Registry
-from FusionDoc import _FusionDoc
+from Registry import Registry_
+from FusionDoc import FusionDoc_
 
 
-class _Object:
+class Object_:
 
 	#---Properties---#
-	RegNode: _Registry
+	RegNode: Registry_
 	"""
 	Read Only
 	"""
-	Comp: _FusionDoc
+	Comp: FusionDoc_
 	"""
 	Read Only
 	"""
@@ -50,7 +50,7 @@ class _Object:
 		...
 	def GetID(self):
 		...
-	def GetComp(self) -> _FusionDoc:
+	def GetComp(self) -> FusionDoc_:
 		...
 	def Comp(self):
 		...
@@ -70,4 +70,4 @@ class _Object:
 		"""
 		...
 
-Object = _Object
+Object = Object_

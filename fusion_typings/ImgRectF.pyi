@@ -1,4 +1,4 @@
-class _ImgRectF:
+class ImgRectF_:
 
 	#---Properties---#
 	TypeName: str
@@ -10,4 +10,4 @@ class _ImgRectF:
 	Read Only
 	"""
 
-ImgRectF = _ImgRectF
+ImgRectF = ImgRectF_

@@ -1,4 +1,4 @@
-class _UIActionTree:
+class UIActionTree_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -34,4 +34,4 @@ class _UIActionTree:
 	def SetTarget(self):
 		...
 
-UIActionTree = _UIActionTree
+UIActionTree = UIActionTree_

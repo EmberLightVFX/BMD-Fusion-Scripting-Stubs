@@ -1,4 +1,4 @@
-class _Media_pool_item:
+class Media_pool_item_:
 
 	#---Methods---#
 	def header_text(self):
@@ -11,4 +11,4 @@ class _Media_pool_item:
 		"""
 		...
 
-Media_pool_item = _Media_pool_item
+Media_pool_item = Media_pool_item_

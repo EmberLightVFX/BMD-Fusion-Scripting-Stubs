@@ -1,9 +1,9 @@
-from Request import _Request
-from Image import _Image
-from TagList import _TagList
+from Request import Request_
+from Image import Image_
+from TagList import TagList_
 
 
-class _GamutInputs:
+class GamutInputs_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -32,7 +32,7 @@ class _GamutInputs:
 		...
 	def info_text(self):
 		...
-	def _ProcessOf(self, req: _Request, img: _Image, out: _Image, depth: int, clippingmode: str, tags: _TagList) -> _Image:
+	def _ProcessOf(self, req: Request_, img: Image_, out: Image_, depth: int, clippingmode: str, tags: TagList_) -> Image_:
 		...
 
-GamutInputs = _GamutInputs
+GamutInputs = GamutInputs_

@@ -1,9 +1,9 @@
 from typing import Any
 
-from Vector2 import _Vector2
+from Vector2 import Vector2_
 
 
-class _TextStyleFont:
+class TextStyleFont_:
 
 	#---Properties---#
 	Underline: bool
@@ -26,11 +26,11 @@ class _TextStyleFont:
 	"""
 	Write Only
 	"""
-	ManualKerning: _Vector2
+	ManualKerning: Vector2_
 	"""
 	Read/Write
 	"""
-	ManualPositioning: _Vector2
+	ManualPositioning: Vector2_
 	"""
 	Read/Write
 	"""
@@ -82,16 +82,16 @@ class _TextStyleFont:
 	#---Methods---#
 	def info_text(self):
 		...
-	def TextStyleFont(self, name: str, style: str, size: float) -> _TextStyleFont:
+	def TextStyleFont(self, name: str, style: str, size: float) -> TextStyleFont_:
 		"""
 		TextStyleFont constructor
 		"""
 		...
-	def MetricsCompatibleWith(self, font: _TextStyleFont) -> bool:
+	def MetricsCompatibleWith(self, font: TextStyleFont_) -> bool:
 		...
 	def header_text(self):
 		...
 	def SetFeatures(self, features: str) -> None:
 		...
 
-TextStyleFont = _TextStyleFont
+TextStyleFont = TextStyleFont_

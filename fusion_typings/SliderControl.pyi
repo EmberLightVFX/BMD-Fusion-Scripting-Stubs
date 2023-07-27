@@ -1,4 +1,4 @@
-class _SliderControl:
+class SliderControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _SliderControl:
 	REGB_ControlView: bool
 
 
-SliderControl = _SliderControl
+SliderControl = SliderControl_

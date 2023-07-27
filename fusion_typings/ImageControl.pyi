@@ -1,4 +1,4 @@
-class _ImageControl:
+class ImageControl_:
 
 	#---Attributes---#
 	REGS_FileName: str
@@ -26,4 +26,4 @@ class _ImageControl:
 	REGB_ControlView: bool
 
 
-ImageControl = _ImageControl
+ImageControl = ImageControl_

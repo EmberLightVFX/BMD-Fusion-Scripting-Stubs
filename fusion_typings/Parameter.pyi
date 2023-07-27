@@ -1,6 +1,6 @@
 from typing import Any
 
-class _Parameter:
+class Parameter_:
 
 	#---Properties---#
 	Name: str
@@ -59,9 +59,9 @@ class _Parameter:
 		...
 	def header_text(self):
 		...
-	def InterpolateWith(self, weight: float, param: _Parameter) -> _Parameter:
+	def InterpolateWith(self, weight: float, param: Parameter_) -> Parameter_:
 		...
-	def Copy(self) -> _Parameter:
+	def Copy(self) -> Parameter_:
 		...
 
-Parameter = _Parameter
+Parameter = Parameter_

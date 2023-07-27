@@ -1,10 +1,10 @@
-from GLView import _GLView
+from GLView import GLView_
 
 
-class _GLPreview:
+class GLPreview_:
 
 	#---Properties---#
-	View: _GLView
+	View: GLView_
 	"""
 	Represents the display GLView for this Preview
 
@@ -61,4 +61,4 @@ class _GLPreview:
 	REGB_Preview_CanCopyAnim: bool
 
 
-GLPreview = _GLPreview
+GLPreview = GLPreview_

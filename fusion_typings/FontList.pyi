@@ -1,6 +1,6 @@
 from typing import Any
 
-class _FontList:
+class FontList_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -40,7 +40,7 @@ class _FontList:
 		and each subtable contains filename strings, indexed by style name.
 		"""
 		...
-	def GetFontManager(self) -> _FontList:
+	def GetFontManager(self) -> FontList_:
 		...
 	def header_text(self):
 		...
@@ -61,4 +61,4 @@ class _FontList:
 		"""
 		...
 
-FontList = _FontList
+FontList = FontList_

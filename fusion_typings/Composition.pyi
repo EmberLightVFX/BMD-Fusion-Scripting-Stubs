@@ -1,14 +1,14 @@
 from typing import Any, overload
 
-from Tool import _Tool
-from FuFrame import _FuFrame
-from _non_existing import _object
+from Tool import Tool_
+from FuFrame import FuFrame_
+from _non_existing import object_
 
 
-class _Composition:
+class Composition_:
 
 	#---Properties---#
-	ActiveTool: _Tool
+	ActiveTool: Tool_
 	"""
 	Represents the currently active tool on this comp
 
@@ -28,7 +28,7 @@ class _Composition:
 
 	Read/Write
 	"""
-	CurrentFrame: _FuFrame
+	CurrentFrame: FuFrame_
 	"""
 	Represents the currently active frame for this composition
 
@@ -84,7 +84,7 @@ class _Composition:
 		...
 	def IsRendering(self) -> bool:
 		...
-	def ChooseAction(self, execute: bool, target: _object) -> str:
+	def ChooseAction(self, execute: bool, target: object_) -> str:
 		"""
 		Displays a dialog with a list of selectable actions
 
@@ -218,7 +218,7 @@ class _Composition:
 		"""
 		...
 	@overload
-	def Copy(self, tool: _Tool) -> bool:
+	def Copy(self, tool: Tool_) -> bool:
 		"""
 		Copy a list of tools to the Clipboard
 
@@ -283,7 +283,7 @@ class _Composition:
 		"""
 		...
 	@overload
-	def CopySettings(self, tool: _Tool) -> dict[Any, Any]:
+	def CopySettings(self, tool: Tool_) -> dict[Any, Any]:
 		"""
 		Copy a list of tools to a settings table
 
@@ -337,19 +337,19 @@ class _Composition:
 		Save the composition
 		"""
 		...
-	def SetActiveTool(self, tool: _Tool) -> None:
+	def SetActiveTool(self, tool: Tool_) -> None:
 		"""
 		Set the currently active tool
 		"""
 		...
 	def _SetCurrentTime(self):
 		...
-	def FindTool(self, name: str) -> _Tool:
+	def FindTool(self, name: str) -> Tool_:
 		"""
 		Finds first tool by name
 		"""
 		...
-	def FindToolByID(self, id: str, prev: _Tool = _Tool()) -> _Tool:
+	def FindToolByID(self, id: str, prev: Tool_ = Tool_()) -> Tool_:
 		"""
 		Finds tools of a given type
 
@@ -357,7 +357,7 @@ class _Composition:
 						 prev - optional tool to start search from
 		"""
 		...
-	def AddTool(self, id: str, defsettings: bool = bool(), xpos: int = int(), ypos: int = int()) -> _Tool:
+	def AddTool(self, id: str, defsettings: bool = bool(), xpos: int = int(), ypos: int = int()) -> Tool_:
 		"""
 		Adds a tool to the comp at a given position
 
@@ -366,12 +366,12 @@ class _Composition:
 						 xpos, ypos	- integer position on flow view
 		"""
 		...
-	def AddSettingAction(self, filename: str, xpos: int = int(), ypos: int = int()) -> _Tool:
+	def AddSettingAction(self, filename: str, xpos: int = int(), ypos: int = int()) -> Tool_:
 		"""
 		Adds a .settings to the comp
 		"""
 		...
-	def AddToolAction(self, id: str, xpos: int = int(), ypos: int = int()) -> _Tool:
+	def AddToolAction(self, id: str, xpos: int = int(), ypos: int = int()) -> Tool_:
 		"""
 		Adds a tool to the comp
 		"""
@@ -395,7 +395,7 @@ class _Composition:
 		...
 	def IsReadOnly(self):
 		...
-	def GetPrevKeyTime(self, time: int = int(), tool: _Tool = _Tool()) -> int:
+	def GetPrevKeyTime(self, time: int = int(), tool: Tool_ = Tool_()) -> int:
 		"""
 		Gets the previous key time
 
@@ -461,7 +461,7 @@ class _Composition:
 		Returns the path string with all mappings expanded. Only the first path of a multipath is returned.
 		"""
 		...
-	def GetNextKeyTime(self, time: int = int(), tool: _Tool = _Tool()) -> int:
+	def GetNextKeyTime(self, time: int = int(), tool: Tool_ = Tool_()) -> int:
 		"""
 		Gets the next key time
 
@@ -471,4 +471,4 @@ class _Composition:
 		"""
 		...
 
-Composition = _Composition
+Composition = Composition_

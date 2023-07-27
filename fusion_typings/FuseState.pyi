@@ -1,7 +1,7 @@
-from TagList import _TagList
+from TagList import TagList_
 
 
-class _FuseState:
+class FuseState_:
 
 	#---Properties---#
 	TypeName: str
@@ -18,7 +18,7 @@ class _FuseState:
 		...
 	def info_text(self):
 		...
-	def _FuRegisterClass(self, id: str, classtype: int, tags: _TagList, filename: str, tpb: str, tpw: int, tph: int, bc: str, bclen: int) -> None:
+	def _FuRegisterClass(self, id: str, classtype: int, tags: TagList_, filename: str, tpb: str, tpw: int, tph: int, bc: str, bclen: int) -> None:
 		...
 
-FuseState = _FuseState
+FuseState = FuseState_

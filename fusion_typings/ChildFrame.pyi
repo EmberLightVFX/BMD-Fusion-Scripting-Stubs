@@ -1,6 +1,6 @@
 from typing import Any
 
-class _ChildFrame:
+class ChildFrame_:
 
 	#---Attributes---#
 	REGS_VersionString: str
@@ -97,4 +97,4 @@ class _ChildFrame:
 		"""
 		...
 
-ChildFrame = _ChildFrame
+ChildFrame = ChildFrame_

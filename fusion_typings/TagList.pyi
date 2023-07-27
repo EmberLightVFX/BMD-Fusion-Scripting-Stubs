@@ -1,52 +1,52 @@
-from RefObject import _RefObject
-from _non_existing import _Tag, _void
+from RefObject import RefObject_
+from _non_existing import Tag_, void_
 
 
-class _TagList:
+class TagList_:
 
 	#---Methods---#
-	def _Set_int32(self, tag: _Tag, val: int, addnew: bool) -> None:
+	def _Set_int32(self, tag: Tag_, val: int, addnew: bool) -> None:
 		...
-	def _Set_uint32(self, tag: _Tag, val: int, addnew: bool) -> None:
+	def _Set_uint32(self, tag: Tag_, val: int, addnew: bool) -> None:
 		...
-	def _Set_float64(self, tag: _Tag, val: float, addnew: bool) -> None:
+	def _Set_float64(self, tag: Tag_, val: float, addnew: bool) -> None:
 		...
-	def _Set_String(self, tag: _Tag, val: str, addnew: bool) -> None:
+	def _Set_String(self, tag: Tag_, val: str, addnew: bool) -> None:
 		...
-	def _Set_ID(self, tag: _Tag, val: str, addnew: bool) -> None:
+	def _Set_ID(self, tag: Tag_, val: str, addnew: bool) -> None:
 		...
-	def _Set_Ptr(self, tag: _Tag, val: _void, addnew: bool) -> None:
+	def _Set_Ptr(self, tag: Tag_, val: void_, addnew: bool) -> None:
 		...
-	def _Set_PtrRaw(self, tag: _Tag, val: _void, addnew: bool) -> None:
+	def _Set_PtrRaw(self, tag: Tag_, val: void_, addnew: bool) -> None:
 		...
-	def _Set_Object(self, tag: _Tag, val: _RefObject, addnew: bool) -> None:
+	def _Set_Object(self, tag: Tag_, val: RefObject_, addnew: bool) -> None:
 		...
-	def _Set_TagList(self, tag: _Tag, val: _TagList, addnew: bool) -> None:
+	def _Set_TagList(self, tag: Tag_, val: TagList_, addnew: bool) -> None:
 		...
-	def _Get_ID(self, tag: _Tag, def_: str) -> str:
+	def _Get_ID(self, tag: Tag_, def_: str) -> str:
 		...
-	def _Get_String(self, tag: _Tag, def_: str) -> str:
+	def _Get_String(self, tag: Tag_, def_: str) -> str:
 		...
 	def info_text(self):
 		...
-	def TagList(self) -> _TagList:
+	def TagList(self) -> TagList_:
 		"""
 		TagList constructor
 		"""
 		...
-	def _Get_float64(self, tag: _Tag, def_: float) -> float:
+	def _Get_float64(self, tag: Tag_, def_: float) -> float:
 		...
-	def _Get_Ptr(self, tag: _Tag, def_: _void) -> None:
+	def _Get_Ptr(self, tag: Tag_, def_: void_) -> None:
 		...
-	def _Get_Object(self, tag: _Tag, def_: _RefObject) -> _RefObject:
+	def _Get_Object(self, tag: Tag_, def_: RefObject_) -> RefObject_:
 		...
-	def _Get_TagList(self, tag: _Tag, def_: _TagList) -> _TagList:
+	def _Get_TagList(self, tag: Tag_, def_: TagList_) -> TagList_:
 		...
-	def _Get_int32(self, tag: _Tag, def_: int) -> int:
+	def _Get_int32(self, tag: Tag_, def_: int) -> int:
 		...
 	def header_text(self):
 		...
-	def _Get_uint32(self, tag: _Tag, def_: int) -> int:
+	def _Get_uint32(self, tag: Tag_, def_: int) -> int:
 		...
 
-TagList = _TagList
+TagList = TagList_

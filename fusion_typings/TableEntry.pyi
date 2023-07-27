@@ -1,4 +1,4 @@
-class _TableEntry:
+class TableEntry_:
 
 	#---Properties---#
 	TypeName: str
@@ -10,4 +10,4 @@ class _TableEntry:
 	Read Only
 	"""
 
-TableEntry = _TableEntry
+TableEntry = TableEntry_
