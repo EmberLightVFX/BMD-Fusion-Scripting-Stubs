@@ -1,5 +1,3 @@
-from typing import Literal
-
 from ImgRectI import _ImgRectI
 
 

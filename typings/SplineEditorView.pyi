@@ -1,4 +1,4 @@
-from typing import Any, overload, Literal
+from typing import Any, overload
 
 from _non_existing import _object
 

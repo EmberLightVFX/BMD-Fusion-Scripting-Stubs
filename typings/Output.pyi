@@ -1,5 +1,3 @@
-from typing import Literal
-
 from Request import _Request
 from Parameter import _Parameter
 

@@ -1,5 +1,3 @@
-from typing import Literal
-
 from FusionDoc import _FusionDoc
 from Request import _Request
 from _non_existing import _MtlData3D

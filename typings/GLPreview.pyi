@@ -1,5 +1,3 @@
-from typing import Literal
-
 from GLView import _GLView
 
 

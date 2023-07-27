@@ -1,5 +1,3 @@
-from typing import Literal
-
 from Parameter import _Parameter
 from TagList import _TagList
 from Request import _Request

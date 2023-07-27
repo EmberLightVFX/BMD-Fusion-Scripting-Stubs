@@ -1,4 +1,4 @@
-from typing import Any, Literal
+from typing import Any
 
 from Vector2 import _Vector2
 

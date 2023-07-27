@@ -1,5 +1,3 @@
-from typing import Literal
-
 from Image import _Image
 from TagList import _TagList
 from Matrix4 import _Matrix4

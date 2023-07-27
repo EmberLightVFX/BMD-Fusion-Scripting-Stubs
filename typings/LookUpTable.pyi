@@ -1,5 +1,3 @@
-from typing import Literal
-
 from TagList import _TagList
 from LUT import _LUT
 from Object import _Object

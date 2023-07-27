@@ -1,7 +1,8 @@
 from typing import Any, overload
 
+from Tool import _Tool
 from FuFrame import _FuFrame
-from _non_existing import _Tool, _object
+from _non_existing import _object
 
 
 class _Composition:

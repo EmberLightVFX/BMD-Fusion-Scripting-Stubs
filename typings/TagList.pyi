@@ -1,5 +1,3 @@
-from typing import Literal
-
 from RefObject import _RefObject
 from _non_existing import _Tag, _void
 

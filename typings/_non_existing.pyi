@@ -1,5 +1,3 @@
-class _Tool:
-	...
 class _object:
 	...
 class _void:
@@ -25,7 +23,6 @@ class _ScriptValType:
 class _ViewShadeNodeGroup:
 	...
 
-Tool = _Tool
 object = _object
 void = _void
 Bins = _Bins

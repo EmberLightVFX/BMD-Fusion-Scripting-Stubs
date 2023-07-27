@@ -1,5 +1,3 @@
-from typing import Literal
-
 from FusionDoc import _FusionDoc
 from OCLProgram import _OCLProgram
 from Registry import _Registry

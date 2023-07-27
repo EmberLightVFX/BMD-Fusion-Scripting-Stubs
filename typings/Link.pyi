@@ -1,7 +1,7 @@
-from typing import Any, Literal
+from typing import Any
 
 from Operator import _Operator
-from _non_existing import _Tool
+from Tool import _Tool
 
 
 class _Link:

@@ -1,4 +1,4 @@
-from typing import Any, Literal
+from typing import Any
 
 from TagList import _TagList
 

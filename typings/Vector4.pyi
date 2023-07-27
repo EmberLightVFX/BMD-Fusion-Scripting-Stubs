@@ -1,5 +1,3 @@
-from typing import Literal
-
 from Vector4f import _Vector4f
 from Vector3f import _Vector3f
 from Matrix4 import _Matrix4

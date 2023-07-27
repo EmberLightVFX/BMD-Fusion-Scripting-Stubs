@@ -1,5 +1,6 @@
-from typing import Any, overload, Literal
+from typing import Any, overload
 
+from Tool import _Tool
 from FusionDoc import _FusionDoc
 from Composition import _Composition
 from Parameter import _Parameter
@@ -9,7 +10,7 @@ from SubInputs import _SubInputs
 from TagList import _TagList
 from Request import _Request
 from TimeRegion import _TimeRegion
-from _non_existing import _Tool, _TimeStamp
+from _non_existing import _TimeStamp
 
 
 class _Operator:

@@ -1,5 +1,3 @@
-from typing import Literal
-
 from FillStyle import _FillStyle
 from Image import _Image
 from ImageRegion import _ImageRegion

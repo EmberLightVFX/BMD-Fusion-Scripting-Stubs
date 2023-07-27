@@ -1,5 +1,3 @@
-from typing import Literal
-
 class _Media_pool_item:
 
 	#---Methods---#

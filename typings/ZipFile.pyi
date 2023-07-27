@@ -1,5 +1,3 @@
-from typing import Literal
-
 from _non_existing import _void
 
 

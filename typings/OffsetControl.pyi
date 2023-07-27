@@ -1,5 +1,3 @@
-from typing import Literal
-
 class _OffsetControl:
 
 	#---Attributes---#

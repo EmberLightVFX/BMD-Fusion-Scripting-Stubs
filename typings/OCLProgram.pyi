@@ -1,5 +1,3 @@
-from typing import Literal
-
 from OCLMemory import _OCLMemory
 from Image import _Image
 from OCLManager import _OCLManager

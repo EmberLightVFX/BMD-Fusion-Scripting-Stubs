@@ -1,5 +1,3 @@
-from typing import Literal
-
 from Request import _Request
 from Image import _Image
 from TagList import _TagList

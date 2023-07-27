@@ -1,5 +1,3 @@
-from typing import Literal
-
 from Request import _Request
 from TransformMatrix import _TransformMatrix
 from TagList import _TagList

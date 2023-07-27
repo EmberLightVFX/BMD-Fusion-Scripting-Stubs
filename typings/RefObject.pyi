@@ -1,5 +1,3 @@
-from typing import Literal
-
 from TagList import _TagList
 from _non_existing import _Tag, _void
 

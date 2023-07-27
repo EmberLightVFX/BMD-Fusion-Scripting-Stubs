@@ -1,4 +1,4 @@
-from typing import Any, Literal
+from typing import Any
 
 from ImgRectI import _ImgRectI
 from IntPixel import _IntPixel

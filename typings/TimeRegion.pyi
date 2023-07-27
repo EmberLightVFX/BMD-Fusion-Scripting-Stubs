@@ -1,4 +1,4 @@
-from typing import Any, Literal
+from typing import Any
 
 from TimeExtent import _TimeExtent
 from _non_existing import _TimeStamp

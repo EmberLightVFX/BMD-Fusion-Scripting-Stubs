@@ -1,5 +1,3 @@
-from typing import Literal
-
 from Matrix3 import _Matrix3
 from Matrix4 import _Matrix4
 

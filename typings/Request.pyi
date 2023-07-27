@@ -1,5 +1,3 @@
-from typing import Literal
-
 from Parameter import _Parameter
 from TimeExtent import _TimeExtent
 from Input import _Input

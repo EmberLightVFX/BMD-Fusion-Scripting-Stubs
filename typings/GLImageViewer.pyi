@@ -1,4 +1,4 @@
-from typing import Any, overload, Literal
+from typing import Any, overload
 
 class _GLImageViewer:
 

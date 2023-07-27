@@ -1,5 +1,3 @@
-from typing import Literal
-
 from ViewShadeNode import _ViewShadeNode
 from TagList import _TagList
 from Input import _Input

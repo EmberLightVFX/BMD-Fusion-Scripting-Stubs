@@ -1,7 +1,5 @@
-from typing import Literal
-
+from Tool import _Tool
 from Image import _Image
-from _non_existing import _Tool
 
 
 class _Preview:
