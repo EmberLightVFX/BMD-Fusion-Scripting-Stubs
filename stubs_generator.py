@@ -85,6 +85,46 @@ def generateNonExistingClasses(non_existing_types: list[str]) -> str:
     return content
 
 
+def generateToolClass() -> str:
+    return """\
+from Operator import _Operator
+
+_Tool = _Operator
+
+"""
+
+
+def generateToolScripts() -> str:
+    return """\
+from Fusion import _Fusion
+from Composition import _Composition
+from Tool import _Tool
+
+fusion = _Fusion()
+fu = _Fusion()
+
+composition = _Composition()
+comp = _Composition()
+
+tool = _Tool()
+
+"""
+
+
+def generateBuiltins() -> str:
+    return """\
+from _tool_scripts import fusion, fu, composition, comp, tool
+
+__all__ = [
+    "fusion",
+    "fu",
+    "composition",
+    "comp",
+    "tool"
+]
+"""
+
+
 def typeConverter(type_string: str, is_optional=False, name: str = "") -> str:
     return_string = ""
 
@@ -137,13 +177,14 @@ def typeConverter(type_string: str, is_optional=False, name: str = "") -> str:
         global return_types
         if type_string != name and type_string not in return_types:
             return_types.append(type_string)
-            global json_files
-            global non_existing_types
-            global local_non_existing_types
-            if f"{type_string}.json" not in json_files:
-                local_non_existing_types.append(type_string)
-                if type_string not in non_existing_types:
-                    non_existing_types.append(type_string)
+            if type_string != "Tool":
+                global json_files
+                global non_existing_types
+                global local_non_existing_types
+                if f"{type_string}.json" not in json_files:
+                    local_non_existing_types.append(type_string)
+                    if type_string not in non_existing_types:
+                        non_existing_types.append(type_string)
 
     if is_optional:
         return_string += f" = {return_string}()"
@@ -435,6 +476,7 @@ if __name__ == "__main__":
         for file in json_stubs_folder.iterdir()
         if file.is_file() and file.suffix == ".json"
     ]
+    ## Process all json files ##
     for file_path in json_stubs_folder.iterdir():
         if file_path.is_file() and file_path.suffix == ".json":
             # Read the Markdown content from the file or fetch it from a URL.
@@ -482,15 +524,30 @@ if __name__ == "__main__":
             ) as f:
                 f.write(stubs_content)
 
+    ## Write non-existing objects to file ##
     with open(f'{typings_folder / "_non_existing.pyi"}', "w", encoding="utf-8") as f:
         f.write(generateNonExistingClasses(non_existing_types))
 
-    butilins_content = (
-        "".join(f"from {name} import {name}\n" for name in stub_names) + "\n__all__ = ["
-    )
-    for name in stub_names:
-        butilins_content += f'\n\t"{name}",'
-    butilins_content += "\n]"
+    ## Write tool class ##
+    with open(f'{typings_folder / "Tool.pyi"}', "w", encoding="utf-8") as f:
+        f.write(generateToolClass())
 
-    with open(f'{typings_folder / "__builtins__.pyi"}', "w", encoding="utf-8") as f:
-        f.write(butilins_content)
+    ## Write tool scripts ##
+    with open(f'{typings_folder / "_tool_scripts.pyi"}', "w", encoding="utf-8") as f:
+        f.write(generateToolScripts())
+
+    ## Generate __builtins__ files
+    if True:
+        with open(f'{typings_folder / "__builtins__.pyi"}', "w", encoding="utf-8") as f:
+            f.write(generateBuiltins())
+    else:  # For debugging
+        butilins_content = (
+            "".join(f"from {name} import {name}\n" for name in stub_names)
+            + "\n__all__ = ["
+        )
+        for name in stub_names:
+            butilins_content += f'\n\t"{name}",'
+        butilins_content += "\n]"
+
+        with open(f'{typings_folder / "__builtins__.pyi"}', "w", encoding="utf-8") as f:
+            f.write(butilins_content)
