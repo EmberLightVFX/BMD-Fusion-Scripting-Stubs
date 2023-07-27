@@ -180,10 +180,12 @@ def genStubs(o) -> tuple[str, list[str]]:
     global add_overload
     global add_any
     global local_non_existing_types
+    global add_literal
     add_overload = False
     add_any = False
     return_types = []
     local_non_existing_types = []
+    add_literal = False
 
     # Check if object is empty:
     if not o.get("properties") and not o.get("attributes") and not o.get("methods"):
