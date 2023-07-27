@@ -8,7 +8,7 @@ Add the typings folder to your language interpreters extra folder.
 In VSCode and Pylance add this string to your settings.json:
 ```json
 "python.analysis.extraPaths": [
-    "./typings"
+    "./fusion_typings"
 ],
 ```
-The script adds all the newly created classes to __builtins__.pyi so your python files will find these classes without the need to import anything in your python script (that would break the script when ran from Fusion as Fusion already have those classes in the global space)
+The script adds the tool-script objects to __builtins__.pyi so your python files will find these classes without the need to import anything in your python script (that would break the script when ran from Fusion as Fusion already have those classes in the global space)

@@ -468,7 +468,7 @@ if __name__ == "__main__":
     # Loop through all files inside the json_stubs folder
     root_folder = Path(__file__).parent
     json_stubs_folder = root_folder / "json_stubs"
-    typings_folder = root_folder / "typings"
+    typings_folder = root_folder / "fusion_typings"
 
     # Get a list of all filenames available
     json_files = [
