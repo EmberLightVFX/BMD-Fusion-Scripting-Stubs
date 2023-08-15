@@ -1,5 +1,3 @@
-from typing import Any
-
 from ImgRectI import ImgRectI_
 from IntPixel import IntPixel_
 from FltPixel import FltPixel_
@@ -28,7 +26,7 @@ class Image_:
 
 	Read Only
 	"""
-	DataWindow: dict[Any, Any]
+	DataWindow: list[int]
 	"""
 	Rectangle of valid data pixels, in a table
 

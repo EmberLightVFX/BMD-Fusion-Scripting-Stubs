@@ -172,17 +172,17 @@ class QueueManager_:
 		Loads a list of jobs to do
 		"""
 		...
-	def GetGroupList(self) -> dict[Any, Any]:
+	def GetGroupList(self) -> list[Any]:
 		"""
 		Get a list of all node groups
 		"""
 		...
-	def GetJobList(self) -> dict[Any, Any]:
+	def GetJobList(self) -> list[Any]:
 		"""
 		Get the list of jobs to render
 		"""
 		...
-	def GetRenderNodeList(self) -> dict[Any, Any]:
+	def GetRenderNodeList(self) -> list[Any]:
 		"""
 		Get the list of available RenderNodes
 		"""

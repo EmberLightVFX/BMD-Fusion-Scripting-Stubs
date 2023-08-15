@@ -239,7 +239,14 @@ class Fusion_:
 		...
 	def Paste(self) -> None:
 		...
-	def SetClipboard(self) -> tuple[bool, str | bool, dict[Any, Any]]:
+	@overload
+	def SetClipboard(self) -> tuple[bool, dict[Any, Any]]:
+		"""
+		Sets the clipboard to contain the tool(s) specifed by a table or as ASCII text.
+		"""
+		...
+	@overload
+	def SetClipboard(self) -> tuple[bool, str]:
 		"""
 		Sets the clipboard to contain the tool(s) specifed by a table or as ASCII text.
 		"""
@@ -441,7 +448,7 @@ class Fusion_:
 		...
 	def SetMasterApp(self) -> None:
 		...
-	def SetData(self, name: str, value: int | str | bool | dict[Any, Any]) -> None:
+	def SetData(self, name: str, value: int | str | bool | dict[Any, Any] | list[Any]) -> None:
 		"""
 		Set custom persistent data
 		"""
@@ -468,7 +475,7 @@ class Fusion_:
 		If no exitcode is specified, the Fusion process will return 0.
 		"""
 		...
-	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any]:
+	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any] | list[Any]:
 		"""
 		Get custom persistent data
 		"""

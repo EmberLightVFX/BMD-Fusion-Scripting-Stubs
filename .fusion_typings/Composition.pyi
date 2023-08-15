@@ -106,7 +106,7 @@ class Composition_:
 		Returns the path string relative to nearest applicable mapped path.
 		"""
 		...
-	def GetCompPathMap(self, built_ins: bool = bool(), defaults: bool = bool()) -> dict[Any, Any]:
+	def GetCompPathMap(self, built_ins: bool = bool(), defaults: bool = bool()) -> dict[str, str]:
 		"""
 		Returns a table of all Composition path maps
 
@@ -115,7 +115,7 @@ class Composition_:
 		Returns: Table of path strings, keyed by map name.
 		"""
 		...
-	def MapPathSegments(self, path: str) -> dict[Any, Any]:
+	def MapPathSegments(self, path: str) -> dict[str, str]:
 		"""
 		Expands all path mappings in a multipath
 
@@ -162,7 +162,7 @@ class Composition_:
 		Starts interactive playback
 		"""
 		...
-	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any]:
+	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any] | list[Any]:
 		"""
 		Get custom persistent data
 		"""
@@ -188,7 +188,7 @@ class Composition_:
 		Retrieves a table of previews
 		"""
 		...
-	def SetData(self, name: str, value: int | str | bool | dict[Any, Any]) -> None:
+	def SetData(self, name: str, value: int | str | bool | dict[Any, Any] | list[Any]) -> None:
 		"""
 		Set custom persistent data
 		"""
@@ -227,7 +227,7 @@ class Composition_:
 		"""
 		...
 	@overload
-	def Copy(self, toollist: dict[Any, Any]) -> bool:
+	def Copy(self, toollist: list[Tool_]) -> bool:
 		"""
 		Copy a list of tools to the Clipboard
 
@@ -246,7 +246,7 @@ class Composition_:
 		"""
 		...
 	@overload
-	def Render(self, settings: dict[Any, Any]) -> bool:
+	def Render(self, settings: dict[Any, Any] = dict[Any, Any]()) -> bool:
 		"""
 		Start a render
 		"""
@@ -292,7 +292,7 @@ class Composition_:
 		"""
 		...
 	@overload
-	def CopySettings(self, toollist: dict[Any, Any]) -> dict[Any, Any]:
+	def CopySettings(self, toollist: list[Tool_]) -> dict[Any, Any]:
 		"""
 		Copy a list of tools to a settings table
 
@@ -383,7 +383,7 @@ class Composition_:
 		...
 	def header_text(self) -> None:
 		...
-	def GetToolList(self, selected: bool = bool(), regid: str = str()) -> dict[Any, Any]:
+	def GetToolList(self, selected: bool = bool(), regid: str = str()) -> list[Tool_]:
 		"""
 		Returns a list of all tools, or selected tools, in the composition
 

@@ -128,7 +128,7 @@ class Operator_:
 			time	- keyframe to fetch (not required for non-animated inputs)
 		"""
 		...
-	def GetChildrenList(self, selected: bool = bool(), regid: str = str()) -> dict[Any, Any]:
+	def GetChildrenList(self, selected: bool = bool(), regid: str = str()) -> list[Tool_]:
 		"""
 		Returns a list of all children tools, or selected children tools
 
@@ -137,12 +137,12 @@ class Operator_:
 			 RegID		- pass a Registry ID string to get only tools of that type
 		"""
 		...
-	def GetOutputList(self, type: str = str()) -> dict[Any, Any]:
+	def GetOutputList(self, type: str = str()) -> dict[Any, Tool_]:
 		"""
 		Return a table of all outputs on this tool
 		"""
 		...
-	def GetInputList(self, type: str = str()) -> dict[Any, Any]:
+	def GetInputList(self, type: str = str()) -> dict[Any, Tool_]:
 		"""
 		Return a table of all inputs on this tool
 		"""
@@ -219,7 +219,7 @@ class Operator_:
 		...
 	def AddSubInputs(self, subid: str, tags: TagList_) -> SubInputs_:
 		...
-	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any]:
+	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any] | list[Any]:
 		"""
 		Get custom persistent data
 		"""
@@ -228,7 +228,7 @@ class Operator_:
 		...
 	def GetPrevKeyTime(self, t: TimeStamp_) -> TimeStamp_:
 		...
-	def SetData(self, name: str, value: int | str | bool | dict[Any, Any]) -> None:
+	def SetData(self, name: str, value: int | str | bool | dict[Any, Any] | list[Any]) -> None:
 		"""
 		Set custom persistent data
 		"""

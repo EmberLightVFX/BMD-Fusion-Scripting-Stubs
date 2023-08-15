@@ -80,7 +80,7 @@ class RenderJob_:
 				frames - a list in the form '1..10,15,20'
 		"""
 		...
-	def GetFailedSlaves(self) -> dict[Any, Any]:
+	def GetFailedSlaves(self) -> list[Any]:
 		"""
 		Lists all slaves that failed this job
 		"""

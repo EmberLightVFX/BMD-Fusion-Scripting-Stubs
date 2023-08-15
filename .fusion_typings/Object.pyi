@@ -41,7 +41,7 @@ class Object_:
 	#---Methods---#
 	def QueueAction(self) -> None:
 		...
-	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any]:
+	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any] | list[Any]:
 		"""
 		Get custom persistent data
 		"""
@@ -64,7 +64,7 @@ class Object_:
 		...
 	def Composition(self) -> None:
 		...
-	def SetData(self, name: str, value: int | str | bool | dict[Any, Any]) -> None:
+	def SetData(self, name: str, value: int | str | bool | dict[Any, Any] | list[Any]) -> None:
 		"""
 		Set custom persistent data
 		"""

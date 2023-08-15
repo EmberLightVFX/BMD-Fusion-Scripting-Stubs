@@ -30,7 +30,7 @@ class FlowView_:
 
 
 	#---Methods---#
-	def GetBookmarkList(self) -> dict[Any, Any]:
+	def GetBookmarkList(self) -> list[str]:
 		"""
 		Returns a list of all bookmarks
 		"""

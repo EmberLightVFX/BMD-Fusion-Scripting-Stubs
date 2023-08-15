@@ -1,5 +1,8 @@
 from typing import Any
 
+from FuView import FuView_
+
+
 class ChildFrame_:
 
 	#---Attributes---#
@@ -27,7 +30,7 @@ class ChildFrame_:
 	#---Methods---#
 	def SwitchLayout(self) -> None:
 		...
-	def GetControlViewList(self) -> dict[Any, Any]:
+	def GetControlViewList(self) -> list[FuView_]:
 		"""
 		Returns the list of views from the Controls tabs
 
@@ -57,7 +60,7 @@ class ChildFrame_:
 		...
 	def SetScreenLayout(self) -> None:
 		...
-	def GetMainViewList(self) -> dict[Any, Any]:
+	def GetMainViewList(self) -> list[FuView_]:
 		"""
 		Returns the list of views from the Main tabs
 

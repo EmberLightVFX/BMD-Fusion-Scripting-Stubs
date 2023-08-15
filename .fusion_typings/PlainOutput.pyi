@@ -76,7 +76,7 @@ class PlainOutput_:
 		Returns: boolean ok - true if user clicked OK/Pre-Render, false for Cancel
 		"""
 		...
-	def GetDoD(self, time: int = int(), flags: int = int(), proxy: int = int()) -> dict[Any, Any]:
+	def GetDoD(self, time: int = int(), flags: int = int(), proxy: int = int()) -> list[int] | None:
 		"""
 		Returns the Domain of Definition at the given time
 

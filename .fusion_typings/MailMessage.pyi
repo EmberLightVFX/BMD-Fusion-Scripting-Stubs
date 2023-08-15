@@ -36,7 +36,7 @@ class MailMessage_:
 		"""
 		...
 	@overload
-	def AddRecipients(self, addresses: dict[Any, Any]) -> None:
+	def AddRecipients(self, addresses: list[str]) -> None:
 		"""
 		Adds a recipient to the To: list
 

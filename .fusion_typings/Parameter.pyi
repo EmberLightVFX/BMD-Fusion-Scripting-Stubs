@@ -45,14 +45,14 @@ class Parameter_:
 
 
 	#---Methods---#
-	def SetData(self, name: str, value: int | str | bool | dict[Any, Any]) -> None:
+	def SetData(self, name: str, value: int | str | bool | dict[Any, Any] | list[Any]) -> None:
 		"""
 		Set custom persistent data
 		"""
 		...
 	def info_text(self) -> None:
 		...
-	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any]:
+	def GetData(self, name: str = str()) -> int | str | bool | dict[Any, Any] | list[Any]:
 		"""
 		Get custom persistent data
 		"""

@@ -141,7 +141,7 @@ class GLView_:
 		Enables or disables 3D stereo display
 		"""
 		...
-	def GetViewerList(self) -> dict[Any, Any]:
+	def GetViewerList(self) -> list[Any]:
 		"""
 		Returns a list of available viewers
 		"""
