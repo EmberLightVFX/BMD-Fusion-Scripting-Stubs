@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "name": "Run Lua script in BMD Fusion",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "C:\\Program Files\\Blackmagic Design\\Fusion 18\\fuscript.exe",
+            "runtimeArgs": [
+                "-l",
+                "Lua",
+                "-x",
+                "fusion = bmd.scriptapp(\\\"Fusion\\\", \\\"localhost\\\");if fusion ~= nil then fu = fusion;app = fu;composition = fu.CurrentComp;comp = composition;SetActiveComp(comp) else print(\\\"[Error] Please open up the Fusion GUI before running this tool.\\\") end;",
+                "${file}"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run Python3 script in BMD Fusion",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "C:\\Program Files\\Blackmagic Design\\Fusion 18\\fuscript.exe",
+            "runtimeArgs": [
+                "-l",
+                "Python3",
+                "-x",
+                "fusion = bmd.scriptapp(\\\"Fusion\\\", \\\"localhost\\\")\nif fusion is not None:\n    fu = fusion\n    app = fu\n    composition = fu.CurrentComp\n    comp = composition\nelse:\n    print(\\\"[Error] Please open up the Fusion GUI before running this tool.\\\")",
+                "${file}"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}

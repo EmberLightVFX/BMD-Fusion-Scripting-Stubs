@@ -1,7 +1,4 @@
 {
-    "python.autoComplete.extraPaths": [
-        "./.fusion_typings"
-    ],
     "python.analysis.extraPaths": [
         "./.fusion_typings"
     ],

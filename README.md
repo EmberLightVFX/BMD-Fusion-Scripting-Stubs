@@ -1,4 +1,4 @@
-# BMD Fusion scripting stubss
+# BMD Fusion scripting stubs
 
 A script to generate python stubs from Fusion.
 
