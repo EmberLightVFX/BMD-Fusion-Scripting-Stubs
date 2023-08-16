@@ -337,7 +337,7 @@ class Composition_:
 		Save the composition
 		"""
 		...
-	def SetActiveTool(self, tool: Tool_) -> None:
+	def SetActiveTool(self, tool: Tool_ = Tool_()) -> None:
 		"""
 		Set the currently active tool
 		"""
@@ -383,7 +383,7 @@ class Composition_:
 		...
 	def header_text(self) -> None:
 		...
-	def GetToolList(self, selected: bool = bool(), regid: str = str()) -> list[Tool_]:
+	def GetToolList(self, selected: bool = bool(), regid: str = str()) -> dict[int, Tool_]:
 		"""
 		Returns a list of all tools, or selected tools, in the composition
 

@@ -33,7 +33,7 @@ method_return_types_to_fix = [
             },
             {
                 "obj_name": "GetToolList",
-                "return_type": "list[Tool_]",
+                "return_type": "dict[int, Tool_]",
                 "extra_import": "Tool",
             },
         ],
@@ -163,6 +163,17 @@ method_inputs_to_fix = [
                         "input_name": "settings",
                         "old_input_type": "dict[Any, Any]",
                         "input_type": "dict[Any, Any] = dict[Any, Any]()",
+                        "extra_import": None,
+                    }
+                ],
+            },
+            {
+                "obj_name": "SetActiveTool",
+                "inputs": [
+                    {
+                        "input_name": "tool",
+                        "old_input_type": "Tool_",
+                        "input_type": "Tool_ = Tool_()",
                         "extra_import": None,
                     }
                 ],
