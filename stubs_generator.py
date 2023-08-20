@@ -24,7 +24,11 @@ import json
 from pathlib import Path
 import re
 
-from manual_fixes import fixMethodReturnTypes, fixMethodInputTypes, fixPropertyReturnTypes
+from manual_fixes import (
+    fixMethodReturnTypes,
+    fixMethodInputTypes,
+    fixPropertyReturnTypes,
+)
 
 
 return_types: list[str] = []
@@ -56,9 +60,10 @@ def replaceDotsFromName(string: str) -> str:
 def replaceWithUnderscore(string: str):
     return string.replace("-", "_").replace(" ", "_")
 
+
 def checkToAddList(string: str) -> str:
     if string == "int | str | bool | dict[Any, Any]":
-        return  "int | str | bool | dict[Any, Any] | list[Any]"
+        return "int | str | bool | dict[Any, Any] | list[Any]"
     return string
 
 
@@ -120,7 +125,16 @@ tool = Tool_()
 
 
 def generateBuiltins() -> str:
-    return """\
+    return '''\
+"""
+v1.1
+Generated with FMD Fusion Scriptsing Stubs
+https://github.com/EmberLightVFX/BMD-Fusion-Scripting-Stubs
+
+Generated with Fusion Studio 18.5 build 73
+
+"""
+
 from _tool_scripts import fusion, fu, composition, comp, tool
 
 __all__ = [
@@ -130,7 +144,7 @@ __all__ = [
     "comp",
     "tool"
 ]
-"""
+'''
 
 
 def typeConverter(type_string: str, is_optional=False, name: str = "") -> str:
@@ -199,8 +213,12 @@ def typeConverter(type_string: str, is_optional=False, name: str = "") -> str:
     return return_string
 
 
-def checkInputType(class_name: str, obj_name: str, input_name: str, old_input_type: str) -> str:
-    input_type, extra_import = fixMethodInputTypes(class_name, obj_name, input_name, old_input_type)
+def checkInputType(
+    class_name: str, obj_name: str, input_name: str, old_input_type: str
+) -> str:
+    input_type, extra_import = fixMethodInputTypes(
+        class_name, obj_name, input_name, old_input_type
+    )
     if input_type:
         global return_types
         if extra_import and extra_import not in return_types:
@@ -266,7 +284,7 @@ def genProperties(o):
                     return_types.append(extra_import)
                 if "Any" in return_type:
                     add_any = True
-                content += f': {return_type}'
+                content += f": {return_type}"
             else:
                 content += f': {typeConverter(key["return_type"], name=o["name"])}'
         else:
@@ -402,7 +420,9 @@ def genMethodInputTypes(o, obj_name, splits) -> str:
                 if match[0] == "[":
                     is_optional = True
                     match = removeBrackets(match)
-                content += genInputType(match, obj_name, is_optional, class_name=o["name"])
+                content += genInputType(
+                    match, obj_name, is_optional, class_name=o["name"]
+                )
     return content
 
 
