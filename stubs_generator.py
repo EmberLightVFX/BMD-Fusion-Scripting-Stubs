@@ -26,7 +26,7 @@ import re
 
 from manual_fixes import (
     fixMethodReturnTypes,
-    fixMethodInputTypes,
+    fixInputTypes,
     fixPropertyReturnTypes,
 )
 
@@ -61,7 +61,7 @@ def replaceWithUnderscore(string: str):
     return string.replace("-", "_").replace(" ", "_")
 
 
-def checkToAddList(string: str) -> str:
+def checkIfToAddList(string: str) -> str:
     if string == "int | str | bool | dict[Any, Any]":
         return "int | str | bool | dict[Any, Any] | list[Any]"
     return string
@@ -147,8 +147,11 @@ __all__ = [
 '''
 
 
-def typeConverter(type_string: str, is_optional=False, name: str = "") -> str:
+def typeConverter(
+    type_string: str, is_optional=False, name: str = ""
+) -> tuple[str, str]:
     return_string = ""
+    custom_return = ""
 
     if type_string == "boolean":
         return_string = "bool"
@@ -198,45 +201,84 @@ def typeConverter(type_string: str, is_optional=False, name: str = "") -> str:
         return_string = f"{type_string}_"
         global return_types
         if type_string != name and type_string not in return_types:
-            return_types.append(type_string)
-            if type_string != "Tool":
-                global json_files
-                global non_existing_types
-                global local_non_existing_types
-                if f"{type_string}.json" not in json_files:
-                    local_non_existing_types.append(type_string)
-                    if type_string not in non_existing_types:
-                        non_existing_types.append(type_string)
+            custom_return = type_string
 
     if is_optional:
         return_string += f" = {return_string}()"
-    return return_string
+    return return_string, custom_return
 
 
-def checkInputType(
-    class_name: str, obj_name: str, input_name: str, old_input_type: str
-) -> str:
-    input_type, extra_import = fixMethodInputTypes(
-        class_name, obj_name, input_name, old_input_type
-    )
-    if input_type:
+def addExtraImports(extra_imports) -> None:
+    if not isinstance(extra_imports, list):
+        extra_imports = [extra_imports]
+    # Remove the trailing "_" that gets added by typeConverter()
+    for extra_import in extra_imports:
+        extra_import = extra_import.replace("_", "")
+        global json_files
+        global non_existing_types
+        global local_non_existing_types
         global return_types
+        if extra_import != "Tool" and f"{extra_import}.json" not in json_files:
+            if extra_import not in local_non_existing_types:
+                local_non_existing_types.append(extra_import)
+            if extra_import not in non_existing_types:
+                non_existing_types.append(extra_import)
+
         if extra_import and extra_import not in return_types:
             return_types.append(extra_import)
-        if "Any" in input_type:
+        if "Any" in extra_import:
             global add_any
             add_any = True
+
+
+def addReturnType(return_type: str, extra_import: str):
+    global return_types
+    global add_any
+    if extra_import and extra_import not in return_types:
+        return_types.append(extra_import)
+    if "Any" in return_type:
+        add_any = True
+
+
+def checkPropertyReturnType(item, class_name: str, obj_name: str) -> str:
+    content = ""
+    return_type, extra_import = fixPropertyReturnTypes(class_name, obj_name)
+    if return_type:
+        addReturnType(return_type, extra_import)
+        content += f": {return_type}"
     else:
-        input_type = ""
-    return input_type
+        returned_types, extra_imports = typeConverter(
+            item["return_type"], name=class_name
+        )
+        content += f": {returned_types}"
+        if extra_imports:
+            addExtraImports(returned_types)
+    return content
 
 
-def genTypeList(types: list[str] | str, is_optional=False, name=""):
+def checkMethodReturnType(class_name: str, obj_name: str, old_return_type: str) -> str:
+    return_type, extra_import = fixMethodReturnTypes(
+        class_name, obj_name, old_return_type
+    )
+    if return_type:
+        addReturnType(return_type, extra_import)
+    else:
+        return_type = ""
+    return return_type
+
+
+def genTypeList(types: list[str] | str, is_optional=False, name="") -> tuple[str, str]:
+    extra_imports = ""
     if isinstance(types, str):
         types = types.split("|")
     for i in range(len(types)):
-        types[i] = typeConverter(types[i], is_optional, name)
-    return " | ".join(types) if len(types) > 1 else "".join(types)
+        return_types, extra_imports = typeConverter(types[i], is_optional, name)
+        types[i] = return_types
+
+    if len(types) > 1:
+        return " | ".join(types), extra_imports
+    else:
+        return "".join(types), extra_imports
 
 
 def genInputType(txt: str, obj_name: str, is_optional=False, class_name=""):
@@ -247,6 +289,7 @@ def genInputType(txt: str, obj_name: str, is_optional=False, class_name=""):
 
     input_name = fixMultiInputNames(fixIllegalNames(replaceWithUnderscore(txt_list[1])))
     input_type = ""
+    extra_imports = ""
     if "§" in input_name:
         global add_literal
         add_literal = True
@@ -255,11 +298,18 @@ def genInputType(txt: str, obj_name: str, is_optional=False, class_name=""):
         input_name = literals[0]
         input_type = f"Literal[{rest_literals}]"
     else:
-        input_type = genTypeList(txt_list[0], is_optional, class_name)
+        input_type, extra_imports = genTypeList(txt_list[0], is_optional, class_name)
 
-    if new_input_type := checkInputType(class_name, obj_name, input_name, input_type):
+    new_input_type, new_extra_imports = fixInputTypes(
+        class_name, obj_name, input_name, input_type
+    )
+    if new_input_type:
         input_type = new_input_type
-    return f"{input_name}: {checkToAddList(input_type)}"
+    if new_extra_imports:
+        addExtraImports(new_extra_imports)
+    elif extra_imports:
+        addExtraImports(extra_imports)
+    return f"{input_name}: {checkIfToAddList(input_type)}"
 
 
 def genProperties(o):
@@ -277,16 +327,7 @@ def genProperties(o):
             continue
 
         if key.get("return_type"):
-            return_type, extra_import = fixPropertyReturnTypes(o["name"], name)
-            if return_type:
-                global return_types
-                if extra_import and extra_import not in return_types:
-                    return_types.append(extra_import)
-                if "Any" in return_type:
-                    add_any = True
-                content += f": {return_type}"
-            else:
-                content += f': {typeConverter(key["return_type"], name=o["name"])}'
+            content += checkPropertyReturnType(key, o["name"], name)
         else:
             content += ": Any"
             add_any = True
@@ -327,7 +368,10 @@ def genAttributes(o):
         content += f"\t{name}"
 
         if key.get("value"):
-            content += f': {typeConverter(key["value"], name=o["name"])}\n'
+            return_types, extra_imports = typeConverter(key["value"], name=o["name"])
+            content += f": {return_types}\n"
+            if extra_imports:
+                addExtraImports(return_types)
 
         content += "\n"
     return content
@@ -427,17 +471,9 @@ def genMethodInputTypes(o, obj_name, splits) -> str:
 
 
 def genMethodReturns(o, obj_name, splits) -> str:
-    content = ""
-
-    return_type, extra_import = fixMethodReturnTypes(o["name"], obj_name)
-    if return_type:
-        global return_types
-        if extra_import and extra_import not in return_types:
-            return_types.append(extra_import)
-        if "Any" in return_type:
-            global add_any
-            add_any = True
-        return checkToAddList(return_type)
+    extra_imports = ""
+    return_content = ""
+    return_imports = []
 
     # Define the regular expression pattern
     return_type_pattern = r"\|(?![^(]*\))"
@@ -445,11 +481,11 @@ def genMethodReturns(o, obj_name, splits) -> str:
     return_type_result = re.split(return_type_pattern, splits[0])
     for r_i, r_splits in enumerate(return_type_result):
         if r_i > 0:
-            content += " | "
+            return_content += " | "
         usage_types = removeParents(r_splits)
         usage_splits = usage_types.split(", ")
         if usage_splits[0] == "":
-            content += "None"
+            return_content += "None"
         else:
             # Catch errors in the fusion docs:
             # If the return type is an empty whitespace
@@ -463,28 +499,36 @@ def genMethodReturns(o, obj_name, splits) -> str:
             if len(construct_split) > 1 and removeParents(
                 construct_split[0]
             ) == removeParents(construct_split[1]):
-                content += f"{removeParents(construct_split[0])}_"
+                return_content += f"{removeParents(construct_split[0])}_"
 
             else:  # Normal return type
                 if len(usage_splits) > 1:
-                    content += "tuple["
+                    return_content += "tuple["
                 for i, splits in enumerate(usage_splits):
                     if i > 0:
-                        content += ", "
+                        return_content += ", "
                     multi_splits = splits.split("|")
-                    content += genTypeList(multi_splits, name=o["name"])
+                    returned_types, extra_imports = genTypeList(
+                        multi_splits, name=o["name"]
+                    )
+                    if extra_imports:
+                        return_imports.append(extra_imports)
+                    return_content += returned_types
                 if len(usage_splits) > 1:
-                    content += "]"
-    return checkToAddList(content)
+                    return_content += "]"
+    if new_return_type := checkMethodReturnType(o["name"], obj_name, return_content):
+        return_content = new_return_type
+    if return_imports:
+        addExtraImports(return_imports)
+    return checkIfToAddList(return_content)
 
 
-def genMethods(o) -> tuple[str, list[str]]:
+def genMethods(o) -> str:
     global add_overload
 
     # Remove duplicates in the method
     o = removeDuplicateMethods(o)
 
-    return_types: list[str] = []
     content = "\n\t#---Methods---#\n"
     for name, key in o["methods"].items():
         # Check if the item is something to process (only process dicts)
@@ -519,10 +563,10 @@ def genMethods(o) -> tuple[str, list[str]]:
                 content += short_help
         else:
             content += f"\tdef {name}(self) -> None:\n{short_help}"
-    return content, return_types
+    return content
 
 
-def genStubs(o) -> tuple[str, list[str]]:
+def genStubs(o) -> str:
     print("Name: ", o["name"])
     global content
     global return_types
@@ -541,7 +585,7 @@ def genStubs(o) -> tuple[str, list[str]]:
     # Check if object is empty:
     if not o.get("properties") and not o.get("attributes") and not o.get("methods"):
         content += "\t...\n"
-        return content, return_types
+        return content
 
     ## PROPERTIES ##
     if o.get("properties") and len(o["properties"]) > 0:
@@ -553,11 +597,10 @@ def genStubs(o) -> tuple[str, list[str]]:
 
     ## METHODS ##
     if o.get("methods") and len(o["methods"]) > 0:
-        new_content, extra_returns = genMethods(o)
+        new_content = genMethods(o)
         content += new_content
-        return_types.extend(extra_returns)
 
-    return content, return_types
+    return content
 
 
 if __name__ == "__main__":
@@ -583,7 +626,7 @@ if __name__ == "__main__":
             with open(file_path, "r", encoding="utf-8") as f:
                 object_data = json.load(f)
 
-            stubs_content, imports_to_add = genStubs(object_data)
+            stubs_content = genStubs(object_data)
 
             imports_list = []
             if add_any:
@@ -599,17 +642,18 @@ if __name__ == "__main__":
                 else ""
             )
 
-            if len(imports_to_add) > 0:
-                for imp in imports_to_add:
+            if len(return_types) > 0:
+                for imp in return_types:
                     if imp not in local_non_existing_types:
                         imports += f"from {imp} import {imp}_\n"
-                if len(local_non_existing_types) > 0:
-                    imports += "from _non_existing import "
-                    for i, imp in enumerate(local_non_existing_types):
-                        if i > 0:
-                            imports += ", "
-                        imports += f"{imp}_"
-                    imports += "\n"
+            if len(local_non_existing_types) > 0:
+                imports += "from _non_existing import "
+                for i, imp in enumerate(local_non_existing_types):
+                    if i > 0:
+                        imports += ", "
+                    imports += f"{imp}_"
+                imports += "\n"
+            if len(return_types) > 0 or len(local_non_existing_types) > 0:
                 imports += "\n\n"
 
             stubs_content = imports + stubs_content
@@ -636,17 +680,5 @@ if __name__ == "__main__":
         f.write(generateToolScripts())
 
     ## Generate __builtins__ files
-    if True:
-        with open(f'{typings_folder / "__builtins__.pyi"}', "w", encoding="utf-8") as f:
-            f.write(generateBuiltins())
-    else:  # For debugging
-        butilins_content = (
-            "".join(f"from {name} import {name}\n" for name in stub_names)
-            + "\n__all__ = ["
-        )
-        for name in stub_names:
-            butilins_content += f'\n\t"{name}",'
-        butilins_content += "\n]"
-
-        with open(f'{typings_folder / "__builtins__.pyi"}', "w", encoding="utf-8") as f:
-            f.write(butilins_content)
+    with open(f'{typings_folder / "__builtins__.pyi"}', "w", encoding="utf-8") as f:
+        f.write(generateBuiltins())
