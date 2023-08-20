@@ -1,6 +1,6 @@
 from typing import Any
 
-from _non_existing import object_
+from Tool import Tool_
 
 
 class FlowView_:
@@ -70,14 +70,14 @@ class FlowView_:
 		Returns the current scale of the contents
 		"""
 		...
-	def SetPos(self, tool: object_, x: int, y: int) -> None:
+	def SetPos(self, tool: Tool_, x: int, y: int) -> None:
 		"""
 		Moves a tool to a new position
 		"""
 		...
 	def header_text(self) -> None:
 		...
-	def GetPosTable(self, tool: object_) -> dict[Any, Any]:
+	def GetPosTable(self, tool: Tool_) -> dict[Any, Any]:
 		"""
 		Returns the position of a tool as a table
 
@@ -86,12 +86,12 @@ class FlowView_:
 					 number y = table[2]
 		"""
 		...
-	def GetPos(self, Tool: object_) -> tuple[int, int]:
+	def GetPos(self, Tool: Tool_) -> tuple[int, int]:
 		"""
 		Returns the position of a tool
 		"""
 		...
-	def Select(self, tool: object_, select: bool = bool()) -> None:
+	def Select(self, tool: Tool_, select: bool = bool()) -> None:
 		"""
 		Selects or deselects a tool
 		"""
@@ -103,7 +103,7 @@ class FlowView_:
 		Change the scale of the contents
 		"""
 		...
-	def QueueSetPos(self, tool: object_, x: int, y: int) -> None:
+	def QueueSetPos(self, tool: Tool_, x: int, y: int) -> None:
 		"""
 		Queues the moving of a tool to a new position
 		"""
