@@ -24,3 +24,17 @@ In VSCode and Pylance add this string to your settings.json:
 ```
 
 The script adds the tool-script objects to __builtins__.pyi so your python files will find these classes without the need to import anything in your python script (that would break the script when ran from Fusion as Fusion already have those classes in the global space)
+
+## Note
+
+The class names of objects is the object name with a trailing `_`.
+So if you have a function that you want to add types to, enter the object name + `_`:
+
+```python
+def getCurrentCompAndClearLogs(fusObj: Fusion_) -> Composition_:
+    fusObj.ClearFileLog()
+    return fusObj.GetCurrentComp()
+
+
+cur_comp = getCurrentCompAndClearLogs(fusion)
+```

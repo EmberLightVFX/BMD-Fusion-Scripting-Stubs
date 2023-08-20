@@ -135,7 +135,14 @@ Generated with Fusion Studio 18.5 build 73
 
 """
 
-from _tool_scripts import fusion, fu, composition, comp, tool
+# Fusion objects
+from _tool_scripts import (
+    fusion,
+    fu,
+    composition,
+    comp,
+    tool,
+)
 
 __all__ = [
     "fusion",
@@ -144,6 +151,8 @@ __all__ = [
     "comp",
     "tool"
 ]
+
+# Stubs objects
 '''
 
 
@@ -682,3 +691,13 @@ if __name__ == "__main__":
     ## Generate __builtins__ files
     with open(f'{typings_folder / "__builtins__.pyi"}', "w", encoding="utf-8") as f:
         f.write(generateBuiltins())
+
+        # Generate Stubs objects list
+        for file in json_files:
+            object_name = file.replace(".json", "")
+            f.write(f"from {object_name} import {object_name}_\n")
+        f.write("\n__all__.extend([\n")
+        for file in json_files:
+            object_name = file.replace(".json", "")
+            f.write(f'\t"{object_name}_",\n')
+        f.write("])")
