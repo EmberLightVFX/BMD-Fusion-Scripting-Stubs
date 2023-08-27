@@ -1,29 +1,3 @@
-def generateToolClass() -> str:
-    return """\
-from Operator import Operator_
-
-Tool_ = Operator_
-
-"""
-
-
-def generateToolScripts() -> str:
-    return """\
-from Fusion import Fusion_
-from Composition import Composition_
-from Tool import Tool_
-
-fusion = Fusion_()
-fu = Fusion_()
-
-composition = Composition_()
-comp = Composition_()
-
-tool = Tool_()
-
-"""
-
-
 def generateBuiltins() -> str:
     return '''\
 """
@@ -54,3 +28,29 @@ __all__ = [
 
 # Stubs objects
 '''
+
+
+def generateToolClass() -> str:
+    return """\
+from Operator import Operator_
+
+Tool_ = Operator_
+
+"""
+
+
+def generateToolScripts() -> str:
+    return """\
+from Fusion import Fusion_
+from Composition import Composition_
+from Tool import Tool_
+
+fusion = Fusion_()
+fu = Fusion_()
+
+composition = Composition_()
+comp = Composition_()
+
+tool = Tool_()
+
+"""

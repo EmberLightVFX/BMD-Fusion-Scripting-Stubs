@@ -35,6 +35,7 @@ from manual_fixes.generate_default_files import (
     generateBuiltins,
 )
 from manual_fixes.additional_properties import additional_properties_list
+from manual_fixes.additional_methods import additional_methods_list
 
 
 return_types: list[str] = []
@@ -154,6 +155,8 @@ def typeConverter(
         return_string = "dict[Any, Any]"
     elif type_string == "nil":
         return_string = "None"
+    elif "dict[" in type_string:
+        return_string = type_string
     else:
         return_string = f"{type_string}_"
         global return_types
@@ -303,7 +306,7 @@ def genProperties(o):
                 lines = key["description"].split("\n")
                 # Add two tabs (8 spaces) to each line except the first one
                 indented_lines = [
-                    "\t\t" + line if line.strip() else line for line in lines
+                    line if line.strip() else line for line in lines
                 ]
                 # Convert any two spaces to four spaces
                 converted_lines = [line.replace("  ", "\t") for line in indented_lines]
@@ -486,6 +489,10 @@ def genMethodReturns(o, obj_name, splits) -> str:
 
 def genMethods(o) -> str:
     global add_overload
+    if additional_methods_list.get(o["name"]):
+        o["methods"] = {key:o["methods"][key] for key in sorted(o["methods"].keys())}
+        o["methods"] = o["methods"] | additional_methods_list[o["name"]]
+        o["methods"] = {key:o["methods"][key] for key in sorted(o["methods"].keys())}
 
     # Remove duplicates in the method
     o = removeDuplicateMethods(o)

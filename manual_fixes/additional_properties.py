@@ -5,5 +5,13 @@ additional_properties_list = {
             "return_type": "int",
             "access_class": "Read Only",
         }
+    },
+    "Operator": {
+        "Comments": {
+            "short_help": "Access the nodes comments field.",
+            "description": "Access using Comments[frame/TIME_UNDEFINED]",
+            "return_type": "dict[int, str]",
+            "access_class": "Read/Write",
+        }
     }
 }
