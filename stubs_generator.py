@@ -34,6 +34,7 @@ from manual_fixes.generate_default_files import (
     generateToolScripts,
     generateBuiltins,
 )
+from manual_fixes.additional_properties import additional_properties_list
 
 
 return_types: list[str] = []
@@ -270,6 +271,10 @@ def genInputType(txt: str, obj_name: str, is_optional=False, class_name=""):
 
 def genProperties(o):
     global add_any
+
+    if additional_properties_list.get(o["name"]):
+        o["properties"].extend(additional_properties_list[o["name"]])
+
     content = "\n\t#---Properties---#\n"
     for name, key in o["properties"].items():
         if isinstance(key, str):
