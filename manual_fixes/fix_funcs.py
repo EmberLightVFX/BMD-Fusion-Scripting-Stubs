@@ -1,7 +1,6 @@
-from method_inputs import method_inputs_to_fix
-from method_return import method_return_types_to_fix
-from property_return import property_return_types_to_fix
-from additional_properties import additional_properties_list
+from .method_inputs import method_inputs_to_fix
+from .method_return import method_return_types_to_fix
+from .property_return import property_return_types_to_fix
 
 
 def fixInputTypes(

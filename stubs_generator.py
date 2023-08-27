@@ -21,8 +21,8 @@ TODO:
 """
 
 import json
-from pathlib import Path
 import re
+from pathlib import Path
 
 from manual_fixes import (
     fixMethodReturnTypes,
@@ -188,7 +188,7 @@ def addExtraImports(extra_imports) -> None:
             add_any = True
 
 
-def addReturnType(return_type: str, extra_import: str):
+def addReturnType(return_type: str, extra_import: str | None):
     global return_types
     global add_any
     if extra_import and extra_import not in return_types:
@@ -271,9 +271,9 @@ def genInputType(txt: str, obj_name: str, is_optional=False, class_name=""):
 
 def genProperties(o):
     global add_any
-
     if additional_properties_list.get(o["name"]):
-        o["properties"].extend(additional_properties_list[o["name"]])
+        o["properties"] = o["properties"] | additional_properties_list[o["name"]]
+        o["properties"] = {key:o["properties"][key] for key in sorted(o["properties"].keys())}
 
     content = "\n\t#---Properties---#\n"
     for name, key in o["properties"].items():

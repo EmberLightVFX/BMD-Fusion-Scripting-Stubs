@@ -43,7 +43,7 @@ method_inputs_to_fix: dict[str, dict[str, dict[str, str | None]]] = {
             "extra_import": "Tool",
         },
         "GetPos": {
-            "input_name": "tool",
+            "input_name": "Tool",
             "old_input_type": "object_",
             "input_type": "Tool_",
             "extra_import": "Tool",

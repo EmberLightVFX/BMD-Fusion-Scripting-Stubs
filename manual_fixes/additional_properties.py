@@ -1,5 +1,5 @@
 additional_properties_list = {
-    "compositing": {
+    "Composition": {
         "TIME_UNDEFINED": {
             "short_help": None,
             "return_type": "int",
