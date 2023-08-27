@@ -10,7 +10,7 @@ class FuFrame_:
 	"""
 	Represents the currently active view for this frame window
 
-			The CurrentView variable represents the currently active view for this frame window.
+	The CurrentView variable represents the currently active view for this frame window.
 
 	Read Only
 	"""
@@ -48,7 +48,7 @@ class FuFrame_:
 	"""
 	Represents this frame window's console
 
-			The ConsoleView variable represents the FuView object used to displayany scripting message, and to allow script commands to be entered.
+	The ConsoleView variable represents the FuView object used to displayany scripting message, and to allow script commands to be entered.
 
 	Read Only
 	"""
@@ -56,7 +56,7 @@ class FuFrame_:
 	"""
 	Represents this frame window's Flow view
 
-			The FlowView variable represents the FuView object used to displaythe various tool connections for the frame's Composition.
+	The FlowView variable represents the FuView object used to displaythe various tool connections for the frame's Composition.
 
 	Read Only
 	"""
@@ -64,7 +64,7 @@ class FuFrame_:
 	"""
 	Represents this frame window's right display view
 
-			The RightView variable represents the right-hand GLView object used todisplay images, 3D scenes and other parameters output by a tool.
+	The RightView variable represents the right-hand GLView object used todisplay images, 3D scenes and other parameters output by a tool.
 
 	Read Only
 	"""
@@ -72,7 +72,7 @@ class FuFrame_:
 	"""
 	Represents this frame window's left display view
 
-			The LeftView variable represents the left-hand GLView object used todisplay images, 3D scenes and other parameters output by a tool.
+	The LeftView variable represents the left-hand GLView object used todisplay images, 3D scenes and other parameters output by a tool.
 
 	Read Only
 	"""
@@ -86,7 +86,7 @@ class FuFrame_:
 	"""
 	Represents this frame window's Composition
 
-			The Composition variable represents the Composition object that thisframe window is displaying.
+	The Composition variable represents the Composition object that thisframe window is displaying.
 
 	Read Only
 	"""
@@ -94,7 +94,7 @@ class FuFrame_:
 	"""
 	Represents this frame window's Info view
 
-			The InfoView variable represents the FuView object used to displayany general notes for the frame's Composition.
+	The InfoView variable represents the FuView object used to displayany general notes for the frame's Composition.
 
 	Read Only
 	"""

@@ -8,7 +8,7 @@ class FloatLUTMacroFrame_:
 	"""
 	Represents this frame window's Composition
 
-			The Composition variable represents the Composition object that thisframe window is displaying.
+	The Composition variable represents the Composition object that thisframe window is displaying.
 
 	Read Only
 	"""

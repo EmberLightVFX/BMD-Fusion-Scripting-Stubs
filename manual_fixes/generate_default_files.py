@@ -1,7 +1,7 @@
 def generateBuiltins() -> str:
     return '''\
 """
-v1.1
+v1.2
 Generated with FMD Fusion Scriptsing Stubs
 https://github.com/EmberLightVFX/BMD-Fusion-Scripting-Stubs
 

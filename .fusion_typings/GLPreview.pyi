@@ -8,7 +8,7 @@ class GLPreview_:
 	"""
 	Represents the display GLView for this Preview
 
-			Use the GLView object this gives you to control the display view.
+	Use the GLView object this gives you to control the display view.
 
 	Read Only
 	"""

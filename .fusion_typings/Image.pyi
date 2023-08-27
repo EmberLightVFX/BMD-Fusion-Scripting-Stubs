@@ -30,8 +30,8 @@ class Image_:
 	"""
 	Rectangle of valid data pixels, in a table
 
-			Data rectangle coordinates are stored as four entries in a table, in the format
-			{ <left>, <bottom>, <right>, <top> }
+	Data rectangle coordinates are stored as four entries in a table, in the format
+	{ <left>, <bottom>, <right>, <top> }
 
 	Read Only
 	"""
@@ -39,16 +39,16 @@ class Image_:
 	"""
 	Image depth indicator (not in bits)
 
-			Depth will be one of the following values:
+	Depth will be one of the following values:
 
-			1 - alpha only	8 bit integer
-			2 - alpha only 16 bit integer
-			3 - alpha only 16 bit float
-			4 - alpha only 32 bit float
-			5 - RGBA				8 bit integer
-			6 - RGBA			 16 bit integer
-			7 - RGBA			 16 bit float
-			8 - RGBA			 32 bit float
+	1 - alpha only	8 bit integer
+	2 - alpha only 16 bit integer
+	3 - alpha only 16 bit float
+	4 - alpha only 32 bit float
+	5 - RGBA				8 bit integer
+	6 - RGBA			 16 bit integer
+	7 - RGBA			 16 bit float
+	8 - RGBA			 32 bit float
 
 	Read Only
 	"""
@@ -56,11 +56,11 @@ class Image_:
 	"""
 	Field indicator
 
-			Field will be one of the following values:
+	Field will be one of the following values:
 
-			-1 - Full Frames, no fields
-			 0 - Odd (NTSC) field
-			 1 - Even (PAL/HD) field
+	-1 - Full Frames, no fields
+	 0 - Odd (NTSC) field
+	 1 - Even (PAL/HD) field
 
 	Read Only
 	"""
@@ -122,7 +122,7 @@ class Image_:
 	"""
 	Image proxy scale multiplier
 
-			ProxyScale may be any positive integer, where 1 indicates no proxy.
+	ProxyScale may be any positive integer, where 1 indicates no proxy.
 
 	Read Only
 	"""
