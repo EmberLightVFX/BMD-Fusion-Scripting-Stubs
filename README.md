@@ -6,6 +6,8 @@ A script to generate python stubs from Fusion.
 
 ## Info
 
+All stubs are generated for Python 3.10+
+
 If you wish to use this in VSCode I recommend installing my VSCode extension [BMD Fusion scripting](https://marketplace.visualstudio.com/items?itemName=EmberLightVFX.bmd-fusion-scripting)
 
 ## Usage
