@@ -276,7 +276,9 @@ def genProperties(o):
     global add_any
     if additional_properties_list.get(o["name"]):
         o["properties"] = o["properties"] | additional_properties_list[o["name"]]
-        o["properties"] = {key:o["properties"][key] for key in sorted(o["properties"].keys())}
+        o["properties"] = {
+            key: o["properties"][key] for key in sorted(o["properties"].keys())
+        }
 
     content = "\n\t#---Properties---#\n"
     for name, key in o["properties"].items():
@@ -305,9 +307,7 @@ def genProperties(o):
                 # Split the string into lines
                 lines = key["description"].split("\n")
                 # Add two tabs (8 spaces) to each line except the first one
-                indented_lines = [
-                    line if line.strip() else line for line in lines
-                ]
+                indented_lines = [line if line.strip() else line for line in lines]
                 # Convert any two spaces to four spaces
                 converted_lines = [line.replace("  ", "\t") for line in indented_lines]
                 # Join the lines back together
@@ -490,9 +490,9 @@ def genMethodReturns(o, obj_name, splits) -> str:
 def genMethods(o) -> str:
     global add_overload
     if additional_methods_list.get(o["name"]):
-        o["methods"] = {key:o["methods"][key] for key in sorted(o["methods"].keys())}
+        o["methods"] = {key: o["methods"][key] for key in sorted(o["methods"].keys())}
         o["methods"] = o["methods"] | additional_methods_list[o["name"]]
-        o["methods"] = {key:o["methods"][key] for key in sorted(o["methods"].keys())}
+        o["methods"] = {key: o["methods"][key] for key in sorted(o["methods"].keys())}
 
     # Remove duplicates in the method
     o = removeDuplicateMethods(o)
@@ -651,6 +651,8 @@ if __name__ == "__main__":
     with open(f'{typings_folder / "__builtins__.pyi"}', "w", encoding="utf-8") as f:
         f.write(generateBuiltins())
 
+        # Add "Tool" to the list as it doesn't exist as .json file
+        json_files.append("Tool")
         # Generate Stubs objects list
         for file in json_files:
             object_name = file.replace(".json", "")

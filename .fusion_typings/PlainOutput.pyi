@@ -1,5 +1,6 @@
 from typing import Any
 
+from Tool import Tool_
 from Parameter import Parameter_
 
 
@@ -28,6 +29,49 @@ class PlainOutput_:
 
 
 	#---Methods---#
+	def ClearDiskCache(self, start: int, end: int) -> bool:
+		"""
+		Clears frames from the disk cache
+
+		Start..End: Frame range to clear from the cache (inclusive)
+		"""
+		...
+	def EnableDiskCache(self, enable: bool = bool(), path: str = str(), lockcache: bool = bool(), lockbranch: bool = bool(), delete: bool = bool(), prerender: bool = bool(), usenetwork: bool = bool()) -> tuple[bool, str]:
+		"""
+		Controls disk-based caching
+
+		Args:
+			Enable:		 Enables or disables the cache
+			Path:			 Path to create the cache at
+			LockCache:	Preserves the cache despite upstream changes (default false)
+			LockBranch: Locks all upstream tools (default false)
+			Delete:		 Deletes the cache at <Path> (default false)
+			PreRender:	Do a render now to create the cache (default true)
+			UseNetwork: Use Network Rendering when PreRendering (default false)
+		"""
+		...
+	def GetConnectedInputs(self) -> None:
+		...
+	def GetDoD(self, time: int = int(), flags: int = int(), proxy: int = int()) -> list[int] | None:
+		"""
+		Returns the Domain of Definition at the given time
+
+		Args:
+			time:		 The frame to fetch the value for (default is the current time).
+			reqflags: Quality flags (default is final quality).
+			proxy:		Proxy level (default is no proxy).
+
+		Returns:
+			may be nil, or a table containing { left,bottom,right,top } coords.
+		"""
+		...
+	def GetTool(self) -> Tool_:
+		"""
+		Get the tool that the output is pointing to
+
+		You can get all attributes by not passing anything
+		"""
+		...
 	def GetValue(self, time: int = int(), flags: int = int(), proxy: int = int()) -> tuple[Parameter_, dict[Any, Any]]:
 		"""
 		Returns the value at the given time
@@ -51,24 +95,6 @@ class PlainOutput_:
 				 DoD			- table of { left,bottom,right,top } coords
 		"""
 		...
-	def EnableDiskCache(self, enable: bool = bool(), path: str = str(), lockcache: bool = bool(), lockbranch: bool = bool(), delete: bool = bool(), prerender: bool = bool(), usenetwork: bool = bool()) -> tuple[bool, str]:
-		"""
-		Controls disk-based caching
-
-		Args:
-			Enable:		 Enables or disables the cache
-			Path:			 Path to create the cache at
-			LockCache:	Preserves the cache despite upstream changes (default false)
-			LockBranch: Locks all upstream tools (default false)
-			Delete:		 Deletes the cache at <Path> (default false)
-			PreRender:	Do a render now to create the cache (default true)
-			UseNetwork: Use Network Rendering when PreRendering (default false)
-		"""
-		...
-	def GetConnectedInputs(self) -> None:
-		...
-	def header_text(self) -> None:
-		...
 	def ShowDiskCacheDlg(self) -> bool:
 		"""
 		Displays Cache-To-Disk dialog for user interaction
@@ -76,25 +102,7 @@ class PlainOutput_:
 		Returns: boolean ok - true if user clicked OK/Pre-Render, false for Cancel
 		"""
 		...
-	def GetDoD(self, time: int = int(), flags: int = int(), proxy: int = int()) -> list[int] | None:
-		"""
-		Returns the Domain of Definition at the given time
-
-		Args:
-			time:		 The frame to fetch the value for (default is the current time).
-			reqflags: Quality flags (default is final quality).
-			proxy:		Proxy level (default is no proxy).
-
-		Returns:
-			may be nil, or a table containing { left,bottom,right,top } coords.
-		"""
-		...
-	def ClearDiskCache(self, start: int, end: int) -> bool:
-		"""
-		Clears frames from the disk cache
-
-		Start..End: Frame range to clear from the cache (inclusive)
-		"""
+	def header_text(self) -> None:
 		...
 
 PlainOutput = PlainOutput_

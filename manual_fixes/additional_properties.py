@@ -12,6 +12,12 @@ additional_properties_list = {
             "description": "Access using Comments[frame/TIME_UNDEFINED]",
             "return_type": "dict[int, str]",
             "access_class": "Read/Write",
+        },
+        "ID": {
+            "short_help": "The ID name of the node",
+            "description": None,
+            "return_type": "string",
+            "access_class": "Read Only",
         }
     }
 }

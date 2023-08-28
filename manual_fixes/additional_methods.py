@@ -44,7 +44,16 @@ additional_methods_list = {
             "usage": [" :SetAttrs(table attributes)"],
         },
         "__getitem__": {
-            "usage": [" :__getitem__(string key)"],
+            "usage": ["(number|string|boolean|table) :__getitem__(string key)"],
         }
+    },
+    "PlainOutput": {
+        "GetTool": {
+            "short_help": "Get the tool that the output is pointing to",
+            "description": "You can get all attributes by not passing anything",
+            "usage": [
+                "Tool :GetTool()",
+            ],
+        },
     },
 }

@@ -4,6 +4,7 @@ from Tool import Tool_
 
 fusion = Fusion_()
 fu = Fusion_()
+app = Fusion_()
 
 composition = Composition_()
 comp = Composition_()

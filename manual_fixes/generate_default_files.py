@@ -1,7 +1,7 @@
 def generateBuiltins() -> str:
     return '''\
 """
-v1.2
+v1.3
 Generated with FMD Fusion Scriptsing Stubs
 https://github.com/EmberLightVFX/BMD-Fusion-Scripting-Stubs
 
@@ -13,6 +13,7 @@ Generated with Fusion Studio 18.5 build 73
 from _tool_scripts import (
     fusion,
     fu,
+    app,
     composition,
     comp,
     tool,
@@ -21,6 +22,7 @@ from _tool_scripts import (
 __all__ = [
     "fusion",
     "fu",
+    "app",
     "composition",
     "comp",
     "tool"
@@ -47,6 +49,7 @@ from Tool import Tool_
 
 fusion = Fusion_()
 fu = Fusion_()
+app = Fusion_()
 
 composition = Composition_()
 comp = Composition_()

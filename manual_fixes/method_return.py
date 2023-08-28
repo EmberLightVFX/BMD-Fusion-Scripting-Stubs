@@ -47,6 +47,11 @@ method_return_types_to_fix: dict[str, dict[str, dict[str, str | None]]] = {
         }
     },
     "Operator": {
+        "FindMainInput": {
+            "old_return_type": "Input_",
+            "return_type": "PlainInput_",
+            "extra_import": "PlainInput",
+        },
         "GetChildrenList": {
             "old_return_type": "dict[Any, Any]",
             "return_type": "list[Tool_]",
@@ -61,6 +66,18 @@ method_return_types_to_fix: dict[str, dict[str, dict[str, str | None]]] = {
             "old_return_type": "dict[Any, Any]",
             "return_type": "dict[Any, Tool_]",
             "extra_import": "Tool",
+        },
+        "Refresh": {
+            "old_return_type": "None",
+            "return_type": "Tool_",
+            "extra_import": "Tool",
+        }
+    },
+    "PlainInput": {
+        "GetConnectedOutput": {
+            "old_return_type": "Output_",
+            "return_type": "PlainOutput_ | None",
+            "extra_import": "PlainOutput",
         },
     },
     "PlainOutput": {

@@ -1,5 +1,5 @@
 """
-v1.1
+v1.2
 Generated with FMD Fusion Scriptsing Stubs
 https://github.com/EmberLightVFX/BMD-Fusion-Scripting-Stubs
 
@@ -11,6 +11,7 @@ Generated with Fusion Studio 18.5 build 73
 from _tool_scripts import (
     fusion,
     fu,
+    app,
     composition,
     comp,
     tool,
@@ -19,6 +20,7 @@ from _tool_scripts import (
 __all__ = [
     "fusion",
     "fu",
+    "app",
     "composition",
     "comp",
     "tool"
@@ -238,6 +240,7 @@ from VGroup import VGroup_
 from ViewShadeNode import ViewShadeNode_
 from XYOffsetControl import XYOffsetControl_
 from ZipFile import ZipFile_
+from Tool import Tool_
 
 __all__.extend([
 	"Action_",
@@ -453,4 +456,5 @@ __all__.extend([
 	"ViewShadeNode_",
 	"XYOffsetControl_",
 	"ZipFile_",
+	"Tool_",
 ])

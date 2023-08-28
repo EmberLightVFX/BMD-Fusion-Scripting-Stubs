@@ -1,6 +1,7 @@
 from typing import Any, overload
 
 from Output import Output_
+from PlainOutput import PlainOutput_
 
 
 class PlainInput_:
@@ -77,7 +78,7 @@ class PlainInput_:
 		Connect the Input to an Output
 		"""
 		...
-	def GetConnectedOutput(self) -> Output_:
+	def GetConnectedOutput(self) -> PlainOutput_ | None:
 		"""
 		Returns the output that this input is connected to
 		"""

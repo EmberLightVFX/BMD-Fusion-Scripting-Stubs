@@ -7,6 +7,7 @@ from TagList import TagList_
 from Output import Output_
 from Input import Input_
 from SubInputs import SubInputs_
+from PlainInput import PlainInput_
 from Parameter import Parameter_
 from TimeRegion import TimeRegion_
 from Request import Request_
@@ -43,7 +44,7 @@ class Operator_:
 	"""
 	ID: str
 	"""
-	Registry ID of this tool
+	The ID name of the node
 
 	Read Only
 	"""
@@ -168,7 +169,7 @@ class Operator_:
 		...
 	def FindInput(self, name: str) -> Input_:
 		...
-	def FindMainInput(self, index: int) -> Input_:
+	def FindMainInput(self, index: int) -> PlainInput_:
 		"""
 		Returns the tool's main (visible) input
 
@@ -276,7 +277,7 @@ class Operator_:
 		Load the tools's settings from a file or table
 		"""
 		...
-	def Refresh(self) -> None:
+	def Refresh(self) -> Tool_:
 		"""
 		Refreshes the tool, showing updated user controls
 
@@ -342,7 +343,7 @@ class Operator_:
 		...
 	def _CloneInput(self, from_: Input_, id: str, tags: TagList_) -> Input_:
 		...
-	def __getitem__(self, key: str) -> None:
+	def __getitem__(self, key: str) -> int | str | bool | dict[Any, Any] | list[Any]:
 		...
 	def header_text(self) -> None:
 		...
