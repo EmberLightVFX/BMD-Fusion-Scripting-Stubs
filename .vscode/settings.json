@@ -17,4 +17,35 @@
     "ruff.args": [
         "--ignore=E501,E101"
     ],
+    "Lua.diagnostics.globals": [
+        "ffi",
+        "app",
+        "bmd",
+        "iif",
+        "fu",
+        "split",
+        "dumptostring",
+        "log"
+    ],
+    "cSpell.words": [
+        "cdef",
+        "Ctrls",
+        "dumptostring",
+        "fairlight",
+        "fullpath",
+        "fusioncontrols",
+        "fusionoperators",
+        "fusionscript",
+        "fusionsystem",
+        "libfusioncontrols",
+        "libfusionoperators",
+        "libfusionsystem",
+        "Magnusson's",
+        "nfds",
+        "pollfd",
+        "Prefs",
+        "REGB",
+        "REGI",
+        "REGST"
+    ],
 }
