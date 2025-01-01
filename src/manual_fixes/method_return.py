@@ -1,17 +1,13 @@
-"""
-Make sure that the class_name and extra_import does NOT include the traling "_"!!!
-"""
-
-method_return_types_to_fix: dict[str, dict[str, dict[str, str | None]]] = {
+method_return_types_to_fix: dict[str, dict[str, dict[str, str | list[str] | None]]] = {
     "ChildFrame": {
         "GetControlViewList": {
             "old_return_type": "dict[Any, Any]",
-            "return_type": "list[FuView_]",
+            "return_type": "list[FuView]",
             "extra_import": "FuView",
         },
         "GetMainViewList": {
             "old_return_type": "dict[Any, Any]",
-            "return_type": "list[FuView_]",
+            "return_type": "list[FuView]",
             "extra_import": "FuView",
         },
     },
@@ -28,8 +24,13 @@ method_return_types_to_fix: dict[str, dict[str, dict[str, str | None]]] = {
         },
         "GetToolList": {
             "old_return_type": "dict[Any, Any]",
-            "return_type": "dict[int, Tool_]",
+            "return_type": "dict[int, Tool]",
             "extra_import": "Tool",
+        },
+        "ChooseTool": {
+            "old_return_type": "str | str",
+            "return_type": "str | tuple[str, str]",
+            "extra_import": None,
         },
     },
     "FlowView": {
@@ -48,35 +49,35 @@ method_return_types_to_fix: dict[str, dict[str, dict[str, str | None]]] = {
     },
     "Operator": {
         "FindMainInput": {
-            "old_return_type": "Input_",
-            "return_type": "PlainInput_",
+            "old_return_type": "Input",
+            "return_type": "PlainInput",
             "extra_import": "PlainInput",
         },
         "GetChildrenList": {
             "old_return_type": "dict[Any, Any]",
-            "return_type": "list[Tool_]",
+            "return_type": "list[Tool]",
             "extra_import": "Tool",
         },
         "GetOutputList": {
             "old_return_type": "dict[Any, Any]",
-            "return_type": "dict[Any, Tool_]",
+            "return_type": "dict[Any, Tool]",
             "extra_import": "Tool",
         },
         "GetInputList": {
             "old_return_type": "dict[Any, Any]",
-            "return_type": "dict[Any, Tool_]",
+            "return_type": "dict[Any, Tool]",
             "extra_import": "Tool",
         },
         "Refresh": {
             "old_return_type": "None",
-            "return_type": "Tool_",
+            "return_type": "Tool",
             "extra_import": "Tool",
-        }
+        },
     },
     "PlainInput": {
         "GetConnectedOutput": {
-            "old_return_type": "Output_",
-            "return_type": "PlainOutput_ | None",
+            "old_return_type": "Output",
+            "return_type": "PlainOutput | None",
             "extra_import": "PlainOutput",
         },
     },
