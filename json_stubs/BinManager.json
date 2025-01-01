@@ -1,1 +1,81 @@
-{"name":"BinManager","properties":{"header_text":"Properties","IconSize":[],"ViewMode":[],"ShowChecker":[]},"class_inheritance":["Object","LockableObject","Manager"],"methods":{"_Library_Notify":[],"_Library_UpdateItem":[],"_Library_DeleteItem":[],"_Library_AddItem":[],"_Library_Reload":[],"GetRootLibraryInfo":[],"GetRootID":[],"StopPlayback":[],"GetSelectedIDs":[],"CanPlaySelected":[],"PlaySelected":[],"RenameSelected":[],"header_text":"Methods","SetLibraryRoot":[],"ShowFolder":[],"NewReel":[],"NewFolder":[],"Open":[],"Close":[],"IsOpen":[],"DeleteSelected":[],"NewItem":[],"ClearSelection":[],"SelectAll":[],"Refresh":[]},"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"5308416","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"BinManager","value":"string"},"REGS_Name":{"type":"BinManager","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}}}
+{
+    "name": "BinManager",
+    "properties": {
+        "IconSize": [],
+        "ViewMode": [],
+        "ShowChecker": []
+    },
+    "class_inheritance": [
+        "Object",
+        "LockableObject",
+        "Manager"
+    ],
+    "methods": {
+        "_Library_Notify": [],
+        "_Library_UpdateItem": [],
+        "_Library_DeleteItem": [],
+        "_Library_AddItem": [],
+        "_Library_Reload": [],
+        "GetRootLibraryInfo": [],
+        "GetRootID": [],
+        "StopPlayback": [],
+        "GetSelectedIDs": [],
+        "CanPlaySelected": [],
+        "PlaySelected": [],
+        "RenameSelected": [],
+        "SetLibraryRoot": [],
+        "ShowFolder": [],
+        "NewReel": [],
+        "NewFolder": [],
+        "Open": [],
+        "Close": [],
+        "IsOpen": [],
+        "DeleteSelected": [],
+        "NewItem": [],
+        "ClearSelection": [],
+        "SelectAll": [],
+        "Refresh": []
+    },
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "5308416",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "BinManager",
+            "value": "string"
+        },
+        "REGS_Name": {
+            "type": "BinManager",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    }
+}

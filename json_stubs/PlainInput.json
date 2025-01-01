@@ -1,1 +1,100 @@
-{"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"0 = CT_Any","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"PlainInput","value":"string"},"REGS_Name":{"type":"PlainInput","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}},"name":"PlainInput","methods":{"GetExpression":[],"SetExpression":[],"WindowControlsVisible":{"short_help":"Returns the visible state of the window controls for this input","usage":["boolean :WindowControlsVisible()"]},"HideWindowControls":{"short_help":"Hides or shows the window controls for this input","description":"Args: Hide - 'true' (default) will hide the controls, 'false' will show them.\n      Hides/Shows can be nested.","usage":[" :HideWindowControls(boolean hide)"]},"ViewControlsVisible":{"short_help":"Returns the visible state of the view controls for this input","usage":["boolean :ViewControlsVisible()"]},"HideViewControls":{"short_help":"Hides or shows the view controls for this input","description":"Args: Hide - 'true' (default) will hide the controls, 'false' will show them.\n      Hides/Shows can be nested.","usage":[" :HideViewControls(boolean hide)"]},"GetKeyFrames":{"short_help":"Return a table of all keyframe times for this input","see_also":"[GetKeyFrames()](Operator.md#GetKeyFrames)","usage":["table :GetKeyFrames()"]},"header_text":"Methods","ConnectTo":{"short_help":"Connect the Input to an Output","usage":["boolean :ConnectTo()","boolean :ConnectTo(Output out)"]},"GetConnectedOutput":{"short_help":"Returns the output that this input is connected to","usage":["Output :GetConnectedOutput()"]}},"class_inheritance":["Object","LockableObject","Link"]}
+{
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "0 = CT_Any",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "PlainInput",
+            "value": "string"
+        },
+        "REGS_Name": {
+            "type": "PlainInput",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    },
+    "name": "PlainInput",
+    "methods": {
+        "GetExpression": [],
+        "SetExpression": [],
+        "WindowControlsVisible": {
+            "short_help": "Returns the visible state of the window controls for this input",
+            "usage": [
+                "boolean :WindowControlsVisible()"
+            ]
+        },
+        "HideWindowControls": {
+            "short_help": "Hides or shows the window controls for this input",
+            "description": "Args: Hide - 'true' (default) will hide the controls, 'false' will show them.\n      Hides/Shows can be nested.",
+            "usage": [
+                " :HideWindowControls(boolean hide)"
+            ]
+        },
+        "ViewControlsVisible": {
+            "short_help": "Returns the visible state of the view controls for this input",
+            "usage": [
+                "boolean :ViewControlsVisible()"
+            ]
+        },
+        "HideViewControls": {
+            "short_help": "Hides or shows the view controls for this input",
+            "description": "Args: Hide - 'true' (default) will hide the controls, 'false' will show them.\n      Hides/Shows can be nested.",
+            "usage": [
+                " :HideViewControls(boolean hide)"
+            ]
+        },
+        "GetKeyFrames": {
+            "short_help": "Return a table of all keyframe times for this input",
+            "see_also": "[GetKeyFrames()](Operator.md#GetKeyFrames)",
+            "usage": [
+                "table :GetKeyFrames()"
+            ]
+        },
+        "ConnectTo": {
+            "short_help": "Connect the Input to an Output",
+            "usage": [
+                "boolean :ConnectTo()",
+                "boolean :ConnectTo(Output out)"
+            ]
+        },
+        "GetConnectedOutput": {
+            "short_help": "Returns the output that this input is connected to",
+            "usage": [
+                "Output :GetConnectedOutput()"
+            ]
+        }
+    },
+    "class_inheritance": [
+        "Object",
+        "LockableObject",
+        "Link"
+    ]
+}

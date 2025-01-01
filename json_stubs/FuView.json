@@ -1,1 +1,86 @@
-{"name":"FuView","properties":{"header_text":"Properties","ID":{"short_help":"ID of this View","access_class":"Read Only"}},"class_inheritance":["Object"],"methods":{"Undock":{"short_help":"Undock this view","usage":[" :Undock()"]},"Remove":{"short_help":"Remove this view","usage":[" :Remove()"]},"Refresh":{"short_help":"Redraw this view","usage":[" :Refresh()"]},"header_text":"Methods","ShowTabs":{"short_help":"Show tabs for this view","usage":[" :ShowTabs()"]},"AddView":{"short_help":"Add a new view to one side","usage":[" :AddView(string View ID, string Side: left, right, above, below)"]}},"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"0 = CT_Any","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"FuView","value":"string"},"REGS_Name":{"type":"FuView","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}}}
+{
+    "name": "FuView",
+    "properties": {
+        "ID": {
+            "short_help": "ID of this View",
+            "access_class": "Read Only"
+        }
+    },
+    "class_inheritance": [
+        "Object"
+    ],
+    "methods": {
+        "Undock": {
+            "short_help": "Undock this view",
+            "usage": [
+                " :Undock()"
+            ]
+        },
+        "Remove": {
+            "short_help": "Remove this view",
+            "usage": [
+                " :Remove()"
+            ]
+        },
+        "Refresh": {
+            "short_help": "Redraw this view",
+            "usage": [
+                " :Refresh()"
+            ]
+        },
+        "ShowTabs": {
+            "short_help": "Show tabs for this view",
+            "usage": [
+                " :ShowTabs()"
+            ]
+        },
+        "AddView": {
+            "short_help": "Add a new view to one side",
+            "usage": [
+                " :AddView(string View ID, string Side: left, right, above, below)"
+            ]
+        }
+    },
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "0 = CT_Any",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "FuView",
+            "value": "string"
+        },
+        "REGS_Name": {
+            "type": "FuView",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    }
+}

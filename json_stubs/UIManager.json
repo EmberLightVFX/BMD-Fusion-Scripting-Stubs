@@ -1,1 +1,82 @@
-{"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"5308416","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"UIManager","value":"string"},"REGS_Name":{"type":"UIManager","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}},"name":"UIManager","methods":{"FindWindow":{"usage":[" :FindWindow()"]},"FindWindows":{"usage":[" :FindWindows()"]},"QueueEvent":{"usage":[" :QueueEvent()"]},"header_text":"Methods","RemoveNotify":{"usage":[" :RemoveNotify()"]},"GetEvent":{"usage":[" :GetEvent()"]},"AddNotify":{"usage":[" :AddNotify()"]}},"class_inheritance":["Object","LockableObject","Manager"]}
+{
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "5308416",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "UIManager",
+            "value": "string"
+        },
+        "REGS_Name": {
+            "type": "UIManager",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    },
+    "name": "UIManager",
+    "methods": {
+        "FindWindow": {
+            "usage": [
+                " :FindWindow()"
+            ]
+        },
+        "FindWindows": {
+            "usage": [
+                " :FindWindows()"
+            ]
+        },
+        "QueueEvent": {
+            "usage": [
+                " :QueueEvent()"
+            ]
+        },
+        "RemoveNotify": {
+            "usage": [
+                " :RemoveNotify()"
+            ]
+        },
+        "GetEvent": {
+            "usage": [
+                " :GetEvent()"
+            ]
+        },
+        "AddNotify": {
+            "usage": [
+                " :AddNotify()"
+            ]
+        }
+    },
+    "class_inheritance": [
+        "Object",
+        "LockableObject",
+        "Manager"
+    ]
+}

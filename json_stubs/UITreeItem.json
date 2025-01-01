@@ -1,1 +1,367 @@
-{"name":"UITreeItem","properties":{"ToolTip":{"access_class":"Read Only"},"TextAlignment":{"access_class":"Read Only"},"SizeHint":{"access_class":"Read Only"},"Hidden":{"access_class":"Read/Write"},"Selected":{"access_class":"Read/Write"},"Font":{"access_class":"Read Only"},"StatusTip":{"access_class":"Read Only"},"Text":{"access_class":"Read Only"},"Icon":{"access_class":"Read Only"},"ChildIndicatorPolicy":{"access_class":"Read/Write"},"Flags":{"access_class":"Read/Write"},"Disabled":{"access_class":"Read/Write"},"FirstColumnSpanned":{"access_class":"Read/Write"},"WhatsThis":{"access_class":"Read Only"},"BackgroundColor":{"access_class":"Read Only"},"TextColor":{"access_class":"Read Only"},"header_text":"Properties","CheckState":{"access_class":"Read Only"},"Expanded":{"access_class":"Read/Write"}},"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"0 = CT_Any","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"UITreeItem","value":"string"},"REGS_Name":{"type":"UITreeItem","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}},"class_inheritance":["Object"],"methods":{"SetText":{"usage":[" :SetText()"]},"header_text":"Methods","GetText":{"usage":[" :GetText()"]},"SetFirstColumnSpanned":{"usage":[" :SetFirstColumnSpanned()"]},"SortChildren":{"usage":[" :SortChildren()"]},"GetFirstColumnSpanned":{"usage":[" :GetFirstColumnSpanned()"]},"SetToolTip":{"usage":[" :SetToolTip()"]},"SetTextColor":{"usage":[" :SetTextColor()"]},"SetFont":{"usage":[" :SetFont()"]},"SetStatusTip":{"usage":[" :SetStatusTip()"]},"ChildCount":{"usage":[" :ChildCount()"]},"TakeChild":{"usage":[" :TakeChild()"]},"Child":{"usage":[" :Child()"]},"TreeWidget":{"usage":[" :TreeWidget()"]},"SetBackgroundColor":{"usage":[" :SetBackgroundColor()"]},"GetBackgroundColor":{"usage":[" :GetBackgroundColor()"]},"SetChildIndicatorPolicy":{"usage":[" :SetChildIndicatorPolicy()"]},"SetCheckState":{"usage":[" :SetCheckState()"]},"GetTextColor":{"usage":[" :GetTextColor()"]},"ColumnCount":{"usage":[" :ColumnCount()"]},"SetTextAlignment":{"usage":[" :SetTextAlignment()"]},"GetTextAlignment":{"usage":[" :GetTextAlignment()"]},"SetFlags":{"usage":[" :SetFlags()"]},"SetSizeHint":{"usage":[" :SetSizeHint()"]},"GetSizeHint":{"usage":[" :GetSizeHint()"]},"Clone":{"usage":[" :Clone()"]},"SetWhatsThis":{"usage":[" :SetWhatsThis()"]},"GetWhatsThis":{"usage":[" :GetWhatsThis()"]},"SetDisabled":{"usage":[" :SetDisabled()"]},"AddChild":{"usage":[" :AddChild()"]},"GetToolTip":{"usage":[" :GetToolTip()"]},"GetFont":{"usage":[" :GetFont()"]},"GetStatusTip":{"usage":[" :GetStatusTip()"]},"SetIcon":{"usage":[" :SetIcon()"]},"GetIcon":{"usage":[" :GetIcon()"]},"GetChildIndicatorPolicy":{"usage":[" :GetChildIndicatorPolicy()"]},"SetData":{"usage":[" :SetData()"]},"GetData":{"usage":[" :GetData()"]},"Parent":{"usage":[" :Parent()"]},"InsertChildren":{"usage":[" :InsertChildren()"]},"GetDisabled":{"usage":[" :GetDisabled()"]},"RemoveChild":{"usage":[" :RemoveChild()"]},"InsertChild":{"usage":[" :InsertChild()"]},"IndexOfChild":{"usage":[" :IndexOfChild()"]},"GetCheckState":{"usage":[" :GetCheckState()"]},"SetExpanded":{"usage":[" :SetExpanded()"]},"GetExpanded":{"usage":[" :GetExpanded()"]},"SetHidden":{"usage":[" :SetHidden()"]},"GetHidden":{"usage":[" :GetHidden()"]},"SetSelected":{"usage":[" :SetSelected()"]},"GetSelected":{"usage":[" :GetSelected()"]},"GetFlags":{"usage":[" :GetFlags()"]},"AddChildren":{"usage":[" :AddChildren()"]}},"qt":"QTreeWidgetItem"}
+{
+    "name": "UITreeItem",
+    "properties": {
+        "ToolTip": {
+            "access_class": "Read Only"
+        },
+        "TextAlignment": {
+            "access_class": "Read Only"
+        },
+        "SizeHint": {
+            "access_class": "Read Only"
+        },
+        "Hidden": {
+            "access_class": "Read/Write"
+        },
+        "Selected": {
+            "access_class": "Read/Write"
+        },
+        "Font": {
+            "access_class": "Read Only"
+        },
+        "StatusTip": {
+            "access_class": "Read Only"
+        },
+        "Text": {
+            "access_class": "Read Only"
+        },
+        "Icon": {
+            "access_class": "Read Only"
+        },
+        "ChildIndicatorPolicy": {
+            "access_class": "Read/Write"
+        },
+        "Flags": {
+            "access_class": "Read/Write"
+        },
+        "Disabled": {
+            "access_class": "Read/Write"
+        },
+        "FirstColumnSpanned": {
+            "access_class": "Read/Write"
+        },
+        "WhatsThis": {
+            "access_class": "Read Only"
+        },
+        "BackgroundColor": {
+            "access_class": "Read Only"
+        },
+        "TextColor": {
+            "access_class": "Read Only"
+        },
+        "CheckState": {
+            "access_class": "Read Only"
+        },
+        "Expanded": {
+            "access_class": "Read/Write"
+        }
+    },
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "0 = CT_Any",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "UITreeItem",
+            "value": "string"
+        },
+        "REGS_Name": {
+            "type": "UITreeItem",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    },
+    "class_inheritance": [
+        "Object"
+    ],
+    "methods": {
+        "SetText": {
+            "usage": [
+                " :SetText()"
+            ]
+        },
+        "GetText": {
+            "usage": [
+                " :GetText()"
+            ]
+        },
+        "SetFirstColumnSpanned": {
+            "usage": [
+                " :SetFirstColumnSpanned()"
+            ]
+        },
+        "SortChildren": {
+            "usage": [
+                " :SortChildren()"
+            ]
+        },
+        "GetFirstColumnSpanned": {
+            "usage": [
+                " :GetFirstColumnSpanned()"
+            ]
+        },
+        "SetToolTip": {
+            "usage": [
+                " :SetToolTip()"
+            ]
+        },
+        "SetTextColor": {
+            "usage": [
+                " :SetTextColor()"
+            ]
+        },
+        "SetFont": {
+            "usage": [
+                " :SetFont()"
+            ]
+        },
+        "SetStatusTip": {
+            "usage": [
+                " :SetStatusTip()"
+            ]
+        },
+        "ChildCount": {
+            "usage": [
+                " :ChildCount()"
+            ]
+        },
+        "TakeChild": {
+            "usage": [
+                " :TakeChild()"
+            ]
+        },
+        "Child": {
+            "usage": [
+                " :Child()"
+            ]
+        },
+        "TreeWidget": {
+            "usage": [
+                " :TreeWidget()"
+            ]
+        },
+        "SetBackgroundColor": {
+            "usage": [
+                " :SetBackgroundColor()"
+            ]
+        },
+        "GetBackgroundColor": {
+            "usage": [
+                " :GetBackgroundColor()"
+            ]
+        },
+        "SetChildIndicatorPolicy": {
+            "usage": [
+                " :SetChildIndicatorPolicy()"
+            ]
+        },
+        "SetCheckState": {
+            "usage": [
+                " :SetCheckState()"
+            ]
+        },
+        "GetTextColor": {
+            "usage": [
+                " :GetTextColor()"
+            ]
+        },
+        "ColumnCount": {
+            "usage": [
+                " :ColumnCount()"
+            ]
+        },
+        "SetTextAlignment": {
+            "usage": [
+                " :SetTextAlignment()"
+            ]
+        },
+        "GetTextAlignment": {
+            "usage": [
+                " :GetTextAlignment()"
+            ]
+        },
+        "SetFlags": {
+            "usage": [
+                " :SetFlags()"
+            ]
+        },
+        "SetSizeHint": {
+            "usage": [
+                " :SetSizeHint()"
+            ]
+        },
+        "GetSizeHint": {
+            "usage": [
+                " :GetSizeHint()"
+            ]
+        },
+        "Clone": {
+            "usage": [
+                " :Clone()"
+            ]
+        },
+        "SetWhatsThis": {
+            "usage": [
+                " :SetWhatsThis()"
+            ]
+        },
+        "GetWhatsThis": {
+            "usage": [
+                " :GetWhatsThis()"
+            ]
+        },
+        "SetDisabled": {
+            "usage": [
+                " :SetDisabled()"
+            ]
+        },
+        "AddChild": {
+            "usage": [
+                " :AddChild()"
+            ]
+        },
+        "GetToolTip": {
+            "usage": [
+                " :GetToolTip()"
+            ]
+        },
+        "GetFont": {
+            "usage": [
+                " :GetFont()"
+            ]
+        },
+        "GetStatusTip": {
+            "usage": [
+                " :GetStatusTip()"
+            ]
+        },
+        "SetIcon": {
+            "usage": [
+                " :SetIcon()"
+            ]
+        },
+        "GetIcon": {
+            "usage": [
+                " :GetIcon()"
+            ]
+        },
+        "GetChildIndicatorPolicy": {
+            "usage": [
+                " :GetChildIndicatorPolicy()"
+            ]
+        },
+        "SetData": {
+            "usage": [
+                " :SetData()"
+            ]
+        },
+        "GetData": {
+            "usage": [
+                " :GetData()"
+            ]
+        },
+        "Parent": {
+            "usage": [
+                " :Parent()"
+            ]
+        },
+        "InsertChildren": {
+            "usage": [
+                " :InsertChildren()"
+            ]
+        },
+        "GetDisabled": {
+            "usage": [
+                " :GetDisabled()"
+            ]
+        },
+        "RemoveChild": {
+            "usage": [
+                " :RemoveChild()"
+            ]
+        },
+        "InsertChild": {
+            "usage": [
+                " :InsertChild()"
+            ]
+        },
+        "IndexOfChild": {
+            "usage": [
+                " :IndexOfChild()"
+            ]
+        },
+        "GetCheckState": {
+            "usage": [
+                " :GetCheckState()"
+            ]
+        },
+        "SetExpanded": {
+            "usage": [
+                " :SetExpanded()"
+            ]
+        },
+        "GetExpanded": {
+            "usage": [
+                " :GetExpanded()"
+            ]
+        },
+        "SetHidden": {
+            "usage": [
+                " :SetHidden()"
+            ]
+        },
+        "GetHidden": {
+            "usage": [
+                " :GetHidden()"
+            ]
+        },
+        "SetSelected": {
+            "usage": [
+                " :SetSelected()"
+            ]
+        },
+        "GetSelected": {
+            "usage": [
+                " :GetSelected()"
+            ]
+        },
+        "GetFlags": {
+            "usage": [
+                " :GetFlags()"
+            ]
+        },
+        "AddChildren": {
+            "usage": [
+                " :AddChildren()"
+            ]
+        }
+    },
+    "qt": "QTreeWidgetItem"
+}

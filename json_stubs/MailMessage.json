@@ -1,1 +1,139 @@
-{"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"0 = CT_Any","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"MailMessage","value":"string"},"REGS_Name":{"type":"MailMessage","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}},"name":"MailMessage","methods":{"AddRecipients":{"short_help":"Adds a recipient to the To: list","description":"Arguments:\n   Addresses - a string of containing one or more email addresses,\n               or table of email address strings (or name/address string pairs)","usage":[" :AddRecipients(string addresses)"," :AddRecipients(table addresses)"]},"RemoveAllRecipients":{"short_help":"Removes all recipients from the To: field","usage":[" :RemoveAllRecipients()"]},"SetPassword":{"short_help":"Sets the password to use for authentication","description":"password - a string containing the plaintext password\n             to use when authenticating with the server.","see_also":"[SetLogin()](#SetLogin)","usage":[" :SetPassword(string password)"]},"SetLogin":{"short_help":"Sets the login to use for authentication","description":"Arguments:\n   login - a string containing the login or email address\n             to use when authenticating with the server.","see_also":"[SetPassword()](#SetPassword)","usage":[" :SetLogin(string login)"]},"SetServer":{"short_help":"Sets the outgoing mail server to use","description":"Arguments:\n   servername - a string containing the domain name of the SMTP server\n             to use when sending mail.\n\nNote: If servername is empty (the default), the Prefs->Network field\n      or direct MX lookup will be used.","usage":[" :SetServer(string servername)"]},"SetSender":{"short_help":"Sets the From: field","description":"sender - a string with the sender's address (or name and address),\n             or a table containing strings of the sender's name\n             and email address.\n\nNote: If the sender is not set, it will default to the user's\n      primary email name and address.","usage":[" :SetSender(string sender)"," :SetSender(table sender)"]},"SetSubject":{"short_help":"Sets the Subject: field","usage":[" :SetSubject(string subject)"]},"SetHTMLBody":{"short_help":"Sets the message body using HTML","usage":[" :SetHTMLBody(string bodyhtml)"]},"GetTable":{"short_help":"Returns the message in the form of a table","description":"Usage: table = GetTable()\n\nReturns: table - a table with To, From, Subject and Body fields\n                 containing the message data. Any attachment filenames\n                 are listed in numbered fields.","usage":["table :GetTable()"]},"AddAttachment":{"short_help":"Attaches a filename to the body","usage":["boolean :AddAttachment(string filename)"]},"RemoveAllAttachments":{"short_help":"Removes all attachments from the message","usage":[" :RemoveAllAttachments()"]},"Send":{"short_help":"Sends the message","description":"Arguments: timeout - (optional) network timeout in milliseconds\n\nReturns: success - true if the message was sent OK\n         log     - nil, or a string containing a log of error messages","usage":["boolean, string :Send([number timeout])"]},"header_text":"Methods","SetBody":{"short_help":"Sets the message body","usage":[" :SetBody(string bodytext)"]}},"class_inheritance":["Object"]}
+{
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "0 = CT_Any",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "MailMessage",
+            "value": "string"
+        },
+        "REGS_Name": {
+            "type": "MailMessage",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    },
+    "name": "MailMessage",
+    "methods": {
+        "AddRecipients": {
+            "short_help": "Adds a recipient to the To: list",
+            "description": "Arguments:\n   Addresses - a string of containing one or more email addresses,\n               or table of email address strings (or name/address string pairs)",
+            "usage": [
+                " :AddRecipients(string addresses)",
+                " :AddRecipients(table addresses)"
+            ]
+        },
+        "RemoveAllRecipients": {
+            "short_help": "Removes all recipients from the To: field",
+            "usage": [
+                " :RemoveAllRecipients()"
+            ]
+        },
+        "SetPassword": {
+            "short_help": "Sets the password to use for authentication",
+            "description": "password - a string containing the plaintext password\n             to use when authenticating with the server.",
+            "see_also": "[SetLogin()](#SetLogin)",
+            "usage": [
+                " :SetPassword(string password)"
+            ]
+        },
+        "SetLogin": {
+            "short_help": "Sets the login to use for authentication",
+            "description": "Arguments:\n   login - a string containing the login or email address\n             to use when authenticating with the server.",
+            "see_also": "[SetPassword()](#SetPassword)",
+            "usage": [
+                " :SetLogin(string login)"
+            ]
+        },
+        "SetServer": {
+            "short_help": "Sets the outgoing mail server to use",
+            "description": "Arguments:\n   servername - a string containing the domain name of the SMTP server\n             to use when sending mail.\n\nNote: If servername is empty (the default), the Prefs->Network field\n      or direct MX lookup will be used.",
+            "usage": [
+                " :SetServer(string servername)"
+            ]
+        },
+        "SetSender": {
+            "short_help": "Sets the From: field",
+            "description": "sender - a string with the sender's address (or name and address),\n             or a table containing strings of the sender's name\n             and email address.\n\nNote: If the sender is not set, it will default to the user's\n      primary email name and address.",
+            "usage": [
+                " :SetSender(string sender)",
+                " :SetSender(table sender)"
+            ]
+        },
+        "SetSubject": {
+            "short_help": "Sets the Subject: field",
+            "usage": [
+                " :SetSubject(string subject)"
+            ]
+        },
+        "SetHTMLBody": {
+            "short_help": "Sets the message body using HTML",
+            "usage": [
+                " :SetHTMLBody(string bodyhtml)"
+            ]
+        },
+        "GetTable": {
+            "short_help": "Returns the message in the form of a table",
+            "description": "Usage: table = GetTable()\n\nReturns: table - a table with To, From, Subject and Body fields\n                 containing the message data. Any attachment filenames\n                 are listed in numbered fields.",
+            "usage": [
+                "table :GetTable()"
+            ]
+        },
+        "AddAttachment": {
+            "short_help": "Attaches a filename to the body",
+            "usage": [
+                "boolean :AddAttachment(string filename)"
+            ]
+        },
+        "RemoveAllAttachments": {
+            "short_help": "Removes all attachments from the message",
+            "usage": [
+                " :RemoveAllAttachments()"
+            ]
+        },
+        "Send": {
+            "short_help": "Sends the message",
+            "description": "Arguments: timeout - (optional) network timeout in milliseconds\n\nReturns: success - true if the message was sent OK\n         log     - nil, or a string containing a log of error messages",
+            "usage": [
+                "boolean, string :Send([number timeout])"
+            ]
+        },
+        "SetBody": {
+            "short_help": "Sets the message body",
+            "usage": [
+                " :SetBody(string bodytext)"
+            ]
+        }
+    },
+    "class_inheritance": [
+        "Object"
+    ]
+}

@@ -1,1 +1,69 @@
-{"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"0 = CT_Any","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"FloatViewFrame","value":"string"},"REGS_Name":{"type":"FloatViewFrame","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}},"name":"FloatViewFrame","methods":{"header_text":"Methods","ActivatePrevFrame":{"short_help":"Activates the previous frame window","usage":[" :ActivatePrevFrame()"]},"ActivateNextFrame":{"short_help":"Activates the next frame window","usage":[" :ActivateNextFrame()"]},"ActivateFrame":{"short_help":"Activates this frame window","usage":[" :ActivateFrame()"]}},"class_inheritance":["Object","FuFrame"]}
+{
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "0 = CT_Any",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "FloatViewFrame",
+            "value": "string"
+        },
+        "REGS_Name": {
+            "type": "FloatViewFrame",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    },
+    "name": "FloatViewFrame",
+    "methods": {
+        "ActivatePrevFrame": {
+            "short_help": "Activates the previous frame window",
+            "usage": [
+                " :ActivatePrevFrame()"
+            ]
+        },
+        "ActivateNextFrame": {
+            "short_help": "Activates the next frame window",
+            "usage": [
+                " :ActivateNextFrame()"
+            ]
+        },
+        "ActivateFrame": {
+            "short_help": "Activates this frame window",
+            "usage": [
+                " :ActivateFrame()"
+            ]
+        }
+    },
+    "class_inheritance": [
+        "Object",
+        "FuFrame"
+    ]
+}

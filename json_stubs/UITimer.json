@@ -1,1 +1,131 @@
-{"name":"UITimer","properties":{"Interval":{"access_class":"Read/Write"},"IsActive":{"access_class":"Read Only"},"SingleShot":{"access_class":"Read/Write"},"header_text":"Properties","RemainingTime":{"access_class":"Read Only"},"TimerID":{"access_class":"Read Only"},"TimerType":{"access_class":"Read/Write"}},"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"5439488","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"UITimer","value":"string"},"REGB_Utility_Toggle":{"type":"false","value":"boolean"},"REGS_Name":{"type":"UITimer","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}},"class_inheritance":["Object","UIItem"],"methods":{"GetIsActive":{"usage":[" :GetIsActive()"]},"GetTimerID":{"usage":[" :GetTimerID()"]},"GetRemainingTime":{"usage":[" :GetRemainingTime()"]},"SetInterval":{"usage":[" :SetInterval()"]},"GetInterval":{"usage":[" :GetInterval()"]},"SetSingleShot":{"usage":[" :SetSingleShot()"]},"GetSingleShot":{"usage":[" :GetSingleShot()"]},"Stop":{"usage":[" :Stop()"]},"header_text":"Methods","SetTimerType":{"usage":[" :SetTimerType()"]},"GetTimerType":{"usage":[" :GetTimerType()"]},"Start":{"usage":[" :Start()"]}},"qt":"QTimer"}
+{
+    "name": "UITimer",
+    "properties": {
+        "Interval": {
+            "access_class": "Read/Write"
+        },
+        "IsActive": {
+            "access_class": "Read Only"
+        },
+        "SingleShot": {
+            "access_class": "Read/Write"
+        },
+        "RemainingTime": {
+            "access_class": "Read Only"
+        },
+        "TimerID": {
+            "access_class": "Read Only"
+        },
+        "TimerType": {
+            "access_class": "Read/Write"
+        }
+    },
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "5439488",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "UITimer",
+            "value": "string"
+        },
+        "REGB_Utility_Toggle": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGS_Name": {
+            "type": "UITimer",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    },
+    "class_inheritance": [
+        "Object",
+        "UIItem"
+    ],
+    "methods": {
+        "GetIsActive": {
+            "usage": [
+                " :GetIsActive()"
+            ]
+        },
+        "GetTimerID": {
+            "usage": [
+                " :GetTimerID()"
+            ]
+        },
+        "GetRemainingTime": {
+            "usage": [
+                " :GetRemainingTime()"
+            ]
+        },
+        "SetInterval": {
+            "usage": [
+                " :SetInterval()"
+            ]
+        },
+        "GetInterval": {
+            "usage": [
+                " :GetInterval()"
+            ]
+        },
+        "SetSingleShot": {
+            "usage": [
+                " :SetSingleShot()"
+            ]
+        },
+        "GetSingleShot": {
+            "usage": [
+                " :GetSingleShot()"
+            ]
+        },
+        "Stop": {
+            "usage": [
+                " :Stop()"
+            ]
+        },
+        "SetTimerType": {
+            "usage": [
+                " :SetTimerType()"
+            ]
+        },
+        "GetTimerType": {
+            "usage": [
+                " :GetTimerType()"
+            ]
+        },
+        "Start": {
+            "usage": [
+                " :Start()"
+            ]
+        }
+    },
+    "qt": "QTimer"
+}

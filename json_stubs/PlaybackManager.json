@@ -1,1 +1,111 @@
-{"name":"PlaybackManager","properties":{"PlaybackDevice":{"access_class":"Read/Write"},"LoopEnabled":{"access_class":"Read/Write"},"LoopOut":{"access_class":"Read/Write"},"LoopIn":{"access_class":"Read/Write"},"LoopMode":[],"ShowMetadata":{"access_class":"Read/Write"},"Gamma":{"access_class":"Read/Write"},"SyncMode":{"access_class":"Read/Write"},"CurrentTime":{"access_class":"Read/Write"},"header_text":"Properties","ShowChannel":{"access_class":"Read/Write"},"Gain":{"access_class":"Read/Write"},"FPS":{"access_class":"Read/Write"}},"class_inheritance":["Object","LockableObject","Manager"],"methods":{"LoopSetShot":[],"TrimSetOut":[],"TrimSetIn":[],"IsReverse":[],"IsPlaying":[],"Stop":[],"SeekEnd":[],"header_text":"Methods","SeekNext":[],"SeekStart":[],"SeekTo":[],"SeekBy":[],"Play":[],"GuideSelect":[],"GuideEnable":[],"GuideIsEnabled":[],"UseDeckLink":[],"IsUsingDeckLink":[],"ExitMode":[],"ItemPrev":[],"ItemNext":[],"ReelExit":[],"TrimExit":[],"SeekPrev":[]},"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"5308416","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"PlaybackManager","value":"string"},"REGS_Name":{"type":"PlaybackManager","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}}}
+{
+    "name": "PlaybackManager",
+    "properties": {
+        "PlaybackDevice": {
+            "access_class": "Read/Write"
+        },
+        "LoopEnabled": {
+            "access_class": "Read/Write"
+        },
+        "LoopOut": {
+            "access_class": "Read/Write"
+        },
+        "LoopIn": {
+            "access_class": "Read/Write"
+        },
+        "LoopMode": [],
+        "ShowMetadata": {
+            "access_class": "Read/Write"
+        },
+        "Gamma": {
+            "access_class": "Read/Write"
+        },
+        "SyncMode": {
+            "access_class": "Read/Write"
+        },
+        "CurrentTime": {
+            "access_class": "Read/Write"
+        },
+        "ShowChannel": {
+            "access_class": "Read/Write"
+        },
+        "Gain": {
+            "access_class": "Read/Write"
+        },
+        "FPS": {
+            "access_class": "Read/Write"
+        }
+    },
+    "class_inheritance": [
+        "Object",
+        "LockableObject",
+        "Manager"
+    ],
+    "methods": {
+        "LoopSetShot": [],
+        "TrimSetOut": [],
+        "TrimSetIn": [],
+        "IsReverse": [],
+        "IsPlaying": [],
+        "Stop": [],
+        "SeekEnd": [],
+        "SeekNext": [],
+        "SeekStart": [],
+        "SeekTo": [],
+        "SeekBy": [],
+        "Play": [],
+        "GuideSelect": [],
+        "GuideEnable": [],
+        "GuideIsEnabled": [],
+        "UseDeckLink": [],
+        "IsUsingDeckLink": [],
+        "ExitMode": [],
+        "ItemPrev": [],
+        "ItemNext": [],
+        "ReelExit": [],
+        "TrimExit": [],
+        "SeekPrev": []
+    },
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "5308416",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "PlaybackManager",
+            "value": "string"
+        },
+        "REGS_Name": {
+            "type": "PlaybackManager",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    }
+}

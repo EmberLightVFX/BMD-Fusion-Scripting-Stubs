@@ -1,1 +1,57 @@
-{"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"5308416","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"ActionManager","value":"string"},"REGS_Name":{"type":"ActionManager","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}},"name":"ActionManager","methods":{"GetEvents":[],"GetTargets":[],"GetActions":[],"QueueAction":[],"header_text":"Methods","DoAction":[]},"class_inheritance":["Object","LockableObject","Manager"]}
+{
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "5308416",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "ActionManager",
+            "value": "string"
+        },
+        "REGS_Name": {
+            "type": "ActionManager",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    },
+    "name": "ActionManager",
+    "methods": {
+        "GetEvents": [],
+        "GetTargets": [],
+        "GetActions": [],
+        "QueueAction": [],
+        "DoAction": []
+    },
+    "class_inheritance": [
+        "Object",
+        "LockableObject",
+        "Manager"
+    ]
+}

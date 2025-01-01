@@ -1,1 +1,140 @@
-{"name":"FuFrame","properties":{"CurrentView":{"short_help":"Represents the currently active view for this frame window","description":"The CurrentView variable represents the currently active view for this frame window.","access_class":"Read Only"},"TransportView":{"short_help":"Represents this frame window's transport controls view","access_class":"Read Only"},"ToolView":{"short_help":"Represents this frame window's Tool controls view","access_class":"Read Only"},"TimelineView":{"short_help":"Represents this frame window's Timeline view","access_class":"Read Only"},"TimeRulerView":{"short_help":"Represents this frame window's time ruler","access_class":"Read Only"},"ModifierView":{"short_help":"Represents this frame window's Modifier controls view","access_class":"Read Only"},"ConsoleView":{"short_help":"Represents this frame window's console","description":"The ConsoleView variable represents the FuView object used to displayany scripting message, and to allow script commands to be entered.","access_class":"Read Only"},"header_text":"Properties","FlowView":{"short_help":"Represents this frame window's Flow view","description":"The FlowView variable represents the FuView object used to displaythe various tool connections for the frame's Composition.","access_class":"Read Only"},"RightView":{"short_help":"Represents this frame window's right display view","description":"The RightView variable represents the right-hand GLView object used todisplay images, 3D scenes and other parameters output by a tool.","access_class":"Read Only"},"LeftView":{"short_help":"Represents this frame window's left display view","description":"The LeftView variable represents the left-hand GLView object used todisplay images, 3D scenes and other parameters output by a tool.","access_class":"Read Only"},"SplineView":{"short_help":"Represents this frame window's spline editor view","access_class":"Read Only"},"Composition":{"short_help":"Represents this frame window's Composition","description":"The Composition variable represents the Composition object that thisframe window is displaying.","access_class":"Read Only"},"InfoView":{"short_help":"Represents this frame window's Info view","description":"The InfoView variable represents the FuView object used to displayany general notes for the frame's Composition.","access_class":"Read Only"}},"class_inheritance":["Object"],"methods":{"SwitchView":{"short_help":"Displays a given view within this frame","description":"where 'id' is the ID of one of the views in the frame.\n e.g. 'FlowView', 'ConsoleView', 'TimelineView', 'SplineEditorView'","see_also":"[GetViewList()](#GetViewList)","usage":[" :SwitchView(string id)"]},"ViewOn":{"short_help":"Displays a tool on a numbered view","description":"where 'view' is a number from 0..9.\nIf 'tool' is omitted, the currently active tool is used.\nIf 'tool' is nil, the view is cleared.\nIf no arguments are supplied, all views are cleared.","usage":[" :ViewOn([Tool tool], [number view])"]},"header_text":"Methods","GetViewList":{"short_help":"Returns the list of views within this frame","description":"where 'table' is a table of the FuView objects in the frame,\nand entries are named by the view's ID string.","see_also":"[SwitchControlView()](ChildFrame.md#SwitchControlView), [GetMainViewList()](ChildFrame.md#GetMainViewList)","usage":["table :GetViewList()"]},"GetPreviewList":{"short_help":"Retrieves a table of previews","usage":["table :GetPreviewList([boolean include_globals])"]}},"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"0 = CT_Any","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"FuFrame","value":"string"},"REGS_Name":{"type":"FuFrame","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}}}
+{
+    "name": "FuFrame",
+    "properties": {
+        "CurrentView": {
+            "short_help": "Represents the currently active view for this frame window",
+            "description": "The CurrentView variable represents the currently active view for this frame window.",
+            "access_class": "Read Only"
+        },
+        "TransportView": {
+            "short_help": "Represents this frame window's transport controls view",
+            "access_class": "Read Only"
+        },
+        "ToolView": {
+            "short_help": "Represents this frame window's Tool controls view",
+            "access_class": "Read Only"
+        },
+        "TimelineView": {
+            "short_help": "Represents this frame window's Timeline view",
+            "access_class": "Read Only"
+        },
+        "TimeRulerView": {
+            "short_help": "Represents this frame window's time ruler",
+            "access_class": "Read Only"
+        },
+        "ModifierView": {
+            "short_help": "Represents this frame window's Modifier controls view",
+            "access_class": "Read Only"
+        },
+        "ConsoleView": {
+            "short_help": "Represents this frame window's console",
+            "description": "The ConsoleView variable represents the FuView object used to displayany scripting message, and to allow script commands to be entered.",
+            "access_class": "Read Only"
+        },
+        "FlowView": {
+            "short_help": "Represents this frame window's Flow view",
+            "description": "The FlowView variable represents the FuView object used to displaythe various tool connections for the frame's Composition.",
+            "access_class": "Read Only"
+        },
+        "RightView": {
+            "short_help": "Represents this frame window's right display view",
+            "description": "The RightView variable represents the right-hand GLView object used todisplay images, 3D scenes and other parameters output by a tool.",
+            "access_class": "Read Only"
+        },
+        "LeftView": {
+            "short_help": "Represents this frame window's left display view",
+            "description": "The LeftView variable represents the left-hand GLView object used todisplay images, 3D scenes and other parameters output by a tool.",
+            "access_class": "Read Only"
+        },
+        "SplineView": {
+            "short_help": "Represents this frame window's spline editor view",
+            "access_class": "Read Only"
+        },
+        "Composition": {
+            "short_help": "Represents this frame window's Composition",
+            "description": "The Composition variable represents the Composition object that thisframe window is displaying.",
+            "access_class": "Read Only"
+        },
+        "InfoView": {
+            "short_help": "Represents this frame window's Info view",
+            "description": "The InfoView variable represents the FuView object used to displayany general notes for the frame's Composition.",
+            "access_class": "Read Only"
+        }
+    },
+    "class_inheritance": [
+        "Object"
+    ],
+    "methods": {
+        "SwitchView": {
+            "short_help": "Displays a given view within this frame",
+            "description": "where 'id' is the ID of one of the views in the frame.\n e.g. 'FlowView', 'ConsoleView', 'TimelineView', 'SplineEditorView'",
+            "see_also": "[GetViewList()](#GetViewList)",
+            "usage": [
+                " :SwitchView(string id)"
+            ]
+        },
+        "ViewOn": {
+            "short_help": "Displays a tool on a numbered view",
+            "description": "where 'view' is a number from 0..9.\nIf 'tool' is omitted, the currently active tool is used.\nIf 'tool' is nil, the view is cleared.\nIf no arguments are supplied, all views are cleared.",
+            "usage": [
+                " :ViewOn([Tool tool], [number view])"
+            ]
+        },
+        "GetViewList": {
+            "short_help": "Returns the list of views within this frame",
+            "description": "where 'table' is a table of the FuView objects in the frame,\nand entries are named by the view's ID string.",
+            "see_also": "[SwitchControlView()](ChildFrame.md#SwitchControlView), [GetMainViewList()](ChildFrame.md#GetMainViewList)",
+            "usage": [
+                "table :GetViewList()"
+            ]
+        },
+        "GetPreviewList": {
+            "short_help": "Retrieves a table of previews",
+            "usage": [
+                "table :GetPreviewList([boolean include_globals])"
+            ]
+        }
+    },
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "0 = CT_Any",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "FuFrame",
+            "value": "string"
+        },
+        "REGS_Name": {
+            "type": "FuFrame",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    }
+}

@@ -1,1 +1,12 @@
-{"methods":{"FindHost":[],"NotifyHosts":[],"Connect":[],"AddHost":[],"header_text":"Methods","StartHost":[],"GetHostList":[],"RemoveHost":[]},"name":"ScriptServer"}
+{
+    "methods": {
+        "FindHost": [],
+        "NotifyHosts": [],
+        "Connect": [],
+        "AddHost": [],
+        "StartHost": [],
+        "GetHostList": [],
+        "RemoveHost": []
+    },
+    "name": "ScriptServer"
+}

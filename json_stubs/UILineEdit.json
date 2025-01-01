@@ -1,1 +1,353 @@
-{"name":"UILineEdit","properties":{"CursorMoveStyle":{"access_class":"Read/Write"},"EchoMode":{"access_class":"Read/Write"},"Alignment":{"access_class":"Read/Write"},"ReadOnly":{"access_class":"Read/Write"},"InputMask":{"access_class":"Read/Write"},"Frame":{"access_class":"Read/Write"},"PlaceholderText":{"access_class":"Read/Write"},"CursorPosition":{"access_class":"Read/Write"},"Modified":{"access_class":"Read/Write"},"MaxLength":{"access_class":"Read/Write"},"header_text":"Properties","Text":{"access_class":"Read/Write"},"DragEnabled":{"access_class":"Read/Write"},"ClearButtonEnabled":{"access_class":"Read/Write"}},"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"5439488","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"UILineEdit","value":"string"},"REGB_Utility_Toggle":{"type":"false","value":"boolean"},"REGS_Name":{"type":"UILineEdit","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}},"class_inheritance":["Object","UIItem","UIWidget"],"methods":{"SetModified":{"usage":[" :SetModified()"]},"GetModified":{"usage":[" :GetModified()"]},"SetReadOnly":{"usage":[" :SetReadOnly()"]},"SetMaxLength":{"usage":[" :SetMaxLength()"]},"GetMaxLength":{"usage":[" :GetMaxLength()"]},"SelectedText":{"usage":[" :SelectedText()"]},"HasSelectedText":{"usage":[" :HasSelectedText()"]},"GetPlaceholderText":{"usage":[" :GetPlaceholderText()"]},"header_text":"Methods","End":{"usage":[" :End()"]},"Undo":{"usage":[" :Undo()"]},"SetText":{"usage":[" :SetText()"]},"SetSelection":{"usage":[" :SetSelection()"]},"SetPlaceholderText":{"usage":[" :SetPlaceholderText()"]},"SelectAll":{"usage":[" :SelectAll()"]},"GetFrame":{"usage":[" :GetFrame()"]},"Clear":{"usage":[" :Clear()"]},"Deselect":{"usage":[" :Deselect()"]},"SetCursorMoveStyle":{"usage":[" :SetCursorMoveStyle()"]},"GetCursorMoveStyle":{"usage":[" :GetCursorMoveStyle()"]},"CursorWordForward":{"usage":[" :CursorWordForward()"]},"SetEchoMode":{"usage":[" :SetEchoMode()"]},"GetEchoMode":{"usage":[" :GetEchoMode()"]},"SelectionStart":{"usage":[" :SelectionStart()"]},"CursorWordBackward":{"usage":[" :CursorWordBackward()"]},"GetAlignment":{"usage":[" :GetAlignment()"]},"CursorBackward":{"usage":[" :CursorBackward()"]},"CursorForward":{"usage":[" :CursorForward()"]},"CursorPositionAt":{"usage":[" :CursorPositionAt()"]},"Home":{"usage":[" :Home()"]},"Del":{"usage":[" :Del()"]},"Backspace":{"usage":[" :Backspace()"]},"Insert":{"usage":[" :Insert()"]},"GetText":{"usage":[" :GetText()"]},"Cut":{"usage":[" :Cut()"]},"Redo":{"usage":[" :Redo()"]},"GetReadOnly":{"usage":[" :GetReadOnly()"]},"HasAcceptableInput":{"usage":[" :HasAcceptableInput()"]},"IsRedoAvailable":{"usage":[" :IsRedoAvailable()"]},"IsUndoAvailable":{"usage":[" :IsUndoAvailable()"]},"SetInputMask":{"usage":[" :SetInputMask()"]},"GetInputMask":{"usage":[" :GetInputMask()"]},"SetAlignment":{"usage":[" :SetAlignment()"]},"SetCursorPosition":{"usage":[" :SetCursorPosition()"]},"GetCursorPosition":{"usage":[" :GetCursorPosition()"]},"Paste":{"usage":[" :Paste()"]},"SetDragEnabled":{"usage":[" :SetDragEnabled()"]},"GetDragEnabled":{"usage":[" :GetDragEnabled()"]},"Copy":{"usage":[" :Copy()"]},"SetFrame":{"usage":[" :SetFrame()"]},"SetClearButtonEnabled":{"usage":[" :SetClearButtonEnabled()"]},"GetClearButtonEnabled":{"usage":[" :GetClearButtonEnabled()"]}},"qt":"QLineEdit"}
+{
+    "name": "UILineEdit",
+    "properties": {
+        "CursorMoveStyle": {
+            "access_class": "Read/Write"
+        },
+        "EchoMode": {
+            "access_class": "Read/Write"
+        },
+        "Alignment": {
+            "access_class": "Read/Write"
+        },
+        "ReadOnly": {
+            "access_class": "Read/Write"
+        },
+        "InputMask": {
+            "access_class": "Read/Write"
+        },
+        "Frame": {
+            "access_class": "Read/Write"
+        },
+        "PlaceholderText": {
+            "access_class": "Read/Write"
+        },
+        "CursorPosition": {
+            "access_class": "Read/Write"
+        },
+        "Modified": {
+            "access_class": "Read/Write"
+        },
+        "MaxLength": {
+            "access_class": "Read/Write"
+        },
+        "Text": {
+            "access_class": "Read/Write"
+        },
+        "DragEnabled": {
+            "access_class": "Read/Write"
+        },
+        "ClearButtonEnabled": {
+            "access_class": "Read/Write"
+        }
+    },
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "5439488",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "UILineEdit",
+            "value": "string"
+        },
+        "REGB_Utility_Toggle": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGS_Name": {
+            "type": "UILineEdit",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    },
+    "class_inheritance": [
+        "Object",
+        "UIItem",
+        "UIWidget"
+    ],
+    "methods": {
+        "SetModified": {
+            "usage": [
+                " :SetModified()"
+            ]
+        },
+        "GetModified": {
+            "usage": [
+                " :GetModified()"
+            ]
+        },
+        "SetReadOnly": {
+            "usage": [
+                " :SetReadOnly()"
+            ]
+        },
+        "SetMaxLength": {
+            "usage": [
+                " :SetMaxLength()"
+            ]
+        },
+        "GetMaxLength": {
+            "usage": [
+                " :GetMaxLength()"
+            ]
+        },
+        "SelectedText": {
+            "usage": [
+                " :SelectedText()"
+            ]
+        },
+        "HasSelectedText": {
+            "usage": [
+                " :HasSelectedText()"
+            ]
+        },
+        "GetPlaceholderText": {
+            "usage": [
+                " :GetPlaceholderText()"
+            ]
+        },
+        "End": {
+            "usage": [
+                " :End()"
+            ]
+        },
+        "Undo": {
+            "usage": [
+                " :Undo()"
+            ]
+        },
+        "SetText": {
+            "usage": [
+                " :SetText()"
+            ]
+        },
+        "SetSelection": {
+            "usage": [
+                " :SetSelection()"
+            ]
+        },
+        "SetPlaceholderText": {
+            "usage": [
+                " :SetPlaceholderText()"
+            ]
+        },
+        "SelectAll": {
+            "usage": [
+                " :SelectAll()"
+            ]
+        },
+        "GetFrame": {
+            "usage": [
+                " :GetFrame()"
+            ]
+        },
+        "Clear": {
+            "usage": [
+                " :Clear()"
+            ]
+        },
+        "Deselect": {
+            "usage": [
+                " :Deselect()"
+            ]
+        },
+        "SetCursorMoveStyle": {
+            "usage": [
+                " :SetCursorMoveStyle()"
+            ]
+        },
+        "GetCursorMoveStyle": {
+            "usage": [
+                " :GetCursorMoveStyle()"
+            ]
+        },
+        "CursorWordForward": {
+            "usage": [
+                " :CursorWordForward()"
+            ]
+        },
+        "SetEchoMode": {
+            "usage": [
+                " :SetEchoMode()"
+            ]
+        },
+        "GetEchoMode": {
+            "usage": [
+                " :GetEchoMode()"
+            ]
+        },
+        "SelectionStart": {
+            "usage": [
+                " :SelectionStart()"
+            ]
+        },
+        "CursorWordBackward": {
+            "usage": [
+                " :CursorWordBackward()"
+            ]
+        },
+        "GetAlignment": {
+            "usage": [
+                " :GetAlignment()"
+            ]
+        },
+        "CursorBackward": {
+            "usage": [
+                " :CursorBackward()"
+            ]
+        },
+        "CursorForward": {
+            "usage": [
+                " :CursorForward()"
+            ]
+        },
+        "CursorPositionAt": {
+            "usage": [
+                " :CursorPositionAt()"
+            ]
+        },
+        "Home": {
+            "usage": [
+                " :Home()"
+            ]
+        },
+        "Del": {
+            "usage": [
+                " :Del()"
+            ]
+        },
+        "Backspace": {
+            "usage": [
+                " :Backspace()"
+            ]
+        },
+        "Insert": {
+            "usage": [
+                " :Insert()"
+            ]
+        },
+        "GetText": {
+            "usage": [
+                " :GetText()"
+            ]
+        },
+        "Cut": {
+            "usage": [
+                " :Cut()"
+            ]
+        },
+        "Redo": {
+            "usage": [
+                " :Redo()"
+            ]
+        },
+        "GetReadOnly": {
+            "usage": [
+                " :GetReadOnly()"
+            ]
+        },
+        "HasAcceptableInput": {
+            "usage": [
+                " :HasAcceptableInput()"
+            ]
+        },
+        "IsRedoAvailable": {
+            "usage": [
+                " :IsRedoAvailable()"
+            ]
+        },
+        "IsUndoAvailable": {
+            "usage": [
+                " :IsUndoAvailable()"
+            ]
+        },
+        "SetInputMask": {
+            "usage": [
+                " :SetInputMask()"
+            ]
+        },
+        "GetInputMask": {
+            "usage": [
+                " :GetInputMask()"
+            ]
+        },
+        "SetAlignment": {
+            "usage": [
+                " :SetAlignment()"
+            ]
+        },
+        "SetCursorPosition": {
+            "usage": [
+                " :SetCursorPosition()"
+            ]
+        },
+        "GetCursorPosition": {
+            "usage": [
+                " :GetCursorPosition()"
+            ]
+        },
+        "Paste": {
+            "usage": [
+                " :Paste()"
+            ]
+        },
+        "SetDragEnabled": {
+            "usage": [
+                " :SetDragEnabled()"
+            ]
+        },
+        "GetDragEnabled": {
+            "usage": [
+                " :GetDragEnabled()"
+            ]
+        },
+        "Copy": {
+            "usage": [
+                " :Copy()"
+            ]
+        },
+        "SetFrame": {
+            "usage": [
+                " :SetFrame()"
+            ]
+        },
+        "SetClearButtonEnabled": {
+            "usage": [
+                " :SetClearButtonEnabled()"
+            ]
+        },
+        "GetClearButtonEnabled": {
+            "usage": [
+                " :GetClearButtonEnabled()"
+            ]
+        }
+    },
+    "qt": "QLineEdit"
+}

@@ -29,7 +29,6 @@
         "MouseY": {
             "access_class": "Read Only"
         },
-        "header_text": "Properties",
         "MenuManager": {
             "short_help": "The Global Menu Manager",
             "return_type": "MenuManager",
@@ -297,7 +296,6 @@
         },
         "OpenLibraryStudio": [],
         "OpenLibrary": [],
-        "header_text": "Methods",
         "ToggleRenderManager": {
             "short_help": "Shows or hides the Render Manager",
             "usage": [

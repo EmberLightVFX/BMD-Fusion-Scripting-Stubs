@@ -1,1 +1,15 @@
-{"properties":{"header_text":"Discovered Properties","info_text":"Discovered properties might be available in many contexts, but most typically in Fuse scripts","TypeName":{"return_type":"string","access_class":"Read Only"},"TypeNamePtr":{"return_type":"string","access_class":"Read Only"}},"name":"ChanLUTs"}
+{
+    "properties": {
+        "header_text": "Discovered Properties",
+        "info_text": "Discovered properties might be available in many contexts, but most typically in Fuse scripts",
+        "TypeName": {
+            "return_type": "string",
+            "access_class": "Read Only"
+        },
+        "TypeNamePtr": {
+            "return_type": "string",
+            "access_class": "Read Only"
+        }
+    },
+    "name": "ChanLUTs"
+}

@@ -1,1 +1,92 @@
-{"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"0 = CT_Any","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"PlainOutput","value":"string"},"REGS_Name":{"type":"PlainOutput","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}},"name":"PlainOutput","methods":{"GetValue":{"short_help":"Returns the value at the given time","description":"Args:\n  time:     The frame to fetch the value for (default is the current time).\n  reqflags: Quality flags (default is final quality).\n  proxy:    Proxy level (default is no proxy).\n\nReturns:\n  value may be nil, or a number of different types:\n     Number - returns a number\n     Point  - returns a table with X and Y members\n     Text   - returns a string\n     Clip   - returns the filename string\n     Image  - returns an Image object\n attrs is a table with the following entries:\n     Valid    - table with Start and End entries\n     DataType - string ID for the parameter type\n     TimeCost - time take to render this parameter\n     DoD      - table of { left,bottom,right,top } coords","usage":["Parameter, table :GetValue([number time], [number flags], [number proxy])"]},"EnableDiskCache":{"short_help":"Controls disk-based caching","description":"Args:\n  Enable:     Enables or disables the cache\n  Path:       Path to create the cache at\n  LockCache:  Preserves the cache despite upstream changes (default false)\n  LockBranch: Locks all upstream tools (default false)\n  Delete:     Deletes the cache at <Path> (default false)\n  PreRender:  Do a render now to create the cache (default true)\n  UseNetwork: Use Network Rendering when PreRendering (default false)","see_also":"[ClearDiskCache()](#ClearDiskCache), [ShowDiskCacheDlg()](#ShowDiskCacheDlg)","usage":["boolean, string :EnableDiskCache([boolean enable], [string path], [boolean lockcache], [boolean lockbranch], [boolean delete], [boolean prerender], [boolean usenetwork])"]},"GetConnectedInputs":[],"header_text":"Methods","ShowDiskCacheDlg":{"short_help":"Displays Cache-To-Disk dialog for user interaction","description":"Returns: boolean ok - true if user clicked OK/Pre-Render, false for Cancel","see_also":"[EnableDiskCache()](#EnableDiskCache), [ClearDiskCache()](#ClearDiskCache)","usage":["boolean :ShowDiskCacheDlg()"]},"GetDoD":{"short_help":"Returns the Domain of Definition at the given time","description":"Args:\n  time:     The frame to fetch the value for (default is the current time).\n  reqflags: Quality flags (default is final quality).\n  proxy:    Proxy level (default is no proxy).\n\nReturns:\n  may be nil, or a table containing { left,bottom,right,top } coords.","see_also":"[GetValue()](#GetValue)","usage":["table :GetDoD([number time], [number flags], [number proxy])"]},"ClearDiskCache":{"short_help":"Clears frames from the disk cache","description":"Start..End: Frame range to clear from the cache (inclusive)","see_also":"[EnableDiskCache()](#EnableDiskCache)","usage":["boolean :ClearDiskCache(number start, number end)"]}},"class_inheritance":["Object","LockableObject","Link"]}
+{
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "0 = CT_Any",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "PlainOutput",
+            "value": "string"
+        },
+        "REGS_Name": {
+            "type": "PlainOutput",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    },
+    "name": "PlainOutput",
+    "methods": {
+        "GetValue": {
+            "short_help": "Returns the value at the given time",
+            "description": "Args:\n  time:     The frame to fetch the value for (default is the current time).\n  reqflags: Quality flags (default is final quality).\n  proxy:    Proxy level (default is no proxy).\n\nReturns:\n  value may be nil, or a number of different types:\n     Number - returns a number\n     Point  - returns a table with X and Y members\n     Text   - returns a string\n     Clip   - returns the filename string\n     Image  - returns an Image object\n attrs is a table with the following entries:\n     Valid    - table with Start and End entries\n     DataType - string ID for the parameter type\n     TimeCost - time take to render this parameter\n     DoD      - table of { left,bottom,right,top } coords",
+            "usage": [
+                "Parameter, table :GetValue([number time], [number flags], [number proxy])"
+            ]
+        },
+        "EnableDiskCache": {
+            "short_help": "Controls disk-based caching",
+            "description": "Args:\n  Enable:     Enables or disables the cache\n  Path:       Path to create the cache at\n  LockCache:  Preserves the cache despite upstream changes (default false)\n  LockBranch: Locks all upstream tools (default false)\n  Delete:     Deletes the cache at <Path> (default false)\n  PreRender:  Do a render now to create the cache (default true)\n  UseNetwork: Use Network Rendering when PreRendering (default false)",
+            "see_also": "[ClearDiskCache()](#ClearDiskCache), [ShowDiskCacheDlg()](#ShowDiskCacheDlg)",
+            "usage": [
+                "boolean, string :EnableDiskCache([boolean enable], [string path], [boolean lockcache], [boolean lockbranch], [boolean delete], [boolean prerender], [boolean usenetwork])"
+            ]
+        },
+        "GetConnectedInputs": [],
+        "ShowDiskCacheDlg": {
+            "short_help": "Displays Cache-To-Disk dialog for user interaction",
+            "description": "Returns: boolean ok - true if user clicked OK/Pre-Render, false for Cancel",
+            "see_also": "[EnableDiskCache()](#EnableDiskCache), [ClearDiskCache()](#ClearDiskCache)",
+            "usage": [
+                "boolean :ShowDiskCacheDlg()"
+            ]
+        },
+        "GetDoD": {
+            "short_help": "Returns the Domain of Definition at the given time",
+            "description": "Args:\n  time:     The frame to fetch the value for (default is the current time).\n  reqflags: Quality flags (default is final quality).\n  proxy:    Proxy level (default is no proxy).\n\nReturns:\n  may be nil, or a table containing { left,bottom,right,top } coords.",
+            "see_also": "[GetValue()](#GetValue)",
+            "usage": [
+                "table :GetDoD([number time], [number flags], [number proxy])"
+            ]
+        },
+        "ClearDiskCache": {
+            "short_help": "Clears frames from the disk cache",
+            "description": "Start..End: Frame range to clear from the cache (inclusive)",
+            "see_also": "[EnableDiskCache()](#EnableDiskCache)",
+            "usage": [
+                "boolean :ClearDiskCache(number start, number end)"
+            ]
+        }
+    },
+    "class_inheritance": [
+        "Object",
+        "LockableObject",
+        "Link"
+    ]
+}

@@ -1,1 +1,439 @@
-{"name":"Composition","properties":{"ActiveTool":{"short_help":"Represents the currently active tool on this comp","return_type":"Tool","access_class":"Read Only"},"AutoPos":{"return_type":"boolean","access_class":"Read/Write"},"UpdateMode":{"access_class":"Read/Write"},"CurrentTime":{"short_help":"The current time position for this composition","return_type":"number","access_class":"Read/Write"},"header_text":"Properties","CurrentFrame":{"short_help":"Represents the currently active frame for this composition","return_type":"FuFrame","access_class":"Read Only"},"YPos":{"return_type":"number","see_also":"[XPos](#XPos)","access_class":"Read/Write"},"XPos":{"return_type":"number","see_also":"[YPos](#YPos)","access_class":"Read/Write"}},"class_inheritance":["Object"],"methods":{"EndUndo":{"short_help":"End an undo event","see_also":"[StartUndo()](#StartUndo), [Undo()](#Undo), [Redo()](#Redo)","usage":[" :EndUndo(boolean keep)"]},"Lock":{"short_help":"Lock the composition from updating","see_also":"[Unlock()](#Unlock)","usage":[" :Lock()"]},"IsViewShowing":[],"ShowView":[],"AskRenderSettings":[],"IsRendering":{"usage":["boolean :IsRendering()"]},"ChooseAction":{"short_help":"Displays a dialog with a list of selectable actions","description":"Allows the user to select from a list of actions, and returns the action.","usage":["string :ChooseAction(boolean execute, object target)"]},"ChooseTool":{"short_help":"Displays a dialog with a list of selectable tools","description":"Allows the user to select from a list of tools, and returns the tool ID.\nIf a macro is selected, the path is also returned.","usage":["string, string :ChooseTool(boolean execute)"]},"ReverseMapPath":{"short_help":"Collapses a path into best-matching path map","description":"Returns the path string relative to nearest applicable mapped path.","see_also":"[MapPath()](#MapPath), [MapPathSegments()](#MapPathSegments), [ReverseMapPath()](Fusion.md#ReverseMapPath)","usage":["string :ReverseMapPath(string mapped)"]},"GetCompPathMap":{"short_help":"Returns a table of all Composition path maps","description":"Args:  built_ins - include built-in path maps (default: true)\n       defaults  - include factory default path maps (default: true)\nReturns: Table of path strings, keyed by map name.","usage":["table :GetCompPathMap([boolean built_ins], [boolean defaults])"]},"MapPathSegments":{"short_help":"Expands all path mappings in a multipath","description":"Returns a table of path strings with all mappings expanded. All paths of a multipath are returned.","see_also":"[ReverseMapPath()](#ReverseMapPath), [MapPath()](#MapPath), [MapPathSegments()](Fusion.md#MapPathSegments)","usage":["table :MapPathSegments(string path)"]},"GetConsoleHistory":[],"UpdateViews":[],"GetFrameList":[],"Loop":{"short_help":"Enables looping interactive playback","description":"where \"mode\" is one of the following:\n   \"none\"\n   \"loop\"\n   \"pingpong\"","usage":[" :Loop(boolean enable)"," :Loop(string mode)"]},"Stop":{"short_help":"Stops interactive playback","usage":[" :Stop()"]},"IsPlaying":{"usage":["boolean :IsPlaying()"]},"Play":{"short_help":"Starts interactive playback","usage":[" :Play([boolean reverse])"]},"GetData":{"short_help":"Get custom persistent data","see_also":"[SetData()](#SetData)","usage":["(number|string|boolean|table) :GetData([string name])"]},"AskUser":{"short_help":"Present a custom dialog to the user, and return selected values","description":"Returns a table of result values, determined by individual control types","usage":["table :AskUser(string title, table controls)"]},"RunScript":{"short_help":"Run a script","usage":[" :RunScript(string filename)"]},"_Output_Error":[],"_Output_Print":[],"GetPreviewList":{"short_help":"Retrieves a table of previews","usage":["table :GetPreviewList([boolean include_globals])"]},"SetData":{"short_help":"Set custom persistent data","see_also":"[GetData()](#GetData)","usage":[" :SetData(string name, (number|string|boolean|table) value)"]},"ClearUndo":{"short_help":"Clears the Undo/Redo history","see_also":"[StartUndo()](#StartUndo), [EndUndo()](#EndUndo), [Undo()](#Undo), [Redo()](#Redo)","usage":[" :ClearUndo()"]},"Redo":{"short_help":"Redo one or more changes to the composition","see_also":"[StartUndo()](#StartUndo), [EndUndo()](#EndUndo), [Undo()](#Undo)","usage":[" :Redo(number count)"]},"Undo":{"short_help":"Undo one or more changes to the composition","see_also":"[StartUndo()](#StartUndo), [EndUndo()](#EndUndo), [Redo()](#Redo)","usage":[" :Undo(number count)"]},"Copy":{"short_help":"Copy a list of tools to the Clipboard","description":"Can be passed a single tool or a table of tools.\nIf no args are given, the currently selected tools will be copied.","usage":["boolean :Copy()","boolean :Copy(Tool tool)","boolean :Copy(table toollist)"]},"GetUndoStack":[],"IsLocked":{"see_also":"[Unlock()](#Unlock), [Lock()](#Lock)","usage":["boolean :IsLocked()"]},"Render":{"short_help":"Start a render","usage":["boolean :Render([boolean wait], [number start], [number end], [number proxy], [boolean hiq], [boolean motionblur])","boolean :Render(table settings)"]},"Reset":[],"AbortRender":[],"IsZoneExpanded":[],"NetRenderAbort":[],"NetRenderTime":[],"NetRenderEnd":[],"NetRenderStart":[],"Paste":{"short_help":"Paste tools from the Clipboard","description":"'settings' may contain the results of Copy() or Operator:SaveSettings()\nIf no args are given, the Clipboard will be pasted.","usage":["boolean :Paste([table settings])"]},"CopySettings":{"short_help":"Copy a list of tools to a settings table","description":"Can be passed a single tool or a table of tools.\nIf no args are given, the currently selected tools will be copied.","usage":["table :CopySettings()","table :CopySettings(Tool tool)","table :CopySettings(table toollist)"]},"SaveCopyAs":{"short_help":"Save a copy of the composition","usage":[" :SaveCopyAs()"]},"GetPrefs":{"short_help":"Retrieve a table of preferences","see_also":"[SetPrefs()](#SetPrefs)","usage":["table :GetPrefs([string prefname], [boolean exclude-defaults])"]},"SaveAs":{"short_help":"Save the composition","usage":[" :SaveAs()"]},"_SaveAs":{"short_help":"Save the composition","usage":[" :_SaveAs()"]},"SetPrefs":{"short_help":"Set preferences from a table of attributes","see_also":"[GetPrefs()](#GetPrefs)","usage":[" :SetPrefs(string prefname, value val)"," :SetPrefs(table prefs)"]},"SaveVersion":{"short_help":"Save the composition","usage":["boolean :SaveVersion(string filename, [number version])"]},"SetActiveTool":{"short_help":"Set the currently active tool","usage":[" :SetActiveTool(Tool tool)"]},"_SetCurrentTime":[],"FindTool":{"short_help":"Finds first tool by name","see_also":"[FindToolbyID()](#FindToolbyID)","usage":["Tool :FindTool(string name)"]},"FindToolByID":{"short_help":"Finds tools of a given type","description":"Args:    id   - string type of tool\n         prev - optional tool to start search from","see_also":"[FindTool()](#FindTool)","usage":["Tool :FindToolByID(string id, [Tool prev])"]},"AddTool":{"short_help":"Adds a tool to the comp at a given position","description":"Args:    id          - string type of tool to be created\n         defsettings - boolean to use saved default settings\n         xpos, ypos  - integer position on flow view","usage":["Tool :AddTool(string id, [boolean defsettings], [number xpos], [number ypos])"]},"AddSettingAction":{"short_help":"Adds a .settings to the comp","usage":["Tool :AddSettingAction(string filename, [number xpos], [number ypos])"]},"AddToolAction":{"short_help":"Adds a tool to the comp","usage":["Tool :AddToolAction(string id, [number xpos], [number ypos])"]},"Save":{"short_help":"Save the composition","usage":["boolean :Save(string filename)"]},"header_text":"Methods","GetToolList":{"short_help":"Returns a list of all tools, or selected tools, in the composition","description":"selected - pass 'true' to get only selected tools\nregid    - pass a Registry ID string to get only tools of that type","usage":["table :GetToolList([boolean selected], [string regid])"]},"Print":[],"IsReadOnly":[],"GetPrevKeyTime":{"short_help":"Gets the previous key time","description":"Returns: The timestamp of the keyframe before the given time\n\tfor the specified tool, or for any tool, if none is specified.\n\tIf no time is given, the last keyframe time is returned.","usage":["number :GetPrevKeyTime([number time], [Tool tool])"]},"Unlock":{"short_help":"Unlock the composition","see_also":"[Lock()](#Lock)","usage":[" :Unlock()"]},"_SaveCopyAs":{"short_help":"Save a copy of the composition","usage":[" :_SaveCopyAs()"]},"_Save":[],"Close":{"short_help":"Close the composition","usage":[" :Close()"]},"SetReadOnly":[],"DisableSelectedTools":{"short_help":"Pass-through the selected tools","usage":[" :DisableSelectedTools()"]},"StartUndo":{"short_help":"Start an undo event","see_also":"[EndUndo()](#EndUndo), [Undo()](#Undo), [Redo()](#Redo)","usage":[" :StartUndo(string name)"]},"GetViewList":[],"ExpandZone":[],"Execute":[],"Heartbeat":[],"AbortRenderUI":[],"AddMedia":[],"Export":{"short_help":"Exports the current composition to a file.","description":"This saves the composition to an external .comp file, translating as required.","see_also":"[Save()](#Save)","usage":["boolean :Export(string filename)"]},"GetRedoStack":[],"MapPath":{"short_help":"Expands path mappings in a path string","description":"Returns the path string with all mappings expanded. Only the first path of a multipath is returned.","see_also":"[ReverseMapPath()](#ReverseMapPath), [MapPathSegments()](#MapPathSegments), [MapPath()](Fusion.md#MapPath)","usage":["string :MapPath(string path)"]},"GetNextKeyTime":{"short_help":"Gets the next key time","description":"Returns: The timestamp of the keyframe after the given time\n\tfor the specified tool, or for any tool, if none is specified.\n\tIf no time is given, the first keyframe time is returned.","usage":["number :GetNextKeyTime([number time], [Tool tool])"]}},"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"0 = CT_Any","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"Composition","value":"string"},"REGS_Name":{"type":"Composition","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}}}
+{
+    "name": "Composition",
+    "properties": {
+        "ActiveTool": {
+            "short_help": "Represents the currently active tool on this comp",
+            "return_type": "Tool",
+            "access_class": "Read Only"
+        },
+        "AutoPos": {
+            "return_type": "boolean",
+            "access_class": "Read/Write"
+        },
+        "UpdateMode": {
+            "access_class": "Read/Write"
+        },
+        "CurrentTime": {
+            "short_help": "The current time position for this composition",
+            "return_type": "number",
+            "access_class": "Read/Write"
+        },
+        "CurrentFrame": {
+            "short_help": "Represents the currently active frame for this composition",
+            "return_type": "FuFrame",
+            "access_class": "Read Only"
+        },
+        "YPos": {
+            "return_type": "number",
+            "see_also": "[XPos](#XPos)",
+            "access_class": "Read/Write"
+        },
+        "XPos": {
+            "return_type": "number",
+            "see_also": "[YPos](#YPos)",
+            "access_class": "Read/Write"
+        }
+    },
+    "class_inheritance": [
+        "Object"
+    ],
+    "methods": {
+        "EndUndo": {
+            "short_help": "End an undo event",
+            "see_also": "[StartUndo()](#StartUndo), [Undo()](#Undo), [Redo()](#Redo)",
+            "usage": [
+                " :EndUndo(boolean keep)"
+            ]
+        },
+        "Lock": {
+            "short_help": "Lock the composition from updating",
+            "see_also": "[Unlock()](#Unlock)",
+            "usage": [
+                " :Lock()"
+            ]
+        },
+        "IsViewShowing": [],
+        "ShowView": [],
+        "AskRenderSettings": [],
+        "IsRendering": {
+            "usage": [
+                "boolean :IsRendering()"
+            ]
+        },
+        "ChooseAction": {
+            "short_help": "Displays a dialog with a list of selectable actions",
+            "description": "Allows the user to select from a list of actions, and returns the action.",
+            "usage": [
+                "string :ChooseAction(boolean execute, object target)"
+            ]
+        },
+        "ChooseTool": {
+            "short_help": "Displays a dialog with a list of selectable tools",
+            "description": "Allows the user to select from a list of tools, and returns the tool ID.\nIf a macro is selected, the path is also returned.",
+            "usage": [
+                "string, string :ChooseTool(boolean execute)"
+            ]
+        },
+        "ReverseMapPath": {
+            "short_help": "Collapses a path into best-matching path map",
+            "description": "Returns the path string relative to nearest applicable mapped path.",
+            "see_also": "[MapPath()](#MapPath), [MapPathSegments()](#MapPathSegments), [ReverseMapPath()](Fusion.md#ReverseMapPath)",
+            "usage": [
+                "string :ReverseMapPath(string mapped)"
+            ]
+        },
+        "GetCompPathMap": {
+            "short_help": "Returns a table of all Composition path maps",
+            "description": "Args:  built_ins - include built-in path maps (default: true)\n       defaults  - include factory default path maps (default: true)\nReturns: Table of path strings, keyed by map name.",
+            "usage": [
+                "table :GetCompPathMap([boolean built_ins], [boolean defaults])"
+            ]
+        },
+        "MapPathSegments": {
+            "short_help": "Expands all path mappings in a multipath",
+            "description": "Returns a table of path strings with all mappings expanded. All paths of a multipath are returned.",
+            "see_also": "[ReverseMapPath()](#ReverseMapPath), [MapPath()](#MapPath), [MapPathSegments()](Fusion.md#MapPathSegments)",
+            "usage": [
+                "table :MapPathSegments(string path)"
+            ]
+        },
+        "GetConsoleHistory": [],
+        "UpdateViews": [],
+        "GetFrameList": [],
+        "Loop": {
+            "short_help": "Enables looping interactive playback",
+            "description": "where \"mode\" is one of the following:\n   \"none\"\n   \"loop\"\n   \"pingpong\"",
+            "usage": [
+                " :Loop(boolean enable)",
+                " :Loop(string mode)"
+            ]
+        },
+        "Stop": {
+            "short_help": "Stops interactive playback",
+            "usage": [
+                " :Stop()"
+            ]
+        },
+        "IsPlaying": {
+            "usage": [
+                "boolean :IsPlaying()"
+            ]
+        },
+        "Play": {
+            "short_help": "Starts interactive playback",
+            "usage": [
+                " :Play([boolean reverse])"
+            ]
+        },
+        "GetData": {
+            "short_help": "Get custom persistent data",
+            "see_also": "[SetData()](#SetData)",
+            "usage": [
+                "(number|string|boolean|table) :GetData([string name])"
+            ]
+        },
+        "AskUser": {
+            "short_help": "Present a custom dialog to the user, and return selected values",
+            "description": "Returns a table of result values, determined by individual control types",
+            "usage": [
+                "table :AskUser(string title, table controls)"
+            ]
+        },
+        "RunScript": {
+            "short_help": "Run a script",
+            "usage": [
+                " :RunScript(string filename)"
+            ]
+        },
+        "_Output_Error": [],
+        "_Output_Print": [],
+        "GetPreviewList": {
+            "short_help": "Retrieves a table of previews",
+            "usage": [
+                "table :GetPreviewList([boolean include_globals])"
+            ]
+        },
+        "SetData": {
+            "short_help": "Set custom persistent data",
+            "see_also": "[GetData()](#GetData)",
+            "usage": [
+                " :SetData(string name, (number|string|boolean|table) value)"
+            ]
+        },
+        "ClearUndo": {
+            "short_help": "Clears the Undo/Redo history",
+            "see_also": "[StartUndo()](#StartUndo), [EndUndo()](#EndUndo), [Undo()](#Undo), [Redo()](#Redo)",
+            "usage": [
+                " :ClearUndo()"
+            ]
+        },
+        "Redo": {
+            "short_help": "Redo one or more changes to the composition",
+            "see_also": "[StartUndo()](#StartUndo), [EndUndo()](#EndUndo), [Undo()](#Undo)",
+            "usage": [
+                " :Redo(number count)"
+            ]
+        },
+        "Undo": {
+            "short_help": "Undo one or more changes to the composition",
+            "see_also": "[StartUndo()](#StartUndo), [EndUndo()](#EndUndo), [Redo()](#Redo)",
+            "usage": [
+                " :Undo(number count)"
+            ]
+        },
+        "Copy": {
+            "short_help": "Copy a list of tools to the Clipboard",
+            "description": "Can be passed a single tool or a table of tools.\nIf no args are given, the currently selected tools will be copied.",
+            "usage": [
+                "boolean :Copy()",
+                "boolean :Copy(Tool tool)",
+                "boolean :Copy(table toollist)"
+            ]
+        },
+        "GetUndoStack": [],
+        "IsLocked": {
+            "see_also": "[Unlock()](#Unlock), [Lock()](#Lock)",
+            "usage": [
+                "boolean :IsLocked()"
+            ]
+        },
+        "Render": {
+            "short_help": "Start a render",
+            "usage": [
+                "boolean :Render([boolean wait], [number start], [number end], [number proxy], [boolean hiq], [boolean motionblur])",
+                "boolean :Render(table settings)"
+            ]
+        },
+        "Reset": [],
+        "AbortRender": [],
+        "IsZoneExpanded": [],
+        "NetRenderAbort": [],
+        "NetRenderTime": [],
+        "NetRenderEnd": [],
+        "NetRenderStart": [],
+        "Paste": {
+            "short_help": "Paste tools from the Clipboard",
+            "description": "'settings' may contain the results of Copy() or Operator:SaveSettings()\nIf no args are given, the Clipboard will be pasted.",
+            "usage": [
+                "boolean :Paste([table settings])"
+            ]
+        },
+        "CopySettings": {
+            "short_help": "Copy a list of tools to a settings table",
+            "description": "Can be passed a single tool or a table of tools.\nIf no args are given, the currently selected tools will be copied.",
+            "usage": [
+                "table :CopySettings()",
+                "table :CopySettings(Tool tool)",
+                "table :CopySettings(table toollist)"
+            ]
+        },
+        "SaveCopyAs": {
+            "short_help": "Save a copy of the composition",
+            "usage": [
+                " :SaveCopyAs()"
+            ]
+        },
+        "GetPrefs": {
+            "short_help": "Retrieve a table of preferences",
+            "see_also": "[SetPrefs()](#SetPrefs)",
+            "usage": [
+                "table :GetPrefs([string prefname], [boolean exclude-defaults])"
+            ]
+        },
+        "SaveAs": {
+            "short_help": "Save the composition",
+            "usage": [
+                " :SaveAs()"
+            ]
+        },
+        "_SaveAs": {
+            "short_help": "Save the composition",
+            "usage": [
+                " :_SaveAs()"
+            ]
+        },
+        "SetPrefs": {
+            "short_help": "Set preferences from a table of attributes",
+            "see_also": "[GetPrefs()](#GetPrefs)",
+            "usage": [
+                " :SetPrefs(string prefname, value val)",
+                " :SetPrefs(table prefs)"
+            ]
+        },
+        "SaveVersion": {
+            "short_help": "Save the composition",
+            "usage": [
+                "boolean :SaveVersion(string filename, [number version])"
+            ]
+        },
+        "SetActiveTool": {
+            "short_help": "Set the currently active tool",
+            "usage": [
+                " :SetActiveTool(Tool tool)"
+            ]
+        },
+        "_SetCurrentTime": [],
+        "FindTool": {
+            "short_help": "Finds first tool by name",
+            "see_also": "[FindToolbyID()](#FindToolbyID)",
+            "usage": [
+                "Tool :FindTool(string name)"
+            ]
+        },
+        "FindToolByID": {
+            "short_help": "Finds tools of a given type",
+            "description": "Args:    id   - string type of tool\n         prev - optional tool to start search from",
+            "see_also": "[FindTool()](#FindTool)",
+            "usage": [
+                "Tool :FindToolByID(string id, [Tool prev])"
+            ]
+        },
+        "AddTool": {
+            "short_help": "Adds a tool to the comp at a given position",
+            "description": "Args:    id          - string type of tool to be created\n         defsettings - boolean to use saved default settings\n         xpos, ypos  - integer position on flow view",
+            "usage": [
+                "Tool :AddTool(string id, [boolean defsettings], [number xpos], [number ypos])"
+            ]
+        },
+        "AddSettingAction": {
+            "short_help": "Adds a .settings to the comp",
+            "usage": [
+                "Tool :AddSettingAction(string filename, [number xpos], [number ypos])"
+            ]
+        },
+        "AddToolAction": {
+            "short_help": "Adds a tool to the comp",
+            "usage": [
+                "Tool :AddToolAction(string id, [number xpos], [number ypos])"
+            ]
+        },
+        "Save": {
+            "short_help": "Save the composition",
+            "usage": [
+                "boolean :Save(string filename)"
+            ]
+        },
+        "GetToolList": {
+            "short_help": "Returns a list of all tools, or selected tools, in the composition",
+            "description": "selected - pass 'true' to get only selected tools\nregid    - pass a Registry ID string to get only tools of that type",
+            "usage": [
+                "table :GetToolList([boolean selected], [string regid])"
+            ]
+        },
+        "Print": [],
+        "IsReadOnly": [],
+        "GetPrevKeyTime": {
+            "short_help": "Gets the previous key time",
+            "description": "Returns: The timestamp of the keyframe before the given time\n\tfor the specified tool, or for any tool, if none is specified.\n\tIf no time is given, the last keyframe time is returned.",
+            "usage": [
+                "number :GetPrevKeyTime([number time], [Tool tool])"
+            ]
+        },
+        "Unlock": {
+            "short_help": "Unlock the composition",
+            "see_also": "[Lock()](#Lock)",
+            "usage": [
+                " :Unlock()"
+            ]
+        },
+        "_SaveCopyAs": {
+            "short_help": "Save a copy of the composition",
+            "usage": [
+                " :_SaveCopyAs()"
+            ]
+        },
+        "_Save": [],
+        "Close": {
+            "short_help": "Close the composition",
+            "usage": [
+                " :Close()"
+            ]
+        },
+        "SetReadOnly": [],
+        "DisableSelectedTools": {
+            "short_help": "Pass-through the selected tools",
+            "usage": [
+                " :DisableSelectedTools()"
+            ]
+        },
+        "StartUndo": {
+            "short_help": "Start an undo event",
+            "see_also": "[EndUndo()](#EndUndo), [Undo()](#Undo), [Redo()](#Redo)",
+            "usage": [
+                " :StartUndo(string name)"
+            ]
+        },
+        "GetViewList": [],
+        "ExpandZone": [],
+        "Execute": [],
+        "Heartbeat": [],
+        "AbortRenderUI": [],
+        "AddMedia": [],
+        "Export": {
+            "short_help": "Exports the current composition to a file.",
+            "description": "This saves the composition to an external .comp file, translating as required.",
+            "see_also": "[Save()](#Save)",
+            "usage": [
+                "boolean :Export(string filename)"
+            ]
+        },
+        "GetRedoStack": [],
+        "MapPath": {
+            "short_help": "Expands path mappings in a path string",
+            "description": "Returns the path string with all mappings expanded. Only the first path of a multipath is returned.",
+            "see_also": "[ReverseMapPath()](#ReverseMapPath), [MapPathSegments()](#MapPathSegments), [MapPath()](Fusion.md#MapPath)",
+            "usage": [
+                "string :MapPath(string path)"
+            ]
+        },
+        "GetNextKeyTime": {
+            "short_help": "Gets the next key time",
+            "description": "Returns: The timestamp of the keyframe after the given time\n\tfor the specified tool, or for any tool, if none is specified.\n\tIf no time is given, the first keyframe time is returned.",
+            "usage": [
+                "number :GetNextKeyTime([number time], [Tool tool])"
+            ]
+        }
+    },
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "0 = CT_Any",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "Composition",
+            "value": "string"
+        },
+        "REGS_Name": {
+            "type": "Composition",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    }
+}

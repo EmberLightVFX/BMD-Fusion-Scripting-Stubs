@@ -1,1 +1,266 @@
-{"name":"UIFont","properties":{"Italic":{"access_class":"Read/Write"},"Bold":{"access_class":"Read/Write"},"HintingPreference":{"access_class":"Read/Write"},"StyleStrategy":{"access_class":"Read/Write"},"PointSize":{"access_class":"Read/Write"},"Stretch":{"access_class":"Read/Write"},"StyleName":{"access_class":"Read/Write"},"header_text":"Properties","Family":{"access_class":"Read/Write"},"RawMode":{"access_class":"Read/Write"},"Kerning":{"access_class":"Read/Write"},"Weight":{"access_class":"Read/Write"},"FixedPitch":{"access_class":"Read/Write"},"PixelSize":{"access_class":"Read/Write"},"StrikeOut":{"access_class":"Read/Write"},"Overline":{"access_class":"Read/Write"},"Underline":{"access_class":"Read/Write"}},"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"5439488","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"UIFont","value":"string"},"REGB_Utility_Toggle":{"type":"false","value":"boolean"},"REGS_Name":{"type":"UIFont","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}},"class_inheritance":["Object","UIItem"],"methods":{"SetHintingPreference":{"usage":[" :SetHintingPreference()"]},"GetHintingPreference":{"usage":[" :GetHintingPreference()"]},"SetStyleStrategy":{"usage":[" :SetStyleStrategy()"]},"GetStyleStrategy":{"usage":[" :GetStyleStrategy()"]},"SetStretch":{"usage":[" :SetStretch()"]},"GetStretch":{"usage":[" :GetStretch()"]},"SetWeight":{"usage":[" :SetWeight()"]},"header_text":"Methods","SetRawMode":{"usage":[" :SetRawMode()"]},"GetRawMode":{"usage":[" :GetRawMode()"]},"SetKerning":{"usage":[" :SetKerning()"]},"GetKerning":{"usage":[" :GetKerning()"]},"SetFixedPitch":{"usage":[" :SetFixedPitch()"]},"GetFixedPitch":{"usage":[" :GetFixedPitch()"]},"SetStrikeOut":{"usage":[" :SetStrikeOut()"]},"GetStrikeOut":{"usage":[" :GetStrikeOut()"]},"SetOverline":{"usage":[" :SetOverline()"]},"GetOverline":{"usage":[" :GetOverline()"]},"SetUnderline":{"usage":[" :SetUnderline()"]},"GetUnderline":{"usage":[" :GetUnderline()"]},"SetItalic":{"usage":[" :SetItalic()"]},"GetItalic":{"usage":[" :GetItalic()"]},"SetBold":{"usage":[" :SetBold()"]},"GetBold":{"usage":[" :GetBold()"]},"SetPixelSize":{"usage":[" :SetPixelSize()"]},"GetPixelSize":{"usage":[" :GetPixelSize()"]},"SetPointSize":{"usage":[" :SetPointSize()"]},"GetPointSize":{"usage":[" :GetPointSize()"]},"SetStyleName":{"usage":[" :SetStyleName()"]},"GetStyleName":{"usage":[" :GetStyleName()"]},"SetFamily":{"usage":[" :SetFamily()"]},"GetFamily":{"usage":[" :GetFamily()"]},"GetWeight":{"usage":[" :GetWeight()"]}},"qt":"QFont"}
+{
+    "name": "UIFont",
+    "properties": {
+        "Italic": {
+            "access_class": "Read/Write"
+        },
+        "Bold": {
+            "access_class": "Read/Write"
+        },
+        "HintingPreference": {
+            "access_class": "Read/Write"
+        },
+        "StyleStrategy": {
+            "access_class": "Read/Write"
+        },
+        "PointSize": {
+            "access_class": "Read/Write"
+        },
+        "Stretch": {
+            "access_class": "Read/Write"
+        },
+        "StyleName": {
+            "access_class": "Read/Write"
+        },
+        "Family": {
+            "access_class": "Read/Write"
+        },
+        "RawMode": {
+            "access_class": "Read/Write"
+        },
+        "Kerning": {
+            "access_class": "Read/Write"
+        },
+        "Weight": {
+            "access_class": "Read/Write"
+        },
+        "FixedPitch": {
+            "access_class": "Read/Write"
+        },
+        "PixelSize": {
+            "access_class": "Read/Write"
+        },
+        "StrikeOut": {
+            "access_class": "Read/Write"
+        },
+        "Overline": {
+            "access_class": "Read/Write"
+        },
+        "Underline": {
+            "access_class": "Read/Write"
+        }
+    },
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "5439488",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "UIFont",
+            "value": "string"
+        },
+        "REGB_Utility_Toggle": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGS_Name": {
+            "type": "UIFont",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    },
+    "class_inheritance": [
+        "Object",
+        "UIItem"
+    ],
+    "methods": {
+        "SetHintingPreference": {
+            "usage": [
+                " :SetHintingPreference()"
+            ]
+        },
+        "GetHintingPreference": {
+            "usage": [
+                " :GetHintingPreference()"
+            ]
+        },
+        "SetStyleStrategy": {
+            "usage": [
+                " :SetStyleStrategy()"
+            ]
+        },
+        "GetStyleStrategy": {
+            "usage": [
+                " :GetStyleStrategy()"
+            ]
+        },
+        "SetStretch": {
+            "usage": [
+                " :SetStretch()"
+            ]
+        },
+        "GetStretch": {
+            "usage": [
+                " :GetStretch()"
+            ]
+        },
+        "SetWeight": {
+            "usage": [
+                " :SetWeight()"
+            ]
+        },
+        "SetRawMode": {
+            "usage": [
+                " :SetRawMode()"
+            ]
+        },
+        "GetRawMode": {
+            "usage": [
+                " :GetRawMode()"
+            ]
+        },
+        "SetKerning": {
+            "usage": [
+                " :SetKerning()"
+            ]
+        },
+        "GetKerning": {
+            "usage": [
+                " :GetKerning()"
+            ]
+        },
+        "SetFixedPitch": {
+            "usage": [
+                " :SetFixedPitch()"
+            ]
+        },
+        "GetFixedPitch": {
+            "usage": [
+                " :GetFixedPitch()"
+            ]
+        },
+        "SetStrikeOut": {
+            "usage": [
+                " :SetStrikeOut()"
+            ]
+        },
+        "GetStrikeOut": {
+            "usage": [
+                " :GetStrikeOut()"
+            ]
+        },
+        "SetOverline": {
+            "usage": [
+                " :SetOverline()"
+            ]
+        },
+        "GetOverline": {
+            "usage": [
+                " :GetOverline()"
+            ]
+        },
+        "SetUnderline": {
+            "usage": [
+                " :SetUnderline()"
+            ]
+        },
+        "GetUnderline": {
+            "usage": [
+                " :GetUnderline()"
+            ]
+        },
+        "SetItalic": {
+            "usage": [
+                " :SetItalic()"
+            ]
+        },
+        "GetItalic": {
+            "usage": [
+                " :GetItalic()"
+            ]
+        },
+        "SetBold": {
+            "usage": [
+                " :SetBold()"
+            ]
+        },
+        "GetBold": {
+            "usage": [
+                " :GetBold()"
+            ]
+        },
+        "SetPixelSize": {
+            "usage": [
+                " :SetPixelSize()"
+            ]
+        },
+        "GetPixelSize": {
+            "usage": [
+                " :GetPixelSize()"
+            ]
+        },
+        "SetPointSize": {
+            "usage": [
+                " :SetPointSize()"
+            ]
+        },
+        "GetPointSize": {
+            "usage": [
+                " :GetPointSize()"
+            ]
+        },
+        "SetStyleName": {
+            "usage": [
+                " :SetStyleName()"
+            ]
+        },
+        "GetStyleName": {
+            "usage": [
+                " :GetStyleName()"
+            ]
+        },
+        "SetFamily": {
+            "usage": [
+                " :SetFamily()"
+            ]
+        },
+        "GetFamily": {
+            "usage": [
+                " :GetFamily()"
+            ]
+        },
+        "GetWeight": {
+            "usage": [
+                " :GetWeight()"
+            ]
+        }
+    },
+    "qt": "QFont"
+}

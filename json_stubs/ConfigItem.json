@@ -1,1 +1,69 @@
-{"name":"ConfigItem","properties":{"Owner":{"access_class":"Read/Write"},"UID":{"access_class":"Read/Write"},"header_text":"Properties","Source":{"access_class":"Read Only"},"ID":{"access_class":"Read/Write"},"Info":{"access_class":"Read/Write"}},"class_inheritance":["Object"],"methods":{"header_text":"Methods","Set":[],"Get":[]},"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"0 = CT_Any","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"ConfigItem","value":"string"},"REGS_Name":{"type":"ConfigItem","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}}}
+{
+    "name": "ConfigItem",
+    "properties": {
+        "Owner": {
+            "access_class": "Read/Write"
+        },
+        "UID": {
+            "access_class": "Read/Write"
+        },
+        "Source": {
+            "access_class": "Read Only"
+        },
+        "ID": {
+            "access_class": "Read/Write"
+        },
+        "Info": {
+            "access_class": "Read/Write"
+        }
+    },
+    "class_inheritance": [
+        "Object"
+    ],
+    "methods": {
+        "Set": [],
+        "Get": []
+    },
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "0 = CT_Any",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "ConfigItem",
+            "value": "string"
+        },
+        "REGS_Name": {
+            "type": "ConfigItem",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    }
+}

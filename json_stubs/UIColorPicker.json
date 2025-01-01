@@ -1,1 +1,111 @@
-{"name":"UIColorPicker","properties":{"Color":{"access_class":"Read/Write"},"header_text":"Properties","DoAlpha":{"access_class":"Read/Write"},"Text":{"access_class":"Read/Write"},"Tracking":{"access_class":"Read/Write"}},"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"5439488","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"UIColorPicker","value":"string"},"REGB_Utility_Toggle":{"type":"false","value":"boolean"},"REGS_Name":{"type":"UIColorPicker","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}},"class_inheritance":["Object","UIItem","UIWidget"],"methods":{"GetColor":{"usage":[" :GetColor()"]},"SetText":{"usage":[" :SetText()"]},"header_text":"Methods","SetColor":{"usage":[" :SetColor()"]},"SetDoAlpha":{"usage":[" :SetDoAlpha()"]},"GetDoAlpha":{"usage":[" :GetDoAlpha()"]},"GetText":{"usage":[" :GetText()"]},"SetTracking":{"usage":[" :SetTracking()"]},"GetTracking":{"usage":[" :GetTracking()"]}},"qt":"QColorDialog"}
+{
+    "name": "UIColorPicker",
+    "properties": {
+        "Color": {
+            "access_class": "Read/Write"
+        },
+        "DoAlpha": {
+            "access_class": "Read/Write"
+        },
+        "Text": {
+            "access_class": "Read/Write"
+        },
+        "Tracking": {
+            "access_class": "Read/Write"
+        }
+    },
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "5439488",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "UIColorPicker",
+            "value": "string"
+        },
+        "REGB_Utility_Toggle": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGS_Name": {
+            "type": "UIColorPicker",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    },
+    "class_inheritance": [
+        "Object",
+        "UIItem",
+        "UIWidget"
+    ],
+    "methods": {
+        "GetColor": {
+            "usage": [
+                " :GetColor()"
+            ]
+        },
+        "SetText": {
+            "usage": [
+                " :SetText()"
+            ]
+        },
+        "SetColor": {
+            "usage": [
+                " :SetColor()"
+            ]
+        },
+        "SetDoAlpha": {
+            "usage": [
+                " :SetDoAlpha()"
+            ]
+        },
+        "GetDoAlpha": {
+            "usage": [
+                " :GetDoAlpha()"
+            ]
+        },
+        "GetText": {
+            "usage": [
+                " :GetText()"
+            ]
+        },
+        "SetTracking": {
+            "usage": [
+                " :SetTracking()"
+            ]
+        },
+        "GetTracking": {
+            "usage": [
+                " :GetTracking()"
+            ]
+        }
+    },
+    "qt": "QColorDialog"
+}

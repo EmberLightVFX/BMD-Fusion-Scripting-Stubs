@@ -1,1 +1,586 @@
-{"name":"UITextEdit","properties":{"Alignment":{"access_class":"Read/Write"},"FrameStyle":{"access_class":"Read/Write"},"AcceptRichText":{"access_class":"Read/Write"},"OverwriteMode":{"access_class":"Read/Write"},"HTML":{"access_class":"Read/Write"},"header_text":"Properties","TabChangesFocus":{"access_class":"Read/Write"},"AutoFormatting":{"access_class":"Read/Write"},"CurrentFont":{"access_class":"Write Only"},"PlaceholderText":{"access_class":"Read/Write"},"TextBackgroundColor":{"access_class":"Read/Write"},"TextColor":{"access_class":"Read/Write"},"TextInteractionFlags":{"access_class":"Read/Write"},"LineWrapMode":{"access_class":"Read/Write"},"PlainText":{"access_class":"Read/Write"},"FontItalic":{"access_class":"Read/Write"},"ReadOnly":{"access_class":"Read/Write"},"Text":{"access_class":"Write Only"},"FontUnderline":{"access_class":"Read/Write"},"WordWrapMode":{"access_class":"Read/Write"},"Lexer":{"access_class":"Read/Write"},"UndoRedoEnabled":{"access_class":"Read/Write"},"FrameShadow":{"access_class":"Read/Write"},"FontFamily":{"access_class":"Read/Write"},"CursorWidth":{"access_class":"Read/Write"},"DocumentTitle":{"access_class":"Read/Write"},"FontPointSize":{"access_class":"Read/Write"},"LexerColors":{"access_class":"Read/Write"},"FrameShape":{"access_class":"Read/Write"},"FrameRect":{"access_class":"Read/Write"},"LineWidth":{"access_class":"Read/Write"},"LineWrapColumnOrWidth":{"access_class":"Read/Write"},"MidLineWidth":{"access_class":"Read/Write"},"FontWeight":{"access_class":"Read/Write"},"TabStopWidth":{"access_class":"Read/Write"}},"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"5439488","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"UITextEdit","value":"string"},"REGB_Utility_Toggle":{"type":"false","value":"boolean"},"REGS_Name":{"type":"UITextEdit","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}},"class_inheritance":["Object","UIItem","UIWidget"],"methods":{"SetLineWrapColumnOrWidth":{"usage":[" :SetLineWrapColumnOrWidth()"]},"GetLineWrapColumnOrWidth":{"usage":[" :GetLineWrapColumnOrWidth()"]},"SetReadOnly":{"usage":[" :SetReadOnly()"]},"SetAcceptRichText":{"usage":[" :SetAcceptRichText()"]},"GetAcceptRichText":{"usage":[" :GetAcceptRichText()"]},"SetText":{"usage":[" :SetText()"]},"SetOverwriteMode":{"usage":[" :SetOverwriteMode()"]},"GetOverwriteMode":{"usage":[" :GetOverwriteMode()"]},"SetUndoRedoEnabled":{"usage":[" :SetUndoRedoEnabled()"]},"GetUndoRedoEnabled":{"usage":[" :GetUndoRedoEnabled()"]},"SetTabChangesFocus":{"usage":[" :SetTabChangesFocus()"]},"GetTabChangesFocus":{"usage":[" :GetTabChangesFocus()"]},"SelectAll":{"usage":[" :SelectAll()"]},"Clear":{"usage":[" :Clear()"]},"SetTextInteractionFlags":{"usage":[" :SetTextInteractionFlags()"]},"GetTextInteractionFlags":{"usage":[" :GetTextInteractionFlags()"]},"SetAlignment":{"usage":[" :SetAlignment()"]},"ScrollToAnchor":{"usage":[" :ScrollToAnchor()"]},"Copy":{"usage":[" :Copy()"]},"FrameWidth":{"usage":[" :FrameWidth()"]},"GetReadOnly":{"usage":[" :GetReadOnly()"]},"SetFrameShadow":{"usage":[" :SetFrameShadow()"]},"GetFrameShadow":{"usage":[" :GetFrameShadow()"]},"SetFrameShape":{"usage":[" :SetFrameShape()"]},"GetFrameShape":{"usage":[" :GetFrameShape()"]},"SetFrameRect":{"usage":[" :SetFrameRect()"]},"GetFrameRect":{"usage":[" :GetFrameRect()"]},"SetMidLineWidth":{"usage":[" :SetMidLineWidth()"]},"GetMidLineWidth":{"usage":[" :GetMidLineWidth()"]},"SetLineWidth":{"usage":[" :SetLineWidth()"]},"GetLineWidth":{"usage":[" :GetLineWidth()"]},"SetFrameStyle":{"usage":[" :SetFrameStyle()"]},"GetFrameStyle":{"usage":[" :GetFrameStyle()"]},"Find":{"usage":[" :Find()"]},"header_text":"Methods","ZoomIn":{"usage":[" :ZoomIn()"]},"Undo":{"usage":[" :Undo()"]},"SetHTML":{"usage":[" :SetHTML()"]},"SetLexerColors":{"usage":[" :SetLexerColors()"]},"SetPlaceholderText":{"usage":[" :SetPlaceholderText()"]},"InsertHTML":{"usage":[" :InsertHTML()"]},"InsertPlainText":{"usage":[" :InsertPlainText()"]},"SetAutoFormatting":{"usage":[" :SetAutoFormatting()"]},"GetAutoFormatting":{"usage":[" :GetAutoFormatting()"]},"GetDocumentTitle":{"usage":[" :GetDocumentTitle()"]},"SetCurrentFont":{"usage":[" :SetCurrentFont()"]},"GetFontFamily":{"usage":[" :GetFontFamily()"]},"SetTextBackgroundColor":{"usage":[" :SetTextBackgroundColor()"]},"GetTextBackgroundColor":{"usage":[" :GetTextBackgroundColor()"]},"GetFontUnderline":{"usage":[" :GetFontUnderline()"]},"SetTextColor":{"usage":[" :SetTextColor()"]},"GetTextColor":{"usage":[" :GetTextColor()"]},"SetLexer":{"usage":[" :SetLexer()"]},"SetWordWrapMode":{"usage":[" :SetWordWrapMode()"]},"GetWordWrapMode":{"usage":[" :GetWordWrapMode()"]},"SetLineWrapMode":{"usage":[" :SetLineWrapMode()"]},"GetLineWrapMode":{"usage":[" :GetLineWrapMode()"]},"GetAlignment":{"usage":[" :GetAlignment()"]},"Paste":{"usage":[" :Paste()"]},"GetHTML":{"usage":[" :GetHTML()"]},"SetPlainText":{"usage":[" :SetPlainText()"]},"GetPlainText":{"usage":[" :GetPlainText()"]},"GetLexer":{"usage":[" :GetLexer()"]},"SetFontItalic":{"usage":[" :SetFontItalic()"]},"GetFontItalic":{"usage":[" :GetFontItalic()"]},"GetFontPointSize":{"usage":[" :GetFontPointSize()"]},"SetFontUnderline":{"usage":[" :SetFontUnderline()"]},"GetLexerColors":{"usage":[" :GetLexerColors()"]},"Cut":{"usage":[" :Cut()"]},"SetFontWeight":{"usage":[" :SetFontWeight()"]},"GetFontWeight":{"usage":[" :GetFontWeight()"]},"MoveCursor":{"usage":[" :MoveCursor()"]},"SetFontFamily":{"usage":[" :SetFontFamily()"]},"CanPaste":{"usage":[" :CanPaste()"]},"AnchorAt":{"usage":[" :AnchorAt()"]},"SetFontPointSize":{"usage":[" :SetFontPointSize()"]},"EnsureCursorVisible":{"usage":[" :EnsureCursorVisible()"]},"ZoomOut":{"usage":[" :ZoomOut()"]},"SetDocumentTitle":{"usage":[" :SetDocumentTitle()"]},"Append":{"usage":[" :Append()"]},"Redo":{"usage":[" :Redo()"]},"SetCursorWidth":{"usage":[" :SetCursorWidth()"]},"GetCursorWidth":{"usage":[" :GetCursorWidth()"]},"GetPlaceholderText":{"usage":[" :GetPlaceholderText()"]},"SetTabStopWidth":{"usage":[" :SetTabStopWidth()"]},"GetTabStopWidth":{"usage":[" :GetTabStopWidth()"]}},"qt":"QTextEdit"}
+{
+    "name": "UITextEdit",
+    "properties": {
+        "Alignment": {
+            "access_class": "Read/Write"
+        },
+        "FrameStyle": {
+            "access_class": "Read/Write"
+        },
+        "AcceptRichText": {
+            "access_class": "Read/Write"
+        },
+        "OverwriteMode": {
+            "access_class": "Read/Write"
+        },
+        "HTML": {
+            "access_class": "Read/Write"
+        },
+        "TabChangesFocus": {
+            "access_class": "Read/Write"
+        },
+        "AutoFormatting": {
+            "access_class": "Read/Write"
+        },
+        "CurrentFont": {
+            "access_class": "Write Only"
+        },
+        "PlaceholderText": {
+            "access_class": "Read/Write"
+        },
+        "TextBackgroundColor": {
+            "access_class": "Read/Write"
+        },
+        "TextColor": {
+            "access_class": "Read/Write"
+        },
+        "TextInteractionFlags": {
+            "access_class": "Read/Write"
+        },
+        "LineWrapMode": {
+            "access_class": "Read/Write"
+        },
+        "PlainText": {
+            "access_class": "Read/Write"
+        },
+        "FontItalic": {
+            "access_class": "Read/Write"
+        },
+        "ReadOnly": {
+            "access_class": "Read/Write"
+        },
+        "Text": {
+            "access_class": "Write Only"
+        },
+        "FontUnderline": {
+            "access_class": "Read/Write"
+        },
+        "WordWrapMode": {
+            "access_class": "Read/Write"
+        },
+        "Lexer": {
+            "access_class": "Read/Write"
+        },
+        "UndoRedoEnabled": {
+            "access_class": "Read/Write"
+        },
+        "FrameShadow": {
+            "access_class": "Read/Write"
+        },
+        "FontFamily": {
+            "access_class": "Read/Write"
+        },
+        "CursorWidth": {
+            "access_class": "Read/Write"
+        },
+        "DocumentTitle": {
+            "access_class": "Read/Write"
+        },
+        "FontPointSize": {
+            "access_class": "Read/Write"
+        },
+        "LexerColors": {
+            "access_class": "Read/Write"
+        },
+        "FrameShape": {
+            "access_class": "Read/Write"
+        },
+        "FrameRect": {
+            "access_class": "Read/Write"
+        },
+        "LineWidth": {
+            "access_class": "Read/Write"
+        },
+        "LineWrapColumnOrWidth": {
+            "access_class": "Read/Write"
+        },
+        "MidLineWidth": {
+            "access_class": "Read/Write"
+        },
+        "FontWeight": {
+            "access_class": "Read/Write"
+        },
+        "TabStopWidth": {
+            "access_class": "Read/Write"
+        }
+    },
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "5439488",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "UITextEdit",
+            "value": "string"
+        },
+        "REGB_Utility_Toggle": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGS_Name": {
+            "type": "UITextEdit",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    },
+    "class_inheritance": [
+        "Object",
+        "UIItem",
+        "UIWidget"
+    ],
+    "methods": {
+        "SetLineWrapColumnOrWidth": {
+            "usage": [
+                " :SetLineWrapColumnOrWidth()"
+            ]
+        },
+        "GetLineWrapColumnOrWidth": {
+            "usage": [
+                " :GetLineWrapColumnOrWidth()"
+            ]
+        },
+        "SetReadOnly": {
+            "usage": [
+                " :SetReadOnly()"
+            ]
+        },
+        "SetAcceptRichText": {
+            "usage": [
+                " :SetAcceptRichText()"
+            ]
+        },
+        "GetAcceptRichText": {
+            "usage": [
+                " :GetAcceptRichText()"
+            ]
+        },
+        "SetText": {
+            "usage": [
+                " :SetText()"
+            ]
+        },
+        "SetOverwriteMode": {
+            "usage": [
+                " :SetOverwriteMode()"
+            ]
+        },
+        "GetOverwriteMode": {
+            "usage": [
+                " :GetOverwriteMode()"
+            ]
+        },
+        "SetUndoRedoEnabled": {
+            "usage": [
+                " :SetUndoRedoEnabled()"
+            ]
+        },
+        "GetUndoRedoEnabled": {
+            "usage": [
+                " :GetUndoRedoEnabled()"
+            ]
+        },
+        "SetTabChangesFocus": {
+            "usage": [
+                " :SetTabChangesFocus()"
+            ]
+        },
+        "GetTabChangesFocus": {
+            "usage": [
+                " :GetTabChangesFocus()"
+            ]
+        },
+        "SelectAll": {
+            "usage": [
+                " :SelectAll()"
+            ]
+        },
+        "Clear": {
+            "usage": [
+                " :Clear()"
+            ]
+        },
+        "SetTextInteractionFlags": {
+            "usage": [
+                " :SetTextInteractionFlags()"
+            ]
+        },
+        "GetTextInteractionFlags": {
+            "usage": [
+                " :GetTextInteractionFlags()"
+            ]
+        },
+        "SetAlignment": {
+            "usage": [
+                " :SetAlignment()"
+            ]
+        },
+        "ScrollToAnchor": {
+            "usage": [
+                " :ScrollToAnchor()"
+            ]
+        },
+        "Copy": {
+            "usage": [
+                " :Copy()"
+            ]
+        },
+        "FrameWidth": {
+            "usage": [
+                " :FrameWidth()"
+            ]
+        },
+        "GetReadOnly": {
+            "usage": [
+                " :GetReadOnly()"
+            ]
+        },
+        "SetFrameShadow": {
+            "usage": [
+                " :SetFrameShadow()"
+            ]
+        },
+        "GetFrameShadow": {
+            "usage": [
+                " :GetFrameShadow()"
+            ]
+        },
+        "SetFrameShape": {
+            "usage": [
+                " :SetFrameShape()"
+            ]
+        },
+        "GetFrameShape": {
+            "usage": [
+                " :GetFrameShape()"
+            ]
+        },
+        "SetFrameRect": {
+            "usage": [
+                " :SetFrameRect()"
+            ]
+        },
+        "GetFrameRect": {
+            "usage": [
+                " :GetFrameRect()"
+            ]
+        },
+        "SetMidLineWidth": {
+            "usage": [
+                " :SetMidLineWidth()"
+            ]
+        },
+        "GetMidLineWidth": {
+            "usage": [
+                " :GetMidLineWidth()"
+            ]
+        },
+        "SetLineWidth": {
+            "usage": [
+                " :SetLineWidth()"
+            ]
+        },
+        "GetLineWidth": {
+            "usage": [
+                " :GetLineWidth()"
+            ]
+        },
+        "SetFrameStyle": {
+            "usage": [
+                " :SetFrameStyle()"
+            ]
+        },
+        "GetFrameStyle": {
+            "usage": [
+                " :GetFrameStyle()"
+            ]
+        },
+        "Find": {
+            "usage": [
+                " :Find()"
+            ]
+        },
+        "ZoomIn": {
+            "usage": [
+                " :ZoomIn()"
+            ]
+        },
+        "Undo": {
+            "usage": [
+                " :Undo()"
+            ]
+        },
+        "SetHTML": {
+            "usage": [
+                " :SetHTML()"
+            ]
+        },
+        "SetLexerColors": {
+            "usage": [
+                " :SetLexerColors()"
+            ]
+        },
+        "SetPlaceholderText": {
+            "usage": [
+                " :SetPlaceholderText()"
+            ]
+        },
+        "InsertHTML": {
+            "usage": [
+                " :InsertHTML()"
+            ]
+        },
+        "InsertPlainText": {
+            "usage": [
+                " :InsertPlainText()"
+            ]
+        },
+        "SetAutoFormatting": {
+            "usage": [
+                " :SetAutoFormatting()"
+            ]
+        },
+        "GetAutoFormatting": {
+            "usage": [
+                " :GetAutoFormatting()"
+            ]
+        },
+        "GetDocumentTitle": {
+            "usage": [
+                " :GetDocumentTitle()"
+            ]
+        },
+        "SetCurrentFont": {
+            "usage": [
+                " :SetCurrentFont()"
+            ]
+        },
+        "GetFontFamily": {
+            "usage": [
+                " :GetFontFamily()"
+            ]
+        },
+        "SetTextBackgroundColor": {
+            "usage": [
+                " :SetTextBackgroundColor()"
+            ]
+        },
+        "GetTextBackgroundColor": {
+            "usage": [
+                " :GetTextBackgroundColor()"
+            ]
+        },
+        "GetFontUnderline": {
+            "usage": [
+                " :GetFontUnderline()"
+            ]
+        },
+        "SetTextColor": {
+            "usage": [
+                " :SetTextColor()"
+            ]
+        },
+        "GetTextColor": {
+            "usage": [
+                " :GetTextColor()"
+            ]
+        },
+        "SetLexer": {
+            "usage": [
+                " :SetLexer()"
+            ]
+        },
+        "SetWordWrapMode": {
+            "usage": [
+                " :SetWordWrapMode()"
+            ]
+        },
+        "GetWordWrapMode": {
+            "usage": [
+                " :GetWordWrapMode()"
+            ]
+        },
+        "SetLineWrapMode": {
+            "usage": [
+                " :SetLineWrapMode()"
+            ]
+        },
+        "GetLineWrapMode": {
+            "usage": [
+                " :GetLineWrapMode()"
+            ]
+        },
+        "GetAlignment": {
+            "usage": [
+                " :GetAlignment()"
+            ]
+        },
+        "Paste": {
+            "usage": [
+                " :Paste()"
+            ]
+        },
+        "GetHTML": {
+            "usage": [
+                " :GetHTML()"
+            ]
+        },
+        "SetPlainText": {
+            "usage": [
+                " :SetPlainText()"
+            ]
+        },
+        "GetPlainText": {
+            "usage": [
+                " :GetPlainText()"
+            ]
+        },
+        "GetLexer": {
+            "usage": [
+                " :GetLexer()"
+            ]
+        },
+        "SetFontItalic": {
+            "usage": [
+                " :SetFontItalic()"
+            ]
+        },
+        "GetFontItalic": {
+            "usage": [
+                " :GetFontItalic()"
+            ]
+        },
+        "GetFontPointSize": {
+            "usage": [
+                " :GetFontPointSize()"
+            ]
+        },
+        "SetFontUnderline": {
+            "usage": [
+                " :SetFontUnderline()"
+            ]
+        },
+        "GetLexerColors": {
+            "usage": [
+                " :GetLexerColors()"
+            ]
+        },
+        "Cut": {
+            "usage": [
+                " :Cut()"
+            ]
+        },
+        "SetFontWeight": {
+            "usage": [
+                " :SetFontWeight()"
+            ]
+        },
+        "GetFontWeight": {
+            "usage": [
+                " :GetFontWeight()"
+            ]
+        },
+        "MoveCursor": {
+            "usage": [
+                " :MoveCursor()"
+            ]
+        },
+        "SetFontFamily": {
+            "usage": [
+                " :SetFontFamily()"
+            ]
+        },
+        "CanPaste": {
+            "usage": [
+                " :CanPaste()"
+            ]
+        },
+        "AnchorAt": {
+            "usage": [
+                " :AnchorAt()"
+            ]
+        },
+        "SetFontPointSize": {
+            "usage": [
+                " :SetFontPointSize()"
+            ]
+        },
+        "EnsureCursorVisible": {
+            "usage": [
+                " :EnsureCursorVisible()"
+            ]
+        },
+        "ZoomOut": {
+            "usage": [
+                " :ZoomOut()"
+            ]
+        },
+        "SetDocumentTitle": {
+            "usage": [
+                " :SetDocumentTitle()"
+            ]
+        },
+        "Append": {
+            "usage": [
+                " :Append()"
+            ]
+        },
+        "Redo": {
+            "usage": [
+                " :Redo()"
+            ]
+        },
+        "SetCursorWidth": {
+            "usage": [
+                " :SetCursorWidth()"
+            ]
+        },
+        "GetCursorWidth": {
+            "usage": [
+                " :GetCursorWidth()"
+            ]
+        },
+        "GetPlaceholderText": {
+            "usage": [
+                " :GetPlaceholderText()"
+            ]
+        },
+        "SetTabStopWidth": {
+            "usage": [
+                " :SetTabStopWidth()"
+            ]
+        },
+        "GetTabStopWidth": {
+            "usage": [
+                " :GetTabStopWidth()"
+            ]
+        }
+    },
+    "qt": "QTextEdit"
+}

@@ -1,1 +1,158 @@
-{"name":"TransformMatrix","properties":{"XScale":{"short_help":"Pixel X Aspect","return_type":"number","access_class":"Read Only"},"YOffset":{"short_help":"Image X Offset","return_type":"number","access_class":"Read Only"},"YScale":{"short_help":"Pixel Y Aspect","return_type":"number","access_class":"Read Only"},"Depth":{"short_help":"Image depth indicator (not in bits)","description":"Depth will be one of the following values:\n\n\t1 - alpha only  8 bit integer\n\t2 - alpha only 16 bit integer\n\t3 - alpha only 16 bit float\n\t4 - alpha only 32 bit float\n\t5 - RGBA        8 bit integer\n\t6 - RGBA       16 bit integer\n\t7 - RGBA       16 bit float\n\t8 - RGBA       32 bit float","return_type":"number","access_class":"Read Only"},"Field":{"short_help":"Field indicator","description":"Field will be one of the following values:\n\n\t-1 - Full Frames, no fields\n\t 0 - Odd (NTSC) field\n\t 1 - Even (PAL/HD) field","return_type":"number","access_class":"Read Only"},"Height":{"short_help":"Actual image height, in pixels","return_type":"number","access_class":"Read Only"},"header_text":"Discovered Properties","OriginalHeight":{"short_help":"Unproxied image height, in pixels","return_type":"number","access_class":"Read Only"},"OriginalWidth":{"short_help":"Unproxied image width, in pixels","return_type":"number","access_class":"Read Only"},"OriginalXScale":{"short_help":"Unproxied pixel X Aspect","return_type":"number","access_class":"Read Only"},"OriginalYScale":{"short_help":"Unproxied pixel Y Aspect","return_type":"number","access_class":"Read Only"},"OriginalIXScale":{"return_type":"float64","access_class":"Read Only"},"OriginalIYScale":{"return_type":"float64","access_class":"Read Only"},"Width":{"short_help":"Actual image width, in pixels","return_type":"number","access_class":"Read Only"},"info_text":"Discovered properties might be available in many contexts, but most typically in Fuse scripts","XOffset":{"short_help":"Image X Offset","return_type":"number","access_class":"Read Only"},"ProxyScale":{"short_help":"Image proxy scale multiplier","description":"ProxyScale may be any positive integer, where 1 indicates no proxy.","return_type":"number","access_class":"Read Only"}},"class_inheritance":["Object","Parameter"],"methods":{"MergeConcatenate":{"usage":[" :MergeConcatenate(Parameter fg, TagList tags)"]},"info_text":"Discovered methods might be available in many contexts, but most typically in Fuse scripts","header_text":"Discovered Methods","TransformMatrix":{"short_help":"TransformMatrix constructor","usage":["TransformMatrix TransformMatrix(Parameter img, Request req, Input inp, int32 slot, TimeStamp time)"]},"ImageConcatenate":{"usage":[" :ImageConcatenate(TagList tags)"]},"ApplyTransform":{"usage":["Image :ApplyTransform(TagList tags)"]}},"attributes":{"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"1507328 = CT_Parameter","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"TransformMatrix","value":"string"},"REGB_Utility_Toggle":{"type":"false","value":"boolean"},"REGS_Name":{"type":"TransformMatrix","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGB_ControlView":{"type":"false","value":"boolean"}}}
+{
+    "name": "TransformMatrix",
+    "properties": {
+        "XScale": {
+            "short_help": "Pixel X Aspect",
+            "return_type": "number",
+            "access_class": "Read Only"
+        },
+        "YOffset": {
+            "short_help": "Image X Offset",
+            "return_type": "number",
+            "access_class": "Read Only"
+        },
+        "YScale": {
+            "short_help": "Pixel Y Aspect",
+            "return_type": "number",
+            "access_class": "Read Only"
+        },
+        "Depth": {
+            "short_help": "Image depth indicator (not in bits)",
+            "description": "Depth will be one of the following values:\n\n\t1 - alpha only  8 bit integer\n\t2 - alpha only 16 bit integer\n\t3 - alpha only 16 bit float\n\t4 - alpha only 32 bit float\n\t5 - RGBA        8 bit integer\n\t6 - RGBA       16 bit integer\n\t7 - RGBA       16 bit float\n\t8 - RGBA       32 bit float",
+            "return_type": "number",
+            "access_class": "Read Only"
+        },
+        "Field": {
+            "short_help": "Field indicator",
+            "description": "Field will be one of the following values:\n\n\t-1 - Full Frames, no fields\n\t 0 - Odd (NTSC) field\n\t 1 - Even (PAL/HD) field",
+            "return_type": "number",
+            "access_class": "Read Only"
+        },
+        "Height": {
+            "short_help": "Actual image height, in pixels",
+            "return_type": "number",
+            "access_class": "Read Only"
+        },
+        "header_text": "Discovered Properties",
+        "OriginalHeight": {
+            "short_help": "Unproxied image height, in pixels",
+            "return_type": "number",
+            "access_class": "Read Only"
+        },
+        "OriginalWidth": {
+            "short_help": "Unproxied image width, in pixels",
+            "return_type": "number",
+            "access_class": "Read Only"
+        },
+        "OriginalXScale": {
+            "short_help": "Unproxied pixel X Aspect",
+            "return_type": "number",
+            "access_class": "Read Only"
+        },
+        "OriginalYScale": {
+            "short_help": "Unproxied pixel Y Aspect",
+            "return_type": "number",
+            "access_class": "Read Only"
+        },
+        "OriginalIXScale": {
+            "return_type": "float64",
+            "access_class": "Read Only"
+        },
+        "OriginalIYScale": {
+            "return_type": "float64",
+            "access_class": "Read Only"
+        },
+        "Width": {
+            "short_help": "Actual image width, in pixels",
+            "return_type": "number",
+            "access_class": "Read Only"
+        },
+        "info_text": "Discovered properties might be available in many contexts, but most typically in Fuse scripts",
+        "XOffset": {
+            "short_help": "Image X Offset",
+            "return_type": "number",
+            "access_class": "Read Only"
+        },
+        "ProxyScale": {
+            "short_help": "Image proxy scale multiplier",
+            "description": "ProxyScale may be any positive integer, where 1 indicates no proxy.",
+            "return_type": "number",
+            "access_class": "Read Only"
+        }
+    },
+    "class_inheritance": [
+        "Object",
+        "Parameter"
+    ],
+    "methods": {
+        "MergeConcatenate": {
+            "usage": [
+                " :MergeConcatenate(Parameter fg, TagList tags)"
+            ]
+        },
+        "info_text": "Discovered methods might be available in many contexts, but most typically in Fuse scripts",
+        "header_text": "Discovered Methods",
+        "TransformMatrix": {
+            "short_help": "TransformMatrix constructor",
+            "usage": [
+                "TransformMatrix TransformMatrix(Parameter img, Request req, Input inp, int32 slot, TimeStamp time)"
+            ]
+        },
+        "ImageConcatenate": {
+            "usage": [
+                " :ImageConcatenate(TagList tags)"
+            ]
+        },
+        "ApplyTransform": {
+            "usage": [
+                "Image :ApplyTransform(TagList tags)"
+            ]
+        }
+    },
+    "attributes": {
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "1507328 = CT_Parameter",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "TransformMatrix",
+            "value": "string"
+        },
+        "REGB_Utility_Toggle": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGS_Name": {
+            "type": "TransformMatrix",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        }
+    }
+}

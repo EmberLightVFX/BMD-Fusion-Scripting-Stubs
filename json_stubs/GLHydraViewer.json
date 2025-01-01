@@ -1,1 +1,121 @@
-{"attributes":{"REGS_FileName":{"type":"C:\\Program Files\\Blackmagic Design\\Fusion 18\\Plugins\\Blackmagic\\USD\\USD.plugin","value":"string"},"REGS_VersionString":{"type":"Built: May 20 2023","value":"string"},"REGI_Version":{"type":"0","value":"number (integer)"},"REGB_Hide":{"type":"false","value":"boolean"},"REGB_SupportsDoD":{"type":"false","value":"boolean"},"REGI_ClassType":{"type":"2359296 = CT_GLViewer","value":"number (integer)"},"REGI_Priority":{"type":"0","value":"number (integer)"},"REGS_ID":{"type":"GLHydraViewer","value":"string"},"REGB_ControlView":{"type":"false","value":"boolean"},"REGB_Utility_Toggle":{"type":"false","value":"boolean"},"REGS_Name":{"type":"Hydra","value":"string"},"REGB_Unpredictable":{"type":"false","value":"boolean"},"REGS_UIName":{"type":"Hydra","value":"string"}},"name":"GLHydraViewer","methods":{"SetShading":{"short_help":"Sets the object shading method","description":"Method should be one of:\n\tpoints\n\twireframe\n\twireframeonsurface\n\tflatshading\n\tsmoothshading\n\tgeometryonly\n\tgeometryflat\n\tgeometrysmooth","usage":[" :SetShading(string method)"]},"GetLighting":{"short_help":"Returns the current type of lighting of objects","description":"Type should be one of:\n\tenable\n\tscene\n\tcam\n\tshadows\n\tsmaterials\n\tskydome","usage":[" :GetLighting([string type])"]},"SetLighting":{"short_help":"Controls the type of lighting of objects","description":"Type should be one of:\n\tenable\n\tscene\n\tcam\n\tshadows\n\tsmaterials\n\tskydome","usage":[" :SetLighting([string type], [boolean enable])"]},"IsLightingEnabled":{"short_help":"Returns boolean state of lighting mode","usage":[" :IsLightingEnabled()"]},"EnableLighting":{"short_help":"Enables or disables lighting of objects","usage":[" :EnableLighting([boolean enable])"]},"FitAll":{"short_help":"Fits this view to the entire scene","usage":[" :FitAll()"]},"FitSelected":{"short_help":"Fits this view to the selected object","usage":[" :FitSelected()"]},"CenterSelected":{"short_help":"Centers this view on the selected object","usage":[" :CenterSelected()"]},"header_text":"Methods","GetShading":{"short_help":"Returns the current object shading method","description":"Returns one of:\n\tpoints\n\twireframe\n\twireframeonsurface\n\tflatshading\n\tsmoothshading\n\tgeometryonly\n\tgeometryflat\n\tgeometrysmooth","usage":[" :GetShading()"]}},"class_inheritance":["Object","GLViewer"]}
+{
+    "attributes": {
+        "REGS_FileName": {
+            "type": "C:\\Program Files\\Blackmagic Design\\Fusion 18\\Plugins\\Blackmagic\\USD\\USD.plugin",
+            "value": "string"
+        },
+        "REGS_VersionString": {
+            "type": "Built: May 20 2023",
+            "value": "string"
+        },
+        "REGI_Version": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGB_Hide": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_SupportsDoD": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGI_ClassType": {
+            "type": "2359296 = CT_GLViewer",
+            "value": "number (integer)"
+        },
+        "REGI_Priority": {
+            "type": "0",
+            "value": "number (integer)"
+        },
+        "REGS_ID": {
+            "type": "GLHydraViewer",
+            "value": "string"
+        },
+        "REGB_ControlView": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGB_Utility_Toggle": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGS_Name": {
+            "type": "Hydra",
+            "value": "string"
+        },
+        "REGB_Unpredictable": {
+            "type": "false",
+            "value": "boolean"
+        },
+        "REGS_UIName": {
+            "type": "Hydra",
+            "value": "string"
+        }
+    },
+    "name": "GLHydraViewer",
+    "methods": {
+        "SetShading": {
+            "short_help": "Sets the object shading method",
+            "description": "Method should be one of:\n\tpoints\n\twireframe\n\twireframeonsurface\n\tflatshading\n\tsmoothshading\n\tgeometryonly\n\tgeometryflat\n\tgeometrysmooth",
+            "usage": [
+                " :SetShading(string method)"
+            ]
+        },
+        "GetLighting": {
+            "short_help": "Returns the current type of lighting of objects",
+            "description": "Type should be one of:\n\tenable\n\tscene\n\tcam\n\tshadows\n\tsmaterials\n\tskydome",
+            "usage": [
+                " :GetLighting([string type])"
+            ]
+        },
+        "SetLighting": {
+            "short_help": "Controls the type of lighting of objects",
+            "description": "Type should be one of:\n\tenable\n\tscene\n\tcam\n\tshadows\n\tsmaterials\n\tskydome",
+            "usage": [
+                " :SetLighting([string type], [boolean enable])"
+            ]
+        },
+        "IsLightingEnabled": {
+            "short_help": "Returns boolean state of lighting mode",
+            "usage": [
+                " :IsLightingEnabled()"
+            ]
+        },
+        "EnableLighting": {
+            "short_help": "Enables or disables lighting of objects",
+            "usage": [
+                " :EnableLighting([boolean enable])"
+            ]
+        },
+        "FitAll": {
+            "short_help": "Fits this view to the entire scene",
+            "usage": [
+                " :FitAll()"
+            ]
+        },
+        "FitSelected": {
+            "short_help": "Fits this view to the selected object",
+            "usage": [
+                " :FitSelected()"
+            ]
+        },
+        "CenterSelected": {
+            "short_help": "Centers this view on the selected object",
+            "usage": [
+                " :CenterSelected()"
+            ]
+        },
+        "GetShading": {
+            "short_help": "Returns the current object shading method",
+            "description": "Returns one of:\n\tpoints\n\twireframe\n\twireframeonsurface\n\tflatshading\n\tsmoothshading\n\tgeometryonly\n\tgeometryflat\n\tgeometrysmooth",
+            "usage": [
+                " :GetShading()"
+            ]
+        }
+    },
+    "class_inheritance": [
+        "Object",
+        "GLViewer"
+    ]
+}
