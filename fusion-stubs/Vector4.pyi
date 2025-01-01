@@ -1,6 +1,6 @@
-from Vector4f import Vector4f
-from Matrix4 import Matrix4
 from Vector3f import Vector3f
+from Matrix4 import Matrix4
+from Vector4f import Vector4f
 
 
 class Vector4:

@@ -1,7 +1,8 @@
-from typing import Any, overload
+from typing import overload, Any
 
-from FuFrame import FuFrame
 from Tool import Tool
+from FuFrame import FuFrame
+from _non_existing import time
 
 
 class Composition:
@@ -369,6 +370,20 @@ class Composition:
 	def GetFrameList(self) -> None:
 		...
 
+	def GetMarkers(self, timestamp: time | None = None) -> list:
+		"""
+		Returns a table of timeline markers.
+
+		This returns a list of timeline markers, each with a table/dict of attributes.
+
+		Args:
+			timestamp (Optional[time])
+
+		Returns:
+			marker data (list)
+		"""
+		...
+
 	def GetNextKeyTime(self, time: int | None = None, tool: Tool | None = None) -> int:
 		"""
 		Gets the next key time
@@ -696,6 +711,18 @@ class Composition:
 		Args:
 			name (str)
 			value ((number_or_string_or_boolean_or_table))
+		"""
+		...
+
+	def SetMarker(self, timestamp: int, marker_data: dict[Any, Any]) -> None:
+		"""
+		Creates or changes a timeline marker.
+
+		This will add or overwrite a timeline marker. Pass a table/dict of attributes, or nil to delete the marker.
+
+		Args:
+			timestamp (int)
+			marker data (dict[Any, Any])
 		"""
 		...
 

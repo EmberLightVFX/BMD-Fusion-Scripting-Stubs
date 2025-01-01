@@ -1,6 +1,6 @@
-from Image import Image
-from Matrix4 import Matrix4
 from Vector3f import Vector3f
+from Matrix4 import Matrix4
+from Image import Image
 from TagList import TagList
 from _non_existing import ViewShadeNodeGroup
 

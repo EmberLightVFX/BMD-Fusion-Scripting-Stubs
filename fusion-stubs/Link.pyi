@@ -1,7 +1,7 @@
 from typing import Any
 
-from Operator import Operator
 from Tool import Tool
+from Operator import Operator
 
 
 class Link:

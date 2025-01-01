@@ -1,5 +1,5 @@
-from Image import Image
 from Request import Request
+from Image import Image
 
 
 class DVIPBuffer:

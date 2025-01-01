@@ -1,6 +1,6 @@
 from LUT import LUT
-from Object import Object
 from TagList import TagList
+from Object import Object
 
 
 class LookUpTable:

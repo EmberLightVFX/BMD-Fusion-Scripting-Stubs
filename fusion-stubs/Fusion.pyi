@@ -1,16 +1,16 @@
 from typing import overload, Any
 
-from QueueManager import QueueManager
-from Registry import Registry
-from RenderJob import RenderJob
-from ActionManager import ActionManager
-from HotkeyManager import HotkeyManager
 from Composition import Composition
-from MailMessage import MailMessage
-from FontList import FontList
-from MemBlock import MemBlock
+from QueueManager import QueueManager
 from UIManager import UIManager
-from _non_existing import Bins, File, MenuManager, CacheManager
+from RenderJob import RenderJob
+from HotkeyManager import HotkeyManager
+from MemBlock import MemBlock
+from FontList import FontList
+from ActionManager import ActionManager
+from Registry import Registry
+from MailMessage import MailMessage
+from _non_existing import Bins, MenuManager, File, CacheManager
 
 
 class Fusion:

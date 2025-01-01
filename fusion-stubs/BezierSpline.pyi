@@ -33,9 +33,9 @@ class BezierSpline:
 
 	REGB_Source_AspectCtrls: bool
 
-	REGB_Source_GlobalCtrls: bool
-
 	REGB_Source_SizeCtrls: bool
+
+	REGB_Source_GlobalCtrls: bool
 
 	REGB_SupportsDoD: bool
 

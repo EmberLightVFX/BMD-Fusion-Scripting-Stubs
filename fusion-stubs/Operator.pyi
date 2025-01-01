@@ -1,16 +1,16 @@
-from typing import Any, overload
+from typing import overload, Any
 
-from PlainInput import PlainInput
-from TimeRegion import TimeRegion
-from SubInputs import SubInputs
-from Output import Output
-from Request import Request
-from Tool import Tool
 from Composition import Composition
+from Request import Request
+from SubInputs import SubInputs
+from Tool import Tool
 from Parameter import Parameter
 from TagList import TagList
-from Input import Input
+from Output import Output
+from TimeRegion import TimeRegion
+from PlainInput import PlainInput
 from FusionDoc import FusionDoc
+from Input import Input
 from _non_existing import TimeStamp
 
 

@@ -41,9 +41,9 @@ class Custom:
 
 	REGI_Priority: int
 
-	REGB_Source_GlobalCtrls: bool
-
 	REGB_Source_SizeCtrls: bool
+
+	REGB_Source_GlobalCtrls: bool
 
 	REGB_Source_AspectCtrls: bool
 

@@ -3,18 +3,6 @@ from Matrix4 import Matrix4
 
 class Vector3f:
 
-	#---Properties---#
-	TypeName: str
-	"""
-	Read Only
-	"""
-
-	TypeNamePtr: str
-	"""
-	Read Only
-	"""
-
-
 	#---Methods---#
 	def Equals(self, vec: Vector3f) -> bool:
 		...
@@ -65,8 +53,5 @@ class Vector3f:
 		...
 
 	def _newNums(self, x: float, y: float, z: float) -> Vector3f:
-		...
-
-	def _newVec3f(self, vec: Vector3f) -> Vector3f:
 		...
 

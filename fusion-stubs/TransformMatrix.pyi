@@ -1,9 +1,9 @@
-from Image import Image
-from Input import Input
+from Request import Request
 from ImgRectI import ImgRectI
+from Image import Image
 from Parameter import Parameter
 from TagList import TagList
-from Request import Request
+from Input import Input
 from _non_existing import TimeStamp
 
 

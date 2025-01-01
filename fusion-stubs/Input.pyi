@@ -1,6 +1,6 @@
+from Request import Request
 from Parameter import Parameter
 from Output import Output
-from Request import Request
 
 
 class Input:

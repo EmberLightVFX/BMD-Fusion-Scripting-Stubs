@@ -1,4 +1,4 @@
-from typing import overload, Any
+from typing import Any, overload
 
 class MailMessage:
 

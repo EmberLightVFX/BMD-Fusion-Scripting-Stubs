@@ -1,6 +1,6 @@
-from Image import Image
-from TagList import TagList
 from Request import Request
+from TagList import TagList
+from Image import Image
 
 
 class CineonInputs:

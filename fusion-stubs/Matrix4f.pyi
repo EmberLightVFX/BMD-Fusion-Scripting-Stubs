@@ -1,5 +1,17 @@
 class Matrix4f:
 
+	#---Properties---#
+	TypeName: str
+	"""
+	Read Only
+	"""
+
+	TypeNamePtr: str
+	"""
+	Read Only
+	"""
+
+
 	#---Methods---#
 	def _newDef(self) -> Matrix4f:
 		...

@@ -1,7 +1,7 @@
-from Image import Image
+from OCLMemory import OCLMemory
 from FusionDoc import FusionDoc
 from OCLManager import OCLManager
-from OCLMemory import OCLMemory
+from Image import Image
 
 
 class OCLProgram:

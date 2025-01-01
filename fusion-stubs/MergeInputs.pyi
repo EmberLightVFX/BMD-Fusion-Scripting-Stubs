@@ -1,7 +1,7 @@
-from Image import Image
-from TagList import TagList
-from TransformMatrix import TransformMatrix
 from Request import Request
+from TransformMatrix import TransformMatrix
+from TagList import TagList
+from Image import Image
 
 
 class MergeInputs:

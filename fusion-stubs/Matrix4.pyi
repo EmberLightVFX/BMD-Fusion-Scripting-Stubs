@@ -1,5 +1,5 @@
-from Vector4 import Vector4
 from Vector3f import Vector3f
+from Vector4 import Vector4
 
 
 class Matrix4:

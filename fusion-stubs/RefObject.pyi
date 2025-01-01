@@ -1,5 +1,5 @@
 from TagList import TagList
-from _non_existing import Tag, void
+from _non_existing import void, Tag
 
 
 class RefObject:

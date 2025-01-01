@@ -1,5 +1,5 @@
-from Image import Image
 from ImgRectI import ImgRectI
+from Image import Image
 
 
 class EXRIO:

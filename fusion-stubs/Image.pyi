@@ -1,15 +1,15 @@
 from typing import Any
 
-from ChanLUTs import ChanLUTs
-from ColorMatrixFull import ColorMatrixFull
-from FltPixel import FltPixel
-from LookUpTable import LookUpTable
 from Request import Request
+from FltPixel import FltPixel
 from IntPixel import IntPixel
-from ImgRectI import ImgRectI
 from ColorMatrix import ColorMatrix
-from MemBlock import MemBlock
 from TagList import TagList
+from MemBlock import MemBlock
+from ColorMatrixFull import ColorMatrixFull
+from ImgRectI import ImgRectI
+from LookUpTable import LookUpTable
+from ChanLUTs import ChanLUTs
 from _non_existing import void, LookUpTable3D
 
 

@@ -1,7 +1,7 @@
-from Image import Image
-from Matrix4 import Matrix4
 from FltPixel import FltPixel
 from Gradient import Gradient
+from Matrix4 import Matrix4
+from Image import Image
 
 
 class ChannelStyle:

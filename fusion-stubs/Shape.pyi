@@ -1,5 +1,5 @@
-from Vector2 import Vector2
 from Matrix4 import Matrix4
+from Vector2 import Vector2
 
 
 class Shape:

@@ -1,5 +1,5 @@
-from Parameter import Parameter
 from Request import Request
+from Parameter import Parameter
 
 
 class Output:

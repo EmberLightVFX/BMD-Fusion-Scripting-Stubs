@@ -1,8 +1,8 @@
-from Image import Image
-from ChannelStyle import ChannelStyle
-from ImageRegion import ImageRegion
-from Shape import Shape
 from FillStyle import FillStyle
+from Shape import Shape
+from ChannelStyle import ChannelStyle
+from Image import Image
+from ImageRegion import ImageRegion
 
 
 class ImageChannel:

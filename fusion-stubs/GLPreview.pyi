@@ -29,25 +29,25 @@ class GLPreview:
 
 	REGS_Name: str
 
+	REGB_Preview_CanCopyAnim: bool
+
+	REGB_Preview_CanRecord: bool
+
+	REGB_Preview_CanDisplayImage: bool
+
+	REGB_Preview_UsesFilenames: bool
+
 	REGB_Preview_CanCopyImage: bool
+
+	REGB_Preview_CanNetRender: bool
 
 	REGB_Preview_CanSaveAnim: bool
 
 	REGB_Preview_CanCreateAnim: bool
 
-	REGB_Preview_CanDisplayImage: bool
-
 	REGB_Preview_CanPlayAnim: bool
 
-	REGB_Preview_CanNetRender: bool
-
 	REGB_Preview_CanSaveImage: bool
-
-	REGB_Preview_CanCopyAnim: bool
-
-	REGB_Preview_CanRecord: bool
-
-	REGB_Preview_UsesFilenames: bool
 
 	REGI_Priority: int
 

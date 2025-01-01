@@ -1,5 +1,5 @@
-from Image import Image
 from FusionDoc import FusionDoc
+from Image import Image
 
 
 class Clip:

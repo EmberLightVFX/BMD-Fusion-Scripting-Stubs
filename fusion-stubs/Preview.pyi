@@ -1,5 +1,5 @@
-from Image import Image
 from Tool import Tool
+from Image import Image
 
 
 class Preview:
