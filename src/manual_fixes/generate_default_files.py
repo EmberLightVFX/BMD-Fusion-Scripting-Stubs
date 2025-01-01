@@ -1,11 +1,11 @@
 def generate_builtins() -> str:
     return '''\
 """
-v1.3
+v1.5
 Generated with FMD Fusion Scriptsing Stubs
 https://github.com/EmberLightVFX/BMD-Fusion-Scripting-Stubs
 
-Generated with Fusion Studio 18.5 build 73
+Generated with Fusion Studio 19.1.2
 
 """
 
