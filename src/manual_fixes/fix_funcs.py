@@ -18,6 +18,8 @@ def fix_optional(
     if get_class := optional_to_fix.get(class_name):
         if get_obj := get_class.get(obj_name):
             if get_obj["input_name"] == input_name:
+                if not isinstance(get_obj["optional"], bool):
+                    assert False, "optional must be a bool"
                 return get_obj["optional"]
     return old_optional
 
