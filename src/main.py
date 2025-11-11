@@ -23,9 +23,19 @@ from manual_fixes.generate_default_files import (
 
 def format_code_in_folder_with_ruff(folder_path: str):
     try:
-        # Run the ruff command to format the file
         subprocess.run(
-            ["ruff", "check", "--select=F401", "--fix", folder_path], check=True
+            [
+                "ruff",
+                "check",
+                "--fix",
+                # "--show-fixes",
+                "--select",
+                "E,F,W,Q,I",
+                "--ignore",
+                "E501",
+                folder_path,
+            ],
+            check=True,
         )
         print(f"Formatted {folder_path} successfully.")
     except subprocess.CalledProcessError as e:
