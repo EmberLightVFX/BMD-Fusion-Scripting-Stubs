@@ -1,193 +1,192 @@
-from Request import Request
-from ImgRectI import ImgRectI
-from Image import Image
-from Parameter import Parameter
-from TagList import TagList
-from Input import Input
 from _non_existing import TimeStamp
-
+from Image import Image
+from ImgRectI import ImgRectI
+from Input import Input
+from Parameter import Parameter
+from Request import Request
+from TagList import TagList
 
 class TransformMatrix:
 
-	#---Properties---#
-	Depth: int
-	"""
-	Image depth indicator (not in bits)
+    #---Properties---#
+    Depth: int
+    """
+    Image depth indicator (not in bits)
 
-	Depth will be one of the following values:
-	
-	1 - alpha only  8 bit integer
-	2 - alpha only 16 bit integer
-	3 - alpha only 16 bit float
-	4 - alpha only 32 bit float
-	5 - RGBA        8 bit integer
-	6 - RGBA       16 bit integer
-	7 - RGBA       16 bit float
-	8 - RGBA       32 bit float
+    Depth will be one of the following values:
 
-	Read Only
-	"""
+    1 - alpha only  8 bit integer
+    2 - alpha only 16 bit integer
+    3 - alpha only 16 bit float
+    4 - alpha only 32 bit float
+    5 - RGBA        8 bit integer
+    6 - RGBA       16 bit integer
+    7 - RGBA       16 bit float
+    8 - RGBA       32 bit float
 
-	Field: int
-	"""
-	Field indicator
+    Read Only
+    """
 
-	Field will be one of the following values:
-	
-	-1 - Full Frames, no fields
-	0 - Odd (NTSC) field
-	1 - Even (PAL/HD) field
+    Field: int
+    """
+    Field indicator
 
-	Read Only
-	"""
+    Field will be one of the following values:
 
-	Height: int
-	"""
-	Actual image height, in pixels
+    -1 - Full Frames, no fields
+    0 - Odd (NTSC) field
+    1 - Even (PAL/HD) field
 
-	Read Only
-	"""
+    Read Only
+    """
 
-	OriginalHeight: int
-	"""
-	Unproxied image height, in pixels
+    Height: int
+    """
+    Actual image height, in pixels
 
-	Read Only
-	"""
+    Read Only
+    """
 
-	OriginalWidth: int
-	"""
-	Unproxied image width, in pixels
+    OriginalHeight: int
+    """
+    Unproxied image height, in pixels
 
-	Read Only
-	"""
+    Read Only
+    """
 
-	OriginalXScale: int
-	"""
-	Unproxied pixel X Aspect
+    OriginalWidth: int
+    """
+    Unproxied image width, in pixels
 
-	Read Only
-	"""
+    Read Only
+    """
 
-	OriginalYScale: int
-	"""
-	Unproxied pixel Y Aspect
+    OriginalXScale: int
+    """
+    Unproxied pixel X Aspect
 
-	Read Only
-	"""
+    Read Only
+    """
 
-	ProxyScale: int
-	"""
-	Image proxy scale multiplier
+    OriginalYScale: int
+    """
+    Unproxied pixel Y Aspect
 
-	ProxyScale may be any positive integer, where 1 indicates no proxy.
+    Read Only
+    """
 
-	Read Only
-	"""
+    ProxyScale: int
+    """
+    Image proxy scale multiplier
 
-	Width: int
-	"""
-	Actual image width, in pixels
+    ProxyScale may be any positive integer, where 1 indicates no proxy.
 
-	Read Only
-	"""
+    Read Only
+    """
 
-	XOffset: int
-	"""
-	Image X Offset
+    Width: int
+    """
+    Actual image width, in pixels
 
-	Read Only
-	"""
+    Read Only
+    """
 
-	XScale: int
-	"""
-	Pixel X Aspect
+    XOffset: int
+    """
+    Image X Offset
 
-	Read Only
-	"""
+    Read Only
+    """
 
-	YOffset: int
-	"""
-	Image X Offset
+    XScale: int
+    """
+    Pixel X Aspect
 
-	Read Only
-	"""
+    Read Only
+    """
 
-	YScale: int
-	"""
-	Pixel Y Aspect
+    YOffset: int
+    """
+    Image X Offset
 
-	Read Only
-	"""
+    Read Only
+    """
 
-	DataWindow: ImgRectI
-	"""
-	Read Only
-	"""
+    YScale: int
+    """
+    Pixel Y Aspect
 
-	ImageWindow: ImgRectI
-	"""
-	Read Only
-	"""
+    Read Only
+    """
 
-	OriginalIXScale: float
-	"""
-	Read Only
-	"""
+    DataWindow: ImgRectI
+    """
+    Read Only
+    """
 
-	OriginalIYScale: float
-	"""
-	Read Only
-	"""
+    ImageWindow: ImgRectI
+    """
+    Read Only
+    """
 
+    OriginalIXScale: float
+    """
+    Read Only
+    """
 
-	#---Registry---#
-	REGI_ClassType: int
-
-	REGB_ControlView: bool
-
-	REGB_Hide: bool
-
-	REGS_ID: str
-
-	REGS_Name: str
-
-	REGI_Priority: int
-
-	REGB_SupportsDoD: bool
-
-	REGB_Unpredictable: bool
-
-	REGB_Utility_Toggle: bool
-
-	REGI_Version: int
-
-	REGS_VersionString: str
+    OriginalIYScale: float
+    """
+    Read Only
+    """
 
 
-	#---Methods---#
-	def ApplyTransform(self, tags: TagList) -> Image:
-		...
+    #---Registry---#
+    REGI_ClassType: int
 
-	def ImageConcatenate(self, tags: TagList) -> None:
-		...
+    REGB_ControlView: bool
 
-	def MergeConcatenate(self, fg: Parameter, tags: TagList) -> None:
-		...
+    REGB_Hide: bool
 
-	def __new(self, img: Parameter, req: Request, inp: Input, slot: int, time: TimeStamp) -> TransformMatrix:
-		"""
-		TransformMatrix constructor
+    REGS_ID: str
 
-		Args:
-			img (Parameter)
-			req (Request)
-			inp (Input)
-			slot (int)
-			time (TimeStamp)
+    REGS_Name: str
 
-		Returns:
-			TransformMatrix
-		"""
-		...
+    REGI_Priority: int
+
+    REGB_SupportsDoD: bool
+
+    REGB_Unpredictable: bool
+
+    REGB_Utility_Toggle: bool
+
+    REGI_Version: int
+
+    REGS_VersionString: str
+
+
+    #---Methods---#
+    def ApplyTransform(self, tags: TagList) -> Image:
+        ...
+
+    def ImageConcatenate(self, tags: TagList) -> None:
+        ...
+
+    def MergeConcatenate(self, fg: Parameter, tags: TagList) -> None:
+        ...
+
+    def __new(self, img: Parameter, req: Request, inp: Input, slot: int, time: TimeStamp) -> TransformMatrix:
+        """
+        TransformMatrix constructor
+
+        Args:
+            img (Parameter)
+            req (Request)
+            inp (Input)
+            slot (int)
+            time (TimeStamp)
+
+        Returns:
+            TransformMatrix
+        """
+        ...
 

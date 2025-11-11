@@ -2,200 +2,237 @@ from typing import Any, overload
 
 class GLImageViewer:
 
-	#---Registry---#
-	REGI_ClassType: int
+    #---Registry---#
+    REGI_ClassType: int
 
-	REGB_ControlView: bool
+    REGB_ControlView: bool
 
-	REGB_Hide: bool
+    REGB_Hide: bool
 
-	REGS_ID: str
+    REGS_ID: str
 
-	REGS_Name: str
+    REGS_Name: str
 
-	REGI_Priority: int
+    REGI_Priority: int
 
-	REGB_SupportsDoD: bool
+    REGB_SupportsDoD: bool
 
-	REGS_UIName: str
+    REGS_UIName: str
 
-	REGB_Unpredictable: bool
+    REGB_Unpredictable: bool
 
-	REGB_Utility_Toggle: bool
+    REGB_Utility_Toggle: bool
 
-	REGI_Version: int
+    REGI_Version: int
 
-	REGS_VersionString: str
+    REGS_VersionString: str
 
 
-	#---Methods---#
-	def DragRoI(self) -> None:
-		"""
-		Lets the user drag out an RoI rectangle
-		"""
-		...
+    #---Methods---#
+    def DragRoI(self) -> None:
+        """
+        Lets the user drag out an RoI rectangle
+        """
+        ...
 
-	def EnableLUT(self, enable: bool | None = None) -> None:
-		"""
-		Enables or disables the current View LUT
+    def EnableLUT(self, enable: bool | None = None) -> None:
+        """
+        Enables or disables the current View LUT
 
-		Args:
-			enable (Optional[bool])
-		"""
-		...
+        Args:
+            enable (Optional[bool])
+        """
+        ...
 
-	def EnableRoI(self, enable: bool | None = None) -> None:
-		"""
-		Enables or disables the current View RoI
+    def EnableRoI(self, enable: bool | None = None) -> None:
+        """
+        Enables or disables the current View RoI
 
-		Args:
-			enable (Optional[bool])
-		"""
-		...
+        Args:
+            enable (Optional[bool])
+        """
+        ...
 
-	def ExportTo3DLUT(self, pathname: str | None = None, cubesize: int | None = None, precision: int | None = None, rangemin: int | None = None, rangemax: int | None = None) -> bool | str:
-		"""
-		Exports the current LUTs to a 3D LUT file
+    def ExportTo3DLUT(self, pathname: str | None = None, cubesize: int | None = None, precision: int | None = None, rangemin: int | None = None, rangemax: int | None = None) -> bool | str:
+        """
+        Exports the current LUTs to a 3D LUT file
 
-		Exports a 3D LUT with cubesize x cubesize x cubesize entries (default 33x33x33).
-		Passing nil or no pathname displays a dialog to the user.
-		For precision, pass 1 for uint8, 2 for uint16 or 9 for float32 (default float32).
-		For HDR LUTs, pass rangemin/rangemax (default is 0.0 to 1.0).
-		Returns: boolean success, and the saved LUT's filename.
+        Exports a 3D LUT with cubesize x cubesize x cubesize entries (default 33x33x33).
+        Passing nil or no pathname displays a dialog to the user.
+        For precision, pass 1 for uint8, 2 for uint16 or 9 for float32 (default float32).
+        For HDR LUTs, pass rangemin/rangemax (default is 0.0 to 1.0).
+        Returns: boolean success, and the saved LUT's filename.
 
-		Args:
-			pathname (Optional[str])
-			cubesize (Optional[int])
-			precision (Optional[int])
-			rangemin (Optional[int])
-			rangemax (Optional[int])
+        Args:
+            pathname (Optional[str])
+            cubesize (Optional[int])
+            precision (Optional[int])
+            rangemin (Optional[int])
+            rangemax (Optional[int])
 
-		Returns:
-			success (bool)
-			filename (str)
-		"""
-		...
+        Returns:
+            success (bool)
+            filename (str)
+        """
+        ...
 
-	def IsDoDShown(self) -> None:
-		...
+    def GetLayer(self) -> None:
+        """
+        Get the layer set to view
+        """
+        ...
 
-	def IsEnableRoI(self) -> None:
-		...
+    def GetLayerList(self) -> None:
+        """
+        Get the list of available layers to view
+        """
+        ...
 
-	def IsLUTEnabled(self) -> bool:
-		"""
-		Returns true if the current View LUT is enabled
+    def GetLayerName(self) -> None:
+        ...
 
-		Returns:
-			enabled (bool)
-		"""
-		...
+    def GetViewedLayer(self) -> None:
+        """
+        Get the actually viewed layer
+        """
+        ...
 
-	def IsShowGainGamma(self) -> None:
-		...
+    def IsDoDShown(self) -> None:
+        ...
 
-	def LoadLUTAction(self, pathname: str | None = None) -> bool:
-		"""
-		Used by the Action system to load a LUT file into the View LUT
+    def IsEnableRoI(self) -> None:
+        ...
 
-		Args:
-			pathname (Optional[str])
+    def IsLUTEnabled(self) -> bool:
+        """
+        Returns true if the current View LUT is enabled
 
-		Returns:
-			success (bool)
-		"""
-		...
+        Returns:
+            enabled (bool)
+        """
+        ...
 
-	def LoadLUTFile(self, pathname: str | None = None) -> bool:
-		"""
-		Loads a LUT file, setting or LUT plugin ID into the View LUT
+    def IsShowGainGamma(self) -> None:
+        ...
 
-		Args:
-			pathname (Optional[str])
+    def LoadLUTAction(self, pathname: str | None = None) -> bool:
+        """
+        Used by the Action system to load a LUT file into the View LUT
 
-		Returns:
-			success (bool)
-		"""
-		...
+        Args:
+            pathname (Optional[str])
 
-	def LockRoI(self, enable: bool | None = None) -> None:
-		"""
-		Locks or unlocks the View RoI
+        Returns:
+            success (bool)
+        """
+        ...
 
-		Args:
-			enable (Optional[bool])
-		"""
-		...
+    def LoadLUTFile(self, pathname: str | None = None) -> bool:
+        """
+        Loads a LUT file, setting or LUT plugin ID into the View LUT
 
-	def SaveLUTFile(self, pathname: str | None = None) -> bool:
-		"""
-		Saves current LUTs into a .viewlut file
+        Args:
+            pathname (Optional[str])
 
-		Args:
-			pathname (Optional[str])
+        Returns:
+            success (bool)
+        """
+        ...
 
-		Returns:
-			success (bool)
-		"""
-		...
+    def LockRoI(self, enable: bool | None = None) -> None:
+        """
+        Locks or unlocks the View RoI
 
-	@overload
-	def SetRoI(self) -> None:
-		"""
-		Sets the current View RoI region
+        Args:
+            enable (Optional[bool])
+        """
+        ...
 
-		Reset RoI to full image
-		"""
-		...
+    def SaveLUTFile(self, pathname: str | None = None) -> bool:
+        """
+        Saves current LUTs into a .viewlut file
 
-	@overload
-	def SetRoI(self, rect: dict[Any, Any]) -> None:
-		"""
-		Sets the current View RoI region
+        Args:
+            pathname (Optional[str])
 
-		Set to table of four normalised coords {left,bottom,right,top} e.g { 0,0,1,1 }
+        Returns:
+            success (bool)
+        """
+        ...
 
-		Args:
-			rect (dict[Any, Any])
-		"""
-		...
+    def SetLayer(self, layer: str) -> None:
+        """
+        Set the layer to view
+        Layer of "" indicates the default layer
 
-	@overload
-	def SetRoI(self, auto: bool) -> None:
-		"""
-		Sets the current View RoI region
+        Args:
+            layer (str)
+        """
+        ...
 
-		true enables automatic sizing of RoI to the view window
+    @overload
+    def SetRoI(self) -> None:
+        """
+        Sets the current View RoI region
 
-		Args:
-			auto (bool)
-		"""
-		...
+        Reset RoI to full image
+        """
+        ...
 
-	def ShowDoD(self, enable: bool | None = None) -> None:
-		"""
-		Enables or disables drawing the current View DoD rectangle
+    @overload
+    def SetRoI(self, rect: dict[Any, Any]) -> None:
+        """
+        Sets the current View RoI region
 
-		Args:
-			enable (Optional[bool])
-		"""
-		...
+        Set to table of four normalised coords {left,bottom,right,top} e.g { 0,0,1,1 }
 
-	def ShowGainGamma(self) -> None:
-		...
+        Args:
+            rect (dict[Any, Any])
+        """
+        ...
 
-	def ShowLUTEditor(self) -> None:
-		"""
-		Pops up the Editor window for the current View LUT
-		"""
-		...
+    @overload
+    def SetRoI(self, auto: bool) -> None:
+        """
+        Sets the current View RoI region
 
-	def ShowRoI(self, enable: bool | None = None) -> None:
-		"""
-		Enables or disables drawing the current View RoI rectangle
+        true enables automatic sizing of RoI to the view window
 
-		Args:
-			enable (Optional[bool])
-		"""
-		...
+        Args:
+            auto (bool)
+        """
+        ...
+
+    def ShowDoD(self, enable: bool | None = None) -> None:
+        """
+        Enables or disables drawing the current View DoD rectangle
+
+        Args:
+            enable (Optional[bool])
+        """
+        ...
+
+    def ShowGainGamma(self) -> None:
+        ...
+
+    def ShowLUTEditor(self) -> None:
+        """
+        Pops up the Editor window for the current View LUT
+        """
+        ...
+
+    def ShowRoI(self, enable: bool | None = None) -> None:
+        """
+        Enables or disables drawing the current View RoI rectangle
+
+        Args:
+            enable (Optional[bool])
+        """
+        ...
+
+    def ToggleLayer(self) -> None:
+        """
+        Set the previously viewed layer as the layer to view
+        """
+        ...
 

@@ -2,79 +2,79 @@ from typing import Any
 
 class UIActionStrip:
 
-	#---Properties---#
-	ActionFlags: Any
+    #---Properties---#
+    ActionFlags: Any
 
-	ZonesPerSide: Any
-
-
-	#---Registry---#
-	REGI_ClassType: int
-
-	REGB_ControlView: bool
-
-	REGB_Hide: bool
-
-	REGS_ID: str
-
-	REGS_Name: str
-
-	REGI_Priority: int
-
-	REGB_SupportsDoD: bool
-
-	REGB_Unpredictable: bool
-
-	REGB_Utility_Toggle: bool
-
-	REGI_Version: int
-
-	REGS_VersionString: str
+    ZonesPerSide: Any
 
 
-	#---Methods---#
-	def AddButton(self) -> None:
-		...
+    #---Registry---#
+    REGI_ClassType: int
 
-	def AddEdit(self) -> None:
-		...
+    REGB_ControlView: bool
 
-	def AddPopup(self) -> None:
-		...
+    REGB_Hide: bool
 
-	def AddSlider(self) -> None:
-		...
+    REGS_ID: str
 
-	def BeginZone(self) -> None:
-		...
+    REGS_Name: str
 
-	def EndZone(self) -> None:
-		...
+    REGI_Priority: int
 
-	def FindZone(self) -> None:
-		...
+    REGB_SupportsDoD: bool
 
-	def GetActionFlags(self) -> None:
-		...
+    REGB_Unpredictable: bool
 
-	def GetNextID(self) -> None:
-		...
+    REGB_Utility_Toggle: bool
 
-	def GetZonesPerSide(self) -> None:
-		...
+    REGI_Version: int
 
-	def Remove(self) -> None:
-		...
+    REGS_VersionString: str
 
-	def SetActionFlags(self) -> None:
-		...
 
-	def SetTarget(self) -> None:
-		...
+    #---Methods---#
+    def AddButton(self) -> None:
+        ...
 
-	def SetZonesPerSide(self) -> None:
-		...
+    def AddEdit(self) -> None:
+        ...
 
-	def Update(self) -> None:
-		...
+    def AddPopup(self) -> None:
+        ...
+
+    def AddSlider(self) -> None:
+        ...
+
+    def BeginZone(self) -> None:
+        ...
+
+    def EndZone(self) -> None:
+        ...
+
+    def FindZone(self) -> None:
+        ...
+
+    def GetActionFlags(self) -> None:
+        ...
+
+    def GetNextID(self) -> None:
+        ...
+
+    def GetZonesPerSide(self) -> None:
+        ...
+
+    def Remove(self) -> None:
+        ...
+
+    def SetActionFlags(self) -> None:
+        ...
+
+    def SetTarget(self) -> None:
+        ...
+
+    def SetZonesPerSide(self) -> None:
+        ...
+
+    def Update(self) -> None:
+        ...
 

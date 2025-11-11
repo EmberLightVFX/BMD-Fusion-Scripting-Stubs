@@ -1,35 +1,34 @@
-from Request import Request
 from Parameter import Parameter
-
+from Request import Request
 
 class Output:
 
-	#---Registry---#
-	REGI_ClassType: int
+    #---Registry---#
+    REGI_ClassType: int
 
-	REGB_ControlView: bool
+    REGB_ControlView: bool
 
-	REGB_Hide: bool
+    REGB_Hide: bool
 
-	REGS_ID: str
+    REGS_ID: str
 
-	REGS_Name: str
+    REGS_Name: str
 
-	REGI_Priority: int
+    REGI_Priority: int
 
-	REGB_SupportsDoD: bool
+    REGB_SupportsDoD: bool
 
-	REGB_Unpredictable: bool
+    REGB_Unpredictable: bool
 
-	REGI_Version: int
+    REGI_Version: int
 
-	REGS_VersionString: str
+    REGS_VersionString: str
 
 
-	#---Methods---#
-	def _SetNum(self, req: Request, num: float) -> None:
-		...
+    #---Methods---#
+    def _SetNum(self, req: Request, num: float) -> None:
+        ...
 
-	def _SetParam(self, req: Request, param: Parameter) -> None:
-		...
+    def _SetParam(self, req: Request, param: Parameter) -> None:
+        ...
 

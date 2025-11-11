@@ -1,5 +1,5 @@
-from Fusion import Fusion
 from Composition import Composition
+from Fusion import Fusion
 from Tool import Tool
 
 fusion = Fusion() # type: ignore

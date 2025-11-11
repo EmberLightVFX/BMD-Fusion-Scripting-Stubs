@@ -1,37 +1,36 @@
 from Composition import Composition
 
-
 class FloatLUTMacroFrame:
 
-	#---Properties---#
-	Composition: Composition
-	"""
-	Represents this frame window's Composition
+    #---Properties---#
+    Composition: Composition
+    """
+    Represents this frame window's Composition
 
-	The Composition variable represents the Composition object that thisframe window is displaying.
+    The Composition variable represents the Composition object that thisframe window is displaying.
 
-	Read Only
-	"""
+    Read Only
+    """
 
 
-	#---Registry---#
-	REGI_ClassType: int
+    #---Registry---#
+    REGI_ClassType: int
 
-	REGB_ControlView: bool
+    REGB_ControlView: bool
 
-	REGB_Hide: bool
+    REGB_Hide: bool
 
-	REGS_ID: str
+    REGS_ID: str
 
-	REGS_Name: str
+    REGS_Name: str
 
-	REGI_Priority: int
+    REGI_Priority: int
 
-	REGB_SupportsDoD: bool
+    REGB_SupportsDoD: bool
 
-	REGB_Unpredictable: bool
+    REGB_Unpredictable: bool
 
-	REGI_Version: int
+    REGI_Version: int
 
-	REGS_VersionString: str
+    REGS_VersionString: str
 

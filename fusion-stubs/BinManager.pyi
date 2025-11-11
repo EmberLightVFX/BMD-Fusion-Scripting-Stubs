@@ -1,99 +1,99 @@
 class BinManager:
 
-	#---Properties---#
+    #---Properties---#
 
-	#---Registry---#
-	REGI_ClassType: int
+    #---Registry---#
+    REGI_ClassType: int
 
-	REGB_ControlView: bool
+    REGB_ControlView: bool
 
-	REGB_Hide: bool
+    REGB_Hide: bool
 
-	REGS_ID: str
+    REGS_ID: str
 
-	REGS_Name: str
+    REGS_Name: str
 
-	REGI_Priority: int
+    REGI_Priority: int
 
-	REGB_SupportsDoD: bool
+    REGB_SupportsDoD: bool
 
-	REGB_Unpredictable: bool
+    REGB_Unpredictable: bool
 
-	REGI_Version: int
+    REGI_Version: int
 
-	REGS_VersionString: str
+    REGS_VersionString: str
 
 
-	#---Methods---#
-	def CanPlaySelected(self) -> None:
-		...
+    #---Methods---#
+    def CanPlaySelected(self) -> None:
+        ...
 
-	def ClearSelection(self) -> None:
-		...
+    def ClearSelection(self) -> None:
+        ...
 
-	def Close(self) -> None:
-		...
+    def Close(self) -> None:
+        ...
 
-	def DeleteSelected(self) -> None:
-		...
+    def DeleteSelected(self) -> None:
+        ...
 
-	def GetRootID(self) -> None:
-		...
+    def GetRootID(self) -> None:
+        ...
 
-	def GetRootLibraryInfo(self) -> None:
-		...
+    def GetRootLibraryInfo(self) -> None:
+        ...
 
-	def GetSelectedIDs(self) -> None:
-		...
+    def GetSelectedIDs(self) -> None:
+        ...
 
-	def IsOpen(self) -> None:
-		...
+    def IsOpen(self) -> None:
+        ...
 
-	def NewFolder(self) -> None:
-		...
+    def NewFolder(self) -> None:
+        ...
 
-	def NewItem(self) -> None:
-		...
+    def NewItem(self) -> None:
+        ...
 
-	def NewReel(self) -> None:
-		...
+    def NewReel(self) -> None:
+        ...
 
-	def Open(self) -> None:
-		...
+    def Open(self) -> None:
+        ...
 
-	def PlaySelected(self) -> None:
-		...
+    def PlaySelected(self) -> None:
+        ...
 
-	def Refresh(self) -> None:
-		...
+    def Refresh(self) -> None:
+        ...
 
-	def RenameSelected(self) -> None:
-		...
+    def RenameSelected(self) -> None:
+        ...
 
-	def SelectAll(self) -> None:
-		...
+    def SelectAll(self) -> None:
+        ...
 
-	def SetLibraryRoot(self) -> None:
-		...
+    def SetLibraryRoot(self) -> None:
+        ...
 
-	def ShowFolder(self) -> None:
-		...
+    def ShowFolder(self) -> None:
+        ...
 
-	def StopPlayback(self) -> None:
-		...
+    def StopPlayback(self) -> None:
+        ...
 
-	def _Library_AddItem(self) -> None:
-		...
+    def _Library_AddItem(self) -> None:
+        ...
 
-	def _Library_DeleteItem(self) -> None:
-		...
+    def _Library_DeleteItem(self) -> None:
+        ...
 
-	def _Library_Notify(self) -> None:
-		...
+    def _Library_Notify(self) -> None:
+        ...
 
-	def _Library_Reload(self) -> None:
-		...
+    def _Library_Reload(self) -> None:
+        ...
 
-	def _Library_UpdateItem(self) -> None:
-		...
+    def _Library_UpdateItem(self) -> None:
+        ...
 

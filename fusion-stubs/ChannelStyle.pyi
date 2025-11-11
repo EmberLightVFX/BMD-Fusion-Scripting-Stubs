@@ -1,83 +1,82 @@
 from FltPixel import FltPixel
 from Gradient import Gradient
-from Matrix4 import Matrix4
 from Image import Image
-
+from Matrix4 import Matrix4
 
 class ChannelStyle:
 
-	#---Properties---#
-	BevelType: str
+    #---Properties---#
+    BevelType: str
 
-	BgColor: FltPixel
+    BgColor: FltPixel
 
-	BlurType: str
+    BlurType: str
 
-	Color: FltPixel
+    Color: FltPixel
 
-	ColorGradient: Gradient
+    ColorGradient: Gradient
 
-	ColorImage: Image
+    ColorImage: Image
 
-	ColorImageBevel: Image
+    ColorImageBevel: Image
 
-	ColorImageEdges: str
+    ColorImageEdges: str
 
-	ColorImageSample: str
+    ColorImageSample: str
 
-	ColorMapping: int
+    ColorMapping: int
 
-	ColorMappingAngle: float
+    ColorMappingAngle: float
 
-	ColorMappingAspect: float
+    ColorMappingAspect: float
 
-	ColorMappingSize: float
+    ColorMappingSize: float
 
-	ImageTransform: Matrix4
+    ImageTransform: Matrix4
 
-	Level: str
+    Level: str
 
-	Opacity: float
+    Opacity: float
 
-	SoftnessBlend: float
+    SoftnessBlend: float
 
-	SoftnessGlow: float
+    SoftnessGlow: float
 
-	SoftnessImage: bool
+    SoftnessImage: bool
 
-	SoftnessX: float
+    SoftnessX: float
 
-	SoftnessY: float
+    SoftnessY: float
 
-	Type: str
+    Type: str
 
-	TypeName: str
-	"""
-	Read Only
-	"""
+    TypeName: str
+    """
+    Read Only
+    """
 
-	TypeNamePtr: str
-	"""
-	Read Only
-	"""
+    TypeNamePtr: str
+    """
+    Read Only
+    """
 
 
-	#---Methods---#
-	def GetImageTransformInverse(self) -> Matrix4:
-		...
+    #---Methods---#
+    def GetImageTransformInverse(self) -> Matrix4:
+        ...
 
-	def IsRenderCompatibleWith(self, cs: ChannelStyle) -> bool:
-		...
+    def IsRenderCompatibleWith(self, cs: ChannelStyle) -> bool:
+        ...
 
-	def RequiresNewImage(self, line: int, tab: int, word: int, ch: int) -> bool:
-		...
+    def RequiresNewImage(self, line: int, tab: int, word: int, ch: int) -> bool:
+        ...
 
-	def __new(self) -> ChannelStyle:
-		"""
-		ChannelStyle constructor
+    def __new(self) -> ChannelStyle:
+        """
+        ChannelStyle constructor
 
-		Returns:
-			ChannelStyle
-		"""
-		...
+        Returns:
+            ChannelStyle
+        """
+        ...
 

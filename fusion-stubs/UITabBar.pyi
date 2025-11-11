@@ -2,161 +2,161 @@ from typing import Any
 
 class UITabBar:
 
-	#---Properties---#
-	AutoHide: Any
+    #---Properties---#
+    AutoHide: Any
 
-	ChangeCurrentOnDrag: Any
+    ChangeCurrentOnDrag: Any
 
-	CurrentIndex: Any
+    CurrentIndex: Any
 
-	DocumentMode: Any
+    DocumentMode: Any
 
-	DrawBase: Any
+    DrawBase: Any
 
-	Expanding: Any
+    Expanding: Any
 
-	Movable: Any
+    Movable: Any
 
-	TabText: Any
-	"""
-	Read Only
-	"""
+    TabText: Any
+    """
+    Read Only
+    """
 
-	TabTextColor: Any
-	"""
-	Read Only
-	"""
+    TabTextColor: Any
+    """
+    Read Only
+    """
 
-	TabToolTip: Any
-	"""
-	Read Only
-	"""
+    TabToolTip: Any
+    """
+    Read Only
+    """
 
-	TabWhatsThis: Any
-	"""
-	Read Only
-	"""
+    TabWhatsThis: Any
+    """
+    Read Only
+    """
 
-	TabsClosable: Any
+    TabsClosable: Any
 
-	UsesScrollButtons: Any
-
-
-	#---Registry---#
-	REGI_ClassType: int
-
-	REGB_ControlView: bool
-
-	REGB_Hide: bool
-
-	REGS_ID: str
-
-	REGS_Name: str
-
-	REGI_Priority: int
-
-	REGB_SupportsDoD: bool
-
-	REGB_Unpredictable: bool
-
-	REGB_Utility_Toggle: bool
-
-	REGI_Version: int
-
-	REGS_VersionString: str
+    UsesScrollButtons: Any
 
 
-	#---Methods---#
-	def AddTab(self) -> None:
-		...
+    #---Registry---#
+    REGI_ClassType: int
 
-	def Count(self) -> None:
-		...
+    REGB_ControlView: bool
 
-	def GetAutoHide(self) -> None:
-		...
+    REGB_Hide: bool
 
-	def GetChangeCurrentOnDrag(self) -> None:
-		...
+    REGS_ID: str
 
-	def GetCurrentIndex(self) -> None:
-		...
+    REGS_Name: str
 
-	def GetDocumentMode(self) -> None:
-		...
+    REGI_Priority: int
 
-	def GetDrawBase(self) -> None:
-		...
+    REGB_SupportsDoD: bool
 
-	def GetExpanding(self) -> None:
-		...
+    REGB_Unpredictable: bool
 
-	def GetMovable(self) -> None:
-		...
+    REGB_Utility_Toggle: bool
 
-	def GetTabText(self) -> None:
-		...
+    REGI_Version: int
 
-	def GetTabTextColor(self) -> None:
-		...
+    REGS_VersionString: str
 
-	def GetTabToolTip(self) -> None:
-		...
 
-	def GetTabWhatsThis(self) -> None:
-		...
+    #---Methods---#
+    def AddTab(self) -> None:
+        ...
 
-	def GetTabsClosable(self) -> None:
-		...
+    def Count(self) -> None:
+        ...
 
-	def GetUsesScrollButtons(self) -> None:
-		...
+    def GetAutoHide(self) -> None:
+        ...
 
-	def InsertTab(self) -> None:
-		...
+    def GetChangeCurrentOnDrag(self) -> None:
+        ...
 
-	def MoveTab(self) -> None:
-		...
+    def GetCurrentIndex(self) -> None:
+        ...
 
-	def RemoveTab(self) -> None:
-		...
+    def GetDocumentMode(self) -> None:
+        ...
 
-	def SetAutoHide(self) -> None:
-		...
+    def GetDrawBase(self) -> None:
+        ...
 
-	def SetChangeCurrentOnDrag(self) -> None:
-		...
+    def GetExpanding(self) -> None:
+        ...
 
-	def SetCurrentIndex(self) -> None:
-		...
+    def GetMovable(self) -> None:
+        ...
 
-	def SetDocumentMode(self) -> None:
-		...
+    def GetTabText(self) -> None:
+        ...
 
-	def SetDrawBase(self) -> None:
-		...
+    def GetTabTextColor(self) -> None:
+        ...
 
-	def SetExpanding(self) -> None:
-		...
+    def GetTabToolTip(self) -> None:
+        ...
 
-	def SetMovable(self) -> None:
-		...
+    def GetTabWhatsThis(self) -> None:
+        ...
 
-	def SetTabText(self) -> None:
-		...
+    def GetTabsClosable(self) -> None:
+        ...
 
-	def SetTabTextColor(self) -> None:
-		...
+    def GetUsesScrollButtons(self) -> None:
+        ...
 
-	def SetTabToolTip(self) -> None:
-		...
+    def InsertTab(self) -> None:
+        ...
 
-	def SetTabWhatsThis(self) -> None:
-		...
+    def MoveTab(self) -> None:
+        ...
 
-	def SetTabsClosable(self) -> None:
-		...
+    def RemoveTab(self) -> None:
+        ...
 
-	def SetUsesScrollButtons(self) -> None:
-		...
+    def SetAutoHide(self) -> None:
+        ...
+
+    def SetChangeCurrentOnDrag(self) -> None:
+        ...
+
+    def SetCurrentIndex(self) -> None:
+        ...
+
+    def SetDocumentMode(self) -> None:
+        ...
+
+    def SetDrawBase(self) -> None:
+        ...
+
+    def SetExpanding(self) -> None:
+        ...
+
+    def SetMovable(self) -> None:
+        ...
+
+    def SetTabText(self) -> None:
+        ...
+
+    def SetTabTextColor(self) -> None:
+        ...
+
+    def SetTabToolTip(self) -> None:
+        ...
+
+    def SetTabWhatsThis(self) -> None:
+        ...
+
+    def SetTabsClosable(self) -> None:
+        ...
+
+    def SetUsesScrollButtons(self) -> None:
+        ...
 

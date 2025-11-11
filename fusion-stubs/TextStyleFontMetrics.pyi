@@ -1,74 +1,73 @@
 from TextStyleFont import TextStyleFont
 
-
 class TextStyleFontMetrics:
 
-	#---Properties---#
-	CharWidthAverage: float
+    #---Properties---#
+    CharWidthAverage: float
 
-	CharWidthSpace: float
+    CharWidthSpace: float
 
-	DoStrikeout: bool
+    DoStrikeout: bool
 
-	DoUnderline: bool
+    DoUnderline: bool
 
-	FontSize: float
+    FontSize: float
 
-	Scale: float
+    Scale: float
 
-	StrikeoutOffset: float
+    StrikeoutOffset: float
 
-	StrikeoutThickness: float
+    StrikeoutThickness: float
 
-	TextAscent: float
+    TextAscent: float
 
-	TextDescent: float
+    TextDescent: float
 
-	TextExternalLeading: float
+    TextExternalLeading: float
 
-	TextInternalLeading: float
+    TextInternalLeading: float
 
-	TypeName: str
-	"""
-	Read Only
-	"""
+    TypeName: str
+    """
+    Read Only
+    """
 
-	TypeNamePtr: str
-	"""
-	Read Only
-	"""
+    TypeNamePtr: str
+    """
+    Read Only
+    """
 
-	UnderlineOffsetH: float
+    UnderlineOffsetH: float
 
-	UnderlineThickness: float
+    UnderlineThickness: float
 
 
-	#---Methods---#
-	def CalcCharacterWidth(self, ch: int) -> float:
-		...
+    #---Methods---#
+    def CalcCharacterWidth(self, ch: int) -> float:
+        ...
 
-	def CharacterKerning(self, first: str, second: str) -> float:
-		...
+    def CharacterKerning(self, first: str, second: str) -> float:
+        ...
 
-	def CharacterWidth(self, ch: str) -> float:
-		...
+    def CharacterWidth(self, ch: str) -> float:
+        ...
 
-	def GetError(self) -> int:
-		...
+    def GetError(self) -> int:
+        ...
 
-	def WordWidth(self, str: str, direction: int) -> float:
-		...
+    def WordWidth(self, str: str, direction: int) -> float:
+        ...
 
-	def __new(self, font: TextStyleFont, direction: int) -> TextStyleFontMetrics:
-		"""
-		TextStyleFontMetrics constructor
+    def __new(self, font: TextStyleFont, direction: int) -> TextStyleFontMetrics:
+        """
+        TextStyleFontMetrics constructor
 
-		Args:
-			font (TextStyleFont)
-			direction (int)
+        Args:
+            font (TextStyleFont)
+            direction (int)
 
-		Returns:
-			TextStyleFontMetrics
-		"""
-		...
+        Returns:
+            TextStyleFontMetrics
+        """
+        ...
 

@@ -1,21 +1,21 @@
 class IntPixel:
 
-	#---Properties---#
-	TypeName: str
-	"""
-	Read Only
-	"""
+    #---Properties---#
+    TypeName: str
+    """
+    Read Only
+    """
 
-	TypeNamePtr: str
-	"""
-	Read Only
-	"""
+    TypeNamePtr: str
+    """
+    Read Only
+    """
 
 
-	#---Methods---#
-	def Clear(self) -> None:
-		...
+    #---Methods---#
+    def Clear(self) -> None:
+        ...
 
-	def _newDef(self) -> IntPixel:
-		...
+    def _newDef(self) -> IntPixel:
+        ...
 

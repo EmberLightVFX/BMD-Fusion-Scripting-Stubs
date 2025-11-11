@@ -1,52 +1,52 @@
 class FillStyle:
 
-	#---Properties---#
-	AdaptToPerspective: bool
+    #---Properties---#
+    AdaptToPerspective: bool
 
-	CleanIntersections: bool
+    CleanIntersections: bool
 
-	ExpandType: str
+    ExpandType: str
 
-	JoinType: str
+    JoinType: str
 
-	LineType: str
+    LineType: str
 
-	MiterLimit: float
+    MiterLimit: float
 
-	OutsideOnly: bool
+    OutsideOnly: bool
 
-	Overlap: str
+    Overlap: str
 
-	RelativeThickness: float
+    RelativeThickness: float
 
-	Thickness: float
+    Thickness: float
 
-	Type: str
+    Type: str
 
-	TypeName: str
-	"""
-	Read Only
-	"""
+    TypeName: str
+    """
+    Read Only
+    """
 
-	TypeNamePtr: str
-	"""
-	Read Only
-	"""
+    TypeNamePtr: str
+    """
+    Read Only
+    """
 
 
-	#---Methods---#
-	def ActualThickness(self) -> float:
-		...
+    #---Methods---#
+    def ActualThickness(self) -> float:
+        ...
 
-	def IsTraceCompatibleWith(self, style: FillStyle) -> bool:
-		...
+    def IsTraceCompatibleWith(self, style: FillStyle) -> bool:
+        ...
 
-	def __new(self) -> FillStyle:
-		"""
-		FillStyle constructor
+    def __new(self) -> FillStyle:
+        """
+        FillStyle constructor
 
-		Returns:
-			FillStyle
-		"""
-		...
+        Returns:
+            FillStyle
+        """
+        ...
 

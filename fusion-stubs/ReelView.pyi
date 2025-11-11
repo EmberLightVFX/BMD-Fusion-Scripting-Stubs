@@ -1,39 +1,39 @@
 class ReelView:
 
-	#---Registry---#
-	REGI_ClassType: int
+    #---Registry---#
+    REGI_ClassType: int
 
-	REGB_ControlView: bool
+    REGB_ControlView: bool
 
-	REGS_FileName: str
+    REGS_FileName: str
 
-	REGB_Hide: bool
+    REGB_Hide: bool
 
-	REGS_ID: str
+    REGS_ID: str
 
-	REGS_Name: str
+    REGS_Name: str
 
-	REGI_Priority: int
+    REGI_Priority: int
 
-	REGB_SupportsDoD: bool
+    REGB_SupportsDoD: bool
 
-	REGB_Unpredictable: bool
+    REGB_Unpredictable: bool
 
-	REGI_Version: int
+    REGI_Version: int
 
-	REGS_VersionString: str
+    REGS_VersionString: str
 
 
-	#---Methods---#
-	def DeleteSelected(self) -> None:
-		...
+    #---Methods---#
+    def DeleteSelected(self) -> None:
+        ...
 
-	def ExitPlayer(self) -> None:
-		...
+    def ExitPlayer(self) -> None:
+        ...
 
-	def ZoomIn(self) -> None:
-		...
+    def ZoomIn(self) -> None:
+        ...
 
-	def ZoomOut(self) -> None:
-		...
+    def ZoomOut(self) -> None:
+        ...
 

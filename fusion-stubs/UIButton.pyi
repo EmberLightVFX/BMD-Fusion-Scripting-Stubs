@@ -2,143 +2,143 @@ from typing import Any
 
 class UIButton:
 
-	#---Properties---#
-	AutoDefault: Any
+    #---Properties---#
+    AutoDefault: Any
 
-	AutoExclusive: Any
+    AutoExclusive: Any
 
-	AutoRepeat: Any
+    AutoRepeat: Any
 
-	AutoRepeatDelay: Any
+    AutoRepeatDelay: Any
 
-	AutoRepeatInterval: Any
+    AutoRepeatInterval: Any
 
-	Checkable: Any
+    Checkable: Any
 
-	Checked: Any
+    Checked: Any
 
-	Default: Any
+    Default: Any
 
-	Down: Any
+    Down: Any
 
-	Flat: Any
+    Flat: Any
 
-	Icon: Any
-	"""
-	Write Only
-	"""
+    Icon: Any
+    """
+    Write Only
+    """
 
-	IconSize: Any
+    IconSize: Any
 
-	Text: Any
-
-
-	#---Registry---#
-	REGI_ClassType: int
-
-	REGB_ControlView: bool
-
-	REGB_Hide: bool
-
-	REGS_ID: str
-
-	REGS_Name: str
-
-	REGI_Priority: int
-
-	REGB_SupportsDoD: bool
-
-	REGB_Unpredictable: bool
-
-	REGB_Utility_Toggle: bool
-
-	REGI_Version: int
-
-	REGS_VersionString: str
+    Text: Any
 
 
-	#---Methods---#
-	def AnimateClick(self) -> None:
-		...
+    #---Registry---#
+    REGI_ClassType: int
 
-	def Click(self) -> None:
-		...
+    REGB_ControlView: bool
 
-	def GetAutoDefault(self) -> None:
-		...
+    REGB_Hide: bool
 
-	def GetAutoExclusive(self) -> None:
-		...
+    REGS_ID: str
 
-	def GetAutoRepeat(self) -> None:
-		...
+    REGS_Name: str
 
-	def GetAutoRepeatDelay(self) -> None:
-		...
+    REGI_Priority: int
 
-	def GetAutoRepeatInterval(self) -> None:
-		...
+    REGB_SupportsDoD: bool
 
-	def GetCheckable(self) -> None:
-		...
+    REGB_Unpredictable: bool
 
-	def GetChecked(self) -> None:
-		...
+    REGB_Utility_Toggle: bool
 
-	def GetDefault(self) -> None:
-		...
+    REGI_Version: int
 
-	def GetDown(self) -> None:
-		...
+    REGS_VersionString: str
 
-	def GetFlat(self) -> None:
-		...
 
-	def GetIconSize(self) -> None:
-		...
+    #---Methods---#
+    def AnimateClick(self) -> None:
+        ...
 
-	def GetText(self) -> None:
-		...
+    def Click(self) -> None:
+        ...
 
-	def SetAutoDefault(self) -> None:
-		...
+    def GetAutoDefault(self) -> None:
+        ...
 
-	def SetAutoExclusive(self) -> None:
-		...
+    def GetAutoExclusive(self) -> None:
+        ...
 
-	def SetAutoRepeat(self) -> None:
-		...
+    def GetAutoRepeat(self) -> None:
+        ...
 
-	def SetAutoRepeatDelay(self) -> None:
-		...
+    def GetAutoRepeatDelay(self) -> None:
+        ...
 
-	def SetAutoRepeatInterval(self) -> None:
-		...
+    def GetAutoRepeatInterval(self) -> None:
+        ...
 
-	def SetCheckable(self) -> None:
-		...
+    def GetCheckable(self) -> None:
+        ...
 
-	def SetChecked(self) -> None:
-		...
+    def GetChecked(self) -> None:
+        ...
 
-	def SetDefault(self) -> None:
-		...
+    def GetDefault(self) -> None:
+        ...
 
-	def SetDown(self) -> None:
-		...
+    def GetDown(self) -> None:
+        ...
 
-	def SetFlat(self) -> None:
-		...
+    def GetFlat(self) -> None:
+        ...
 
-	def SetIcon(self) -> None:
-		...
+    def GetIconSize(self) -> None:
+        ...
 
-	def SetIconSize(self) -> None:
-		...
+    def GetText(self) -> None:
+        ...
 
-	def SetText(self) -> None:
-		...
+    def SetAutoDefault(self) -> None:
+        ...
 
-	def Toggle(self) -> None:
-		...
+    def SetAutoExclusive(self) -> None:
+        ...
+
+    def SetAutoRepeat(self) -> None:
+        ...
+
+    def SetAutoRepeatDelay(self) -> None:
+        ...
+
+    def SetAutoRepeatInterval(self) -> None:
+        ...
+
+    def SetCheckable(self) -> None:
+        ...
+
+    def SetChecked(self) -> None:
+        ...
+
+    def SetDefault(self) -> None:
+        ...
+
+    def SetDown(self) -> None:
+        ...
+
+    def SetFlat(self) -> None:
+        ...
+
+    def SetIcon(self) -> None:
+        ...
+
+    def SetIconSize(self) -> None:
+        ...
+
+    def SetText(self) -> None:
+        ...
+
+    def Toggle(self) -> None:
+        ...
 

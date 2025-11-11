@@ -2,62 +2,62 @@ from typing import Any
 
 class UIColorPicker:
 
-	#---Properties---#
-	Color: Any
+    #---Properties---#
+    Color: Any
 
-	DoAlpha: Any
+    DoAlpha: Any
 
-	Text: Any
+    Text: Any
 
-	Tracking: Any
-
-
-	#---Registry---#
-	REGI_ClassType: int
-
-	REGB_ControlView: bool
-
-	REGB_Hide: bool
-
-	REGS_ID: str
-
-	REGS_Name: str
-
-	REGI_Priority: int
-
-	REGB_SupportsDoD: bool
-
-	REGB_Unpredictable: bool
-
-	REGB_Utility_Toggle: bool
-
-	REGI_Version: int
-
-	REGS_VersionString: str
+    Tracking: Any
 
 
-	#---Methods---#
-	def GetColor(self) -> None:
-		...
+    #---Registry---#
+    REGI_ClassType: int
 
-	def GetDoAlpha(self) -> None:
-		...
+    REGB_ControlView: bool
 
-	def GetText(self) -> None:
-		...
+    REGB_Hide: bool
 
-	def GetTracking(self) -> None:
-		...
+    REGS_ID: str
 
-	def SetColor(self) -> None:
-		...
+    REGS_Name: str
 
-	def SetDoAlpha(self) -> None:
-		...
+    REGI_Priority: int
 
-	def SetText(self) -> None:
-		...
+    REGB_SupportsDoD: bool
 
-	def SetTracking(self) -> None:
-		...
+    REGB_Unpredictable: bool
+
+    REGB_Utility_Toggle: bool
+
+    REGI_Version: int
+
+    REGS_VersionString: str
+
+
+    #---Methods---#
+    def GetColor(self) -> None:
+        ...
+
+    def GetDoAlpha(self) -> None:
+        ...
+
+    def GetText(self) -> None:
+        ...
+
+    def GetTracking(self) -> None:
+        ...
+
+    def SetColor(self) -> None:
+        ...
+
+    def SetDoAlpha(self) -> None:
+        ...
+
+    def SetText(self) -> None:
+        ...
+
+    def SetTracking(self) -> None:
+        ...
 

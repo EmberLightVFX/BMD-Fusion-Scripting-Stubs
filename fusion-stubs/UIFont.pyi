@@ -2,158 +2,158 @@ from typing import Any
 
 class UIFont:
 
-	#---Properties---#
-	Bold: Any
+    #---Properties---#
+    Bold: Any
 
-	Family: Any
+    Family: Any
 
-	FixedPitch: Any
+    FixedPitch: Any
 
-	HintingPreference: Any
+    HintingPreference: Any
 
-	Italic: Any
+    Italic: Any
 
-	Kerning: Any
+    Kerning: Any
 
-	Overline: Any
+    Overline: Any
 
-	PixelSize: Any
+    PixelSize: Any
 
-	PointSize: Any
+    PointSize: Any
 
-	RawMode: Any
+    RawMode: Any
 
-	Stretch: Any
+    Stretch: Any
 
-	StrikeOut: Any
+    StrikeOut: Any
 
-	StyleName: Any
+    StyleName: Any
 
-	StyleStrategy: Any
+    StyleStrategy: Any
 
-	Underline: Any
+    Underline: Any
 
-	Weight: Any
-
-
-	#---Registry---#
-	REGI_ClassType: int
-
-	REGB_ControlView: bool
-
-	REGB_Hide: bool
-
-	REGS_ID: str
-
-	REGS_Name: str
-
-	REGI_Priority: int
-
-	REGB_SupportsDoD: bool
-
-	REGB_Unpredictable: bool
-
-	REGB_Utility_Toggle: bool
-
-	REGI_Version: int
-
-	REGS_VersionString: str
+    Weight: Any
 
 
-	#---Methods---#
-	def GetBold(self) -> None:
-		...
+    #---Registry---#
+    REGI_ClassType: int
 
-	def GetFamily(self) -> None:
-		...
+    REGB_ControlView: bool
 
-	def GetFixedPitch(self) -> None:
-		...
+    REGB_Hide: bool
 
-	def GetHintingPreference(self) -> None:
-		...
+    REGS_ID: str
 
-	def GetItalic(self) -> None:
-		...
+    REGS_Name: str
 
-	def GetKerning(self) -> None:
-		...
+    REGI_Priority: int
 
-	def GetOverline(self) -> None:
-		...
+    REGB_SupportsDoD: bool
 
-	def GetPixelSize(self) -> None:
-		...
+    REGB_Unpredictable: bool
 
-	def GetPointSize(self) -> None:
-		...
+    REGB_Utility_Toggle: bool
 
-	def GetRawMode(self) -> None:
-		...
+    REGI_Version: int
 
-	def GetStretch(self) -> None:
-		...
+    REGS_VersionString: str
 
-	def GetStrikeOut(self) -> None:
-		...
 
-	def GetStyleName(self) -> None:
-		...
+    #---Methods---#
+    def GetBold(self) -> None:
+        ...
 
-	def GetStyleStrategy(self) -> None:
-		...
+    def GetFamily(self) -> None:
+        ...
 
-	def GetUnderline(self) -> None:
-		...
+    def GetFixedPitch(self) -> None:
+        ...
 
-	def GetWeight(self) -> None:
-		...
+    def GetHintingPreference(self) -> None:
+        ...
 
-	def SetBold(self) -> None:
-		...
+    def GetItalic(self) -> None:
+        ...
 
-	def SetFamily(self) -> None:
-		...
+    def GetKerning(self) -> None:
+        ...
 
-	def SetFixedPitch(self) -> None:
-		...
+    def GetOverline(self) -> None:
+        ...
 
-	def SetHintingPreference(self) -> None:
-		...
+    def GetPixelSize(self) -> None:
+        ...
 
-	def SetItalic(self) -> None:
-		...
+    def GetPointSize(self) -> None:
+        ...
 
-	def SetKerning(self) -> None:
-		...
+    def GetRawMode(self) -> None:
+        ...
 
-	def SetOverline(self) -> None:
-		...
+    def GetStretch(self) -> None:
+        ...
 
-	def SetPixelSize(self) -> None:
-		...
+    def GetStrikeOut(self) -> None:
+        ...
 
-	def SetPointSize(self) -> None:
-		...
+    def GetStyleName(self) -> None:
+        ...
 
-	def SetRawMode(self) -> None:
-		...
+    def GetStyleStrategy(self) -> None:
+        ...
 
-	def SetStretch(self) -> None:
-		...
+    def GetUnderline(self) -> None:
+        ...
 
-	def SetStrikeOut(self) -> None:
-		...
+    def GetWeight(self) -> None:
+        ...
 
-	def SetStyleName(self) -> None:
-		...
+    def SetBold(self) -> None:
+        ...
 
-	def SetStyleStrategy(self) -> None:
-		...
+    def SetFamily(self) -> None:
+        ...
 
-	def SetUnderline(self) -> None:
-		...
+    def SetFixedPitch(self) -> None:
+        ...
 
-	def SetWeight(self) -> None:
-		...
+    def SetHintingPreference(self) -> None:
+        ...
+
+    def SetItalic(self) -> None:
+        ...
+
+    def SetKerning(self) -> None:
+        ...
+
+    def SetOverline(self) -> None:
+        ...
+
+    def SetPixelSize(self) -> None:
+        ...
+
+    def SetPointSize(self) -> None:
+        ...
+
+    def SetRawMode(self) -> None:
+        ...
+
+    def SetStretch(self) -> None:
+        ...
+
+    def SetStrikeOut(self) -> None:
+        ...
+
+    def SetStyleName(self) -> None:
+        ...
+
+    def SetStyleStrategy(self) -> None:
+        ...
+
+    def SetUnderline(self) -> None:
+        ...
+
+    def SetWeight(self) -> None:
+        ...
 

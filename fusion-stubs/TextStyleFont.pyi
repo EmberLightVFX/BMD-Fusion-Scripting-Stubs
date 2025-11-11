@@ -1,73 +1,72 @@
 from Vector2 import Vector2
 
-
 class TextStyleFont:
 
-	#---Properties---#
-	DoKerning: bool
+    #---Properties---#
+    DoKerning: bool
 
-	DoLigatures: int
+    DoLigatures: int
 
-	Features: None
-	"""
-	Write Only
-	"""
+    Features: None
+    """
+    Write Only
+    """
 
-	ManualKerning: Vector2
+    ManualKerning: Vector2
 
-	ManualPositioning: Vector2
+    ManualPositioning: Vector2
 
-	Monospaced: float
+    Monospaced: float
 
-	Name: str
+    Name: str
 
-	Orientation: int
+    Orientation: int
 
-	Size: float
+    Size: float
 
-	SplitLigatures: bool
+    SplitLigatures: bool
 
-	Strikeout: bool
+    Strikeout: bool
 
-	Style: str
+    Style: str
 
-	StylisticSet: int
+    StylisticSet: int
 
-	TypeName: str
-	"""
-	Read Only
-	"""
+    TypeName: str
+    """
+    Read Only
+    """
 
-	TypeNamePtr: str
-	"""
-	Read Only
-	"""
+    TypeNamePtr: str
+    """
+    Read Only
+    """
 
-	Underline: bool
+    Underline: bool
 
-	UnderlinePosition: int
+    UnderlinePosition: int
 
-	Valid: bool
+    Valid: bool
 
 
-	#---Methods---#
-	def MetricsCompatibleWith(self, font: TextStyleFont) -> bool:
-		...
+    #---Methods---#
+    def MetricsCompatibleWith(self, font: TextStyleFont) -> bool:
+        ...
 
-	def SetFeatures(self, features: str) -> None:
-		...
+    def SetFeatures(self, features: str) -> None:
+        ...
 
-	def __new(self, name: str, style: str, size: float) -> TextStyleFont:
-		"""
-		TextStyleFont constructor
+    def __new(self, name: str, style: str, size: float) -> TextStyleFont:
+        """
+        TextStyleFont constructor
 
-		Args:
-			name (str)
-			style (str)
-			size (float)
+        Args:
+            name (str)
+            style (str)
+            size (float)
 
-		Returns:
-			TextStyleFont
-		"""
-		...
+        Returns:
+            TextStyleFont
+        """
+        ...
 

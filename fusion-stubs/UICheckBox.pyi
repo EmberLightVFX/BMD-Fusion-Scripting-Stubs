@@ -2,119 +2,119 @@ from typing import Any
 
 class UICheckBox:
 
-	#---Properties---#
-	AutoExclusive: Any
+    #---Properties---#
+    AutoExclusive: Any
 
-	AutoRepeat: Any
+    AutoRepeat: Any
 
-	AutoRepeatDelay: Any
+    AutoRepeatDelay: Any
 
-	AutoRepeatInterval: Any
+    AutoRepeatInterval: Any
 
-	CheckState: Any
+    CheckState: Any
 
-	Checkable: Any
+    Checkable: Any
 
-	Checked: Any
+    Checked: Any
 
-	Down: Any
+    Down: Any
 
-	Text: Any
+    Text: Any
 
-	Tristate: Any
-
-
-	#---Registry---#
-	REGI_ClassType: int
-
-	REGB_ControlView: bool
-
-	REGB_Hide: bool
-
-	REGS_ID: str
-
-	REGS_Name: str
-
-	REGI_Priority: int
-
-	REGB_SupportsDoD: bool
-
-	REGB_Unpredictable: bool
-
-	REGB_Utility_Toggle: bool
-
-	REGI_Version: int
-
-	REGS_VersionString: str
+    Tristate: Any
 
 
-	#---Methods---#
-	def AnimateClick(self) -> None:
-		...
+    #---Registry---#
+    REGI_ClassType: int
 
-	def Click(self) -> None:
-		...
+    REGB_ControlView: bool
 
-	def GetAutoExclusive(self) -> None:
-		...
+    REGB_Hide: bool
 
-	def GetAutoRepeat(self) -> None:
-		...
+    REGS_ID: str
 
-	def GetAutoRepeatDelay(self) -> None:
-		...
+    REGS_Name: str
 
-	def GetAutoRepeatInterval(self) -> None:
-		...
+    REGI_Priority: int
 
-	def GetCheckState(self) -> None:
-		...
+    REGB_SupportsDoD: bool
 
-	def GetCheckable(self) -> None:
-		...
+    REGB_Unpredictable: bool
 
-	def GetChecked(self) -> None:
-		...
+    REGB_Utility_Toggle: bool
 
-	def GetDown(self) -> None:
-		...
+    REGI_Version: int
 
-	def GetText(self) -> None:
-		...
+    REGS_VersionString: str
 
-	def GetTristate(self) -> None:
-		...
 
-	def SetAutoExclusive(self) -> None:
-		...
+    #---Methods---#
+    def AnimateClick(self) -> None:
+        ...
 
-	def SetAutoRepeat(self) -> None:
-		...
+    def Click(self) -> None:
+        ...
 
-	def SetAutoRepeatDelay(self) -> None:
-		...
+    def GetAutoExclusive(self) -> None:
+        ...
 
-	def SetAutoRepeatInterval(self) -> None:
-		...
+    def GetAutoRepeat(self) -> None:
+        ...
 
-	def SetCheckState(self) -> None:
-		...
+    def GetAutoRepeatDelay(self) -> None:
+        ...
 
-	def SetCheckable(self) -> None:
-		...
+    def GetAutoRepeatInterval(self) -> None:
+        ...
 
-	def SetChecked(self) -> None:
-		...
+    def GetCheckState(self) -> None:
+        ...
 
-	def SetDown(self) -> None:
-		...
+    def GetCheckable(self) -> None:
+        ...
 
-	def SetText(self) -> None:
-		...
+    def GetChecked(self) -> None:
+        ...
 
-	def SetTristate(self) -> None:
-		...
+    def GetDown(self) -> None:
+        ...
 
-	def Toggle(self) -> None:
-		...
+    def GetText(self) -> None:
+        ...
+
+    def GetTristate(self) -> None:
+        ...
+
+    def SetAutoExclusive(self) -> None:
+        ...
+
+    def SetAutoRepeat(self) -> None:
+        ...
+
+    def SetAutoRepeatDelay(self) -> None:
+        ...
+
+    def SetAutoRepeatInterval(self) -> None:
+        ...
+
+    def SetCheckState(self) -> None:
+        ...
+
+    def SetCheckable(self) -> None:
+        ...
+
+    def SetChecked(self) -> None:
+        ...
+
+    def SetDown(self) -> None:
+        ...
+
+    def SetText(self) -> None:
+        ...
+
+    def SetTristate(self) -> None:
+        ...
+
+    def Toggle(self) -> None:
+        ...
 

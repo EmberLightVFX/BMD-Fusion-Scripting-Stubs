@@ -3,118 +3,117 @@ from typing import Any, overload
 from Output import Output
 from PlainOutput import PlainOutput
 
-
 class PlainInput:
 
-	#---Registry---#
-	REGI_ClassType: int
+    #---Registry---#
+    REGI_ClassType: int
 
-	REGB_ControlView: bool
+    REGB_ControlView: bool
 
-	REGB_Hide: bool
+    REGB_Hide: bool
 
-	REGS_ID: str
+    REGS_ID: str
 
-	REGS_Name: str
+    REGS_Name: str
 
-	REGI_Priority: int
+    REGI_Priority: int
 
-	REGB_SupportsDoD: bool
+    REGB_SupportsDoD: bool
 
-	REGB_Unpredictable: bool
+    REGB_Unpredictable: bool
 
-	REGI_Version: int
+    REGI_Version: int
 
-	REGS_VersionString: str
+    REGS_VersionString: str
 
 
-	#---Methods---#
-	@overload
-	def ConnectTo(self) -> bool:
-		"""
-		Connect the Input to an Output
+    #---Methods---#
+    @overload
+    def ConnectTo(self) -> bool:
+        """
+        Connect the Input to an Output
 
-		Returns:
-			success (bool)
-		"""
-		...
+        Returns:
+            success (bool)
+        """
+        ...
 
-	@overload
-	def ConnectTo(self, out: Output) -> bool:
-		"""
-		Connect the Input to an Output
+    @overload
+    def ConnectTo(self, out: Output) -> bool:
+        """
+        Connect the Input to an Output
 
-		Args:
-			out (Output)
+        Args:
+            out (Output)
 
-		Returns:
-			success (bool)
-		"""
-		...
+        Returns:
+            success (bool)
+        """
+        ...
 
-	def GetConnectedOutput(self) -> PlainOutput | None:
-		"""
-		Returns the output that this input is connected to
+    def GetConnectedOutput(self) -> PlainOutput | None:
+        """
+        Returns the output that this input is connected to
 
-		Returns:
-			out (PlainOutput | None)
-		"""
-		...
+        Returns:
+            out (PlainOutput | None)
+        """
+        ...
 
-	def GetExpression(self) -> None:
-		...
+    def GetExpression(self) -> None:
+        ...
 
-	def GetKeyFrames(self) -> dict[Any, Any]:
-		"""
-		Return a table of all keyframe times for this input
+    def GetKeyFrames(self) -> dict[Any, Any]:
+        """
+        Return a table of all keyframe times for this input
 
-		Returns:
-			keyframes (dict[Any, Any])
-		"""
-		...
+        Returns:
+            keyframes (dict[Any, Any])
+        """
+        ...
 
-	def HideViewControls(self, hide: bool) -> None:
-		"""
-		Hides or shows the view controls for this input
+    def HideViewControls(self, hide: bool) -> None:
+        """
+        Hides or shows the view controls for this input
 
-		Args: Hide - 'true' (default) will hide the controls, 'false' will show them.
-		Hides/Shows can be nested.
+        Args: Hide - 'true' (default) will hide the controls, 'false' will show them.
+        Hides/Shows can be nested.
 
-		Args:
-			hide (bool)
-		"""
-		...
+        Args:
+            hide (bool)
+        """
+        ...
 
-	def HideWindowControls(self, hide: bool) -> None:
-		"""
-		Hides or shows the window controls for this input
+    def HideWindowControls(self, hide: bool) -> None:
+        """
+        Hides or shows the window controls for this input
 
-		Args: Hide - 'true' (default) will hide the controls, 'false' will show them.
-		Hides/Shows can be nested.
+        Args: Hide - 'true' (default) will hide the controls, 'false' will show them.
+        Hides/Shows can be nested.
 
-		Args:
-			hide (bool)
-		"""
-		...
+        Args:
+            hide (bool)
+        """
+        ...
 
-	def SetExpression(self) -> None:
-		...
+    def SetExpression(self) -> None:
+        ...
 
-	def ViewControlsVisible(self) -> bool:
-		"""
-		Returns the visible state of the view controls for this input
+    def ViewControlsVisible(self) -> bool:
+        """
+        Returns the visible state of the view controls for this input
 
-		Returns:
-			hidden (bool)
-		"""
-		...
+        Returns:
+            hidden (bool)
+        """
+        ...
 
-	def WindowControlsVisible(self) -> bool:
-		"""
-		Returns the visible state of the window controls for this input
+    def WindowControlsVisible(self) -> bool:
+        """
+        Returns the visible state of the window controls for this input
 
-		Returns:
-			hidden (bool)
-		"""
-		...
+        Returns:
+            hidden (bool)
+        """
+        ...
 

@@ -2,57 +2,57 @@ from typing import Any
 
 class Action:
 
-	#---Properties---#
-	Checked: Any
+    #---Properties---#
+    Checked: Any
 
-	Disabled: Any
+    Disabled: Any
 
-	FullName: Any
+    FullName: Any
 
-	Name: Any
+    Name: Any
 
-	ShortName: Any
+    ShortName: Any
 
-	StatusTip: Any
+    StatusTip: Any
 
-	StripName: Any
+    StripName: Any
 
-	ToolTip: Any
+    ToolTip: Any
 
-	Visible: Any
-
-
-	#---Registry---#
-	REGI_ClassType: int
-
-	REGB_ControlView: bool
-
-	REGB_Hide: bool
-
-	REGS_ID: str
-
-	REGS_Name: str
-
-	REGI_Priority: int
-
-	REGB_SupportsDoD: bool
-
-	REGB_Unpredictable: bool
-
-	REGB_Utility_Toggle: bool
-
-	REGI_Version: int
-
-	REGS_VersionString: str
+    Visible: Any
 
 
-	#---Methods---#
-	def SetName(self) -> None:
-		...
+    #---Registry---#
+    REGI_ClassType: int
 
-	def SetOwner(self) -> None:
-		...
+    REGB_ControlView: bool
 
-	def Update(self) -> None:
-		...
+    REGB_Hide: bool
+
+    REGS_ID: str
+
+    REGS_Name: str
+
+    REGI_Priority: int
+
+    REGB_SupportsDoD: bool
+
+    REGB_Unpredictable: bool
+
+    REGB_Utility_Toggle: bool
+
+    REGI_Version: int
+
+    REGS_VersionString: str
+
+
+    #---Methods---#
+    def SetName(self) -> None:
+        ...
+
+    def SetOwner(self) -> None:
+        ...
+
+    def Update(self) -> None:
+        ...
 

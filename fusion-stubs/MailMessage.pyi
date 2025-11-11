@@ -2,213 +2,213 @@ from typing import Any, overload
 
 class MailMessage:
 
-	#---Registry---#
-	REGI_ClassType: int
+    #---Registry---#
+    REGI_ClassType: int
 
-	REGB_ControlView: bool
+    REGB_ControlView: bool
 
-	REGB_Hide: bool
+    REGB_Hide: bool
 
-	REGS_ID: str
+    REGS_ID: str
 
-	REGS_Name: str
+    REGS_Name: str
 
-	REGI_Priority: int
+    REGI_Priority: int
 
-	REGB_SupportsDoD: bool
+    REGB_SupportsDoD: bool
 
-	REGB_Unpredictable: bool
+    REGB_Unpredictable: bool
 
-	REGI_Version: int
+    REGI_Version: int
 
-	REGS_VersionString: str
+    REGS_VersionString: str
 
 
-	#---Methods---#
-	def AddAttachment(self, filename: str) -> bool:
-		"""
-		Attaches a filename to the body
+    #---Methods---#
+    def AddAttachment(self, filename: str) -> bool:
+        """
+        Attaches a filename to the body
 
-		Args:
-			filename (str)
+        Args:
+            filename (str)
 
-		Returns:
-			success (bool)
-		"""
-		...
+        Returns:
+            success (bool)
+        """
+        ...
 
-	@overload
-	def AddRecipients(self, addresses: str) -> None:
-		"""
-		Adds a recipient to the To: list
+    @overload
+    def AddRecipients(self, addresses: str) -> None:
+        """
+        Adds a recipient to the To: list
 
-		Arguments:
-		Addresses - a string of containing one or more email addresses,
-		or table of email address strings (or name/address string pairs)
+        Arguments:
+        Addresses - a string of containing one or more email addresses,
+        or table of email address strings (or name/address string pairs)
 
-		Args:
-			addresses (str)
-		"""
-		...
+        Args:
+            addresses (str)
+        """
+        ...
 
-	@overload
-	def AddRecipients(self, addresses: list[str]) -> None:
-		"""
-		Adds a recipient to the To: list
+    @overload
+    def AddRecipients(self, addresses: list[str]) -> None:
+        """
+        Adds a recipient to the To: list
 
-		Arguments:
-		Addresses - a string of containing one or more email addresses,
-		or table of email address strings (or name/address string pairs)
+        Arguments:
+        Addresses - a string of containing one or more email addresses,
+        or table of email address strings (or name/address string pairs)
 
-		Args:
-			addresses (list[str])
-		"""
-		...
+        Args:
+            addresses (list[str])
+        """
+        ...
 
-	def GetTable(self) -> dict[Any, Any]:
-		"""
-		Returns the message in the form of a table
+    def GetTable(self) -> dict[Any, Any]:
+        """
+        Returns the message in the form of a table
 
-		Usage: table = GetTable()
-		
-		Returns: table - a table with To, From, Subject and Body fields
-		containing the message data. Any attachment filenames
-		are listed in numbered fields.
+        Usage: table = GetTable()
 
-		Returns:
-			msg (dict[Any, Any])
-		"""
-		...
+        Returns: table - a table with To, From, Subject and Body fields
+        containing the message data. Any attachment filenames
+        are listed in numbered fields.
 
-	def RemoveAllAttachments(self) -> None:
-		"""
-		Removes all attachments from the message
-		"""
-		...
+        Returns:
+            msg (dict[Any, Any])
+        """
+        ...
 
-	def RemoveAllRecipients(self) -> None:
-		"""
-		Removes all recipients from the To: field
-		"""
-		...
+    def RemoveAllAttachments(self) -> None:
+        """
+        Removes all attachments from the message
+        """
+        ...
 
-	def Send(self, timeout: int | None = None) -> bool | str:
-		"""
-		Sends the message
+    def RemoveAllRecipients(self) -> None:
+        """
+        Removes all recipients from the To: field
+        """
+        ...
 
-		Arguments: timeout - (optional) network timeout in milliseconds
-		
-		Returns: success - true if the message was sent OK
-		log     - nil, or a string containing a log of error messages
+    def Send(self, timeout: int | None = None) -> bool | str:
+        """
+        Sends the message
 
-		Args:
-			timeout (Optional[int])
+        Arguments: timeout - (optional) network timeout in milliseconds
 
-		Returns:
-			success (bool)
-			errlog (str)
-		"""
-		...
+        Returns: success - true if the message was sent OK
+        log     - nil, or a string containing a log of error messages
 
-	def SetBody(self, bodytext: str) -> None:
-		"""
-		Sets the message body
+        Args:
+            timeout (Optional[int])
 
-		Args:
-			bodytext (str)
-		"""
-		...
+        Returns:
+            success (bool)
+            errlog (str)
+        """
+        ...
 
-	def SetHTMLBody(self, bodyhtml: str) -> None:
-		"""
-		Sets the message body using HTML
+    def SetBody(self, bodytext: str) -> None:
+        """
+        Sets the message body
 
-		Args:
-			bodyhtml (str)
-		"""
-		...
+        Args:
+            bodytext (str)
+        """
+        ...
 
-	def SetLogin(self, login: str) -> None:
-		"""
-		Sets the login to use for authentication
+    def SetHTMLBody(self, bodyhtml: str) -> None:
+        """
+        Sets the message body using HTML
 
-		Arguments:
-		login - a string containing the login or email address
-		to use when authenticating with the server.
+        Args:
+            bodyhtml (str)
+        """
+        ...
 
-		Args:
-			login (str)
-		"""
-		...
+    def SetLogin(self, login: str) -> None:
+        """
+        Sets the login to use for authentication
 
-	def SetPassword(self, password: str) -> None:
-		"""
-		Sets the password to use for authentication
+        Arguments:
+        login - a string containing the login or email address
+        to use when authenticating with the server.
 
-		password - a string containing the plaintext password
-		to use when authenticating with the server.
+        Args:
+            login (str)
+        """
+        ...
 
-		Args:
-			password (str)
-		"""
-		...
+    def SetPassword(self, password: str) -> None:
+        """
+        Sets the password to use for authentication
 
-	@overload
-	def SetSender(self, sender: str) -> None:
-		"""
-		Sets the From: field
+        password - a string containing the plaintext password
+        to use when authenticating with the server.
 
-		sender - a string with the sender's address (or name and address),
-		or a table containing strings of the sender's name
-		and email address.
-		
-		Note: If the sender is not set, it will default to the user's
-		primary email name and address.
+        Args:
+            password (str)
+        """
+        ...
 
-		Args:
-			sender (str)
-		"""
-		...
+    @overload
+    def SetSender(self, sender: str) -> None:
+        """
+        Sets the From: field
 
-	@overload
-	def SetSender(self, sender: dict[Any, Any]) -> None:
-		"""
-		Sets the From: field
+        sender - a string with the sender's address (or name and address),
+        or a table containing strings of the sender's name
+        and email address.
 
-		sender - a string with the sender's address (or name and address),
-		or a table containing strings of the sender's name
-		and email address.
-		
-		Note: If the sender is not set, it will default to the user's
-		primary email name and address.
+        Note: If the sender is not set, it will default to the user's
+        primary email name and address.
 
-		Args:
-			sender (dict[Any, Any])
-		"""
-		...
+        Args:
+            sender (str)
+        """
+        ...
 
-	def SetServer(self, servername: str) -> None:
-		"""
-		Sets the outgoing mail server to use
+    @overload
+    def SetSender(self, sender: dict[Any, Any]) -> None:
+        """
+        Sets the From: field
 
-		Arguments:
-		servername - a string containing the domain name of the SMTP server
-		to use when sending mail.
-		
-		Note: If servername is empty (the default), the Prefs->Network field
-		or direct MX lookup will be used.
+        sender - a string with the sender's address (or name and address),
+        or a table containing strings of the sender's name
+        and email address.
 
-		Args:
-			servername (str)
-		"""
-		...
+        Note: If the sender is not set, it will default to the user's
+        primary email name and address.
 
-	def SetSubject(self, subject: str) -> None:
-		"""
-		Sets the Subject: field
+        Args:
+            sender (dict[Any, Any])
+        """
+        ...
 
-		Args:
-			subject (str)
-		"""
-		...
+    def SetServer(self, servername: str) -> None:
+        """
+        Sets the outgoing mail server to use
+
+        Arguments:
+        servername - a string containing the domain name of the SMTP server
+        to use when sending mail.
+
+        Note: If servername is empty (the default), the Prefs->Network field
+        or direct MX lookup will be used.
+
+        Args:
+            servername (str)
+        """
+        ...
+
+    def SetSubject(self, subject: str) -> None:
+        """
+        Sets the Subject: field
+
+        Args:
+            subject (str)
+        """
+        ...
 

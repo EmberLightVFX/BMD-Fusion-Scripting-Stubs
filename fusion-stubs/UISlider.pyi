@@ -2,140 +2,140 @@ from typing import Any
 
 class UISlider:
 
-	#---Properties---#
-	InvertedAppearance: Any
+    #---Properties---#
+    InvertedAppearance: Any
 
-	InvertedControls: Any
+    InvertedControls: Any
 
-	Maximum: Any
+    Maximum: Any
 
-	Minimum: Any
+    Minimum: Any
 
-	Orientation: Any
+    Orientation: Any
 
-	PageStep: Any
+    PageStep: Any
 
-	SingleStep: Any
+    SingleStep: Any
 
-	SliderDown: Any
+    SliderDown: Any
 
-	SliderPosition: Any
+    SliderPosition: Any
 
-	TickInterval: Any
+    TickInterval: Any
 
-	TickPosition: Any
+    TickPosition: Any
 
-	Tracking: Any
+    Tracking: Any
 
-	Value: Any
-
-
-	#---Registry---#
-	REGI_ClassType: int
-
-	REGB_ControlView: bool
-
-	REGB_Hide: bool
-
-	REGS_ID: str
-
-	REGS_Name: str
-
-	REGI_Priority: int
-
-	REGB_SupportsDoD: bool
-
-	REGB_Unpredictable: bool
-
-	REGB_Utility_Toggle: bool
-
-	REGI_Version: int
-
-	REGS_VersionString: str
+    Value: Any
 
 
-	#---Methods---#
-	def GetInvertedAppearance(self) -> None:
-		...
+    #---Registry---#
+    REGI_ClassType: int
 
-	def GetInvertedControls(self) -> None:
-		...
+    REGB_ControlView: bool
 
-	def GetMaximum(self) -> None:
-		...
+    REGB_Hide: bool
 
-	def GetMinimum(self) -> None:
-		...
+    REGS_ID: str
 
-	def GetOrientation(self) -> None:
-		...
+    REGS_Name: str
 
-	def GetPageStep(self) -> None:
-		...
+    REGI_Priority: int
 
-	def GetSingleStep(self) -> None:
-		...
+    REGB_SupportsDoD: bool
 
-	def GetSliderDown(self) -> None:
-		...
+    REGB_Unpredictable: bool
 
-	def GetSliderPosition(self) -> None:
-		...
+    REGB_Utility_Toggle: bool
 
-	def GetTickInterval(self) -> None:
-		...
+    REGI_Version: int
 
-	def GetTickPosition(self) -> None:
-		...
+    REGS_VersionString: str
 
-	def GetTracking(self) -> None:
-		...
 
-	def GetValue(self) -> None:
-		...
+    #---Methods---#
+    def GetInvertedAppearance(self) -> None:
+        ...
 
-	def SetInvertedAppearance(self) -> None:
-		...
+    def GetInvertedControls(self) -> None:
+        ...
 
-	def SetInvertedControls(self) -> None:
-		...
+    def GetMaximum(self) -> None:
+        ...
 
-	def SetMaximum(self) -> None:
-		...
+    def GetMinimum(self) -> None:
+        ...
 
-	def SetMinimum(self) -> None:
-		...
+    def GetOrientation(self) -> None:
+        ...
 
-	def SetOrientation(self) -> None:
-		...
+    def GetPageStep(self) -> None:
+        ...
 
-	def SetPageStep(self) -> None:
-		...
+    def GetSingleStep(self) -> None:
+        ...
 
-	def SetRange(self) -> None:
-		...
+    def GetSliderDown(self) -> None:
+        ...
 
-	def SetSingleStep(self) -> None:
-		...
+    def GetSliderPosition(self) -> None:
+        ...
 
-	def SetSliderDown(self) -> None:
-		...
+    def GetTickInterval(self) -> None:
+        ...
 
-	def SetSliderPosition(self) -> None:
-		...
+    def GetTickPosition(self) -> None:
+        ...
 
-	def SetTickInterval(self) -> None:
-		...
+    def GetTracking(self) -> None:
+        ...
 
-	def SetTickPosition(self) -> None:
-		...
+    def GetValue(self) -> None:
+        ...
 
-	def SetTracking(self) -> None:
-		...
+    def SetInvertedAppearance(self) -> None:
+        ...
 
-	def SetValue(self) -> None:
-		...
+    def SetInvertedControls(self) -> None:
+        ...
 
-	def TriggerAction(self) -> None:
-		...
+    def SetMaximum(self) -> None:
+        ...
+
+    def SetMinimum(self) -> None:
+        ...
+
+    def SetOrientation(self) -> None:
+        ...
+
+    def SetPageStep(self) -> None:
+        ...
+
+    def SetRange(self) -> None:
+        ...
+
+    def SetSingleStep(self) -> None:
+        ...
+
+    def SetSliderDown(self) -> None:
+        ...
+
+    def SetSliderPosition(self) -> None:
+        ...
+
+    def SetTickInterval(self) -> None:
+        ...
+
+    def SetTickPosition(self) -> None:
+        ...
+
+    def SetTracking(self) -> None:
+        ...
+
+    def SetValue(self) -> None:
+        ...
+
+    def TriggerAction(self) -> None:
+        ...
 

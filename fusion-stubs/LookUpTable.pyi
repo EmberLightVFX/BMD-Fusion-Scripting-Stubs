@@ -1,59 +1,58 @@
 from LUT import LUT
-from TagList import TagList
 from Object import Object
-
+from TagList import TagList
 
 class LookUpTable:
 
-	#---Registry---#
-	REGI_ClassType: int
+    #---Registry---#
+    REGI_ClassType: int
 
-	REGB_ControlView: bool
+    REGB_ControlView: bool
 
-	REGB_Hide: bool
+    REGB_Hide: bool
 
-	REGS_ID: str
+    REGS_ID: str
 
-	REGS_Name: str
+    REGS_Name: str
 
-	REGI_Priority: int
+    REGI_Priority: int
 
-	REGB_SupportsDoD: bool
+    REGB_SupportsDoD: bool
 
-	REGB_Unpredictable: bool
+    REGB_Unpredictable: bool
 
-	REGB_Utility_Toggle: bool
+    REGB_Utility_Toggle: bool
 
-	REGI_Version: int
+    REGI_Version: int
 
-	REGS_VersionString: str
+    REGS_VersionString: str
 
 
-	#---Methods---#
-	def Attach(self, obj: Object) -> None:
-		...
+    #---Methods---#
+    def Attach(self, obj: Object) -> None:
+        ...
 
-	def Detach(self) -> None:
-		...
+    def Detach(self) -> None:
+        ...
 
-	def GetTable(self, tags: TagList) -> LUT:
-		...
+    def GetTable(self, tags: TagList) -> LUT:
+        ...
 
-	def GetValue(self, inval: float) -> float:
-		...
+    def GetValue(self, inval: float) -> float:
+        ...
 
-	def IsOneToOne(self) -> bool:
-		...
+    def IsOneToOne(self) -> bool:
+        ...
 
-	def SetOneToOne(self, set: bool) -> None:
-		...
+    def SetOneToOne(self, set: bool) -> None:
+        ...
 
-	def _newCopy(self, lut: LookUpTable) -> LookUpTable:
-		...
+    def _newCopy(self, lut: LookUpTable) -> LookUpTable:
+        ...
 
-	def _newDef(self) -> LookUpTable:
-		...
+    def _newDef(self) -> LookUpTable:
+        ...
 
-	def _newLUT(self, lut: LUT, id: str) -> LookUpTable:
-		...
+    def _newLUT(self, lut: LUT, id: str) -> LookUpTable:
+        ...
 

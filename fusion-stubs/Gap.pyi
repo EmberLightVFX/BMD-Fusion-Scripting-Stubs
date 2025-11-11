@@ -1,18 +1,17 @@
 from TagList import TagList
 
-
 class Gap:
 
-	#---Methods---#
-	def __new(self, tags: TagList) -> Gap:
-		"""
-		Gap constructor
+    #---Methods---#
+    def __new(self, tags: TagList) -> Gap:
+        """
+        Gap constructor
 
-		Args:
-			tags (TagList)
+        Args:
+            tags (TagList)
 
-		Returns:
-			Gap
-		"""
-		...
+        Returns:
+            Gap
+        """
+        ...
 

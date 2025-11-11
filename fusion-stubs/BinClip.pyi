@@ -1,47 +1,47 @@
 class BinClip:
 
-	#---Registry---#
-	REGI_ClassType: int
+    #---Registry---#
+    REGI_ClassType: int
 
-	REGB_ControlView: bool
+    REGB_ControlView: bool
 
-	REGS_FileName: str
+    REGS_FileName: str
 
-	REGB_Hide: bool
+    REGB_Hide: bool
 
-	REGS_ID: str
+    REGS_ID: str
 
-	REGS_Name: str
+    REGS_Name: str
 
-	REGI_Priority: int
+    REGI_Priority: int
 
-	REGB_SupportsDoD: bool
+    REGB_SupportsDoD: bool
 
-	REGS_UIName: str
+    REGS_UIName: str
 
-	REGB_Unpredictable: bool
+    REGB_Unpredictable: bool
 
-	REGI_Version: int
+    REGI_Version: int
 
-	REGS_VersionString: str
+    REGS_VersionString: str
 
 
-	#---Methods---#
-	def CreateStamp(self) -> None:
-		"""
-		Create a stamp for this BinClip
-		"""
-		...
+    #---Methods---#
+    def CreateStamp(self) -> None:
+        """
+        Create a stamp for this BinClip
+        """
+        ...
 
-	def Defragment(self) -> None:
-		"""
-		Defragment this clip
-		"""
-		...
+    def Defragment(self) -> None:
+        """
+        Defragment this clip
+        """
+        ...
 
-	def DeleteStamp(self) -> None:
-		"""
-		Delete the stamp for this BinClip
-		"""
-		...
+    def DeleteStamp(self) -> None:
+        """
+        Delete the stamp for this BinClip
+        """
+        ...
 

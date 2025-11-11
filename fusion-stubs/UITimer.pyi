@@ -2,84 +2,84 @@ from typing import Any
 
 class UITimer:
 
-	#---Properties---#
-	Interval: Any
+    #---Properties---#
+    Interval: Any
 
-	IsActive: Any
-	"""
-	Read Only
-	"""
+    IsActive: Any
+    """
+    Read Only
+    """
 
-	RemainingTime: Any
-	"""
-	Read Only
-	"""
+    RemainingTime: Any
+    """
+    Read Only
+    """
 
-	SingleShot: Any
+    SingleShot: Any
 
-	TimerID: Any
-	"""
-	Read Only
-	"""
+    TimerID: Any
+    """
+    Read Only
+    """
 
-	TimerType: Any
-
-
-	#---Registry---#
-	REGI_ClassType: int
-
-	REGB_ControlView: bool
-
-	REGB_Hide: bool
-
-	REGS_ID: str
-
-	REGS_Name: str
-
-	REGI_Priority: int
-
-	REGB_SupportsDoD: bool
-
-	REGB_Unpredictable: bool
-
-	REGB_Utility_Toggle: bool
-
-	REGI_Version: int
-
-	REGS_VersionString: str
+    TimerType: Any
 
 
-	#---Methods---#
-	def GetInterval(self) -> None:
-		...
+    #---Registry---#
+    REGI_ClassType: int
 
-	def GetIsActive(self) -> None:
-		...
+    REGB_ControlView: bool
 
-	def GetRemainingTime(self) -> None:
-		...
+    REGB_Hide: bool
 
-	def GetSingleShot(self) -> None:
-		...
+    REGS_ID: str
 
-	def GetTimerID(self) -> None:
-		...
+    REGS_Name: str
 
-	def GetTimerType(self) -> None:
-		...
+    REGI_Priority: int
 
-	def SetInterval(self) -> None:
-		...
+    REGB_SupportsDoD: bool
 
-	def SetSingleShot(self) -> None:
-		...
+    REGB_Unpredictable: bool
 
-	def SetTimerType(self) -> None:
-		...
+    REGB_Utility_Toggle: bool
 
-	def Start(self) -> None:
-		...
+    REGI_Version: int
 
-	def Stop(self) -> None:
-		...
+    REGS_VersionString: str
+
+
+    #---Methods---#
+    def GetInterval(self) -> None:
+        ...
+
+    def GetIsActive(self) -> None:
+        ...
+
+    def GetRemainingTime(self) -> None:
+        ...
+
+    def GetSingleShot(self) -> None:
+        ...
+
+    def GetTimerID(self) -> None:
+        ...
+
+    def GetTimerType(self) -> None:
+        ...
+
+    def SetInterval(self) -> None:
+        ...
+
+    def SetSingleShot(self) -> None:
+        ...
+
+    def SetTimerType(self) -> None:
+        ...
+
+    def Start(self) -> None:
+        ...
+
+    def Stop(self) -> None:
+        ...
 

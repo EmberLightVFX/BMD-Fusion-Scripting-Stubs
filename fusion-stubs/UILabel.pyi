@@ -2,165 +2,165 @@ from typing import Any
 
 class UILabel:
 
-	#---Properties---#
-	Alignment: Any
+    #---Properties---#
+    Alignment: Any
 
-	FrameRect: Any
+    FrameRect: Any
 
-	FrameShadow: Any
+    FrameShadow: Any
 
-	FrameShape: Any
+    FrameShape: Any
 
-	FrameStyle: Any
+    FrameStyle: Any
 
-	Indent: Any
+    Indent: Any
 
-	LineWidth: Any
+    LineWidth: Any
 
-	Margin: Any
+    Margin: Any
 
-	MidLineWidth: Any
+    MidLineWidth: Any
 
-	OpenExternalLinks: Any
+    OpenExternalLinks: Any
 
-	ScaledContents: Any
+    ScaledContents: Any
 
-	Text: Any
+    Text: Any
 
-	TextFormat: Any
+    TextFormat: Any
 
-	TextInteractionFlags: Any
+    TextInteractionFlags: Any
 
-	WordWrap: Any
-
-
-	#---Registry---#
-	REGI_ClassType: int
-
-	REGB_ControlView: bool
-
-	REGB_Hide: bool
-
-	REGS_ID: str
-
-	REGS_Name: str
-
-	REGI_Priority: int
-
-	REGB_SupportsDoD: bool
-
-	REGB_Unpredictable: bool
-
-	REGB_Utility_Toggle: bool
-
-	REGI_Version: int
-
-	REGS_VersionString: str
+    WordWrap: Any
 
 
-	#---Methods---#
-	def FrameWidth(self) -> None:
-		...
+    #---Registry---#
+    REGI_ClassType: int
 
-	def GetAlignment(self) -> None:
-		...
+    REGB_ControlView: bool
 
-	def GetFrameRect(self) -> None:
-		...
+    REGB_Hide: bool
 
-	def GetFrameShadow(self) -> None:
-		...
+    REGS_ID: str
 
-	def GetFrameShape(self) -> None:
-		...
+    REGS_Name: str
 
-	def GetFrameStyle(self) -> None:
-		...
+    REGI_Priority: int
 
-	def GetIndent(self) -> None:
-		...
+    REGB_SupportsDoD: bool
 
-	def GetLineWidth(self) -> None:
-		...
+    REGB_Unpredictable: bool
 
-	def GetMargin(self) -> None:
-		...
+    REGB_Utility_Toggle: bool
 
-	def GetMidLineWidth(self) -> None:
-		...
+    REGI_Version: int
 
-	def GetOpenExternalLinks(self) -> None:
-		...
+    REGS_VersionString: str
 
-	def GetScaledContents(self) -> None:
-		...
 
-	def GetText(self) -> None:
-		...
+    #---Methods---#
+    def FrameWidth(self) -> None:
+        ...
 
-	def GetTextFormat(self) -> None:
-		...
+    def GetAlignment(self) -> None:
+        ...
 
-	def GetTextInteractionFlags(self) -> None:
-		...
+    def GetFrameRect(self) -> None:
+        ...
 
-	def GetWordWrap(self) -> None:
-		...
+    def GetFrameShadow(self) -> None:
+        ...
 
-	def HasSelectedText(self) -> None:
-		...
+    def GetFrameShape(self) -> None:
+        ...
 
-	def SelectedText(self) -> None:
-		...
+    def GetFrameStyle(self) -> None:
+        ...
 
-	def SelectionStart(self) -> None:
-		...
+    def GetIndent(self) -> None:
+        ...
 
-	def SetAlignment(self) -> None:
-		...
+    def GetLineWidth(self) -> None:
+        ...
 
-	def SetFrameRect(self) -> None:
-		...
+    def GetMargin(self) -> None:
+        ...
 
-	def SetFrameShadow(self) -> None:
-		...
+    def GetMidLineWidth(self) -> None:
+        ...
 
-	def SetFrameShape(self) -> None:
-		...
+    def GetOpenExternalLinks(self) -> None:
+        ...
 
-	def SetFrameStyle(self) -> None:
-		...
+    def GetScaledContents(self) -> None:
+        ...
 
-	def SetIndent(self) -> None:
-		...
+    def GetText(self) -> None:
+        ...
 
-	def SetLineWidth(self) -> None:
-		...
+    def GetTextFormat(self) -> None:
+        ...
 
-	def SetMargin(self) -> None:
-		...
+    def GetTextInteractionFlags(self) -> None:
+        ...
 
-	def SetMidLineWidth(self) -> None:
-		...
+    def GetWordWrap(self) -> None:
+        ...
 
-	def SetOpenExternalLinks(self) -> None:
-		...
+    def HasSelectedText(self) -> None:
+        ...
 
-	def SetScaledContents(self) -> None:
-		...
+    def SelectedText(self) -> None:
+        ...
 
-	def SetSelection(self) -> None:
-		...
+    def SelectionStart(self) -> None:
+        ...
 
-	def SetText(self) -> None:
-		...
+    def SetAlignment(self) -> None:
+        ...
 
-	def SetTextFormat(self) -> None:
-		...
+    def SetFrameRect(self) -> None:
+        ...
 
-	def SetTextInteractionFlags(self) -> None:
-		...
+    def SetFrameShadow(self) -> None:
+        ...
 
-	def SetWordWrap(self) -> None:
-		...
+    def SetFrameShape(self) -> None:
+        ...
+
+    def SetFrameStyle(self) -> None:
+        ...
+
+    def SetIndent(self) -> None:
+        ...
+
+    def SetLineWidth(self) -> None:
+        ...
+
+    def SetMargin(self) -> None:
+        ...
+
+    def SetMidLineWidth(self) -> None:
+        ...
+
+    def SetOpenExternalLinks(self) -> None:
+        ...
+
+    def SetScaledContents(self) -> None:
+        ...
+
+    def SetSelection(self) -> None:
+        ...
+
+    def SetText(self) -> None:
+        ...
+
+    def SetTextFormat(self) -> None:
+        ...
+
+    def SetTextInteractionFlags(self) -> None:
+        ...
+
+    def SetWordWrap(self) -> None:
+        ...
 

@@ -1,67 +1,67 @@
 class Point:
 
-	#---Properties---#
-	X: float
+    #---Properties---#
+    X: float
 
-	Y: float
+    Y: float
 
-	Z: float
-
-
-	#---Registry---#
-	REGI_ClassType: int
-
-	REGB_ControlView: bool
-
-	REGB_Hide: bool
-
-	REGS_ID: str
-
-	REGS_Name: str
-
-	REGI_Priority: int
-
-	REGB_SupportsDoD: bool
-
-	REGB_Unpredictable: bool
-
-	REGB_Utility_Toggle: bool
-
-	REGI_Version: int
-
-	REGS_VersionString: str
+    Z: float
 
 
-	#---Methods---#
-	def __add(self, pt: Point) -> Point:
-		...
+    #---Registry---#
+    REGI_ClassType: int
 
-	def __div(self, num: float) -> Point:
-		...
+    REGB_ControlView: bool
 
-	def __eq(self, pt: Point) -> bool:
-		...
+    REGB_Hide: bool
 
-	def __mul(self, num: float) -> Point:
-		...
+    REGS_ID: str
 
-	def __new(self, x: float, y: float, z: float) -> Point:
-		"""
-		Point constructor
+    REGS_Name: str
 
-		Args:
-			x (float)
-			y (float)
-			z (float)
+    REGI_Priority: int
 
-		Returns:
-			Point
-		"""
-		...
+    REGB_SupportsDoD: bool
 
-	def __sub(self, pt: Point) -> Point:
-		...
+    REGB_Unpredictable: bool
 
-	def __unm(self) -> Point:
-		...
+    REGB_Utility_Toggle: bool
+
+    REGI_Version: int
+
+    REGS_VersionString: str
+
+
+    #---Methods---#
+    def __add(self, pt: Point) -> Point:
+        ...
+
+    def __div(self, num: float) -> Point:
+        ...
+
+    def __eq(self, pt: Point) -> bool:
+        ...
+
+    def __mul(self, num: float) -> Point:
+        ...
+
+    def __new(self, x: float, y: float, z: float) -> Point:
+        """
+        Point constructor
+
+        Args:
+            x (float)
+            y (float)
+            z (float)
+
+        Returns:
+            Point
+        """
+        ...
+
+    def __sub(self, pt: Point) -> Point:
+        ...
+
+    def __unm(self) -> Point:
+        ...
 
