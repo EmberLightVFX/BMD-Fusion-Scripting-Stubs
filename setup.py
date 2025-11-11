@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="fusion-stubs",
-    version="1.5.0",
+    version="1.20.0",
     description="Python stubs for BMD Fusion scripting",
     author="Jacob Danell @ Ember Light",
     author_email="jacob@emberlight.se",
