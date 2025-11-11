@@ -59,6 +59,10 @@ def format_docstring(string: str, tabs: str = "") -> str:
     new_str = []
     lines = string.strip().split("\n")
     for line in lines:
-        new_str.append(f"{tabs}{line.strip()}")
+        stripped = line.strip()
+        if stripped:
+            new_str.append(f"{tabs}{stripped}")
+        else:
+            new_str.append("")
 
     return "\n".join(new_str)

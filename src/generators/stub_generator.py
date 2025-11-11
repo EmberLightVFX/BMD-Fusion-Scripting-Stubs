@@ -19,7 +19,7 @@ def generate_stubs(
     generated_types: list[str],
 ) -> str:
     imports_list = set()
-    content = f'class {replace_with_underscore(obj_data["Name"])}:\n'
+    content = f"class {replace_with_underscore(obj_data['Name'])}:\n"
 
     # Check if object is empty
     if (
@@ -27,7 +27,7 @@ def generate_stubs(
         and not obj_data.get("Registry")
         and not obj_data.get("Methods")
     ):
-        content += "\t...\n"
+        content += "    ...\n"
         return content
 
     # Generate properties
@@ -118,5 +118,5 @@ def generate_non_existing_classes() -> str:
     """Generate stub classes for non-existing types"""
     content = ""
     for obj in non_existing_imports:
-        content += f"class {obj}:\n\t...\n\n"
+        content += f"class {obj}:\n    ...\n\n"
     return content

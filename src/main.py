@@ -113,10 +113,10 @@ def main():
             f.write(f"from .{object_name} import {object_name}\n")
         f.write("\n__all__.extend([\n")
         for object_name in generated_types:
-            f.write(f'\t"{object_name}",\n')
-        f.write("])")
+            f.write(f'    "{object_name}",\n')
+        f.write("])\n")
 
-    # format_code_in_folder_with_ruff(typings_folder.as_posix())
+    format_code_in_folder_with_ruff(typings_folder.as_posix())
 
 
 if __name__ == "__main__":

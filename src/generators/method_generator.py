@@ -35,7 +35,7 @@ def gen_methods(obj_data: dict[str, Any]) -> MethodGeneratorResult:
     # TODO: I think this function isn't needed any longer?
     # obj_data = remove_duplicate_methods(obj_data)
 
-    content = "\n\t#---Methods---#\n"
+    content = "\n    #---Methods---#\n"
     requires_overload = False
     requires_any = False
     requires_literal = False
@@ -105,8 +105,8 @@ def generate_method(
 
         for usage in method["Usage"]:
             if is_overload:
-                content += "\t@overload\n"
-            content += f'\tdef {method["Name"]}(self'
+                content += "    @overload\n"
+            content += f"    def {method['Name']}(self"
 
             method_signature = generate_method_signature(obj, method, usage)
             requires_any = requires_any or method_signature.requires_any
@@ -118,12 +118,12 @@ def generate_method(
             if do_docstring:
                 content += generate_method_docstring(obj, method, usage)
 
-            content += "\t\t...\n\n"
+            content += "        ...\n\n"
     else:
-        content = f'\tdef {method["Name"]}(self) -> None:\n'
+        content = f"    def {method['Name']}(self) -> None:\n"
         if do_docstring:
             content += generate_method_docstring(obj, method)
-        content += "\t\t...\n\n"
+        content += "        ...\n\n"
 
     return MethodGeneratorResult(
         content,
@@ -149,17 +149,17 @@ def generate_method_docstring(
     obj: dict[str, Any], method: dict[str, Any], usage: dict[str, Any] = {}
 ) -> str:
     """Generate method docstring from help text"""
-    docstring = '\t\t"""\n'
+    docstring = '        """\n'
 
     if method["ShortHelp"] != "":
-        docstring += f'{format_docstring(method["ShortHelp"], "\t\t")}\n\n'
+        docstring += f"{format_docstring(method['ShortHelp'], '        ')}\n\n"
 
     if usage.get("Description") and usage["Description"] != "":
-        docstring += f"{format_docstring(usage["Description"], "\t\t")}\n\n"
+        docstring += f"{format_docstring(usage['Description'], '        ')}\n\n"
 
     for description in method["Description"]:
         if description["Text"] != "":
-            docstring += f'{format_docstring(description["Text"], "\t\t")}\n\n'
+            docstring += f"{format_docstring(description['Text'], '        ')}\n\n"
 
     # Args
     args = []
@@ -180,13 +180,13 @@ def generate_method_docstring(
                 info += arg_type
             info += ")"
             if arg.get("Description"):
-                info += f": {format_docstring(arg["Description"])}"
+                info += f": {format_docstring(arg['Description'])}"
             args.append(info)
 
         if args:
-            docstring += "\t\tArgs:\n"
+            docstring += "        Args:\n"
             for arg in args:
-                docstring += f"\t\t\t{arg}\n"
+                docstring += f"            {arg}\n"
             docstring += "\n"
 
         # Returns
@@ -215,13 +215,13 @@ def generate_method_docstring(
             returns.append(info)
 
         if returns:
-            docstring += "\t\tReturns:\n"
+            docstring += "        Returns:\n"
             for ret in returns:
-                docstring += f"\t\t\t{ret}\n"
+                docstring += f"            {ret}\n"
             docstring += "\n"
 
     docstring = docstring[:-1]
-    docstring += '\t\t"""\n'
+    docstring += '        """\n'
 
     return docstring
 

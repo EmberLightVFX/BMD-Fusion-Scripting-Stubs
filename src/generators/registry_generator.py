@@ -10,11 +10,11 @@ class RegistryGeneratorResult:
 
 
 def gen_registry(obj_data: dict[str, Any]) -> RegistryGeneratorResult:
-    content = "\n\t#---Registry---#\n"
+    content = "\n    #---Registry---#\n"
     extra_imports = []
 
     for object in obj_data["Registry"]:
-        content += f"\t{object['FullName']}"
+        content += f"    {object['FullName']}"
         if object.get("Value"):
             result = type_converter(object["Value"], obj_data["Name"])
             content += f": {result.return_string}\n"

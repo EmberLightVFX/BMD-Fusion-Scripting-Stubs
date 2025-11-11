@@ -21,14 +21,14 @@ def gen_properties(
     if additional_properties_list.get(obj_data["Name"]):
         obj_data["Properties"].extend(additional_properties_list[obj_data["Name"]])
 
-    content = "\n\t#---Properties---#\n"
+    content = "\n    #---Properties---#\n"
     requires_any = False
     extra_imports = set()
     for property in obj_data["Properties"]:
         # If property is not accessible, skip it
         if property["VarRead"] is False and property["VarWrite"] is False:
             continue
-        content += f"\t{property["Name"]}"
+        content += f"    {property['Name']}"
 
         if not property["Usage"]:
             content += ": Any\n\n"
@@ -79,21 +79,21 @@ def gen_properties(
 
 def generate_property_docstring(property: dict[str, Any]) -> str:
     """Generate property docstring from help text"""
-    docstring = '\t"""\n'
+    docstring = '    """\n'
 
     if property["ShortHelp"] != "":
-        docstring += f'{format_docstring(property["ShortHelp"], "\t")}\n\n'
+        docstring += f"{format_docstring(property['ShortHelp'], '    ')}\n\n"
 
     for description in property["Description"]:
         if description["Text"] != "":
-            docstring += f'{format_docstring(description["Text"], "\t")}\n\n'
+            docstring += f"{format_docstring(description['Text'], '    ')}\n\n"
 
     if property.get("VarRead") is True and property.get("VarWrite") is False:
-        docstring += "\tRead Only\n"
+        docstring += "    Read Only\n"
     elif property.get("VarRead") is False and property.get("VarWrite") is True:
-        docstring += "\tWrite Only\n"
+        docstring += "    Write Only\n"
 
     docstring = docstring[:-1]
-    docstring += '\n\t"""'
+    docstring += '\n    """'
 
     return docstring
