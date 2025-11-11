@@ -1,1 +1,0 @@
-{"name":"Group","methods":{"header_text":"Discovered Methods","info_text":"Discovered methods might be available in many contexts, but most typically in Fuse scripts","Group":{"short_help":"Group constructor","usage":["Group Group(TagList tags)"]}},"class_inheritance":["LayoutObj","Container"]}

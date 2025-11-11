@@ -1,1 +1,0 @@
-{"name":"Gap","methods":{"header_text":"Discovered Methods","info_text":"Discovered methods might be available in many contexts, but most typically in Fuse scripts","Gap":{"short_help":"Gap constructor","usage":["Gap Gap(TagList tags)"]}},"class_inheritance":["LayoutObj"]}

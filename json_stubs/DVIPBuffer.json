@@ -1,1 +1,0 @@
-{"methods":{"header_text":"Discovered Methods","info_text":"Discovered methods might be available in many contexts, but most typically in Fuse scripts","DVIPBuffer":{"short_help":"DVIPBuffer constructor","usage":["DVIPBuffer DVIPBuffer(Request req, Image image, boolean writable)"]}},"name":"DVIPBuffer"}

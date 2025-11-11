@@ -1,1 +1,0 @@
-{"name":"HGroup","methods":{"header_text":"Discovered Methods","info_text":"Discovered methods might be available in many contexts, but most typically in Fuse scripts","HGroup":{"short_help":"HGroup constructor","usage":["HGroup HGroup(TagList tags)"]}},"class_inheritance":["LayoutObj","Container","Group"]}

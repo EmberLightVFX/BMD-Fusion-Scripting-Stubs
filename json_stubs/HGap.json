@@ -1,1 +1,0 @@
-{"name":"HGap","methods":{"header_text":"Discovered Methods","info_text":"Discovered methods might be available in many contexts, but most typically in Fuse scripts","HGap":{"short_help":"HGap constructor","usage":["HGap HGap(TagList tags)"]}},"class_inheritance":["LayoutObj","Gap"]}

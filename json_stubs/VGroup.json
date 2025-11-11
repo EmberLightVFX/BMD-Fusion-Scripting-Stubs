@@ -1,1 +1,0 @@
-{"name":"VGroup","methods":{"header_text":"Discovered Methods","info_text":"Discovered methods might be available in many contexts, but most typically in Fuse scripts","VGroup":{"short_help":"VGroup constructor","usage":["VGroup VGroup(TagList tags)"]}},"class_inheritance":["LayoutObj","Container","Group"]}
