@@ -2385,6 +2385,7 @@ local filename = save_file
 if (bmd.fileexists(filename)) then
     assert(os.remove(filename))
 end
+print("Saving luatable")
 bmd.writefile(filename, all_class_data)
 
 local json_data = json.encode(all_class_data, { indent = true })
@@ -2397,6 +2398,7 @@ end
 
 local json_file = io.open(json_filename, "w")
 if json_file then
+    print("Saving JSON")
     json_file:write(json_data)
     json_file:close()
 else
