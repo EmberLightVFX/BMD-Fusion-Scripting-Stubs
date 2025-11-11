@@ -1,9 +1,9 @@
 """
-v1.5
+v2.0
 Generated with FMD Fusion Scriptsing Stubs
 https://github.com/EmberLightVFX/BMD-Fusion-Scripting-Stubs
 
-Generated with Fusion Studio 19.1.2
+Generated with Fusion Studio 20.2.3
 
 """
 
