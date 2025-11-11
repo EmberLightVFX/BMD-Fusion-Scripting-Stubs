@@ -1,5 +1,5 @@
 """
-v2.0
+v1.20.0
 Generated with FMD Fusion Scriptsing Stubs
 https://github.com/EmberLightVFX/BMD-Fusion-Scripting-Stubs
 
